@@ -173,10 +173,10 @@ const getExperiences = (country: string, activity: string): ContentItem[] => {
           slug: "everest-base-camp"
         },
         {
-          title: "Annapurna Circuit Trek",
-          description: "Classic high-altitude trek around the Annapurna massif with diverse landscapes and cultures.",
+          title: "Annapurna Circuit Trek - Thorong La Pass",
+          description: "Epic 16-day trek around the Annapurna massif, crossing the legendary Thorong La Pass at 5,416m with diverse landscapes and cultures.",
           price: 899,
-          duration: "14 Days",
+          duration: "16 Days",
           difficulty: "Challenging",
           groupSize: "6-12 people",
           image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&auto=format&fit=crop&q=80",
@@ -184,15 +184,37 @@ const getExperiences = (country: string, activity: string): ContentItem[] => {
           slug: "annapurna-circuit"
         },
         {
-          title: "Langtang Valley Trek",
-          description: "Beautiful valley trek with stunning mountain views and authentic Tamang culture.",
-          price: 699,
-          duration: "10 Days",
+          title: "Langtang Valley Trek - 7 Days",
+          description: "Perfect 7-day trek through Langtang National Park. Ideal for those with limited time seeking Himalayan vistas and Tamang culture.",
+          price: 190,
+          duration: "7 Days",
           difficulty: "Moderate",
-          groupSize: "6-12 people",
+          groupSize: "2-10 people",
           image: "https://images.unsplash.com/photo-1486022662195-42e47e8a6cc3?w=800&auto=format&fit=crop&q=80",
           _path: "/nepal/trekking/langtang-valley",
           slug: "langtang-valley"
+        },
+        {
+          title: "Manaslu Circuit Trek - 12 Days",
+          description: "Epic 12-day trek around Mount Manaslu (8,163m). Cross the spectacular Larkya La Pass (5,106m) through pristine wilderness and Tibetan villages.",
+          price: 0,
+          duration: "12 Days",
+          difficulty: "Challenging",
+          groupSize: "2-10 people",
+          image: "https://images.unsplash.com/photo-1544735716-392fe2489ffa?w=800&auto=format&fit=crop&q=80",
+          _path: "/nepal/trekking/manaslu-circuit",
+          slug: "manaslu-circuit"
+        },
+        {
+          title: "Tsum Valley & Manaslu Trek",
+          description: "Sacred hidden valley trek combined with Manaslu Circuit. Experience authentic Tibetan culture and pristine mountain landscapes.",
+          price: 0,
+          duration: "18 Days",
+          difficulty: "Challenging",
+          groupSize: "2-10 people",
+          image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&auto=format&fit=crop&q=80",
+          _path: "/nepal/trekking/tsum-valley-manaslu",
+          slug: "tsum-valley-manaslu"
         }
       ],
       paragliding: [

@@ -277,21 +277,7 @@
                 </div>
               </Card>
 
-              <!-- Share -->
-              <Card class="rounded-3xl border-2 border-slate-200 bg-white p-6">
-                <h3 class="mb-4 font-bold text-slate-900">Share This Adventure</h3>
-                <div class="flex space-x-2">
-                  <button class="flex h-10 w-10 items-center justify-center rounded-full bg-sky-100 text-sky-600 transition-all hover:bg-sky-500 hover:text-white">
-                    <Icon name="mdi:facebook" class="h-5 w-5" />
-                  </button>
-                  <button class="flex h-10 w-10 items-center justify-center rounded-full bg-pink-100 text-pink-600 transition-all hover:bg-pink-500 hover:text-white">
-                    <Icon name="mdi:instagram" class="h-5 w-5" />
-                  </button>
-                  <button class="flex h-10 w-10 items-center justify-center rounded-full bg-slate-100 text-slate-600 transition-all hover:bg-slate-500 hover:text-white">
-                    <Icon name="mdi:twitter" class="h-5 w-5" />
-                  </button>
-                </div>
-              </Card>
+
             </div>
           </div>
         </div>
@@ -455,12 +441,14 @@ interface ExperienceDetail {
   notIncluded: string[]
   itinerary: Array<{ title: string; content: string }>
   body?: any
+  minElevation?: string
+  maxElevation?: string
 }
 
 const route = useRoute()
 const { country, activity, slug } = route.params
 
-// Comprehensive mock data for experience details
+// Mock data for experiences not in content files
 const getExperienceDetail = (country: string, activity: string, slug: string): ExperienceDetail | null => {
   const experienceData: Record<string, Record<string, Record<string, ExperienceDetail>>> = {
     nepal: {
@@ -604,40 +592,238 @@ const getExperienceDetail = (country: string, activity: string, slug: string): E
           ]
         },
         'langtang-valley': {
-          title: "Langtang Valley Trek",
-          description: "Beautiful valley trek with stunning mountain views and authentic Tamang culture.",
-          price: 699,
-          duration: "10 Days",
+          title: "Langtang Valley Trek - 7 Days",
+          description: "Perfect 7-day trek through Langtang National Park. Ideal for those with limited time seeking Himalayan vistas and Tamang culture.",
+          price: 190,
+          duration: "7 Days",
           difficulty: "Moderate",
-          groupSize: "6-12 people",
+          groupSize: "2-10 people",
           image: "https://images.unsplash.com/photo-1486022662195-42e47e8a6cc3?w=1200&auto=format&fit=crop&q=80",
           bestTime: "March-May, September-November",
           highlights: [
-            "Explore Langtang Valley",
-            "Visit Kyanjin Gompa monastery",
-            "Stunning mountain panoramas",
-            "Tamang culture experience",
-            "Less crowded than other routes"
+            "Kyanjin Gompa ancient monastery",
+            "Langtang Lirung (7,246m) panoramic views",
+            "Kyanjin Ri (4,773m) summit hike",
+            "Authentic Tamang culture immersion",
+            "Rhododendron forests and glaciers",
+            "Traditional yak cheese factories"
           ],
           gallery: [
-            "https://images.unsplash.com/photo-1486022662195-42e47e8a6cc3?w=800&auto=format&fit=crop&q=80"
+            "/images/langtang-1.jpg",
+            "/images/langtang-2.jpg",
+            "/images/langtang-3.jpg",
+            "/images/langtang-4.jpg"
           ],
           included: [
-            "Transportation",
-            "Accommodation",
-            "Meals",
-            "Guide",
-            "Permits"
+            "6 nights teahouse/lodge accommodation",
+            "Kathmandu to Syafrubesi to Kathmandu by bus",
+            "All permits and necessary paperwork",
+            "Experienced English-speaking guide",
+            "Equipment: sleeping bag, down jacket, gloves, walking poles",
+            "Emergency helicopter service arrangements",
+            "First aid medical supplies",
+            "All official expenses and government taxes"
           ],
           notIncluded: [
-            "Flights",
-            "Insurance",
-            "Personal items"
+            "3 meals per day (breakfast, lunch, dinner)",
+            "All drinks (tea, coffee, beer, etc.)",
+            "Your personal expenses",
+            "Travel insurance (required for emergency evacuation)",
+            "Tips for guide"
           ],
           itinerary: [
             {
-              title: "Day 1: Drive to Syabrubesi",
-              content: "Drive from Kathmandu to Syabrubesi, gateway to Langtang Valley."
+              title: "Day 1: Drive Kathmandu to Syafrubesi (1,400m)",
+              content: "Scenic 8-hour drive from Kathmandu through terraced fields and traditional villages to Syafrubesi, the gateway to Langtang Valley."
+            },
+            {
+              title: "Day 2: Trek to Lama Hotel (2,430m)",
+              content: "5-hour trek (11km) following the Langtang River through beautiful subtropical forests, bamboo and rhododendron forests."
+            },
+            {
+              title: "Day 3: Trek to Langtang Village (3,375m)",
+              content: "6-hour trek (11km) ascending through forests to Langtang Village, rebuilt after the 2015 earthquake."
+            },
+            {
+              title: "Day 4: Trek to Kyanjin Gompa (3,750m)",
+              content: "5-6 hour trek (8km) through yak pastures to Kyanjin Gompa. Visit ancient Buddhist monastery and yak cheese factory."
+            },
+            {
+              title: "Day 5: Hike to Kyanjin Ri (4,773m) then Godatabela (2,900m)",
+              content: "6-7 hour day: Early morning summit of Kyanjin Ri for 360-degree mountain views, then descend to Godatabela."
+            },
+            {
+              title: "Day 6: Trek to Syafrubesi (1,400m)",
+              content: "6-hour trek (17km) descending through the valley, retracing your steps back to Syafrubesi."
+            },
+            {
+              title: "Day 7: Drive to Kathmandu",
+              content: "Drive back to Kathmandu through scenic countryside. Arrive with time for celebration dinner."
+            }
+          ]
+        },
+        'manaslu-circuit': {
+          title: "Manaslu Circuit Trek - 12 Days",
+          description: "Epic 12-day trek around Mount Manaslu (8,163m). Cross the spectacular Larkya La Pass (5,106m) through pristine wilderness and Tibetan villages.",
+          price: 950,
+          duration: "12 Days",
+          difficulty: "Challenging",
+          groupSize: "2-10 people",
+          image: "https://images.unsplash.com/photo-1544735716-392fe2489ffa?w=1200&auto=format&fit=crop&q=80",
+          bestTime: "March-May, September-November",
+          highlights: [
+            "Larkya La Pass (5,106m) crossing",
+            "Mount Manaslu (8,163m) close-up views",
+            "Pristine wilderness and restricted area",
+            "Tibetan Buddhist culture and monasteries",
+            "Birendra Lake and Pungyen Gompa",
+            "Less crowded than Annapurna/Everest"
+          ],
+          gallery: [
+            "/images/manaslu-1.jpg",
+            "/images/manaslu-2.jpg",
+            "/images/manaslu-3.jpg",
+            "/images/manaslu-4.jpg"
+          ],
+          included: [
+            "11 nights teahouse/lodge accommodation",
+            "Transportation Kathmandu-Machha Khola and return",
+            "All permits and restricted area permits",
+            "Experienced English-speaking guide",
+            "Equipment: sleeping bag, down jacket",
+            "Emergency helicopter service arrangements",
+            "First aid medical supplies",
+            "All government taxes"
+          ],
+          notIncluded: [
+            "3 meals per day (breakfast, lunch, dinner)",
+            "All drinks (tea, coffee, beer, etc.)",
+            "Your personal expenses",
+            "Travel insurance (required)",
+            "Tips for guide and porter"
+          ],
+          itinerary: [
+            {
+              title: "Day 1: Drive Kathmandu to Machha Khola (869m)",
+              content: "8-10 hour scenic drive through countryside alongside Trishuli and Budhi Gandaki rivers."
+            },
+            {
+              title: "Day 2: Trek to Jagat (1,340m)",
+              content: "6-7 hour trek following the Budhi Gandaki River, crossing suspension bridges through lush forests."
+            },
+            {
+              title: "Day 3: Trek to Deng (1,860m)",
+              content: "6-7 hour trek crossing bridges and passing through bamboo forests with increasing mountain views."
+            },
+            {
+              title: "Day 4: Trek to Namrung (2,630m)",
+              content: "6-7 hour ascent through forests and villages with views of Siring, Ganesh Himal, and Mt. Himal Chuli."
+            },
+            {
+              title: "Day 5: Trek to Lho (3,180m)",
+              content: "4-5 hour trek through Tibetan villages with prayer flags. Visit Ribung Gompa with Mt. Manaslu views."
+            },
+            {
+              title: "Day 6: Trek to Samagaon (3,530m)",
+              content: "3-4 hour trek allowing acclimatization. Visit Pungyen Gompa and enjoy Manaslu Glacier views."
+            },
+            {
+              title: "Day 7: Acclimatization in Samagaon",
+              content: "Rest day with optional hikes to Birendra Lake or Pungyen Gompa for altitude adaptation."
+            },
+            {
+              title: "Day 8: Trek to Samdo (3,860m)",
+              content: "3-4 hour gentle ascent to Tibetan refugee village near the border with panoramic views."
+            },
+            {
+              title: "Day 9: Trek to Dharmashala (4,460m)",
+              content: "4-5 hour trek to Larkya Phedi base camp for the pass crossing, amidst rugged terrain."
+            },
+            {
+              title: "Day 10: Cross Larkya La Pass (5,106m) to Bimthang (3,590m)",
+              content: "8-9 hour challenging day crossing the pass with panoramic views of Himlung Himal, Cheo Himal, Annapurna II."
+            },
+            {
+              title: "Day 11: Trek to Gho (2,515m)",
+              content: "5-6 hour descent through alpine meadows and rhododendron forests with wildlife opportunities."
+            },
+            {
+              title: "Day 12: Drive to Kathmandu or Pokhara",
+              content: "Shared jeep to Besisahar, then bus to Kathmandu or Pokhara. Trek completion celebration."
+            }
+          ]
+        },
+        'tsum-valley-manaslu': {
+          title: "Tsum Valley & Manaslu Trek",
+          description: "Sacred hidden valley trek combined with Manaslu Circuit. Experience authentic Tibetan culture and pristine mountain landscapes.",
+          price: 590,
+          duration: "18 Days",
+          difficulty: "Challenging",
+          groupSize: "2-10 people",
+          image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&auto=format&fit=crop&q=80",
+          bestTime: "March-May, September-November",
+          highlights: [
+            "Sacred Tsum Valley exploration",
+            "Mu Gompa - largest monastery in region",
+            "Milarepa Cave Buddhist pilgrimage site",
+            "Cross Larkya La Pass (5,106m)",
+            "Mt. Manaslu (8,163m) spectacular views",
+            "Authentic Tibetan Buddhist culture"
+          ],
+          gallery: [
+            "/images/tsum-manaslu-1.jpg",
+            "/images/tsum-manaslu-2.jpg",
+            "/images/tsum-manaslu-3.jpg",
+            "/images/tsum-manaslu-4.jpg"
+          ],
+          included: [
+            "17 nights teahouse/lodge accommodation",
+            "Professional English-speaking guide",
+            "All permits (Tsum Valley & Manaslu restricted area)",
+            "Transportation to/from trailhead",
+            "Cultural monastery visits and ceremonies",
+            "First aid kit and emergency support"
+          ],
+          notIncluded: [
+            "International flights to/from Nepal",
+            "Nepal visa fees",
+            "All meals during trek (approx. $20-30/day)",
+            "Travel insurance (mandatory)",
+            "Personal expenses and tips",
+            "Monastery donation fees"
+          ],
+          itinerary: [
+            {
+              title: "Day 1-2: Drive to Soti Khola and trek to Machha Khola",
+              content: "Begin journey with drive and initial trekking through riverside trails and local villages."
+            },
+            {
+              title: "Day 3-5: Trek through Jagat to Lokpa (Tsum Valley entrance)",
+              content: "Ascend gradually through forests and suspension bridges entering the sacred Tsum Valley."
+            },
+            {
+              title: "Day 6-8: Explore Tsum Valley - Chhokang Paro and Mu Gompa",
+              content: "Visit Mu Gompa monastery, Milarepa Cave, and experience authentic Tibetan Buddhist culture."
+            },
+            {
+              title: "Day 9-11: Return to Manaslu Circuit via Samagaon",
+              content: "Rejoin Manaslu Circuit trail with acclimatization day in Samagaon."
+            },
+            {
+              title: "Day 12-14: Trek to Dharmashala via Samdo",
+              content: "Ascend gradually preparing for Larkya La Pass crossing through alpine terrain."
+            },
+            {
+              title: "Day 15: Cross Larkya La Pass (5,106m) to Bimthang",
+              content: "Epic 8-9 hour day crossing the pass with spectacular mountain panoramas."
+            },
+            {
+              title: "Day 16-17: Descend to Dharapani and drive to Kathmandu",
+              content: "Descend through rhododendron forests, complete trek, and return to Kathmandu."
+            },
+            {
+              title: "Day 18: Buffer day and departure",
+              content: "Rest day in Kathmandu or departure preparations."
             }
           ]
         }
@@ -865,7 +1051,7 @@ const getExperienceDetail = (country: string, activity: string, slug: string): E
 }
 
 // Get experience data
-const experience = ref<ExperienceDetail | null>(getExperienceDetail(country as string, activity as string, slug as string))
+const experience = ref(getExperienceDetail(String(country), String(activity), String(slug)))
 
 // Parse itinerary from the data
 const parsedItinerary = computed(() => {

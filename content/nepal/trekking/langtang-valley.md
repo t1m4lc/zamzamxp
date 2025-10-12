@@ -1,10 +1,10 @@
 ---
-title: "Langtang Valley Trek"
-description: "Perfect 7-day trek through Langtang National Park. Ideal for those with limited time seeking Himalayan vistas, cultural immersion, and diverse landscapes with rhododendron forests and Tamang villages."
+title: "Langtang Valley Trek - 7 Days"
+description: "Perfect 7-day trek through Langtang National Park. Ideal for those with limited time seeking Himalayan vistas, cultural immersion with rhododendron forests, Tamang villages, and panoramic views of Langtang Lirung (7,246m)."
 price: 190
-duration: "7 Days"
+duration: "7 Days / 6 Nights"
 difficulty: "Moderate"
-groupSize: "4-10 people"
+groupSize: "2-10 people"
 image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&auto=format&fit=crop&q=80"
 gallery:
   - "/images/langtang-1.jpg"
@@ -20,27 +20,29 @@ highlights:
   - "Traditional yak cheese factories"
 included:
   - "6 nights teahouse/lodge accommodation"
-  - "Transportation Kathmandu-Syafrubesi-Kathmandu"
-  - "All permits and paperwork"
-  - "Experienced English-speaking guide"
+  - "Kathmandu to Syafrubesi to Kathmandu by bus"
+  - "All permits and necessary paperwork"
+  - "Experienced English-speaking guide (food, salary, accommodation, insurance)"
   - "Equipment: sleeping bag, down jacket, gloves, walking poles"
   - "Emergency helicopter service arrangements"
-  - "First aid medical supplies"
-  - "All government taxes and official expenses"
+  - "First aid medical supplies (carried by guide)"
+  - "All official expenses and government taxes"
 notIncluded:
   - "3 meals per day (breakfast, lunch, dinner)"
   - "All drinks (tea, coffee, beer, etc.)"
-  - "Personal expenses"
-  - "Travel insurance (required for emergency evacuation)"
+  - "Your personal expenses"
+  - "Travel insurance (required for emergency evacuation & medical rescue)"
   - "Tips for guide"
 bestTime: "March-May, September-November"
 minElevation: "1,400m"
 maxElevation: "4,773m (Kyanjin Ri)"
 ---
 
-# Langtang Valley - Valley of Glaciers
+# Langtang Valley Trek - 7 Days
 
-The Langtang Valley Trek is a moderate trek in Nepal, ideal for those with limited time but seeking authentic Himalayan vistas, cultural immersion, and diverse landscapes. This beautiful valley features rhododendron forests, traditional Tamang villages, glaciers, and panoramic views of peaks like Langtang Lirung (7,246m) and the opportunity to climb Kyanjin Ri (4,773m).
+The Langtang Valley Trek is a moderate trek in Nepal, ideal for those with limited time but seeking Himalayan vistas, cultural immersion, and diverse landscapes. It features rhododendron forests, Tamang villages, glaciers, and panoramic views of peaks like Langtang Lirung (7,246m) and Kyanjin Ri (4,773m).
+
+**Total Cost: €190 per person**
 
 ## Why Choose Langtang Valley?
 
@@ -64,59 +66,59 @@ The Langtang Valley Trek is a moderate trek in Nepal, ideal for those with limit
 
 ## Complete Day-by-Day Itinerary
 
-### Day 1: Drive Kathmandu to Syafrubesi (1,400m) - 8 hours
+### Day 1: Drive Kathmandu to Syafrubesi (1,400m)
 Begin your journey with a scenic drive from Kathmandu through the beautiful Nepali countryside. Pass through terraced fields, traditional villages, and along mountain rivers. The drive takes you north of Kathmandu valley through Trishuli and beyond to reach Syafrubesi, the gateway to Langtang Valley.
 
-**Accommodation:** Teahouse/lodge in Syafrubesi
-**Drive Duration:** 8 hours
-**Highlights:** Rural Nepal landscapes, mountain views, traditional villages
+- **Altitude:** 1,400m
+- **Drive Duration:** 8 hours
+- **Accommodation:** Teahouse/lodge in Syafrubesi
+- **Highlights:** Rural Nepal landscapes, mountain views, traditional villages
 
-### Day 2: Trek Syafrubesi to Lama Hotel (2,430m) - 5 hours (11km)
+### Day 2: Trek Syafrubesi to Lama Hotel (2,430m)
 Start your trek following the Langtang River through beautiful subtropical forests. The trail passes through bamboo and rhododendron forests, crossing several suspension bridges. Gradual ascent through lush vegetation with occasional glimpses of mountain peaks.
 
-**Accommodation:** Teahouse/lodge in Lama Hotel  
-**Trek Duration:** 5 hours walk (11km)
-**Elevation Gain:** 1,030m
-**Highlights:** Subtropical forests, river crossings, wildlife spotting opportunities
+- **Altitude:** 2,430m
+- **Trek Duration:** 5 hours walk (11km)
+- **Accommodation:** Teahouse/lodge in Lama Hotel
+- **Highlights:** Subtropical forests, river crossings, wildlife spotting opportunities
 
-### Day 3: Trek Lama Hotel to Langtang Village (3,375m) - 6 hours (11km)
+### Day 3: Trek Lama Hotel to Langtang Village (3,375m)
 Continue ascending through beautiful forests, now with more conifers and alpine vegetation. Cross several small settlements and experience the changing landscape. The trail offers increasing mountain views as you approach Langtang Village, rebuilt after the 2015 earthquake.
 
-**Accommodation:** Teahouse/lodge in Langtang Village
-**Trek Duration:** 6 hours walk (11km)  
-**Elevation Gain:** 945m
-**Highlights:** Changing vegetation zones, mountain views, traditional architecture
+- **Altitude:** 3,375m
+- **Trek Duration:** 6 hours walk (11km)
+- **Accommodation:** Teahouse/lodge in Langtang Village
+- **Highlights:** Changing vegetation zones, mountain views, traditional architecture
 
-### Day 4: Trek Langtang Village to Kyanjin Gompa (3,750m) - 5-6 hours (8km)
+### Day 4: Trek Langtang Village to Kyanjin Gompa (3,750m)
 The trail opens up into the beautiful Langtang Valley with spectacular mountain views. Pass through yak pastures and traditional summer settlements. Arrive at Kyanjin Gompa, home to an ancient Buddhist monastery and a traditional yak cheese factory.
 
-**Accommodation:** Teahouse/lodge in Kyanjin Gompa
-**Trek Duration:** 5-6 hours walk (8km)
-**Elevation Gain:** 375m  
-**Highlights:** Panoramic mountain views, Kyanjin Gompa monastery, yak cheese factory visit
+- **Altitude:** 3,750m
+- **Trek Duration:** 5-6 hours walk (8km)
+- **Accommodation:** Teahouse/lodge in Kyanjin Gompa
+- **Highlights:** Panoramic mountain views, Kyanjin Gompa monastery, yak cheese factory visit
 
-### Day 5: Hike to Kyanjin Ri (4,773m) then trek to Godatabela (2,900m) - 6-7 hours (16km)
+### Day 5: Hike to Kyanjin Ri (4,773m) then trek to Godatabela (2,900m)
 Early morning ascent of Kyanjin Ri for spectacular 360-degree mountain views including Langtang Lirung, Dorje Lakpa, and other peaks. This is the highest point of your trek. After enjoying the summit views and taking photos, descend back to Kyanjin Gompa and continue down to Godatabela.
 
-**Accommodation:** Teahouse/lodge in Godatabela
-**Trek Duration:** 6-7 hours walk (16km)
-**Maximum Elevation:** 4,773m (Kyanjin Ri)
-**Highlights:** Summit views from Kyanjin Ri, 360-degree mountain panorama, descent through varied landscapes
+- **Altitude:** 2,900m
+- **Trek Duration:** 6-7 hours walk (16km)
+- **Accommodation:** Teahouse/lodge in Godatabela
+- **Highlights:** Summit views from Kyanjin Ri (4,773m), 360-degree mountain panorama, descent through varied landscapes
 
-### Day 6: Trek Godatabela to Syafrubesi (1,400m) - 6 hours (17km)
+### Day 6: Trek Godatabela to Syafrubesi (1,400m)
 Long descent day retracing your steps through the beautiful Langtang Valley. Pass through the forests you climbed through earlier, now appreciating them from a different perspective. Enjoy the changing vegetation zones as you descend.
 
-**Accommodation:** Teahouse/lodge in Syafrubesi
-**Trek Duration:** 6 hours walk (17km)
-**Elevation Loss:** 1,500m
-**Highlights:** Full valley views during descent, forest ecosystems, sense of accomplishment
+- **Altitude:** 1,400m
+- **Trek Duration:** 6 hours walk (17km)
+- **Accommodation:** Teahouse/lodge in Syafrubesi
+- **Highlights:** Full valley views during descent, forest ecosystems, sense of accomplishment
 
-### Day 7: Drive Syafrubesi to Kathmandu - 8 hours
+### Day 7: Drive Syafrubesi to Kathmandu
 Drive back to Kathmandu through the scenic countryside. Reflect on your trekking experience and enjoy the return to civilization. Arrive in Kathmandu with time for celebration dinner or rest.
 
-**Transportation:** Private vehicle/bus to Kathmandu
-**Drive Duration:** 8 hours
-**Highlights:** Countryside views, return to Kathmandu, trek completion
+- **Drive Duration:** 8 hours
+- **Highlights:** Countryside views, return to Kathmandu, trek completion
 
 ## What's Included in Your Package
 

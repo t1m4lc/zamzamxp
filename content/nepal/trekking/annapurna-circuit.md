@@ -50,89 +50,135 @@ This trek offers unparalleled diversity:
 - **Mountain views** including 8 peaks over 6,000m
 - **Ancient trade routes** along traditional salt trading paths
 
-## Complete Itinerary
+## Complete Day-by-Day Itinerary
 
 ### Arrival in Kathmandu
 Upon arrival at Tribhuvan International Airport (TIA), you'll be welcomed by our team and transferred to your hotel. After settling in, enjoy an orientation session to prepare for this exciting adventure. Later in the evening, experience a warm welcome dinner at an authentic Nepali restaurant, indulging in traditional flavors and the genuine hospitality of Nepal 🇳🇵.
 
-### Day 1: Drive from Kathmandu to Jagat via Besisahar (1,120m) - 8-9 hours
+### Day 1: Drive from Kathmandu to Jagat via Besisahar (1,120m)
 After breakfast, begin your journey with a scenic drive from Kathmandu. Pass through winding roads, lush green hills, rivers, and rural towns. The drive takes you along the Trisuli and then Marsyangdi River. Depending on road conditions and time, you might stop at Besisahar then take a jeep further to Jagat, the traditional trekking starting point.
 
-**Accommodation:** Teahouse/lodge in Jagat
+- **Altitude:** 1,120m
+- **Duration:** 8-9 hours drive
+- **Accommodation:** Teahouse/lodge in Jagat
+- **Highlights:** Scenic mountain roads, riverside views, rural Nepal
 
-### Day 2: Trek from Jagat to Dharapani (1,960m) - 5-6 hours
+### Day 2: Trek from Jagat to Dharapani (1,960m)
 Your first day of trekking follows the Marsyangdi River, gradually ascending through terraced fields and small villages. Cross several suspension bridges and pass beautiful waterfalls. The landscape transitions from subtropical to more temperate as you gain altitude. Reach Dharapani, a larger village with Tibetan influences.
 
-**Accommodation:** Teahouse/lodge in Dharapani
+- **Altitude:** 1,960m
+- **Duration:** 5-6 hours trek
+- **Accommodation:** Teahouse/lodge in Dharapani
+- **Highlights:** Suspension bridges, waterfalls, terraced fields
 
-### Day 3: Trek from Dharapani to Chame (2,650m) - 5-6 hours
+### Day 3: Trek from Dharapani to Chame (2,650m)
 The trail continues climbing through dense pine and fir forests. Pass through villages like Bagarchhap and Koto. Chame is the headquarters of Manang district, where you'll notice distinct Tibetan influence in architecture and culture. Enjoy your first clear views of Annapurna II and Lamjung Himal.
 
-**Accommodation:** Teahouse/lodge in Chame
+- **Altitude:** 2,650m
+- **Duration:** 5-6 hours trek
+- **Accommodation:** Teahouse/lodge in Chame
+- **Highlights:** Annapurna II views, Tibetan architecture, forest trails
 
-### Day 4: Trek from Chame to Upper Pisang (3,350m) - 4-5 hours
+### Day 4: Trek from Chame to Upper Pisang (3,350m)
 Experience a dramatic scenery change as the valley narrows and landscape becomes more arid. Walk along steep, narrow paths often carved into cliff faces. The day ends in Upper Pisang with excellent views of Annapurna II and Pisang Peak.
 
-**Accommodation:** Teahouse/lodge in Upper Pisang
+- **Altitude:** 3,350m
+- **Duration:** 4-5 hours trek
+- **Accommodation:** Teahouse/lodge in Upper Pisang
+- **Highlights:** Dramatic cliffs, Pisang Peak views, arid landscape
 
-### Day 5: Trek from Upper Pisang to Manang (3,450m) - 5-6 hours
+### Day 5: Trek from Upper Pisang to Manang (3,450m)
 Climb via Ghyaru and Ngawal. This route offers absolutely breathtaking panoramic views of the Annapurna range, including Annapurna III, Gangapurna, and Tilicho Peak.
 
-**Accommodation:** Teahouse/lodge in Manang
+- **Altitude:** 3,450m
+- **Duration:** 5-6 hours trek
+- **Accommodation:** Teahouse/lodge in Manang
+- **Highlights:** Annapurna panorama, mountain villages, Tibetan culture
 
 ### Day 6: Acclimatization Day in Manang
 This crucial acclimatization day is essential for high-altitude adaptation. It's recommended to hike to higher elevation during the day and sleep lower. Explore the following places around Manang:
 
-**Activities:**
-- **Gangapurna Lake:** Short, easy walk to the glacial lake below Gangapurna mountain
-- **Ice Lake:** Strenuous 5-6 hours round trip offering incredible views and excellent acclimatization
-- **Manang Village Exploration:** Visit Manang Gompa (monastery) and explore local culture
+- **Activities:** Gangapurna Lake, Ice Lake (5-6 hours), Manang Gompa monastery
+- **Accommodation:** Teahouse/lodge in Manang
+- **Highlights:** Acclimatization, glacial lake, monastery visit
 
-### Day 7: Trek from Manang to Tilicho Base Camp (4,210m) - 6-7 hours
+### Day 7: Trek from Manang to Tilicho Base Camp (4,210m)
 This challenging day involves traversing the notorious landslide area. The path is narrow and exposed, requiring careful navigation. Tilicho Base Camp sits in a dramatic setting surrounded by towering peaks.
 
-**Accommodation:** Teahouse/lodge in Tilicho Base Camp
+- **Altitude:** 4,210m
+- **Duration:** 6-7 hours trek
+- **Accommodation:** Teahouse/lodge in Tilicho Base Camp
+- **Highlights:** Dramatic mountain scenery, high-altitude trekking
 
-### Day 8: Day Trip to Tilicho Lake (4,920m) & Return to Base Camp - 6-8 hours
+### Day 8: Day Trip to Tilicho Lake (4,920m) & Return to Base Camp
 Early morning departure for one of the world's highest lakes. The trail is challenging but rewards with spectacular views of the turquoise Tilicho Lake surrounded by snow-capped peaks. This sacred lake holds religious significance for both Hindus and Buddhists.
 
-**Accommodation:** Teahouse/lodge in Tilicho Base Camp
+- **Maximum Altitude:** 4,920m (Tilicho Lake)
+- **Duration:** 6-8 hours round trip
+- **Accommodation:** Teahouse/lodge in Tilicho Base Camp
+- **Highlights:** Turquoise glacial lake, sacred site, mountain panorama
 
-### Day 9: Trek from Tilicho Base Camp to Yak Kharka (4,110m) - 5-6 hours
+### Day 9: Trek from Tilicho Base Camp to Yak Kharka (4,110m)
 Descend from Tilicho Base Camp and continue toward Thorong La Pass preparation. Yak Kharka offers stunning mountain views and is the last settlement before the high pass.
 
-**Accommodation:** Teahouse/lodge in Yak Kharka
+- **Altitude:** 4,110m
+- **Duration:** 5-6 hours trek
+- **Accommodation:** Teahouse/lodge in Yak Kharka
+- **Highlights:** Mountain views, pre-pass preparation
 
-### Day 10: Trek from Yak Kharka to Thorong Phedi (4,450m) - 3-4 hours
+### Day 10: Trek from Yak Kharka to Thorong Phedi (4,450m)
 Short but important day preparing for the Thorong La Pass crossing. Thorong Phedi (meaning "foot of the pass") provides basic accommodation and is the staging point for the early morning pass crossing.
 
-**Accommodation:** Teahouse/lodge in Thorong Phedi
+- **Altitude:** 4,450m
+- **Duration:** 3-4 hours trek
+- **Accommodation:** Teahouse/lodge in Thorong Phedi
+- **Highlights:** Pass preparation, high-altitude environment
 
-### Day 11: Cross Thorong La Pass (5,416m) to Muktinath (3,800m) - 7-9 hours
+### Day 11: Cross Thorong La Pass (5,416m) to Muktinath (3,800m)
 The highlight and most challenging day! Early morning start (around 5 AM) to cross the Thorong La Pass, the highest point of the trek at 5,416m. From the pass, enjoy panoramic views of Dhaulagiri, Annapurna, and surrounding peaks. Descend to the sacred temple of Muktinath, an important pilgrimage site for both Hindus and Buddhists.
 
-**Accommodation:** Teahouse/lodge in Muktinath
+- **Maximum Altitude:** 5,416m (Thorong La Pass)
+- **Ending Altitude:** 3,800m (Muktinath)
+- **Duration:** 7-9 hours trek
+- **Accommodation:** Teahouse/lodge in Muktinath
+- **Highlights:** Thorong La Pass crossing, panoramic views, Muktinath Temple
 
-### Day 12: Trek from Muktinath to Jomsom (2,720m) - 5-6 hours
+### Day 12: Trek from Muktinath to Jomsom (2,720m)
 Descend through the Kali Gandaki Valley, known as the world's deepest gorge. Jomsom is a major town with an airport, offering modern amenities and a glimpse into the Mustang region's culture.
 
-**Accommodation:** Teahouse/lodge in Jomsom
+- **Altitude:** 2,720m
+- **Duration:** 5-6 hours trek
+- **Accommodation:** Teahouse/lodge in Jomsom
+- **Highlights:** Kali Gandaki Gorge, Mustang culture, town amenities
 
-### Day 13: Trek from Jomsom to Tatopani (1,190m) - 6-7 hours
+### Day 13: Trek from Jomsom to Tatopani (1,190m)
 Descend further through the Kali Gandaki Valley, passing through Marpha (famous for apple brandy) and other traditional villages. Tatopani is renowned for its natural hot springs - perfect for relaxing tired muscles.
 
-**Accommodation:** Teahouse/lodge in Tatopani
+- **Altitude:** 1,190m
+- **Duration:** 6-7 hours trek
+- **Accommodation:** Teahouse/lodge in Tatopani
+- **Highlights:** Natural hot springs, Marpha village, apple brandy
 
-### Day 14: Trek from Tatopani to Ghorepani (2,850m) - 6-7 hours
+### Day 14: Trek from Tatopani to Ghorepani (2,850m)
 Begin ascending through rhododendron forests (spectacular if trekking in spring). Ghorepani is a traditional Gurung village famous for its sunrise viewpoint.
 
-**Accommodation:** Teahouse/lodge in Ghorepani
+- **Altitude:** 2,850m
+- **Duration:** 6-7 hours trek
+- **Accommodation:** Teahouse/lodge in Ghorepani
+- **Highlights:** Rhododendron forests, Gurung culture, Poon Hill preparation
 
-### Day 15: Sunrise at Poon Hill (3,210m) & Trek to Nayapul - 6-7 hours
+### Day 15: Sunrise at Poon Hill (3,210m) & Trek to Nayapul
 Early morning hike to Poon Hill for sunrise views over the Annapurna and Dhaulagiri ranges - one of Nepal's most famous viewpoints. Descend through beautiful rhododendron and oak forests to Nayapul, where your trek concludes.
+
+- **Maximum Altitude:** 3,210m (Poon Hill)
+- **Duration:** 6-7 hours total
+- **Highlights:** Poon Hill sunrise, panoramic mountain views, trek completion
 
 ### Day 16: Drive from Nayapul to Pokhara, then to Kathmandu
 Drive to Pokhara (1 hour), then continue to Kathmandu (6-7 hours) or take a domestic flight (25 minutes).
+
+- **Duration:** Full day
+- **Highlights:** Return to civilization, celebration dinner
 
 ## What Makes This Trek Special
 
