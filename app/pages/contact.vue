@@ -155,36 +155,7 @@
             </div>
           </div>
 
-          <!-- Social Links -->
-          <div class="mt-12 text-center">
-            <h3 class="mb-6 text-xl font-bold text-slate-900">Follow Our Adventures</h3>
-            <div class="flex justify-center space-x-4">
-              <a
-                href="https://instagram.com"
-                target="_blank"
-                rel="noopener"
-                class="flex h-14 w-14 items-center justify-center rounded-full bg-pink-100 text-pink-600 transition-all hover:bg-pink-500 hover:text-white hover:scale-110"
-              >
-                <Icon name="mdi:instagram" class="h-7 w-7" />
-              </a>
-              <a
-                href="https://facebook.com"
-                target="_blank"
-                rel="noopener"
-                class="flex h-14 w-14 items-center justify-center rounded-full bg-sky-100 text-sky-600 transition-all hover:bg-sky-500 hover:text-white hover:scale-110"
-              >
-                <Icon name="mdi:facebook" class="h-7 w-7" />
-              </a>
-              <a
-                href="https://youtube.com"
-                target="_blank"
-                rel="noopener"
-                class="flex h-14 w-14 items-center justify-center rounded-full bg-red-100 text-red-600 transition-all hover:bg-red-500 hover:text-white hover:scale-110"
-              >
-                <Icon name="mdi:youtube" class="h-7 w-7" />
-              </a>
-            </div>
-          </div>
+
         </div>
       </div>
     </section>
