@@ -205,7 +205,16 @@
 import { Card } from '~/components/ui/card'
 
 useSeoMeta({
-  title: 'Terms of Service',
-  description: 'ZamZam XP Terms of Service. Booking policies, cancellations, liability, and participant responsibilities for our adventure tours.',
+  title: "Terms of Service | Zamzam Experience",
+  description:
+    "Zamzam Experience Terms of Service. Booking policies, cancellations, liability, and participant responsibilities for adventure tours.",
+  robots: "noindex, follow", // Terms pages typically shouldn't be indexed
 })
+
+useSchemaOrg([
+  defineWebPage({
+    "@type": "WebPage",
+    name: "Terms of Service",
+  }),
+])
 </script>

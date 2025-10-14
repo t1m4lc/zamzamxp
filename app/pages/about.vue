@@ -326,7 +326,31 @@ import { Button } from '~/components/ui/button'
 import { NumberTicker } from '~/components/ui/number-ticker'
 
 useSeoMeta({
-  title: 'About Us',
-  description: 'Learn about Zamzam Experience - our story, values, and commitment to sustainable, community-focused adventure tourism.',
+  title: "About Us - Fair Adventure Travel | Zamzam Experience",
+  description:
+    "Learn about Zamzam Experience: connecting travelers with local guides for authentic adventures. Fair prices, sustainable tourism, and meaningful cultural experiences since 2025.",
+  ogTitle: "About Zamzam Experience - Fair Adventure Travel",
+  ogDescription:
+    "Our mission: authentic adventures that benefit travelers, guides, and local communities.",
+  ogType: "website",
+  twitterCard: "summary_large_image",
 })
+
+useSchemaOrg([
+  defineOrganization({
+    name: "Zamzam Experience",
+    description:
+      "Connecting travelers with passionate local guides for authentic adventures around the world",
+    foundingDate: "2025",
+    founder: {
+      "@type": "Person",
+      name: "Timothy Alcaide",
+      jobTitle: "Founder",
+    },
+  }),
+  defineWebPage({
+    "@type": "AboutPage",
+    name: "About Zamzam Experience",
+  }),
+])
 </script>

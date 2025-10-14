@@ -407,8 +407,24 @@ const destinations = [
 ]
 
 useSeoMeta({
-  title: 'Home',
-  description: 'Discover unforgettable adventure travel experiences around the world. Expert-guided tours, authentic cultural immersion, and memories that last a lifetime.',
-  ogImage: '/images/og-home.jpg',
+  title: "Fair Adventure Travel with Local Guides | Zamzam Experience",
+  description:
+    "Discover authentic adventure experiences with passionate local guides. Fair prices, sustainable tourism, and unforgettable trekking, paragliding, and surfing adventures worldwide.",
+  ogTitle: "Fair Adventure Travel with Local Guides | Zamzam Experience",
+  ogDescription:
+    "Travel that's fair for everyone. Expert-guided adventure tours with honest pricing and sustainable tourism practices.",
+  ogImage: "/images/og-home.jpg",
+  ogType: "website",
+  twitterCard: "summary_large_image",
+  twitterTitle: "Fair Adventure Travel with Local Guides | Zamzam Experience",
+  twitterDescription:
+    "Discover authentic adventures with local guides. Fair prices, sustainable tourism.",
+  twitterImage: "/images/og-home.jpg",
+})
+
+defineOgImageComponent("NuxtSeo", {
+  title: "Zamzam Experience",
+  description: "Travel that's fair for everyone",
+  theme: "#FF6B35",
 })
 </script>

@@ -23,7 +23,57 @@ export default defineNuxtConfig({
     "@nuxt/image",
     "motion-v/nuxt",
     "nuxt-gtag",
+    "@nuxtjs/seo",
   ],
+
+  site: {
+    url: process.env.NUXT_PUBLIC_SITE_URL || "https://zamzamxp.com",
+    name: "Zamzam Experience",
+    description:
+      "Discover authentic adventure experiences with passionate local guides. Fair prices, sustainable tourism. Explore trekking, paragliding, and more with Zamzam Experience.",
+    defaultLocale: "en",
+  },
+
+  schemaOrg: {
+    identity: {
+      type: "Organization",
+      name: "Zamzam Experience",
+      url: "https://zamzamxp.com",
+      logo: "https://zamzamxp.com/logo.png",
+      sameAs: [
+        // Add your social media profiles here when available
+      ],
+      contactPoint: {
+        "@type": "ContactPoint",
+        telephone: "+33767503066",
+        contactType: "Customer Service",
+        email: "hello@zamzamxp.com",
+        availableLanguage: ["English", "French"],
+      },
+    },
+  },
+
+  robots: {
+    // Allow all by default, but can be configured per environment
+    groups: [
+      {
+        userAgent: ["*"],
+        allow: ["/"],
+        disallow: ["/api/"],
+      },
+    ],
+  },
+
+  sitemap: {
+    strictNuxtContentPaths: true,
+    // Automatically generate sitemap from routes and content
+  },
+
+  ogImage: {
+    enabled: true,
+    // Will use default OG images from public folder if available
+    fonts: ["Inter:400", "Inter:700"],
+  },
 
   shadcn: {
     prefix: "",

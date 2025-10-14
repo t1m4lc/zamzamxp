@@ -229,7 +229,26 @@ const activities = computed(() => {
 })
 
 useSeoMeta({
-  title: `Adventures in ${countryName}`,
-  description: countryDescription,
+  title: `${countryName} Adventure Travel & Tours | Zamzam Experience`,
+  description: `${countryDescription} Fair prices, expert local guides, and sustainable tourism in ${countryName}.`,
+  ogTitle: `Adventures in ${countryName} | Zamzam Experience`,
+  ogDescription: countryDescription,
+  ogType: "website",
+  twitterCard: "summary_large_image",
 })
+
+useSchemaOrg([
+  defineWebPage({
+    "@type": "CollectionPage",
+    name: `Adventures in ${countryName}`,
+    description: countryDescription,
+  }),
+  defineBreadcrumb({
+    itemListElement: [
+      { name: "Home", item: "/" },
+      { name: "Destinations", item: "/destinations" },
+      { name: countryName, item: `/${country}` },
+    ],
+  }),
+])
 </script>

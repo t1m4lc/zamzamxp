@@ -228,7 +228,22 @@ const moroccoData = computed(() =>
 )
 
 useSeoMeta({
-  title: 'Our Destinations - ZamZam Experience',
-  description: 'Explore our carefully curated adventure destinations. From Nepal\'s Himalayas to Morocco\'s Atlantic coast, discover your next adventure.',
+  title: "Adventure Travel Destinations | Nepal, Morocco & More | Zamzam Experience",
+  description:
+    "Explore authentic adventure destinations with expert local guides. Trekking in Nepal's Himalayas, surfing Morocco's Atlantic coast, and more sustainable tourism experiences.",
+  ogTitle: "Adventure Travel Destinations | Zamzam Experience",
+  ogDescription:
+    "From Nepal's Himalayas to Morocco's Atlantic coast - discover authentic adventures with local guides.",
+  ogType: "website",
+  twitterCard: "summary_large_image",
 })
+
+useSchemaOrg([
+  defineWebPage({
+    "@type": "CollectionPage",
+    name: "Adventure Destinations",
+    description:
+      "Browse our collection of adventure travel destinations around the world",
+  }),
+])
 </script>

@@ -206,9 +206,31 @@ import { APP_CONFIG } from '~/config/constants'
 const { getWhatsAppUrl } = useContact()
 
 useSeoMeta({
-  title: 'Contact Us',
-  description: 'Get in touch with ZamZam XP. Plan your adventure in Nepal or Morocco. Quick response via WhatsApp or email.',
+  title: "Contact Us - Plan Your Adventure | Zamzam Experience",
+  description:
+    "Get in touch to plan your adventure. Quick response via WhatsApp or email. Expert advice on trekking in Nepal, surfing in Morocco, and sustainable adventure travel.",
+  ogTitle: "Contact Zamzam Experience",
+  ogDescription: "Ready to plan your next adventure? Get in touch with our team.",
+  ogType: "website",
+  robots: "noindex, follow", // Contact pages typically don't need to be indexed
 })
+
+useSchemaOrg([
+  defineWebPage({
+    "@type": "ContactPage",
+    name: "Contact Us",
+  }),
+  defineOrganization({
+    name: "Zamzam Experience",
+    contactPoint: {
+      "@type": "ContactPoint",
+      telephone: "+33767503066",
+      contactType: "Customer Service",
+      email: "hello@zamzamxp.com",
+      availableLanguage: ["English", "French"],
+    },
+  }),
+])
 
 // Form data
 const formData = ref({

@@ -203,8 +203,29 @@ const experiences = computed(() => {
   }))
 })
 
+const activityTitle = activity.charAt(0).toUpperCase() + activity.slice(1)
+
 useSeoMeta({
-  title: `${activity.charAt(0).toUpperCase() + activity.slice(1)} in ${countryName}`,
-  description: activityDescription,
+  title: `${activityTitle} Tours in ${countryName} | Zamzam Experience`,
+  description: `${activityDescription} Book authentic ${activity} adventures with expert local guides. Fair prices and sustainable tourism.`,
+  ogTitle: `${activityTitle} in ${countryName}`,
+  ogDescription: activityDescription,
+  ogType: "website",
+  twitterCard: "summary_large_image",
 })
+
+useSchemaOrg([
+  defineWebPage({
+    "@type": "CollectionPage",
+    name: `${activityTitle} in ${countryName}`,
+    description: activityDescription,
+  }),
+  defineBreadcrumb({
+    itemListElement: [
+      { name: "Home", item: "/" },
+      { name: countryName, item: `/${country}` },
+      { name: activityTitle, item: `/${country}/${activity}` },
+    ],
+  }),
+])
 </script>

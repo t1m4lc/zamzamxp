@@ -644,11 +644,47 @@ const whatsappUrl = computed(() => {
 })
 
 if (experience.value) {
+  const exp = experience.value
+  const countryStr = String(country)
+  const activityStr = String(activity)
+  const countryName = countryStr.charAt(0).toUpperCase() + countryStr.slice(1)
+  const activityName = activityStr.charAt(0).toUpperCase() + activityStr.slice(1)
+  
   useSeoMeta({
-    title: experience.value.title,
-    description: experience.value.description,
-    ogImage: experience.value.image,
+    title: `${exp.title} - ${exp.duration} | Zamzam Experience`,
+    description: `${exp.description} Book this ${exp.difficulty} ${activityStr} tour in ${countryStr}. From $${exp.price}. Expert local guides and sustainable tourism.`,
+    ogTitle: exp.title,
+    ogDescription: exp.description,
+    ogImage: exp.image,
+    ogType: "website",
+    twitterCard: "summary_large_image",
+    twitterTitle: exp.title,
+    twitterDescription: exp.description,
+    twitterImage: exp.image,
   })
+
+  useSchemaOrg([
+    defineProduct({
+      name: exp.title,
+      description: exp.description,
+      image: exp.image,
+      offers: {
+        "@type": "Offer",
+        price: exp.price,
+        priceCurrency: "USD",
+        availability: "https://schema.org/InStock",
+        url: `https://zamzamxp.com/${countryStr}/${activityStr}/${slug}`,
+      },
+    }),
+    defineBreadcrumb({
+      itemListElement: [
+        { name: "Home", item: "/" },
+        { name: countryName, item: `/${countryStr}` },
+        { name: activityName, item: `/${countryStr}/${activityStr}` },
+        { name: exp.title, item: `/${countryStr}/${activityStr}/${slug}` },
+      ],
+    }),
+  ])
 }
 </script>
 

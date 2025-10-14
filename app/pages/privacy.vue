@@ -289,7 +289,16 @@
 import { Card } from '~/components/ui/card'
 
 useSeoMeta({
-  title: 'Privacy Policy',
-  description: 'ZamZam XP Privacy Policy. How we collect, use, and protect your personal data. GDPR compliant.',
+  title: "Privacy Policy | Zamzam Experience",
+  description:
+    "Zamzam Experience Privacy Policy. Learn how we collect, use, and protect your personal data. GDPR compliant adventure travel.",
+  robots: "noindex, follow", // Privacy pages typically shouldn't be indexed
 })
+
+useSchemaOrg([
+  defineWebPage({
+    "@type": "WebPage",
+    name: "Privacy Policy",
+  }),
+])
 </script>
