@@ -33,7 +33,7 @@
       </div>
 
       <!-- Adventure Tag -->
-      <Badge :variant="badgeVariant" class="font-semibold">
+      <Badge variant="secondary" class="font-semibold">
         {{ testimonial.adventure }}
       </Badge>
     </CardContent>
@@ -54,7 +54,7 @@ interface Testimonial {
   quote: string
   rating: number
   adventure: string
-  color: 'orange' | 'sky' | 'emerald' | 'purple' | 'pink'
+  color: 'orange' | 'sky' | 'emerald' | 'purple' | 'pink' | 'slate'
   rotation?: number
 }
 
@@ -76,16 +76,14 @@ const cardClass = computed(() => {
       return 'border-purple-200 bg-purple-50 hover:border-purple-300'
     case 'pink':
       return 'border-pink-200 bg-pink-50 hover:border-pink-300'
+    case 'slate':
+      return 'border-slate-200 bg-white hover:border-slate-300'
     default:
-      return 'border-orange-200 bg-orange-50'
+      return 'border-slate-200 bg-white'
   }
 })
 
 const rotationClass = computed(() => {
   return 'hover:rotate-0 transition-transform duration-300'
-})
-
-const badgeVariant = computed(() => {
-  return 'secondary'
 })
 </script>

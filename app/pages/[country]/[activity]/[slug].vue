@@ -197,18 +197,18 @@
           <div class="lg:col-span-1">
             <div class="sticky top-24 space-y-6">
               <!-- Booking Card -->
-              <Card class="rounded-3xl border-2 border-orange-200 bg-orange-50 p-8">
+              <Card class="rounded-3xl border-2 border-slate-200 bg-white p-8 shadow-sm">
                 <div class="mb-6 text-center">
-                  <div class="mb-2 text-sm font-semibold text-orange-900">Starting from</div>
-                  <div class="mb-4 text-5xl font-black text-orange-600">${{ experience.price }}</div>
-                  <div class="text-xs text-orange-900">Per person</div>
+                  <div class="mb-2 text-sm font-semibold text-slate-600">Starting from</div>
+                  <div class="mb-4 text-5xl font-black text-slate-900">${{ experience.price }}</div>
+                  <div class="text-xs text-slate-600">Per person</div>
                 </div>
 
                 <div class="space-y-4">
                   <Button
                     as-child
                     size="lg"
-                    class="w-full rounded-full bg-orange-500 py-6 font-bold shadow-xl hover:bg-orange-600"
+                    class="w-full rounded-full bg-orange-500 py-6 font-bold shadow-lg hover:bg-orange-600"
                   >
                     <a href="https://wa.me/1234567890" target="_blank" rel="noopener">
                       <Icon name="mdi:whatsapp" class="mr-2 h-5 w-5" />
@@ -220,28 +220,13 @@
                     as-child
                     size="lg"
                     variant="outline"
-                    class="w-full rounded-full border-2 border-orange-500 font-bold hover:bg-orange-500 hover:text-white"
+                    class="w-full rounded-full border-2 border-slate-300 font-bold hover:bg-slate-100"
                   >
                     <NuxtLink to="/contact">
                       <Icon name="mdi:email" class="mr-2 h-5 w-5" />
                       Email Us
                     </NuxtLink>
                   </Button>
-                </div>
-
-                <div class="mt-6 space-y-3 border-t border-orange-200 pt-6 text-sm text-orange-900">
-                  <div class="flex items-center space-x-2">
-                    <Icon name="mdi:check-circle" class="h-4 w-4 text-green-600" />
-                    <span>Free cancellation</span>
-                  </div>
-                  <div class="flex items-center space-x-2">
-                    <Icon name="mdi:check-circle" class="h-4 w-4 text-green-600" />
-                    <span>Reserve now, pay later</span>
-                  </div>
-                  <div class="flex items-center space-x-2">
-                    <Icon name="mdi:check-circle" class="h-4 w-4 text-green-600" />
-                    <span>Instant confirmation</span>
-                  </div>
                 </div>
               </Card>
 
@@ -280,42 +265,48 @@
       </div>
     </section>
 
-    <!-- Meet Your Guide Section -->
-    <section class="bg-slate-50 py-20">
+    <!-- Meet Your Referee Section -->
+    <section v-if="experience.referee" class="bg-slate-50 py-20">
       <div class="container mx-auto px-4">
         <div class="mx-auto max-w-4xl">
-          <h2 class="mb-12 text-center text-4xl font-black text-slate-900">Meet Your Guide</h2>
-          <Card class="overflow-hidden rounded-3xl border-2 border-orange-200">
+          <h2 class="mb-12 text-center text-4xl font-black text-slate-900">{{ experience.referee.title || 'Meet Your Referee' }}</h2>
+          <Card class="overflow-hidden rounded-3xl border-2 border-slate-200 bg-white">
             <div class="grid gap-8 p-8 md:grid-cols-3">
               <div class="md:col-span-1">
-                <div class="aspect-square overflow-hidden rounded-2xl bg-gradient-to-br from-orange-400 to-pink-500">
-                  <div class="flex h-full items-center justify-center text-7xl text-white">
-                    👨‍🏫
+                <div class="aspect-square overflow-hidden rounded-2xl bg-slate-100">
+                  <NuxtImg
+                    v-if="experience.referee.image"
+                    :src="experience.referee.image"
+                    :alt="experience.referee.name"
+                    class="h-full w-full object-cover"
+                  />
+                  <div v-else class="flex h-full items-center justify-center text-7xl">
+                    {{ experience.referee.emoji || '👨‍🏫' }}
                   </div>
                 </div>
               </div>
               <div class="md:col-span-2">
-                <h3 class="mb-2 text-2xl font-semibold text-slate-900">Passionate Professionals</h3>
-                <div class="mb-4 flex flex-wrap gap-2">
-                  <Badge class="bg-slate-900 text-white font-medium text-xs">Experienced</Badge>
-                  <Badge class="bg-slate-900 text-white font-medium text-xs">Certified</Badge>
-                  <Badge class="bg-slate-900 text-white font-medium text-xs">First Aid Trained</Badge>
+                <h3 class="mb-2 text-2xl font-semibold text-slate-900">{{ experience.referee.name || 'Passionate Professionals' }}</h3>
+                <div v-if="experience.referee.badges" class="mb-4 flex flex-wrap gap-2">
+                  <Badge
+                    v-for="(badge, index) in experience.referee.badges"
+                    :key="index"
+                    class="bg-slate-900 text-white font-medium text-xs"
+                  >
+                    {{ badge }}
+                  </Badge>
                 </div>
                 <p class="mb-6 leading-relaxed text-slate-700">
-                  Our guides are passionate locals who know every trail, every story, and every hidden gem. They love sharing their culture and ensuring your safety and enjoyment are the top priorities.
+                  {{ experience.referee.description || 'Our referees are passionate locals who know every detail of their craft. They love sharing their expertise and ensuring your safety and enjoyment are the top priorities.' }}
                 </p>
-                <div class="space-y-2 text-sm text-slate-600">
-                  <div class="flex items-center space-x-2">
-                    <Icon name="mdi:star" class="h-4 w-4 text-yellow-400" />
-                    <span>Average 4.9/5 rating from travelers</span>
-                  </div>
-                  <div class="flex items-center space-x-2">
-                    <Icon name="mdi:translate" class="h-4 w-4 text-orange-500" />
-                    <span>Fluent in English and local languages</span>
-                  </div>
-                  <div class="flex items-center space-x-2">
-                    <Icon name="mdi:heart" class="h-4 w-4 text-pink-500" />
-                    <span>Passionate about sharing their culture</span>
+                <div v-if="experience.referee.details" class="space-y-2 text-sm text-slate-600">
+                  <div
+                    v-for="(detail, index) in experience.referee.details"
+                    :key="index"
+                    class="flex items-center space-x-2"
+                  >
+                    <Icon :name="detail.icon || 'mdi:check'" class="h-4 w-4 text-orange-500" />
+                    <span>{{ detail.text }}</span>
                   </div>
                 </div>
               </div>
@@ -326,7 +317,7 @@
     </section>
 
     <!-- Testimonials -->
-    <section class="py-20">
+    <section class="py-20 bg-slate-50">
       <div class="container mx-auto px-4">
         <div class="mb-12 text-center">
           <h2 class="mb-4 text-4xl font-black text-slate-900">Traveler Reviews</h2>
@@ -347,8 +338,8 @@
               quote: 'Absolutely incredible experience! The guide was knowledgeable, the scenery was stunning, and every detail was perfectly planned.',
               rating: 5,
               adventure: experience.title,
-              color: 'orange',
-              rotation: -1
+              color: 'slate',
+              rotation: 0
             }"
           />
           <TestimonialCard
@@ -359,8 +350,8 @@
               quote: 'This was the highlight of my trip! Professional team, amazing views, and memories that will last forever. Highly recommend!',
               rating: 5,
               adventure: experience.title,
-              color: 'sky',
-              rotation: 1
+              color: 'slate',
+              rotation: 0
             }"
           />
           <TestimonialCard
@@ -371,8 +362,8 @@
               quote: 'Outstanding from start to finish. The guides really care about your experience and safety. Would do it again in a heartbeat!',
               rating: 5,
               adventure: experience.title,
-              color: 'purple',
-              rotation: -2
+              color: 'slate',
+              rotation: 0
             }"
           />
         </div>
@@ -380,21 +371,21 @@
     </section>
 
     <!-- Final CTA -->
-    <section class="bg-gradient-to-br from-orange-500 via-pink-500 to-purple-600 py-20 lg:py-32">
+    <section class="bg-slate-900 py-20 lg:py-32">
       <div class="container mx-auto px-4">
         <div class="mx-auto max-w-3xl text-center text-white">
           <h2 class="mb-4 text-4xl font-black lg:text-5xl">
             Ready to Book {{ experience.title }}?
           </h2>
-          <div class="mb-8 text-6xl font-black">${{ experience.price }}</div>
-          <p class="mb-10 text-xl leading-relaxed">
+          <div class="mb-8 text-6xl font-black text-orange-500">${{ experience.price }}</div>
+          <p class="mb-10 text-xl leading-relaxed text-slate-300">
             Don't miss out on this incredible adventure. Spots fill up quickly!
           </p>
 
           <Button
             as-child
             size="lg"
-            class="rounded-full bg-white px-12 py-8 text-xl font-bold text-orange-600 shadow-2xl transition-all hover:bg-slate-100 hover:scale-105"
+            class="rounded-full bg-orange-500 px-12 py-8 text-xl font-bold text-white shadow-2xl transition-all hover:bg-orange-600 hover:scale-105"
           >
             <a href="https://wa.me/1234567890" target="_blank" rel="noopener">
               <Icon name="mdi:whatsapp" class="mr-2 h-7 w-7" />
@@ -402,9 +393,27 @@
             </a>
           </Button>
 
-          <div class="mt-8 text-sm opacity-90">
+          <div class="mt-8 text-sm text-slate-400">
             Questions? Contact us anytime at hello@zamzamxp.com
           </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Related Activities -->
+    <section v-if="relatedActivities.length" class="py-20 bg-slate-50">
+      <div class="container mx-auto px-4">
+        <div class="mb-12 text-center">
+          <h2 class="mb-4 text-4xl font-black text-slate-900">You Might Also Like</h2>
+          <p class="text-lg text-slate-600">Explore more adventures in {{ String(country).charAt(0).toUpperCase() + String(country).slice(1) }}</p>
+        </div>
+
+        <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+          <ExperienceCard
+            v-for="relatedExp in relatedActivities"
+            :key="relatedExp.slug"
+            :experience="relatedExp"
+          />
         </div>
       </div>
     </section>
@@ -421,6 +430,16 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from '~/components/ui/accordion'
+
+interface RefereeDetail {
+  title?: string
+  name?: string
+  image?: string
+  emoji?: string
+  badges?: string[]
+  description?: string
+  details?: Array<{ icon?: string; text: string }>
+}
 
 interface ExperienceDetail {
   title: string
@@ -439,6 +458,7 @@ interface ExperienceDetail {
   body?: any
   minElevation?: string
   maxElevation?: string
+  referee?: RefereeDetail
 }
 
 const route = useRoute()
@@ -1046,12 +1066,68 @@ const getExperienceDetail = (country: string, activity: string, slug: string): E
   return experienceData[country]?.[activity]?.[slug] || null
 }
 
+// Get all experiences for related activities
+const getAllExperiences = () => {
+  const allExperiences: Array<ExperienceDetail & { country: string; activity: string; slug: string }> = []
+  
+  // Nepal Trekking
+  allExperiences.push({
+    ...getExperienceDetail('nepal', 'trekking', 'everest-base-camp')!,
+    country: 'nepal',
+    activity: 'trekking',
+    slug: 'everest-base-camp'
+  })
+  
+  // Nepal Paragliding
+  allExperiences.push({
+    ...getExperienceDetail('nepal', 'paragliding', 'pokhara-tandem')!,
+    country: 'nepal',
+    activity: 'paragliding',
+    slug: 'pokhara-tandem'
+  })
+  
+  // Morocco Surfing
+  allExperiences.push({
+    ...getExperienceDetail('morocco', 'surfing', 'taghazout-beginner')!,
+    country: 'morocco',
+    activity: 'surfing',
+    slug: 'taghazout-beginner'
+  })
+  allExperiences.push({
+    ...getExperienceDetail('morocco', 'surfing', 'taghazout-intermediate')!,
+    country: 'morocco',
+    activity: 'surfing',
+    slug: 'taghazout-intermediate'
+  })
+  allExperiences.push({
+    ...getExperienceDetail('morocco', 'surfing', 'essaouira-culture')!,
+    country: 'morocco',
+    activity: 'surfing',
+    slug: 'essaouira-culture'
+  })
+  
+  return allExperiences
+}
+
 // Get experience data
 const experience = ref(getExperienceDetail(String(country), String(activity), String(slug)))
 
 // Parse itinerary from the data
 const parsedItinerary = computed(() => {
   return experience.value?.itinerary || []
+})
+
+// Get related activities (same country, different slug, max 3)
+const relatedActivities = computed(() => {
+  if (!experience.value) return []
+  
+  const allExperiences = getAllExperiences()
+  return allExperiences
+    .filter(exp => 
+      exp.country === String(country) && 
+      exp.slug !== String(slug)
+    )
+    .slice(0, 3)
 })
 
 if (experience.value) {

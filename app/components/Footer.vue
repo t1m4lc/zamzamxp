@@ -20,16 +20,18 @@
             <li>
               <NuxtLink
                 to="/nepal"
-                class="group flex items-center text-sm text-slate-600 transition-colors hover:text-orange-600"
+                class="group flex items-center space-x-2 text-sm text-slate-600 transition-colors hover:text-orange-600"
               >
+                <span class="text-lg">🇳🇵</span>
                 <span class="group-hover:translate-x-1 transition-transform">Nepal</span>
               </NuxtLink>
             </li>
             <li>
               <NuxtLink
                 to="/morocco"
-                class="group flex items-center text-sm text-slate-600 transition-colors hover:text-orange-600"
+                class="group flex items-center space-x-2 text-sm text-slate-600 transition-colors hover:text-orange-600"
               >
+                <span class="text-lg">🇲🇦</span>
                 <span class="group-hover:translate-x-1 transition-transform">Morocco</span>
               </NuxtLink>
             </li>

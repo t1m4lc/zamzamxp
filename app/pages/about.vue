@@ -2,7 +2,7 @@
   <div>
     <!-- Hero -->
     <section class="relative py-20 lg:py-32 overflow-hidden">
-      <div class="absolute inset-0 bg-gradient-to-br from-[#FF6B35]/10 to-[#F7931E]/10"></div>
+      <div class="absolute inset-0 bg-gradient-to-br from-[#FF6B35]/5 to-[#F7931E]/5"></div>
       <div class="container mx-auto px-4 relative">
         <div class="mx-auto max-w-4xl text-center">
           <h1 class="mb-6 text-5xl font-semibold text-slate-900 lg:text-6xl">
@@ -168,8 +168,9 @@
 
           <div class="grid gap-8 md:grid-cols-2">
             <Card class="rounded-2xl border border-slate-200 bg-white p-6">
-              <h3 class="mb-4 text-xl font-semibold text-slate-900">
-                Fair Remuneration
+              <h3 class="mb-4 flex items-center space-x-2 text-xl font-semibold text-slate-900">
+                <Icon name="mdi:cash-multiple" class="h-6 w-6 text-green-600" />
+                <span>Fair Remuneration</span>
               </h3>
               <p class="mb-4 leading-relaxed text-slate-700">
                 All our partners receive fair compensation for their services. We believe in equitable partnerships where everyone benefits.
@@ -190,9 +191,9 @@
               </ul>
             </Card>
 
-            <Card class="rounded-3xl border-2 border-orange-200 bg-orange-50 p-8">
+            <Card class="rounded-3xl border-2 border-slate-200 bg-white/95 backdrop-blur-sm p-8">
               <h3 class="mb-4 flex items-center space-x-2 text-2xl font-bold text-slate-900">
-                <Icon name="mdi:account-group" class="h-7 w-7 text-orange-600" />
+                <Icon name="mdi:account-group" class="h-7 w-7 text-[#FF6B35]" />
                 <span>Community Focus</span>
               </h3>
               <p class="mb-4 leading-relaxed text-slate-700">
@@ -200,21 +201,21 @@
               </p>
               <ul class="space-y-2 text-sm text-slate-600">
                 <li class="flex items-start space-x-2">
-                  <Icon name="mdi:check" class="mt-0.5 h-4 w-4 flex-shrink-0 text-orange-600" />
+                  <Icon name="mdi:check" class="mt-0.5 h-4 w-4 flex-shrink-0 text-[#FF6B35]" />
                   <span>Direct partnerships with local families</span>
                 </li>
                 <li class="flex items-start space-x-2">
-                  <Icon name="mdi:check" class="mt-0.5 h-4 w-4 flex-shrink-0 text-orange-600" />
+                  <Icon name="mdi:check" class="mt-0.5 h-4 w-4 flex-shrink-0 text-[#FF6B35]" />
                   <span>Support for small local businesses</span>
                 </li>
                 <li class="flex items-start space-x-2">
-                  <Icon name="mdi:check" class="mt-0.5 h-4 w-4 flex-shrink-0 text-orange-600" />
+                  <Icon name="mdi:check" class="mt-0.5 h-4 w-4 flex-shrink-0 text-[#FF6B35]" />
                   <span>Revenue stays in local communities</span>
                 </li>
               </ul>
             </Card>
 
-            <Card class="rounded-3xl border-2 border-sky-200 bg-sky-50 p-8">
+            <Card class="rounded-3xl border-2 border-slate-200 bg-white/95 backdrop-blur-sm p-8">
               <h3 class="mb-4 flex items-center space-x-2 text-2xl font-bold text-slate-900">
                 <Icon name="mdi:leaf" class="h-7 w-7 text-green-600" />
                 <span>Environmental Care</span>
@@ -224,23 +225,23 @@
               </p>
               <ul class="space-y-2 text-sm text-slate-600">
                 <li class="flex items-start space-x-2">
-                  <Icon name="mdi:check" class="mt-0.5 h-4 w-4 flex-shrink-0 text-sky-600" />
+                  <Icon name="mdi:check" class="mt-0.5 h-4 w-4 flex-shrink-0 text-green-600" />
                   <span>Carbon offset partnerships</span>
                 </li>
                 <li class="flex items-start space-x-2">
-                  <Icon name="mdi:check" class="mt-0.5 h-4 w-4 flex-shrink-0 text-sky-600" />
+                  <Icon name="mdi:check" class="mt-0.5 h-4 w-4 flex-shrink-0 text-green-600" />
                   <span>Weekly trail cleanups</span>
                 </li>
                 <li class="flex items-start space-x-2">
-                  <Icon name="mdi:check" class="mt-0.5 h-4 w-4 flex-shrink-0 text-sky-600" />
+                  <Icon name="mdi:check" class="mt-0.5 h-4 w-4 flex-shrink-0 text-green-600" />
                   <span>Plastic-free operations</span>
                 </li>
               </ul>
             </Card>
 
-            <Card class="rounded-3xl border-2 border-purple-200 bg-purple-50 p-8">
+            <Card class="rounded-3xl border-2 border-slate-200 bg-white/95 backdrop-blur-sm p-8">
               <h3 class="mb-4 flex items-center space-x-2 text-2xl font-bold text-slate-900">
-                <Icon name="mdi:diversity" class="h-7 w-7 text-purple-600" />
+                <Icon name="mdi:human-greeting" class="h-7 w-7 text-purple-600" />
                 <span>Inclusive Opportunities</span>
               </h3>
               <p class="mb-4 leading-relaxed text-slate-700">
@@ -267,20 +268,26 @@
     </section>
 
     <!-- Stats -->
-    <section class="bg-gradient-to-r from-[#FF6B35] to-[#F7931E] py-20">
+    <section class="bg-white/95 backdrop-blur-sm py-20 border-y">
       <div class="container mx-auto px-4">
         <div class="grid gap-8 md:grid-cols-3">
-          <div class="text-center text-white">
-            <div class="mb-2 text-5xl font-semibold">100+</div>
-            <div class="text-lg">Happy Customers</div>
+          <div class="text-center">
+            <div class="mb-2 text-5xl font-semibold text-slate-900">
+              <NumberTicker :value="100" :decimal-places="0" />+
+            </div>
+            <div class="text-lg text-slate-600">Happy Customers</div>
           </div>
-          <div class="text-center text-white">
-            <div class="mb-2 text-5xl font-semibold">10+</div>
-            <div class="text-lg">Local Partners</div>
+          <div class="text-center">
+            <div class="mb-2 text-5xl font-semibold text-slate-900">
+              <NumberTicker :value="10" :decimal-places="0" />+
+            </div>
+            <div class="text-lg text-slate-600">Local Partners</div>
           </div>
-          <div class="text-center text-white">
-            <div class="mb-2 text-5xl font-semibold">2+</div>
-            <div class="text-lg">Countries</div>
+          <div class="text-center">
+            <div class="mb-2 text-5xl font-semibold text-slate-900">
+              <NumberTicker :value="2" :decimal-places="0" />+
+            </div>
+            <div class="text-lg text-slate-600">Countries</div>
           </div>
         </div>
       </div>
@@ -316,6 +323,7 @@
 import { Card } from '~/components/ui/card'
 import { Badge } from '~/components/ui/badge'
 import { Button } from '~/components/ui/button'
+import { NumberTicker } from '~/components/ui/number-ticker'
 
 useSeoMeta({
   title: 'About Us',

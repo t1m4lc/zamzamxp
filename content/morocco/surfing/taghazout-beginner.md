@@ -31,6 +31,22 @@ notIncluded:
   - "Personal expenses"
   - "Additional surf sessions"
 bestTime: "March-October (best for beginners)"
+referee:
+  title: "Meet Your Surf Instructor"
+  name: "Hassan & The Surf Team"
+  emoji: "🏄‍♂️"
+  badges:
+    - "ISA Certified"
+    - "10+ Years Experience"
+    - "First Aid Trained"
+  description: "Our surf instructors are passionate locals who grew up riding the waves of Taghazout. They know every break, every tide, and the best spots for beginners. Safety and fun are always the top priorities!"
+  details:
+    - icon: "mdi:star"
+      text: "Average 4.9/5 rating from students"
+    - icon: "mdi:translate"
+      text: "Fluent in English, French, and Arabic"
+    - icon: "mdi:shield-check"
+      text: "Safety certified with spotless record"
 ---
 
 # Your Surf Journey Starts Here

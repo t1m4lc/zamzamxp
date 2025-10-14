@@ -1,7 +1,7 @@
 <template>
   <div>
     <!-- Hero Section with Globe Background -->
-    <section class="relative bg-white overflow-visible" style="padding-bottom: 300px; padding-top: 40px;">
+    <section class="relative bg-white overflow-visible" style="padding-bottom: 250px; padding-top: 40px;">
       <!-- Globe Background - Positioned lower -->
       <div class="absolute left-0 right-0 flex items-end justify-center pointer-events-none" style="top: 35%; transform: translateY(0);">
         <div class="relative w-full h-[600px] lg:h-[800px] max-w-[800px] lg:max-w-[1000px]">
@@ -31,8 +31,6 @@
       </div>
     </section>
 
-
-
     <!-- Why Choose Us Section -->
     <section class="py-20 lg:py-24">
       <div class="container mx-auto px-6">
@@ -47,27 +45,27 @@
         <div class="grid gap-8 md:grid-cols-3">
           <div class="text-center">
             <div class="w-16 h-16 bg-slate-100 rounded-full flex items-center justify-center mx-auto mb-4">
-              <Icon name="mdi:heart-handshake" class="h-8 w-8 text-slate-900" />
+              <Icon name="mdi:handshake" class="h-8 w-8 text-slate-900" />
             </div>
-            <h3 class="text-lg font-semibold text-slate-900 mb-2">Fair for Everyone</h3>
+            <h3 class="text-lg font-semibold text-slate-900 mb-2">Fair for everyone</h3>
             <p class="text-slate-600">
               Local guides get paid fairly. You get honest prices. Everyone wins.
             </p>
           </div>
           <div class="text-center">
             <div class="w-16 h-16 bg-slate-100 rounded-full flex items-center justify-center mx-auto mb-4">
-              <Icon name="mdi:account-heart" class="h-8 w-8 text-slate-900" />
+              <Icon name="mdi:account-group" class="h-8 w-8 text-slate-900" />
             </div>
-            <h3 class="text-lg font-semibold text-slate-900 mb-2">Passionate Locals</h3>
+            <h3 class="text-lg font-semibold text-slate-900 mb-2">Passionate locals</h3>
             <p class="text-slate-600">
               Our guides love what they do and can't wait to share it with you.
             </p>
           </div>
           <div class="text-center">
             <div class="w-16 h-16 bg-slate-100 rounded-full flex items-center justify-center mx-auto mb-4">
-              <Icon name="mdi:leaf-circle" class="h-8 w-8 text-slate-900" />
+              <Icon name="mdi:leaf" class="h-8 w-8 text-slate-900" />
             </div>
-            <h3 class="text-lg font-semibold text-slate-900 mb-2">Sustainable Tourism</h3>
+            <h3 class="text-lg font-semibold text-slate-900 mb-2">Sustainable tourism</h3>
             <p class="text-slate-600">
               Eco-friendly practices that protect the places we love to explore.
             </p>
@@ -170,19 +168,27 @@
         <!-- Stats Bar -->
         <div class="mt-16 grid grid-cols-4 gap-8 max-w-4xl mx-auto">
           <div class="text-center p-6">
-            <div class="text-4xl font-semibold text-slate-900 mb-2">100+</div>
+            <div class="text-4xl font-semibold text-slate-900 mb-2">
+              <NumberTicker :value="100" :decimal-places="0" />+
+            </div>
             <div class="text-sm text-slate-600">Happy Travelers</div>
           </div>
           <div class="text-center p-6">
-            <div class="text-4xl font-semibold text-slate-900 mb-2">{{ totalCountries }}</div>
+            <div class="text-4xl font-semibold text-slate-900 mb-2">
+              <NumberTicker :value="totalCountries" :decimal-places="0" />
+            </div>
             <div class="text-sm text-slate-600">Countries</div>
           </div>
           <div class="text-center p-6">
-            <div class="text-4xl font-semibold text-slate-900 mb-2">{{ totalActivities }}</div>
+            <div class="text-4xl font-semibold text-slate-900 mb-2">
+              <NumberTicker :value="totalActivities" :decimal-places="0" />
+            </div>
             <div class="text-sm text-slate-600">Activities</div>
           </div>
           <div class="text-center p-6">
-            <div class="text-4xl font-semibold text-slate-900 mb-2">4.9★</div>
+            <div class="text-4xl font-semibold text-slate-900 mb-2">
+              <NumberTicker :value="4.9" :decimal-places="1" />★
+            </div>
             <div class="text-sm text-slate-600">Average Rating</div>
           </div>
         </div>
@@ -271,6 +277,7 @@ import { Button } from '~/components/ui/button'
 import { Card } from '~/components/ui/card'
 import Globe from '~/components/ui/globe/Globe.vue'
 import { Marquee } from '~/components/ui/marquee'
+import { NumberTicker } from '~/components/ui/number-ticker'
 
 useSeoMeta({
   title: 'Zamzam Experience - Adventure Travel with Fair Prices & Local Guides',
