@@ -44,7 +44,7 @@
           <ul class="space-y-3">
             <li>
               <a
-                href="https://wa.me/1234567890"
+                :href="`https://wa.me/${APP_CONFIG.company.whatsapp}`"
                 target="_blank"
                 rel="noopener"
                 class="flex items-center space-x-2 text-sm text-slate-600 transition-colors hover:text-green-600"
@@ -104,4 +104,5 @@
   </footer>
 </template>
 <script setup lang="ts">
+import { APP_CONFIG } from '~/config/constants'
 </script>

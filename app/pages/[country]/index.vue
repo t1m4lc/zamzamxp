@@ -163,7 +163,7 @@
               variant="outline"
               class="rounded-lg border-2 border-slate-300 px-8 py-3 text-base font-medium text-slate-700 hover:bg-slate-50 hover:border-slate-400 transition-all"
             >
-              <a href="https://wa.me/1234567890" target="_blank" rel="noopener">
+              <a :href="`https://wa.me/${APP_CONFIG.company.whatsapp}`" target="_blank" rel="noopener">
                 WhatsApp
               </a>
             </Button>
@@ -221,6 +221,8 @@ const countryData: Record<string, any> = {
     }
   }
 }
+
+import { APP_CONFIG } from '~/config/constants'
 
 const data = countryData[country] || countryData.nepal
 const countryName = data.name

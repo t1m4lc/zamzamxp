@@ -187,6 +187,7 @@
 
 <script setup lang="ts">
 import { Button } from '~/components/ui/button'
+import { APP_CONFIG } from '~/config/constants'
 
 const { extractCountriesFromExperiences } = useExperiences()
 

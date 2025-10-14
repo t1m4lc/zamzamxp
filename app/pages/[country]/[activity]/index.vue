@@ -127,9 +127,10 @@
 </template>
 
 <script setup lang="ts">
+import { Button } from '~/components/ui/button'
 import { Card } from '~/components/ui/card'
 import { Badge } from '~/components/ui/badge'
-import { Button } from '~/components/ui/button'
+import { APP_CONFIG } from '~/config/constants'
 import { 
   Empty, 
   EmptyContent, 
@@ -179,10 +180,9 @@ const getActivityIcon = (activityType: string) => {
 
 // Fetch experiences dynamically from content
 const { data: experiencesData } = await useAsyncData(`${country}-${activity}-experiences`, async () => {
-  const experiences = await queryCollection('content').all()
-  return experiences.filter((item: any) => 
-    item.path?.includes(`/${country}/${activity}/`)
-  )
+  return await queryCollection('content')
+    .where('path', 'LIKE', `/${country}/${activity}/%`)
+    .all()
 })
 
 const experiences = computed(() => {

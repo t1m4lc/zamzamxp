@@ -517,11 +517,9 @@ const { country, activity, slug } = route.params
 // First try to load from content
 const { data: contentData } = await useAsyncData(`experience-${country}-${activity}-${slug}`, async () => {
   try {
-    const experiences = await queryCollection('content').all()
-    const content = experiences.find((item: any) => 
-      item.path === `/${country}/${activity}/${slug}`
-    )
-    return content || null
+    return await queryCollection('content')
+      .path(`/${country}/${activity}/${slug}`)
+      .first()
   } catch (error) {
     return null
   }

@@ -1,9 +1,9 @@
 // Application Constants
 export const APP_CONFIG = {
   company: {
-    name: "ZamZam XP",
+    name: "Zamzam Experience",
     email: "hello@zamzamxp.com",
-    whatsapp: "+33-0767503066",
+    whatsapp: "+33767503066",
   },
 
   smtp: {

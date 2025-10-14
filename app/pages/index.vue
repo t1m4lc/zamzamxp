@@ -278,6 +278,7 @@ import { Card } from '~/components/ui/card'
 import Globe from '~/components/ui/globe/Globe.vue'
 import { Marquee } from '~/components/ui/marquee'
 import { NumberTicker } from '~/components/ui/number-ticker'
+import { APP_CONFIG } from '~/config/constants'
 
 useSeoMeta({
   title: 'Zamzam Experience - Adventure Travel with Fair Prices & Local Guides',
@@ -335,7 +336,9 @@ const secondRowReviews = [
 // Count activities and countries dynamically from content
 const { data: activities } = await useAsyncData('activities-count', async () => {
   try {
-    return await queryCollection('content').all()
+    const allContent = await queryCollection('content').all()
+    // Transform path to _path for compatibility
+    return allContent.map((item: any) => ({ ...item, _path: item.path }))
   } catch (error) {
     console.error('Error loading activities:', error)
     return []
