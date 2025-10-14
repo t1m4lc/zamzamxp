@@ -1,6 +1,8 @@
 ---
 title: "Tsum Valley & Manaslu Circuit Trek"
 description: "Epic 18-day journey combining the sacred Tsum Valley with the Manaslu Circuit. Experience ancient monasteries, Tibetan culture, and cross Larkya La Pass at 5,106m."
+country: "nepal"
+activity: "trekking"
 price: 590
 duration: "18 Days"
 difficulty: "Challenging"

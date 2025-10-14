@@ -1,11 +1,13 @@
 ---
 title: "Sidi Kaouki Beginner Surf Camp"
 description: "Perfect for first-time surfers. Learn the basics on gentle waves near Essaouira with experienced instructors in Morocco's hidden surf gem."
+country: "morocco"
+activity: "surfing"
 price: 549
 duration: "7 Days"
 difficulty: "Easy"
 groupSize: "4-8 people"
-image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&auto=format&fit=crop&q=80"
+image: "/images/morocco-surfing.jpg"
 gallery:
   - "/images/sidi-kaouki-1.jpg"
   - "/images/sidi-kaouki-2.jpg"

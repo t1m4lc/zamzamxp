@@ -1,6 +1,8 @@
 ---
 title: "Everest Base Camp with Gokyo Lakes & Cho La Pass"
 description: "Ultimate 14-day Everest region adventure combining EBC trek with Gokyo Lakes and challenging Cho La Pass crossing. Experience the complete Khumbu region."
+country: "nepal"
+activity: "trekking"
 price: 1299
 duration: "14 Days"
 difficulty: "Very Challenging"

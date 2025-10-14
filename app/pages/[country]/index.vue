@@ -106,36 +106,6 @@
       </div>
     </section>
 
-    <!-- Featured Experiences -->
-    <section class="py-20 lg:py-24 bg-slate-50" v-if="featuredExperiences && featuredExperiences.length > 0">
-      <div class="container mx-auto px-6">
-        <div class="mb-12">
-          <h2 class="text-3xl font-semibold text-slate-900 mb-3">
-            Featured experiences
-          </h2>
-        </div>
-
-        <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          <ExperienceCard
-            v-for="(experience, index) in featuredExperiences"
-            :key="experience.slug || index"
-            :experience="{
-              title: experience.title || '',
-              description: experience.description || '',
-              price: experience.price || 0,
-              duration: experience.duration || '',
-              difficulty: experience.difficulty || '',
-              groupSize: experience.groupSize || '',
-              image: experience.image || '',
-              country: country,
-              activity: experience._path?.split('/')[2] || '',
-              slug: experience.slug || ''
-            }"
-          />
-        </div>
-      </div>
-    </section>
-
     <!-- CTA Section -->
     <section class="py-20 lg:py-24">
       <div class="container mx-auto px-6">
@@ -189,9 +159,7 @@ const route = useRoute()
 const country = route.params.country as string
 
 const { 
-  extractActivitiesFromExperiences,
-  extractSlug,
-  extractActivity 
+  extractSlug
 } = useExperiences()
 
 // Country-specific static data (keep for images and descriptions)
@@ -232,13 +200,13 @@ const heroImage = data.heroImage
 // Fetch activities dynamically from content
 const { data: activityList } = await useAsyncData(`${country}-activities`, async () => {
   try {
-    // Query all experiences for this country
-    const experiences = await queryCollection('content').all()
-    // Note: queryCollection returns items with 'path' property in format: "nepal/trekking/annapurna-circuit"
-    const countryExperiences = experiences.filter((item: any) => 
-      item.path?.startsWith(`${country}/`)
-    )
-    return extractActivitiesFromExperiences(countryExperiences.map((exp: any) => ({ ...exp, _path: exp.path })))
+    // Query all experiences for this country using metadata
+    const allExperiences = await queryCollection('content').all()
+    const experiences = allExperiences.filter((exp: any) => exp.country === country)
+    
+    // Extract unique activities from the experiences
+    const activities = [...new Set(experiences.map((exp: any) => exp.activity))].filter(Boolean)
+    return activities
   } catch (error) {
     console.error('Error fetching activities:', error)
     return []
@@ -255,33 +223,6 @@ const activities = computed(() => {
     link: `/${country}/${activity}`,
     image: data.activityImages?.[activity] || '/images/default-activity.jpg',
     color: activity === 'trekking' ? 'orange' as const : 'sky' as const
-  }))
-})
-
-// Fetch featured experiences dynamically from content
-const { data: experiencesData } = await useAsyncData(`${country}-experiences`, async () => {
-  const experiences = await queryCollection('content').all()
-  // Filter by country - path format is "nepal/trekking/annapurna-circuit"
-  return experiences.filter((item: any) => 
-    item.path?.startsWith(`${country}/`)
-  )
-})
-
-const featuredExperiences = computed(() => {
-  if (!experiencesData.value) return []
-  
-  // Take first 3 experiences as featured
-  return experiencesData.value.slice(0, 3).map((exp: any) => ({
-    title: exp.title,
-    description: exp.description,
-    price: exp.price,
-    duration: exp.duration,
-    difficulty: exp.difficulty,
-    groupSize: exp.groupSize,
-    image: exp.image,
-    country: country,
-    activity: extractActivity(exp.path),
-    slug: extractSlug(exp.path)
   }))
 })
 

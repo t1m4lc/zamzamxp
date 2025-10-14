@@ -1,6 +1,8 @@
 ---
 title: "Pokhara Tandem Paragliding"
 description: "Soar like a bird above Phewa Lake with the Annapurna range as your backdrop. Experience Nepal's adventure capital from the sky."
+country: "nepal"
+activity: "paragliding"
 price: 55
 duration: "20-60 minutes"
 difficulty: "Easy"

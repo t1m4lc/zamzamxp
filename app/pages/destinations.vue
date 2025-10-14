@@ -2,11 +2,11 @@
   <div>
     <!-- Hero Section -->
     <section class="relative py-24 lg:py-32 overflow-hidden">
-      <div class="absolute inset-0 bg-gradient-to-br from-[#FF6B35]/10 to-[#F7931E]/10"></div>
+      <div class="absolute inset-0 bg-gradient-to-br from-[#FF6B35]/5 to-[#F7931E]/5"></div>
       <div class="container mx-auto px-6 relative">
         <div class="text-center max-w-3xl mx-auto">
           <h1 class="text-4xl font-semibold leading-tight text-slate-900 lg:text-5xl mb-6">
-            Explore Our Destinations
+            Explore our destinations
           </h1>
           <p class="text-xl text-slate-600 mb-8">
             Discover breathtaking adventures in carefully selected destinations around the world
@@ -107,7 +107,7 @@
       <div class="container mx-auto px-6">
         <div class="max-w-3xl mx-auto text-center mb-12">
           <h2 class="text-3xl font-semibold text-slate-900 mb-4">
-            Why Choose Our Destinations
+            Why choose our destinations
           </h2>
           <p class="text-lg text-slate-600">
             We carefully select each destination based on unique experiences, safety, and authentic cultural connections
@@ -153,7 +153,7 @@
       <div class="container mx-auto px-6">
         <div class="max-w-2xl mx-auto text-center">
           <h2 class="text-3xl font-semibold text-slate-900 mb-4">
-            Ready to Start Your Adventure?
+            Ready to start your adventure?
           </h2>
           <p class="text-lg text-slate-600 mb-8">
             Contact our travel specialists to plan your perfect adventure in any of our amazing destinations.
@@ -187,25 +187,24 @@
 
 <script setup lang="ts">
 import { Button } from '~/components/ui/button'
-import { APP_CONFIG } from '~/config/constants'
 
-const { extractCountriesFromExperiences } = useExperiences()
+// No need for extractCountriesFromExperiences anymore, using frontmatter fields
 
 // Fetch all content to get countries dynamically
 const { data: allContent } = await useAsyncData('all-content', async () => {
-  return await queryCollection('content').all()
+  return await queryCollection('activities').all()
 })
 
 // Extract countries and count experiences per country
 const countriesData = computed(() => {
   if (!allContent.value) return []
   
-  const countries = extractCountriesFromExperiences(allContent.value.map((exp: any) => ({ ...exp, _path: exp.path })))
+  const content = allContent.value as any[]
+  // Extract unique countries from meta field
+  const countries = [...new Set(content.map((exp: any) => exp.meta?.country))].filter(Boolean)
   
   return countries.map(country => {
-    const count = allContent.value.filter((item: any) => 
-      item.path?.includes(`/${country}/`)
-    ).length
+    const count = content.filter((item: any) => item.meta?.country === country).length
     
     return {
       slug: country,

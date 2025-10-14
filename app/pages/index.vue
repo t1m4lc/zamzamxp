@@ -200,7 +200,7 @@
       <div class="container mx-auto px-6">
         <div class="text-center mb-12">
           <h2 class="text-3xl font-semibold text-slate-900 mb-3">
-            Explore Our Destinations
+            Explore our destinations
           </h2>
           <p class="text-lg text-slate-600">
             Discover amazing adventures in breathtaking locations around the world

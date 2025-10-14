@@ -1,11 +1,9 @@
 <template>
-  <div class="overflow-x-hidden">
     <NuxtLoadingIndicator color="#FF6B35" />
     <Header />
     <NuxtPage />
     <Footer />
     <WhatsAppBubble />
-  </div>
 </template>
 
 <script setup lang="ts">

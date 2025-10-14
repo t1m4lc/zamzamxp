@@ -6,7 +6,7 @@
       <div class="container mx-auto px-4 relative">
         <div class="mx-auto max-w-4xl text-center">
           <h1 class="mb-6 text-5xl font-semibold text-slate-900 lg:text-6xl">
-            Who We Are
+            Who we are
           </h1>
           <p class="text-xl leading-relaxed text-slate-600 lg:text-2xl">
             Connecting travelers with passionate local guides for authentic adventures around the world.
@@ -121,7 +121,7 @@
       <div class="container mx-auto px-4">
         <div class="mx-auto max-w-4xl text-center">
           <h2 class="mb-6 text-3xl font-semibold text-slate-900">
-            Our Local Partners
+            Our local partners
           </h2>
           <p class="mb-12 text-lg leading-relaxed text-slate-600">
             We work exclusively with passionate local guides, family-run accommodations, and small businesses. When you travel with us, you're directly supporting the people who call these places home.
@@ -159,7 +159,7 @@
         <div class="mx-auto max-w-4xl">
           <div class="mb-16 text-center">
             <h2 class="mb-4 text-3xl font-semibold text-slate-900">
-              Our Commitment to Fair Tourism
+              Our commitment to fair tourism
             </h2>
             <p class="text-lg text-slate-600">
               Tourism should benefit everyone, especially local communities

@@ -7,7 +7,7 @@
           <Icon name="mdi:compass-off-outline" class="h-24 w-24 text-slate-300 mx-auto" />
         </div>
         <h1 class="text-4xl font-black text-slate-900 mb-4">
-          Experience Not Found
+          Experience not found
         </h1>
         <p class="text-lg text-slate-600 mb-8">
           We couldn't find the experience you're looking for. It may have been moved or doesn't exist yet.
@@ -513,14 +513,25 @@ interface ExperienceDetail {
 
 const route = useRoute()
 const { country, activity, slug } = route.params
+const { extractSlug } = useExperiences()
 
 // First try to load from content
 const { data: contentData } = await useAsyncData(`experience-${country}-${activity}-${slug}`, async () => {
   try {
-    return await queryCollection('content')
-      .path(`/${country}/${activity}/${slug}`)
-      .first()
+    // Query all content and find by slug, country and activity
+    const allContent = await queryCollection('content').all()
+    
+    // Find the matching content by comparing extracted slug, country and activity
+    const found = allContent.find((item: any) => {
+      const itemSlug = extractSlug(item.path || '')
+      return itemSlug === String(slug) && 
+             item.country === String(country) && 
+             item.activity === String(activity)
+    })
+    
+    return found || null
   } catch (error) {
+    console.error('Error loading experience:', error)
     return null
   }
 })
@@ -565,8 +576,6 @@ const parsedItinerary = computed(() => {
 })
 
 // Get related activities dynamically from content
-const { extractSlug, extractActivity, extractCountry } = useExperiences()
-
 const { data: relatedExps } = await useAsyncData(`related-${country}-${slug}`, async () => {
   try {
     const allExp = await queryCollection('content').all()
@@ -576,20 +585,20 @@ const { data: relatedExps } = await useAsyncData(`related-${country}-${slug}`, a
     
     // Prioritize: same activity, same country first
     const sameActivity = otherExperiences.filter((exp: any) => 
-      extractActivity(exp.path) === String(activity) && 
-      extractCountry(exp.path) === String(country)
+      exp.activity === String(activity) && 
+      exp.country === String(country)
     )
     
     // Then: other activities in same country
     const sameCountry = otherExperiences.filter((exp: any) => 
-      extractCountry(exp.path) === String(country) && 
-      extractActivity(exp.path) !== String(activity)
+      exp.country === String(country) && 
+      exp.activity !== String(activity)
     )
     
     // Finally: same activity in other countries
     const sameActivityOtherCountry = otherExperiences.filter((exp: any) => 
-      extractActivity(exp.path) === String(activity) && 
-      extractCountry(exp.path) !== String(country)
+      exp.activity === String(activity) && 
+      exp.country !== String(country)
     )
     
     // Combine and limit to 3
@@ -603,8 +612,8 @@ const { data: relatedExps } = await useAsyncData(`related-${country}-${slug}`, a
       difficulty: exp.difficulty,
       groupSize: exp.groupSize,
       image: exp.image,
-      country: extractCountry(exp.path) || '',
-      activity: extractActivity(exp.path) || '',
+      country: exp.country || '',
+      activity: exp.activity || '',
       slug: extractSlug(exp.path) || ''
     }))
   } catch (error) {
