@@ -38,11 +38,10 @@
                   Experience world-class trekking and paragliding adventures in the Himalayas with stunning mountain views.
                 </p>
                 <div class="flex flex-wrap gap-2 mb-4">
-                  <span class="px-3 py-1 bg-slate-100 text-slate-700 text-sm rounded-full">Trekking</span>
-                  <span class="px-3 py-1 bg-slate-100 text-slate-700 text-sm rounded-full">Paragliding</span>
+                  <span v-for="activity in nepalData.activities" :key="activity" class="px-3 py-1 bg-slate-100 text-slate-700 text-sm rounded-full">{{ activity }}</span>
                 </div>
                 <div class="flex items-center justify-between">
-                  <span class="text-slate-500 text-sm">{{ nepalCount }} experiences</span>
+                  <span class="text-slate-500 text-sm">{{ nepalData.count }} experiences</span>
                   <span class="text-slate-900 font-medium group-hover:translate-x-1 transition-transform">Explore →</span>
                 </div>
               </div>
@@ -68,11 +67,10 @@
                   Discover Atlantic coast surfing combined with rich Moroccan culture in charming coastal towns.
                 </p>
                 <div class="flex flex-wrap gap-2 mb-4">
-                  <span class="px-3 py-1 bg-slate-100 text-slate-700 text-sm rounded-full">Surfing</span>
-                  <span class="px-3 py-1 bg-slate-100 text-slate-700 text-sm rounded-full">Culture</span>
+                  <span v-for="activity in moroccoData.activities" :key="activity" class="px-3 py-1 bg-slate-100 text-slate-700 text-sm rounded-full">{{ activity }}</span>
                 </div>
                 <div class="flex items-center justify-between">
-                  <span class="text-slate-500 text-sm">{{ moroccoCount }} experiences</span>
+                  <span class="text-slate-500 text-sm">{{ moroccoData.count }} experiences</span>
                   <span class="text-slate-900 font-medium group-hover:translate-x-1 transition-transform">Explore →</span>
                 </div>
               </div>
@@ -188,11 +186,9 @@
 <script setup lang="ts">
 import { Button } from '~/components/ui/button'
 
-// No need for extractCountriesFromExperiences anymore, using frontmatter fields
-
 // Fetch all content to get countries dynamically
 const { data: allContent } = await useAsyncData('all-content', async () => {
-  return await queryCollection('activities').all()
+  return await queryCollection('content').all()
 })
 
 // Extract countries and count experiences per country
@@ -200,26 +196,31 @@ const countriesData = computed(() => {
   if (!allContent.value) return []
   
   const content = allContent.value as any[]
-  // Extract unique countries from meta field
-  const countries = [...new Set(content.map((exp: any) => exp.meta?.country))].filter(Boolean)
+  // Extract unique countries
+  const countries = [...new Set(content.map((exp: any) => exp.country))].filter(Boolean)
   
   return countries.map(country => {
-    const count = content.filter((item: any) => item.meta?.country === country).length
+    const countryExperiences = content.filter((item: any) => item.country === country)
+    const count = countryExperiences.length
+    
+    // Extract unique activities for this country
+    const activities = [...new Set(countryExperiences.map((exp: any) => exp.activity))].filter(Boolean)
     
     return {
       slug: country,
       name: country.charAt(0).toUpperCase() + country.slice(1),
-      count
+      count,
+      activities: activities.map(act => act.charAt(0).toUpperCase() + act.slice(1))
     }
   })
 })
 
 // Quick accessors for existing country cards
-const nepalCount = computed(() => 
-  countriesData.value.find(c => c.slug === 'nepal')?.count || 0
+const nepalData = computed(() => 
+  countriesData.value.find(c => c.slug === 'nepal') || { count: 0, activities: [] }
 )
-const moroccoCount = computed(() => 
-  countriesData.value.find(c => c.slug === 'morocco')?.count || 0
+const moroccoData = computed(() => 
+  countriesData.value.find(c => c.slug === 'morocco') || { count: 0, activities: [] }
 )
 
 useSeoMeta({

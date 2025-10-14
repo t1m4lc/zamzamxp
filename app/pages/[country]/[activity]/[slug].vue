@@ -228,7 +228,7 @@
             </div>
 
             <!-- Content Body -->
-            <div v-if="contentData?.body" class="prose prose-lg prose-slate max-w-none prose-headings:font-black prose-headings:text-slate-900 prose-h2:text-3xl prose-h3:text-2xl prose-p:text-slate-700 prose-p:leading-relaxed prose-strong:text-slate-900 prose-strong:font-bold prose-ul:text-slate-700 prose-li:text-slate-700">
+            <div v-if="contentData?.body" class="prose prose-slate max-w-none prose-headings:font-black prose-headings:text-slate-900 prose-h2:text-3xl prose-h3:text-2xl prose-p:text-slate-700 prose-p:leading-relaxed prose-strong:text-slate-900 prose-strong:font-bold prose-ul:text-slate-700 prose-li:text-slate-700">
               <ContentRenderer :value="contentData" />
             </div>
           </div>

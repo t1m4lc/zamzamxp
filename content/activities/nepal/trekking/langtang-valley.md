@@ -1,10 +1,10 @@
 ---
-title: "Langtang Valley Trek - 7 Days"
+title: "Langtang Valley Trek"
 description: "Perfect 7-day trek through Langtang National Park. Ideal for those with limited time seeking Himalayan vistas, cultural immersion with rhododendron forests, Tamang villages, and panoramic views of Langtang Lirung (7,246m)."
 country: "nepal"
 activity: "trekking"
 price: 190
-duration: "7 Days / 6 Nights"
+duration: "7 Days"
 difficulty: "Moderate"
 groupSize: "2-10 people"
 image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&auto=format&fit=crop&q=80"
@@ -40,7 +40,7 @@ minElevation: "1,400m"
 maxElevation: "4,773m (Kyanjin Ri)"
 ---
 
-# Langtang Valley Trek - 7 Days
+# Langtang Valley Trek
 
 The Langtang Valley Trek is a moderate trek in Nepal, ideal for those with limited time but seeking Himalayan vistas, cultural immersion, and diverse landscapes. It features rhododendron forests, Tamang villages, glaciers, and panoramic views of peaks like Langtang Lirung (7,246m) and Kyanjin Ri (4,773m).
 
