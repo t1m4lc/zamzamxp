@@ -42,7 +42,7 @@
                   <span class="px-3 py-1 bg-slate-100 text-slate-700 text-sm rounded-full">Paragliding</span>
                 </div>
                 <div class="flex items-center justify-between">
-                  <span class="text-slate-500 text-sm">6 experiences</span>
+                  <span class="text-slate-500 text-sm">{{ nepalCount }} experiences</span>
                   <span class="text-slate-900 font-medium group-hover:translate-x-1 transition-transform">Explore →</span>
                 </div>
               </div>
@@ -72,7 +72,7 @@
                   <span class="px-3 py-1 bg-slate-100 text-slate-700 text-sm rounded-full">Culture</span>
                 </div>
                 <div class="flex items-center justify-between">
-                  <span class="text-slate-500 text-sm">4 experiences</span>
+                  <span class="text-slate-500 text-sm">{{ moroccoCount }} experiences</span>
                   <span class="text-slate-900 font-medium group-hover:translate-x-1 transition-transform">Explore →</span>
                 </div>
               </div>
@@ -90,7 +90,7 @@
             </div>
             <div class="p-6">
               <p class="text-slate-500 mb-4">
-                We're constantly adding new exciting destinations. Stay tuned for more adventures!
+                We're constantly adding new exciting experiences. Stay tuned for more adventures!
               </p>
               <div class="flex items-center justify-between">
                 <span class="text-slate-400 text-sm">Expanding soon</span>
@@ -187,6 +187,40 @@
 
 <script setup lang="ts">
 import { Button } from '~/components/ui/button'
+
+const { extractCountriesFromExperiences } = useExperiences()
+
+// Fetch all content to get countries dynamically
+const { data: allContent } = await useAsyncData('all-content', async () => {
+  return await queryCollection('content').all()
+})
+
+// Extract countries and count experiences per country
+const countriesData = computed(() => {
+  if (!allContent.value) return []
+  
+  const countries = extractCountriesFromExperiences(allContent.value.map((exp: any) => ({ ...exp, _path: exp.path })))
+  
+  return countries.map(country => {
+    const count = allContent.value.filter((item: any) => 
+      item.path?.includes(`/${country}/`)
+    ).length
+    
+    return {
+      slug: country,
+      name: country.charAt(0).toUpperCase() + country.slice(1),
+      count
+    }
+  })
+})
+
+// Quick accessors for existing country cards
+const nepalCount = computed(() => 
+  countriesData.value.find(c => c.slug === 'nepal')?.count || 0
+)
+const moroccoCount = computed(() => 
+  countriesData.value.find(c => c.slug === 'morocco')?.count || 0
+)
 
 useSeoMeta({
   title: 'Our Destinations - ZamZam Experience',

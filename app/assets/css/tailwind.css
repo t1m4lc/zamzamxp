@@ -1,7 +1,18 @@
 @import "tailwindcss";
 @import "tw-animate-css";
+@plugin "@tailwindcss/typography";
 
 @custom-variant dark (&:is(.dark *));
+
+@theme {
+  /* Custom prose colors and styles */
+  --color-prose-body: oklch(0.4 0 0);
+  --color-prose-headings: oklch(0.145 0 0);
+  --color-prose-links: oklch(0.62 0.19 30.51);
+  --color-prose-bold: oklch(0.145 0 0);
+  --color-prose-code: oklch(0.205 0 0);
+  --color-prose-quotes: oklch(0.4 0 0);
+}
 
 @theme inline {
   --radius-sm: calc(var(--radius) - 4px);

@@ -5,7 +5,7 @@
       <NuxtLink to="/" class="flex items-center space-x-2 transition-opacity hover:opacity-80">
         <span class="text-2xl font-semibold text-slate-900">Zamzam
 
-          <FlipWords :words="['experience', 'adventure', 'tours']" :duration="5000" class="text-sm font-mono text-slate-700" />
+          <FlipWords :words="['experience', 'adventure', 'tours', 'traveling']" :duration="5000" class="text-sm font-mono text-slate-700" />
         </span>
 
       </NuxtLink>

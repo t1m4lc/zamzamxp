@@ -60,10 +60,19 @@
             </div>
 
             <!-- Empty State -->
-            <div v-else class="py-20 text-center">
-              <h3 class="mb-2 text-xl font-semibold text-slate-900">No experiences available</h3>
-              <p class="text-slate-600">Check back soon for new adventures!</p>
-            </div>
+            <Empty v-else class="py-12">
+              <EmptyMedia>
+                <Icon :name="getActivityIcon(activity)" class="h-16 w-16 text-slate-400" />
+              </EmptyMedia>
+              <EmptyContent>
+                <EmptyHeader>
+                  <EmptyTitle>No Experiences Yet</EmptyTitle>
+                  <EmptyDescription>
+                    We're currently adding {{ activity }} experiences in {{ countryName }}. Check back soon for exciting new adventures!
+                  </EmptyDescription>
+                </EmptyHeader>
+              </EmptyContent>
+            </Empty>
           </div>
 
           <!-- Sidebar CTA -->
@@ -121,22 +130,22 @@
 import { Card } from '~/components/ui/card'
 import { Badge } from '~/components/ui/badge'
 import { Button } from '~/components/ui/button'
-
-interface ContentItem {
-  title?: string
-  description?: string
-  price?: number
-  duration?: string
-  difficulty?: string
-  groupSize?: string
-  image?: string
-  _path?: string
-  slug?: string
-}
+import { 
+  Empty, 
+  EmptyContent, 
+  EmptyDescription, 
+  EmptyHeader, 
+  EmptyMedia, 
+  EmptyTitle 
+} from '~/components/ui/empty'
 
 const route = useRoute()
 const country = route.params.country as string
 const activity = route.params.activity as string
+
+const { 
+  extractSlug 
+} = useExperiences()
 
 // Activity-specific data
 const activityData: Record<string, any> = {
@@ -156,135 +165,42 @@ const activityDescription = data.description
 
 const countryName = country.charAt(0).toUpperCase() + country.slice(1)
 
-// Mock data for experiences (to be replaced with proper content system)
-const getExperiences = (country: string, activity: string): ContentItem[] => {
-  const experienceData: Record<string, Record<string, ContentItem[]>> = {
-    nepal: {
-      trekking: [
-        {
-          title: "Everest Base Camp Trek",
-          description: "Experience the world's most iconic trek. Journey through Sherpa villages, ancient monasteries, and breathtaking Himalayan landscapes to reach the foot of Mount Everest.",
-          price: 1299,
-          duration: "12 Days",
-          difficulty: "Challenging",
-          groupSize: "6-12 people",
-          image: "https://images.unsplash.com/photo-1544735716-392fe2489ffa?w=800&auto=format&fit=crop&q=80",
-          _path: "/nepal/trekking/everest-base-camp",
-          slug: "everest-base-camp"
-        },
-        {
-          title: "Annapurna Circuit Trek - Thorong La Pass",
-          description: "Epic 16-day trek around the Annapurna massif, crossing the legendary Thorong La Pass at 5,416m with diverse landscapes and cultures.",
-          price: 899,
-          duration: "16 Days",
-          difficulty: "Challenging",
-          groupSize: "6-12 people",
-          image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&auto=format&fit=crop&q=80",
-          _path: "/nepal/trekking/annapurna-circuit",
-          slug: "annapurna-circuit"
-        },
-        {
-          title: "Langtang Valley Trek - 7 Days",
-          description: "Perfect 7-day trek through Langtang National Park. Ideal for those with limited time seeking Himalayan vistas and Tamang culture.",
-          price: 190,
-          duration: "7 Days",
-          difficulty: "Moderate",
-          groupSize: "2-10 people",
-          image: "https://images.unsplash.com/photo-1486022662195-42e47e8a6cc3?w=800&auto=format&fit=crop&q=80",
-          _path: "/nepal/trekking/langtang-valley",
-          slug: "langtang-valley"
-        },
-        {
-          title: "Manaslu Circuit Trek - 12 Days",
-          description: "Epic 12-day trek around Mount Manaslu (8,163m). Cross the spectacular Larkya La Pass (5,106m) through pristine wilderness and Tibetan villages.",
-          price: 0,
-          duration: "12 Days",
-          difficulty: "Challenging",
-          groupSize: "2-10 people",
-          image: "https://images.unsplash.com/photo-1544735716-392fe2489ffa?w=800&auto=format&fit=crop&q=80",
-          _path: "/nepal/trekking/manaslu-circuit",
-          slug: "manaslu-circuit"
-        },
-        {
-          title: "Tsum Valley & Manaslu Trek",
-          description: "Sacred hidden valley trek combined with Manaslu Circuit. Experience authentic Tibetan culture and pristine mountain landscapes.",
-          price: 0,
-          duration: "18 Days",
-          difficulty: "Challenging",
-          groupSize: "2-10 people",
-          image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&auto=format&fit=crop&q=80",
-          _path: "/nepal/trekking/tsum-valley-manaslu",
-          slug: "tsum-valley-manaslu"
-        }
-      ],
-      paragliding: [
-        {
-          title: "Everest Tandem Paragliding",
-          description: "Soar above the Himalayas with experienced pilots and witness Mount Everest from the sky.",
-          price: 299,
-          duration: "1 Day",
-          difficulty: "Easy",
-          groupSize: "2-4 people",
-          image: "https://images.unsplash.com/photo-1540979388789-6cee28a1cdc9?w=800&auto=format&fit=crop&q=80",
-          _path: "/nepal/paragliding/everest-tandem",
-          slug: "everest-tandem"
-        },
-        {
-          title: "Pokhara Tandem Paragliding",
-          description: "Experience the thrill of paragliding over Pokhara with views of the Annapurna range.",
-          price: 149,
-          duration: "1 Day",
-          difficulty: "Easy",
-          groupSize: "2-6 people",
-          image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&auto=format&fit=crop&q=80",
-          _path: "/nepal/paragliding/pokhara-tandem",
-          slug: "pokhara-tandem"
-        }
-      ]
-    },
-    morocco: {
-      surfing: [
-        {
-          title: "Taghazout Beginner Surf Camp",
-          description: "Perfect for first-time surfers. Learn the basics on gentle waves with experienced instructors in Morocco's surf capital.",
-          price: 599,
-          duration: "7 Days",
-          difficulty: "Easy",
-          groupSize: "6-10 people",
-          image: "https://images.unsplash.com/photo-1502680390469-be75c86b636f?w=800&auto=format&fit=crop&q=80",
-          _path: "/morocco/surfing/taghazout-beginner",
-          slug: "taghazout-beginner"
-        },
-        {
-          title: "Taghazout Intermediate Surf Camp",
-          description: "Take your surfing to the next level with advanced techniques and bigger waves.",
-          price: 699,
-          duration: "7 Days",
-          difficulty: "Intermediate",
-          groupSize: "6-8 people",
-          image: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=800&auto=format&fit=crop&q=80",
-          _path: "/morocco/surfing/taghazout-intermediate",
-          slug: "taghazout-intermediate"
-        },
-        {
-          title: "Essaouira Culture & Surf",
-          description: "Combine surfing lessons with cultural exploration in the historic coastal city of Essaouira.",
-          price: 549,
-          duration: "5 Days",
-          difficulty: "Easy",
-          groupSize: "4-8 people",
-          image: "https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=800&auto=format&fit=crop&q=80",
-          _path: "/morocco/surfing/essaouira-culture",
-          slug: "essaouira-culture"
-        }
-      ]
-    }
+// Helper function to get icon based on activity
+const getActivityIcon = (activityType: string) => {
+  const icons: Record<string, string> = {
+    trekking: 'mdi:hiking',
+    paragliding: 'mdi:paragliding',
+    surfing: 'mdi:surfing',
+    climbing: 'mdi:climbing',
+    skiing: 'mdi:ski'
   }
-  
-  return experienceData[country]?.[activity] || []
+  return icons[activityType] || 'mdi:map-marker-path'
 }
 
-const experiences = ref<ContentItem[]>(getExperiences(country, activity))
+// Fetch experiences dynamically from content
+const { data: experiencesData } = await useAsyncData(`${country}-${activity}-experiences`, async () => {
+  const experiences = await queryCollection('content').all()
+  return experiences.filter((item: any) => 
+    item.path?.includes(`/${country}/${activity}/`)
+  )
+})
+
+const experiences = computed(() => {
+  if (!experiencesData.value) return []
+  
+  return experiencesData.value.map((exp: any) => ({
+    title: exp.title,
+    description: exp.description,
+    price: exp.price,
+    duration: exp.duration,
+    difficulty: exp.difficulty,
+    groupSize: exp.groupSize,
+    image: exp.image,
+    country: country,
+    activity: activity,
+    slug: extractSlug(exp.path)
+  }))
+})
 
 useSeoMeta({
   title: `${activity.charAt(0).toUpperCase() + activity.slice(1)} in ${countryName}`,

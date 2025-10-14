@@ -48,13 +48,27 @@
           </h2>
         </div>
 
-        <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <div v-if="activities && activities.length > 0" class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           <ActivityCard
             v-for="activity in activities"
             :key="activity.title"
             :activity="activity"
           />
         </div>
+
+        <Empty v-else class="py-12">
+          <EmptyMedia>
+            <Icon name="mdi:hiking" class="h-16 w-16 text-slate-400" />
+          </EmptyMedia>
+          <EmptyContent>
+            <EmptyHeader>
+              <EmptyTitle>No Activities Available</EmptyTitle>
+              <EmptyDescription>
+                We're working on adding exciting activities for {{ countryName }}. Check back soon for new adventures!
+              </EmptyDescription>
+            </EmptyHeader>
+          </EmptyContent>
+        </Empty>
       </div>
     </section>
 
@@ -161,60 +175,50 @@
 </template>
 
 <script setup lang="ts">
-import { Card } from '~/components/ui/card'
 import { Button } from '~/components/ui/button'
-
-interface ContentItem {
-  title?: string
-  description?: string
-  price?: number
-  duration?: string
-  difficulty?: string
-  groupSize?: string
-  image?: string
-  _path?: string
-  slug?: string
-}
+import { 
+  Empty, 
+  EmptyContent, 
+  EmptyDescription, 
+  EmptyHeader, 
+  EmptyMedia, 
+  EmptyTitle 
+} from '~/components/ui/empty'
 
 const route = useRoute()
 const country = route.params.country as string
 
-// Country-specific data
+const { 
+  extractActivitiesFromExperiences,
+  extractSlug,
+  extractActivity 
+} = useExperiences()
+
+// Country-specific static data (keep for images and descriptions)
 const countryData: Record<string, any> = {
   nepal: {
     name: 'Nepal',
     description: 'Experience world-class trekking and paragliding adventures in the Himalayas.',
     heroImage: 'https://images.unsplash.com/photo-1544735716-392fe2489ffa?w=1920&auto=format&fit=crop&q=80',
-    activities: [
-      {
-        title: 'Trekking',
-        description: 'Multi-day treks through the Himalayas with stunning mountain views',
-        link: '/nepal/trekking',
-        image: '/images/nepal-trekking.jpg',
-        color: 'orange' as const
-      },
-      {
-        title: 'Paragliding',
-        description: 'Soar above valleys with the Annapurna range as your backdrop',
-        link: '/nepal/paragliding',
-        image: '/images/nepal-paragliding.jpg',
-        color: 'sky' as const
-      }
-    ]
+    activityDescriptions: {
+      trekking: 'Multi-day treks through the Himalayas with stunning mountain views',
+      paragliding: 'Soar above valleys with the Annapurna range as your backdrop'
+    },
+    activityImages: {
+      trekking: '/images/nepal-trekking.jpg',
+      paragliding: '/images/nepal-paragliding.jpg'
+    }
   },
   morocco: {
     name: 'Morocco',
     description: 'Discover Atlantic coast surfing combined with rich Moroccan culture.',
     heroImage: 'https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?w=1920&auto=format&fit=crop&q=80',
-    activities: [
-      {
-        title: 'Surfing',
-        description: 'Learn to surf or improve your skills on Morocco\'s perfect waves',
-        link: '/morocco/surfing',
-        image: '/images/morocco-surfing.jpg',
-        color: 'sky' as const
-      }
-    ]
+    activityDescriptions: {
+      surfing: 'Learn to surf or improve your skills on Morocco\'s perfect waves'
+    },
+    activityImages: {
+      surfing: '/images/morocco-surfing.jpg'
+    }
   }
 }
 
@@ -222,87 +226,61 @@ const data = countryData[country] || countryData.nepal
 const countryName = data.name
 const countryDescription = data.description
 const heroImage = data.heroImage
-const activities = data.activities
 
-// Mock data for featured experiences (to be replaced with proper content system)
-const getFeaturedExperiences = (country: string): ContentItem[] => {
-  const experienceData: Record<string, ContentItem[]> = {
-    nepal: [
-      {
-        title: "Everest Base Camp Trek",
-        description: "Experience the world's most iconic trek. Journey through Sherpa villages, ancient monasteries, and breathtaking Himalayan landscapes to reach the foot of Mount Everest.",
-        price: 1299,
-        duration: "12 Days",
-        difficulty: "Challenging",
-        groupSize: "6-12 people",
-        image: "https://images.unsplash.com/photo-1544735716-392fe2489ffa?w=800&auto=format&fit=crop&q=80",
-        _path: "/nepal/trekking/everest-base-camp",
-        slug: "everest-base-camp"
-      },
-      {
-        title: "Annapurna Circuit Trek",
-        description: "Classic high-altitude trek around the Annapurna massif with diverse landscapes and cultures.",
-        price: 899,
-        duration: "14 Days",
-        difficulty: "Challenging",
-        groupSize: "6-12 people",
-        image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&auto=format&fit=crop&q=80",
-        _path: "/nepal/trekking/annapurna-circuit",
-        slug: "annapurna-circuit"
-      },
-      {
-        title: "Everest Tandem Paragliding",
-        description: "Soar above the Himalayas with experienced pilots and witness Mount Everest from the sky.",
-        price: 299,
-        duration: "1 Day",
-        difficulty: "Easy",
-        groupSize: "2-4 people",
-        image: "https://images.unsplash.com/photo-1540979388789-6cee28a1cdc9?w=800&auto=format&fit=crop&q=80",
-        _path: "/nepal/paragliding/everest-tandem",
-        slug: "everest-tandem"
-      }
-    ],
-    morocco: [
-      {
-        title: "Taghazout Beginner Surf Camp",
-        description: "Perfect for first-time surfers. Learn the basics on gentle waves with experienced instructors in Morocco's surf capital.",
-        price: 599,
-        duration: "7 Days",
-        difficulty: "Easy",
-        groupSize: "6-10 people",
-        image: "https://images.unsplash.com/photo-1502680390469-be75c86b636f?w=800&auto=format&fit=crop&q=80",
-        _path: "/morocco/surfing/taghazout-beginner",
-        slug: "taghazout-beginner"
-      },
-      {
-        title: "Taghazout Intermediate Surf Camp",
-        description: "Take your surfing to the next level with advanced techniques and bigger waves.",
-        price: 699,
-        duration: "7 Days",
-        difficulty: "Intermediate",
-        groupSize: "6-8 people",
-        image: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=800&auto=format&fit=crop&q=80",
-        _path: "/morocco/surfing/taghazout-intermediate",
-        slug: "taghazout-intermediate"
-      },
-      {
-        title: "Essaouira Culture & Surf",
-        description: "Combine surfing lessons with cultural exploration in the historic coastal city of Essaouira.",
-        price: 549,
-        duration: "5 Days",
-        difficulty: "Easy",
-        groupSize: "4-8 people",
-        image: "https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=800&auto=format&fit=crop&q=80",
-        _path: "/morocco/surfing/essaouira-culture",
-        slug: "essaouira-culture"
-      }
-    ]
+// Fetch activities dynamically from content
+const { data: activityList } = await useAsyncData(`${country}-activities`, async () => {
+  try {
+    // Query all experiences for this country
+    const experiences = await queryCollection('content').all()
+    // Note: queryCollection returns items with 'path' property, not '_path'
+    const countryExperiences = experiences.filter((item: any) => 
+      item.path?.includes(`/${country}/`)
+    )
+    return extractActivitiesFromExperiences(countryExperiences.map((exp: any) => ({ ...exp, _path: exp.path })))
+  } catch (error) {
+    console.error('Error fetching activities:', error)
+    return []
   }
-  
-  return experienceData[country] || []
-}
+})
 
-const featuredExperiences = ref<ContentItem[]>(getFeaturedExperiences(country))
+// Build activities array with dynamic data
+const activities = computed(() => {
+  if (!activityList.value || activityList.value.length === 0) return []
+  
+  return activityList.value.map((activity: string) => ({
+    title: activity.charAt(0).toUpperCase() + activity.slice(1),
+    description: data.activityDescriptions?.[activity] || `Explore ${activity} adventures`,
+    link: `/${country}/${activity}`,
+    image: data.activityImages?.[activity] || '/images/default-activity.jpg',
+    color: activity === 'trekking' ? 'orange' as const : 'sky' as const
+  }))
+})
+
+// Fetch featured experiences dynamically from content
+const { data: experiencesData } = await useAsyncData(`${country}-experiences`, async () => {
+  const experiences = await queryCollection('content').all()
+  return experiences.filter((item: any) => 
+    item.path?.includes(`/${country}/`)
+  )
+})
+
+const featuredExperiences = computed(() => {
+  if (!experiencesData.value) return []
+  
+  // Take first 3 experiences as featured
+  return experiencesData.value.slice(0, 3).map((exp: any) => ({
+    title: exp.title,
+    description: exp.description,
+    price: exp.price,
+    duration: exp.duration,
+    difficulty: exp.difficulty,
+    groupSize: exp.groupSize,
+    image: exp.image,
+    country: country,
+    activity: extractActivity(exp.path),
+    slug: extractSlug(exp.path)
+  }))
+})
 
 useSeoMeta({
   title: `Adventures in ${countryName}`,
