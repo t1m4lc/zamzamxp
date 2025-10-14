@@ -148,10 +148,16 @@
 
 html {
   color-scheme: light dark;
+  scroll-padding-top: 6rem; /* Account for sticky header (h-20 = 5rem + extra padding) */
 }
 html.dark {
   color-scheme: dark;
 }
 html.light {
   color-scheme: light;
+}
+
+/* Ensure anchor links account for fixed header */
+:target {
+  scroll-margin-top: 6rem;
 }

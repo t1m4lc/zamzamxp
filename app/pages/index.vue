@@ -333,9 +333,14 @@ const secondRowReviews = [
 ]
 
 // Count activities and countries dynamically from content
-const { data: activities } = await useAsyncData('activities-count', () => 
-  queryContent().find()
-)
+const { data: activities } = await useAsyncData('activities-count', async () => {
+  try {
+    return await queryCollection('content').all()
+  } catch (error) {
+    console.error('Error loading activities:', error)
+    return []
+  }
+})
 const totalActivities = computed(() => activities.value?.length || 10)
 
 // Count unique countries (folders in content directory)

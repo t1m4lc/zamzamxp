@@ -232,9 +232,9 @@ const { data: activityList } = await useAsyncData(`${country}-activities`, async
   try {
     // Query all experiences for this country
     const experiences = await queryCollection('content').all()
-    // Note: queryCollection returns items with 'path' property, not '_path'
+    // Note: queryCollection returns items with 'path' property in format: "nepal/trekking/annapurna-circuit"
     const countryExperiences = experiences.filter((item: any) => 
-      item.path?.includes(`/${country}/`)
+      item.path?.startsWith(`${country}/`)
     )
     return extractActivitiesFromExperiences(countryExperiences.map((exp: any) => ({ ...exp, _path: exp.path })))
   } catch (error) {
@@ -259,8 +259,9 @@ const activities = computed(() => {
 // Fetch featured experiences dynamically from content
 const { data: experiencesData } = await useAsyncData(`${country}-experiences`, async () => {
   const experiences = await queryCollection('content').all()
+  // Filter by country - path format is "nepal/trekking/annapurna-circuit"
   return experiences.filter((item: any) => 
-    item.path?.includes(`/${country}/`)
+    item.path?.startsWith(`${country}/`)
   )
 })
 

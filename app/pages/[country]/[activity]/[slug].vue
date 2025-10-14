@@ -239,7 +239,7 @@
               <!-- Booking Card -->
               <Card class="rounded-3xl border-2 border-slate-200 bg-white p-8 shadow-sm">
                 <div class="mb-6 text-center">
-                  <div class="mb-2 text-sm font-semibold text-slate-600">Starting from</div>
+                  <div class="mb-2 text-sm font-semibold text-slate-600 text">Starting from</div>
                   <div class="mb-4 text-5xl font-black text-slate-900">${{ experience.price }}</div>
                   <div class="text-xs text-slate-600">Per person</div>
                 </div>
@@ -445,7 +445,17 @@
       <div class="container mx-auto px-4">
         <div class="mb-12 text-center">
           <h2 class="mb-4 text-4xl font-black text-slate-900">You Might Also Like</h2>
-          <p class="text-lg text-slate-600">Explore more adventures in <span class="capitalize">{{ country }}</span></p>
+          <p class="text-lg text-slate-600">
+            <span v-if="relatedActivities.some(exp => exp.activity === activity && exp.country === country)">
+              More <span class="capitalize">{{ activity }}</span> adventures in <span class="capitalize">{{ country }}</span>
+            </span>
+            <span v-else-if="relatedActivities.some(exp => exp.country === country)">
+              Explore more adventures in <span class="capitalize">{{ country }}</span>
+            </span>
+            <span v-else>
+              Similar <span class="capitalize">{{ activity }}</span> experiences worldwide
+            </span>
+          </p>
         </div>
 
         <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
@@ -511,10 +521,8 @@ const { data: contentData } = await useAsyncData(`experience-${country}-${activi
     const content = experiences.find((item: any) => 
       item.path === `/${country}/${activity}/${slug}`
     )
-    console.log('Content found:', content)
     return content || null
   } catch (error) {
-    console.log('Content not found, using fallback data')
     return null
   }
 })
@@ -558,28 +566,49 @@ const parsedItinerary = computed(() => {
   return experience.value?.itinerary || []
 })
 
-// Get related activities dynamically from content (same country, different slug, max 3)
-const { extractSlug, extractActivity } = useExperiences()
+// Get related activities dynamically from content
+const { extractSlug, extractActivity, extractCountry } = useExperiences()
 
 const { data: relatedExps } = await useAsyncData(`related-${country}-${slug}`, async () => {
   try {
     const allExp = await queryCollection('content').all()
     
-    return allExp
-      .filter((exp: any) => exp.path?.includes(`/${country}/`) && extractSlug(exp.path) !== String(slug))
-      .slice(0, 3)
-      .map((exp: any) => ({
-        title: exp.title,
-        description: exp.description,
-        price: exp.price,
-        duration: exp.duration,
-        difficulty: exp.difficulty,
-        groupSize: exp.groupSize,
-        image: exp.image,
-        country: String(country),
-        activity: extractActivity(exp.path),
-        slug: extractSlug(exp.path)
-      }))
+    // Filter out current experience
+    const otherExperiences = allExp.filter((exp: any) => extractSlug(exp.path) !== String(slug))
+    
+    // Prioritize: same activity, same country first
+    const sameActivity = otherExperiences.filter((exp: any) => 
+      extractActivity(exp.path) === String(activity) && 
+      extractCountry(exp.path) === String(country)
+    )
+    
+    // Then: other activities in same country
+    const sameCountry = otherExperiences.filter((exp: any) => 
+      extractCountry(exp.path) === String(country) && 
+      extractActivity(exp.path) !== String(activity)
+    )
+    
+    // Finally: same activity in other countries
+    const sameActivityOtherCountry = otherExperiences.filter((exp: any) => 
+      extractActivity(exp.path) === String(activity) && 
+      extractCountry(exp.path) !== String(country)
+    )
+    
+    // Combine and limit to 3
+    const combined = [...sameActivity, ...sameCountry, ...sameActivityOtherCountry].slice(0, 3)
+    
+    return combined.map((exp: any) => ({
+      title: exp.title,
+      description: exp.description,
+      price: exp.price,
+      duration: exp.duration,
+      difficulty: exp.difficulty,
+      groupSize: exp.groupSize,
+      image: exp.image,
+      country: extractCountry(exp.path) || '',
+      activity: extractActivity(exp.path) || '',
+      slug: extractSlug(exp.path) || ''
+    }))
   } catch (error) {
     return []
   }
@@ -607,3 +636,20 @@ if (experience.value) {
   })
 }
 </script>
+
+<style scoped>
+/* Ensure smooth scroll behavior for anchor links */
+:deep(.prose h1),
+:deep(.prose h2),
+:deep(.prose h3),
+:deep(.prose h4),
+:deep(.prose h5),
+:deep(.prose h6) {
+  scroll-margin-top: 6rem;
+}
+
+/* Smooth scrolling for the entire page */
+:deep(*) {
+  scroll-behavior: smooth;
+}
+</style>

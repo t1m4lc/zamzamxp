@@ -3,7 +3,17 @@ import tailwindcss from "@tailwindcss/vite";
 
 export default defineNuxtConfig({
   compatibilityDate: "2025-07-15",
-  devtools: { enabled: true },
+
+  devtools: { enabled: false },
+
+  ssr: true,
+
+  nitro: {
+    preset: "vercel-static",
+    prerender: {
+      failOnError: false,
+    },
+  },
 
   modules: [
     "shadcn-nuxt",
@@ -22,6 +32,7 @@ export default defineNuxtConfig({
   css: ["~/assets/css/tailwind.css"],
 
   image: {
+    provider: "vercel",
     quality: 85,
     format: ["webp", "jpg"],
     screens: {
