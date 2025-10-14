@@ -1,5 +1,18 @@
 <template>
   <div>
+    <!-- Breadcrumb -->
+    <div class="border-b bg-white">
+      <div class="container mx-auto px-6 py-4">
+        <nav class="flex items-center space-x-2 text-sm text-slate-600">
+          <NuxtLink to="/" class="hover:text-slate-900 transition-colors">Home</NuxtLink>
+          <span>›</span>
+          <NuxtLink to="/destinations" class="hover:text-slate-900 transition-colors">Destinations</NuxtLink>
+          <span>›</span>
+          <span class="text-slate-900 font-medium">{{ countryName }}</span>
+        </nav>
+      </div>
+    </div>
+
     <!-- Hero Section with Image -->
     <section class="relative h-[70vh] min-h-[500px] flex items-center">
       <!-- Background Image -->

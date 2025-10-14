@@ -6,13 +6,10 @@
         <!-- Brand -->
         <div class="space-y-4">
           <NuxtLink to="/" class="flex items-center space-x-2">
-            <span class="text-3xl">🌍</span>
-            <span class="text-2xl font-black text-slate-900">
-              ZamZam<span class="text-orange-600">XP</span>
-            </span>
+            <span class="text-2xl font-semibold text-slate-900">Zamzam <span class="text-sm font-mono text-slate-700">experience</span></span>
           </NuxtLink>
           <p class="text-sm leading-relaxed text-slate-600">
-            Epic adventures in Nepal and Morocco. Trekking, paragliding, and surfing experiences that create memories for life.
+            Connecting travelers with passionate local guides for authentic adventures around the world.
           </p>
         </div>
 
@@ -23,18 +20,16 @@
             <li>
               <NuxtLink
                 to="/nepal"
-                class="group flex items-center space-x-2 text-sm text-slate-600 transition-colors hover:text-orange-600"
+                class="group flex items-center text-sm text-slate-600 transition-colors hover:text-orange-600"
               >
-                <span class="text-lg">🇳🇵</span>
                 <span class="group-hover:translate-x-1 transition-transform">Nepal</span>
               </NuxtLink>
             </li>
             <li>
               <NuxtLink
                 to="/morocco"
-                class="group flex items-center space-x-2 text-sm text-slate-600 transition-colors hover:text-orange-600"
+                class="group flex items-center text-sm text-slate-600 transition-colors hover:text-orange-600"
               >
-                <span class="text-lg">🇲🇦</span>
                 <span class="group-hover:translate-x-1 transition-transform">Morocco</span>
               </NuxtLink>
             </li>
@@ -79,12 +74,12 @@
           <!-- Trust Badges -->
           <div class="pt-4 space-y-2">
             <div class="flex items-center space-x-2 text-xs text-slate-500">
-              <Icon name="mdi:shield-check" class="h-4 w-4 text-green-600" />
-              <span>Licensed & Insured</span>
+              <Icon name="mdi:leaf" class="h-4 w-4 text-green-600" />
+              <span>Eco-Friendly & Sustainable</span>
             </div>
             <div class="flex items-center space-x-2 text-xs text-slate-500">
-              <Icon name="mdi:leaf" class="h-4 w-4 text-green-600" />
-              <span>Eco-Friendly Tours</span>
+              <Icon name="mdi:handshake" class="h-4 w-4 text-green-600" />
+              <span>Fair Remuneration for Partners</span>
             </div>
           </div>
         </div>
@@ -94,7 +89,7 @@
       <div class="mt-12 border-t pt-8">
         <div class="flex flex-col items-center justify-between space-y-4 md:flex-row md:space-y-0">
           <p class="text-center text-sm text-slate-500">
-            © {{ new Date().getFullYear() }} ZamZam XP. All rights reserved.
+            © {{ new Date().getFullYear() }} Zamzam Experience. All rights reserved.
           </p>
           <div class="flex items-center space-x-4 text-xs text-slate-400">
             <NuxtLink to="/terms" class="hover:text-slate-600 transition-colors">Terms</NuxtLink>

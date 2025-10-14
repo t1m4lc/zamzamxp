@@ -1,19 +1,49 @@
 <template>
   <Teleport to="body">
-    <a
-      :href="whatsappUrl"
-      target="_blank"
-      rel="noopener noreferrer"
-      class="fixed bottom-6 right-6 z-50 flex h-16 w-16 items-center justify-center rounded-full bg-green-500 text-white shadow-lg transition-all duration-300 hover:scale-110 hover:bg-green-600 hover:shadow-xl"
-      aria-label="Chat on WhatsApp"
+    <Transition
+      enter-active-class="transition-all duration-500 ease-out"
+      enter-from-class="opacity-0 translate-y-4 scale-50"
+      enter-to-class="opacity-100 translate-y-0 scale-100"
+      leave-active-class="transition-all duration-300 ease-in"
+      leave-from-class="opacity-100 translate-y-0 scale-100"
+      leave-to-class="opacity-0 translate-y-4 scale-50"
     >
-      <Icon name="mdi:whatsapp" class="h-10 w-10" />
-    </a>
+      <a
+        v-if="isVisible"
+        :href="whatsappUrl"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="fixed bottom-6 right-6 z-50 flex h-16 w-16 items-center justify-center rounded-full bg-green-500 text-white shadow-lg transition-all duration-300 hover:scale-110 hover:bg-green-600 hover:shadow-xl"
+        aria-label="Chat on WhatsApp"
+      >
+        <Icon name="mdi:whatsapp" class="h-10 w-10" />
+      </a>
+    </Transition>
   </Teleport>
 </template>
 
 <script setup lang="ts">
 const route = useRoute()
+const isVisible = ref(false)
+
+// Show WhatsApp bubble after scrolling down
+onMounted(() => {
+  const handleScroll = () => {
+    // Show after scrolling 300px down
+    isVisible.value = window.scrollY > 300
+  }
+
+  // Initial check
+  handleScroll()
+
+  // Add scroll listener
+  window.addEventListener('scroll', handleScroll, { passive: true })
+
+  // Cleanup
+  onUnmounted(() => {
+    window.removeEventListener('scroll', handleScroll)
+  })
+})
 
 const whatsappUrl = computed(() => {
   const phoneNumber = '1234567890' // Replace with actual WhatsApp number

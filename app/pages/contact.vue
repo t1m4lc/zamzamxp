@@ -1,11 +1,11 @@
 <template>
   <div>
     <!-- Hero -->
-    <section class="bg-gradient-to-br from-orange-100 via-sky-50 to-purple-100 py-20 lg:py-32">
-      <div class="container mx-auto px-4">
+    <section class="relative py-20 lg:py-32 overflow-hidden">
+      <div class="absolute inset-0 bg-gradient-to-br from-[#FF6B35]/10 to-[#F7931E]/10"></div>
+      <div class="container mx-auto px-4 relative">
         <div class="mx-auto max-w-3xl text-center">
-          <div class="mb-6 text-8xl">💬</div>
-          <h1 class="mb-6 text-5xl font-black text-slate-900 lg:text-7xl">
+          <h1 class="mb-6 text-5xl font-semibold text-slate-900 lg:text-6xl">
             Let's Chat!
           </h1>
           <p class="text-xl leading-relaxed text-slate-600">
@@ -21,16 +21,16 @@
         <div class="mx-auto max-w-4xl">
           <div class="mb-16 grid gap-8 md:grid-cols-2">
             <!-- WhatsApp -->
-            <Card class="rounded-3xl border-2 border-green-200 bg-green-50 p-8 text-center transition-all hover:shadow-xl hover:scale-105">
-              <div class="mb-6 text-7xl">📱</div>
-              <h2 class="mb-4 text-2xl font-bold text-slate-900">WhatsApp</h2>
+            <Card class="rounded-2xl border border-slate-200 bg-white p-8 text-center transition-all hover:shadow-lg">
+              <Icon name="mdi:whatsapp" class="mx-auto mb-4 h-12 w-12 text-green-500" />
+              <h2 class="mb-4 text-xl font-semibold text-slate-900">WhatsApp</h2>
               <p class="mb-6 leading-relaxed text-slate-600">
                 Quick questions? Chat with us instantly on WhatsApp. We usually respond within 30 minutes!
               </p>
               <Button
                 as-child
                 size="lg"
-                class="w-full rounded-full bg-green-500 font-bold hover:bg-green-600"
+                class="w-full rounded-lg bg-green-500 font-medium hover:bg-green-600"
               >
                 <a href="https://wa.me/1234567890" target="_blank" rel="noopener">
                   <Icon name="mdi:whatsapp" class="mr-2 h-5 w-5" />
@@ -40,16 +40,16 @@
             </Card>
 
             <!-- Email -->
-            <Card class="rounded-3xl border-2 border-orange-200 bg-orange-50 p-8 text-center transition-all hover:shadow-xl hover:scale-105">
-              <div class="mb-6 text-7xl">📧</div>
-              <h2 class="mb-4 text-2xl font-bold text-slate-900">Email</h2>
+            <Card class="rounded-2xl border border-slate-200 bg-white p-8 text-center transition-all hover:shadow-lg">
+              <Icon name="mdi:email" class="mx-auto mb-4 h-12 w-12 text-orange-500" />
+              <h2 class="mb-4 text-xl font-semibold text-slate-900">Email</h2>
               <p class="mb-6 leading-relaxed text-slate-600">
                 Prefer email? Send us your questions and we'll get back to you within 24 hours.
               </p>
               <Button
                 as-child
                 size="lg"
-                class="w-full rounded-full bg-orange-500 font-bold hover:bg-orange-600"
+                class="w-full rounded-lg bg-gradient-to-r from-[#FF6B35] to-[#F7931E] font-medium"
               >
                 <a href="mailto:hello@zamzamxp.com">
                   <Icon name="mdi:email" class="mr-2 h-5 w-5" />
@@ -139,7 +139,7 @@
             <div class="text-center">
               <div class="mb-3 text-4xl">📍</div>
               <div class="font-bold text-slate-900">Location</div>
-              <div class="text-sm text-slate-600">Kathmandu, Nepal</div>
+              <div class="text-sm text-slate-600">Montpellier, France</div>
             </div>
 
             <div class="text-center">
@@ -151,10 +151,9 @@
             <div class="text-center">
               <div class="mb-3 text-4xl">🌐</div>
               <div class="font-bold text-slate-900">Languages</div>
-              <div class="text-sm text-slate-600">English, Nepali, French</div>
+              <div class="text-sm text-slate-600">English & French</div>
             </div>
           </div>
-
 
         </div>
       </div>

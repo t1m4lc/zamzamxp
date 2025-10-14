@@ -12,8 +12,7 @@ gallery:
   - "/images/paragliding-3.jpg"
   - "/images/paragliding-4.jpg"
 highlights:
-  - "Fly over Phewa Lake"
-  - "Annapurna & Machhapuchhre views"
+  - "Stunning Himalayan views"
   - "Professional tandem pilot"
   - "Photos & videos included"
   - "Take off from Sarangkot"
@@ -39,16 +38,21 @@ Experience the thrill of paragliding over one of the world's most beautiful vall
 
 Never flown before? No problem! Our certified pilots have thousands of flights under their belts. You just sit back, relax, and enjoy the incredible views while your pilot handles everything.
 
-## What to Expect
+## Itinerary
 
-### Before Flight
-We'll pick you up from your hotel in Pokhara and drive 30 minutes to Sarangkot (1,592m). Your pilot will brief you on safety and what to expect. The takeoff is simple – just a few steps and you're airborne!
+**Meeting Point**: Rendezvous at the communicated meeting point
 
-### During Flight
-Once airborne, you'll soar peacefully over the valley. Your pilot can make it calm and serene or add some exciting acrobatic maneuvers if you're feeling adventurous. The views are absolutely breathtaking – Phewa Lake below, the Annapurna range ahead, and Pokhara city spreading out beneath you.
+**Transportation**: Board a minibus to the launch site at Sarangkot (1,592m) - approximately 30 minutes
 
-### Landing
-Landing is smooth and easy on the lakeside area. After touchdown, you'll receive your photos and videos as a memento of your flight.
+**Preparation**: Safety briefing and equipment setup with your pilot. The takeoff is simple – just a few steps and you're airborne!
+
+**Flight**: Soar peacefully over the valley for 30-45 minutes. Your pilot can make it calm and serene or add exciting acrobatic maneuvers if you're feeling adventurous.
+
+**Landing**: Smooth landing at the lakeside area
+
+**Photos & Videos**: Collection of your flight photos and videos
+
+**Return**: Transportation back to the meeting point in Pokhara
 
 ## Flight Options
 

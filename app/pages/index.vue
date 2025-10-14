@@ -6,15 +6,15 @@
         <div class="container mx-auto px-6">
           <div class="max-w-2xl">
             <h1 class="text-5xl font-semibold leading-tight text-slate-900 lg:text-6xl mb-6">
-              Discover unforgettable adventures around the world
+              Adventure travel that benefits everyone
             </h1>
             <p class="text-xl text-slate-600 mb-8">
-              Expertly curated experiences for adventurous travelers seeking authentic connections with nature and culture.
+              We're building a new kind of travel agency – connecting you with passionate local guides while ensuring fair pay and sustainable tourism. Real adventures, fair prices, happy communities.
             </p>
             <Button
               as-child
               size="lg"
-              class="rounded-lg bg-orange-600 px-8 py-3 text-base font-medium text-white hover:bg-orange-700 transition-all shadow-lg hover:shadow-xl"
+              class="rounded-lg bg-gradient-to-r from-[#FF6B35] to-[#F7931E] px-8 py-3 text-base font-medium text-white transition-all shadow-lg hover:shadow-xl"
             >
               <NuxtLink to="/destinations">
                 Explore Destinations
@@ -24,6 +24,28 @@
         </div>
       </section>
     </AuroraBackground>
+
+    <!-- Globe Section -->
+    <!-- TODO: Add Globe component from https://inspira-ui.com/docs/components/visualization/globe -->
+    <!-- Show interactive globe with pins for: Essaouira, Kathmandu, Pokhara -->
+    <section class="py-20 lg:py-24">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-semibold text-slate-900 mb-4">
+            Adventures Across the Globe
+          </h2>
+          <p class="text-lg text-slate-600">
+            From Himalayan peaks to Atlantic waves, discover authentic experiences worldwide
+          </p>
+        </div>
+        <!-- Globe component will be integrated here -->
+        <div class="flex justify-center">
+          <div class="w-full max-w-2xl aspect-square bg-slate-100 rounded-2xl flex items-center justify-center text-slate-500">
+            <p>Interactive Globe (Coming Soon)</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- Destinations Section -->
     <section class="py-20 lg:py-24 bg-slate-50">
@@ -82,28 +104,40 @@
     <!-- Why Choose Us Section -->
     <section class="py-20 lg:py-24">
       <div class="container mx-auto px-6">
-        <div class="mb-12">
-          <h2 class="text-3xl font-semibold text-slate-900 mb-3">
-            Why travel with us
+        <div class="mb-12 text-center max-w-3xl mx-auto">
+          <h2 class="text-3xl font-semibold text-slate-900 mb-4">
+            A Different Kind of Travel Agency
           </h2>
+          <p class="text-lg text-slate-600">
+            We believe travel should enrich everyone – the traveler, the guide, and the community.
+          </p>
         </div>
         <div class="grid gap-8 md:grid-cols-3">
-          <div>
-            <h3 class="text-lg font-semibold text-slate-900 mb-2">Local expertise</h3>
+          <div class="text-center">
+            <div class="w-16 h-16 bg-slate-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <Icon name="mdi:heart-handshake" class="h-8 w-8 text-slate-900" />
+            </div>
+            <h3 class="text-lg font-semibold text-slate-900 mb-2">Fair for Everyone</h3>
             <p class="text-slate-600">
-              Our guides are local experts who know every trail and hidden gem.
+              Local guides get paid fairly. You get honest prices. Everyone wins.
             </p>
           </div>
-          <div>
-            <h3 class="text-lg font-semibold text-slate-900 mb-2">Small groups</h3>
+          <div class="text-center">
+            <div class="w-16 h-16 bg-slate-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <Icon name="mdi:account-heart" class="h-8 w-8 text-slate-900" />
+            </div>
+            <h3 class="text-lg font-semibold text-slate-900 mb-2">Passionate Locals</h3>
             <p class="text-slate-600">
-              Maximum 12 people per group for personalized attention.
+              Our guides love what they do and can't wait to share it with you.
             </p>
           </div>
-          <div>
-            <h3 class="text-lg font-semibold text-slate-900 mb-2">Safety first</h3>
+          <div class="text-center">
+            <div class="w-16 h-16 bg-slate-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <Icon name="mdi:leaf-circle" class="h-8 w-8 text-slate-900" />
+            </div>
+            <h3 class="text-lg font-semibold text-slate-900 mb-2">Sustainable Tourism</h3>
             <p class="text-slate-600">
-              Licensed, insured, and equipped with comprehensive safety protocols.
+              Eco-friendly practices that protect the places we love to explore.
             </p>
           </div>
         </div>
@@ -237,6 +271,11 @@
 import { Button } from '~/components/ui/button'
 import { Card, CardContent } from '~/components/ui/card'
 import { AuroraBackground } from '~/components/ui/aurora-background'
+
+useSeoMeta({
+  title: 'Zamzam Experience - Adventure Travel with Fair Prices & Local Guides',
+  description: 'A new kind of travel agency connecting you with passionate local guides. Fair prices, sustainable tourism, and authentic adventures in Nepal, Morocco & beyond.',
+})
 
 const teamMembers = [
   {

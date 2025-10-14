@@ -3,7 +3,7 @@
     <div class="container mx-auto flex h-20 items-center justify-between px-6">
       <!-- Logo -->
       <NuxtLink to="/" class="flex items-center space-x-2 transition-opacity hover:opacity-80">
-        <span class="text-2xl font-semibold text-slate-900">ZamZam <span class="text-rose-500">Experience</span></span>
+        <span class="text-2xl font-semibold text-slate-900">Zamzam <span class="text-sm font-mono text-slate-700">experience</span></span>
       </NuxtLink>
 
       <!-- Desktop Navigation -->
@@ -33,25 +33,13 @@
                 </NuxtLink>
               </NavigationMenuLink>
             </NavigationMenuItem>
-
-            <!-- Contact -->
-            <NavigationMenuItem>
-              <NavigationMenuLink as-child>
-                <NuxtLink
-                  to="/contact"
-                  class="inline-flex h-10 w-max items-center justify-center rounded-md px-4 py-2 text-sm font-medium transition-colors hover:bg-slate-50 hover:text-slate-900 focus:bg-slate-50"
-                >
-                  Contact
-                </NuxtLink>
-              </NavigationMenuLink>
-            </NavigationMenuItem>
           </NavigationMenuList>
         </NavigationMenu>
 
         <!-- CTA Button -->
         <Button
           as-child
-          class="ml-4 rounded-lg bg-gradient-to-r from-rose-500 to-orange-500 px-6 py-2.5 text-sm font-medium text-white hover:from-rose-600 hover:to-orange-600 transition-all shadow-sm hover:shadow"
+          class="ml-4 rounded-lg bg-gradient-to-r from-[#FF6B35] to-[#F7931E] px-6 py-2.5 text-sm font-medium text-white hover:from-[#FF5520] hover:to-[#E8820F] transition-all shadow-sm hover:shadow"
         >
           <NuxtLink to="/contact">
             Get Started
@@ -86,7 +74,7 @@
             class="block rounded-xl px-4 py-3 font-semibold text-slate-900 hover:bg-slate-100"
             @click="mobileMenuOpen = false"
           >
-            � Destinations
+            Destinations
           </NuxtLink>
 
           <!-- Other Links -->
@@ -97,21 +85,14 @@
           >
             About
           </NuxtLink>
-          <NuxtLink
-            to="/contact"
-            class="block rounded-xl px-4 py-3 font-semibold text-slate-900 hover:bg-slate-100"
-            @click="mobileMenuOpen = false"
-          >
-            Contact
-          </NuxtLink>
 
           <!-- Mobile CTA -->
           <Button
             as-child
-            class="w-full rounded-full bg-orange-500 py-6 text-base font-bold text-white"
+            class="w-full rounded-lg bg-gradient-to-r from-[#FF6B35] to-[#F7931E] py-6 text-base font-medium text-white"
           >
             <NuxtLink to="/contact" @click="mobileMenuOpen = false">
-              Book Now 🚀
+              Get Started
             </NuxtLink>
           </Button>
         </nav>

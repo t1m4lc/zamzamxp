@@ -42,10 +42,6 @@
           <h1 class="mb-4 text-4xl font-black lg:text-6xl">
             {{ experience.title }}
           </h1>
-          <!-- Price Sticker -->
-          <div class="inline-block rounded-full bg-orange-500 px-6 py-3 text-2xl font-black shadow-xl">
-            From ${{ experience.price }}
-          </div>
         </div>
       </div>
     </section>
@@ -250,28 +246,28 @@
               </Card>
 
               <!-- Trust Badges -->
-              <Card class="rounded-3xl border-2 border-slate-200 bg-white p-6">
-                <h3 class="mb-4 font-bold text-slate-900">Why Book With Us</h3>
+              <Card class="rounded-2xl border border-slate-200 bg-white p-6">
+                <h3 class="mb-4 font-semibold text-slate-900">Why Book With Us</h3>
                 <div class="space-y-4 text-sm">
                   <div class="flex items-start space-x-3">
-                    <Icon name="mdi:shield-check" class="mt-0.5 h-5 w-5 flex-shrink-0 text-green-500" />
+                    <Icon name="mdi:cash" class="mt-0.5 h-5 w-5 flex-shrink-0 text-slate-900" />
                     <div>
-                      <div class="font-semibold text-slate-900">Secure Payments</div>
-                      <div class="text-slate-600">Your data is protected</div>
+                      <div class="font-semibold text-slate-900">Best Market Prices</div>
+                      <div class="text-slate-600">Quality service at fair prices - check locally if you want!</div>
                     </div>
                   </div>
                   <div class="flex items-start space-x-3">
-                    <Icon name="mdi:license" class="mt-0.5 h-5 w-5 flex-shrink-0 text-blue-500" />
+                    <Icon name="mdi:handshake" class="mt-0.5 h-5 w-5 flex-shrink-0 text-slate-900" />
                     <div>
-                      <div class="font-semibold text-slate-900">Licensed & Insured</div>
-                      <div class="text-slate-600">Fully certified operations</div>
+                      <div class="font-semibold text-slate-900">Fair Remuneration</div>
+                      <div class="text-slate-600">Our partners are paid fairly - see our values</div>
                     </div>
                   </div>
                   <div class="flex items-start space-x-3">
-                    <Icon name="mdi:leaf" class="mt-0.5 h-5 w-5 flex-shrink-0 text-green-500" />
+                    <Icon name="mdi:leaf" class="mt-0.5 h-5 w-5 flex-shrink-0 text-slate-900" />
                     <div>
                       <div class="font-semibold text-slate-900">Eco-Friendly</div>
-                      <div class="text-slate-600">Sustainable tourism</div>
+                      <div class="text-slate-600">Sustainable tourism practices</div>
                     </div>
                   </div>
                 </div>
@@ -299,14 +295,14 @@
                 </div>
               </div>
               <div class="md:col-span-2">
-                <h3 class="mb-2 text-2xl font-black text-slate-900">Experienced Local Guides</h3>
+                <h3 class="mb-2 text-2xl font-semibold text-slate-900">Passionate Professionals</h3>
                 <div class="mb-4 flex flex-wrap gap-2">
-                  <Badge class="bg-orange-500 font-semibold">15+ Years Experience</Badge>
-                  <Badge class="bg-sky-500 font-semibold">Licensed & Certified</Badge>
-                  <Badge class="bg-green-500 font-semibold">First Aid Trained</Badge>
+                  <Badge class="bg-slate-900 text-white font-medium text-xs">Experienced</Badge>
+                  <Badge class="bg-slate-900 text-white font-medium text-xs">Certified</Badge>
+                  <Badge class="bg-slate-900 text-white font-medium text-xs">First Aid Trained</Badge>
                 </div>
                 <p class="mb-6 leading-relaxed text-slate-700">
-                  Our guides are not just experts—they're locals who were born and raised in these mountains/communities. They know every trail, every story, and every hidden gem. With decades of combined experience, your safety and enjoyment are their top priorities.
+                  Our guides are passionate locals who know every trail, every story, and every hidden gem. They love sharing their culture and ensuring your safety and enjoyment are the top priorities.
                 </p>
                 <div class="space-y-2 text-sm text-slate-600">
                   <div class="flex items-center space-x-2">

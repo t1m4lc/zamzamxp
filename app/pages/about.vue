@@ -1,15 +1,15 @@
 <template>
   <div>
     <!-- Hero -->
-    <section class="bg-gradient-to-br from-orange-100 via-sky-50 to-purple-100 py-20 lg:py-32">
-      <div class="container mx-auto px-4">
+    <section class="relative py-20 lg:py-32 overflow-hidden">
+      <div class="absolute inset-0 bg-gradient-to-br from-[#FF6B35]/10 to-[#F7931E]/10"></div>
+      <div class="container mx-auto px-4 relative">
         <div class="mx-auto max-w-4xl text-center">
-          <div class="mb-6 text-8xl">👋</div>
-          <h1 class="mb-6 text-5xl font-black text-slate-900 lg:text-7xl">
+          <h1 class="mb-6 text-5xl font-semibold text-slate-900 lg:text-6xl">
             Who We Are
           </h1>
           <p class="text-xl leading-relaxed text-slate-600 lg:text-2xl">
-            We're adventure enthusiasts on a mission to create unforgettable experiences while supporting local communities.
+            Connecting travelers with passionate local guides for authentic adventures around the world.
           </p>
         </div>
       </div>
@@ -19,16 +19,16 @@
     <section class="py-20 lg:py-32">
       <div class="container mx-auto px-4">
         <div class="mx-auto max-w-3xl">
-          <h2 class="mb-8 text-4xl font-black text-slate-900">Our Story</h2>
+          <h2 class="mb-8 text-3xl font-semibold text-slate-900">Our Story</h2>
           <div class="prose prose-lg space-y-6 text-slate-700">
             <p>
-              ZamZam XP started in 2010 when two adventure-seeking friends realized something was missing in the travel industry: authentic, locally-led experiences that truly benefit the communities hosting travelers.
+              Zamzam Experience was born from a simple observation: around the world, talented local guides are passionate about sharing their culture and activities, but struggle to connect with travelers in a fair and equitable way.
             </p>
             <p>
-              We began with a single trekking route in Nepal, guided by local Sherpa friends who knew every mountain path and monastery. Word spread, travelers returned, and something magical happened – a community formed around shared adventures and mutual respect.
+              We’re building a new kind of travel agency – one that puts local communities first, ensures fair compensation for guides and partners, and delivers authentic experiences that benefit everyone involved.
             </p>
             <p>
-              Today, we operate in Nepal and Morocco, working exclusively with local guides, family-run guesthouses, and community cooperatives. Every adventure we offer creates jobs, preserves culture, and protects the environments we love exploring.
+              Every adventure we offer creates meaningful connections, supports sustainable tourism, and helps preserve the destinations we love exploring.
             </p>
           </div>
         </div>
@@ -48,35 +48,31 @@
         </div>
 
         <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
-          <Card class="rounded-3xl border-2 border-orange-200 bg-white p-8 text-center transition-all hover:shadow-xl hover:scale-105">
-            <div class="mb-4 text-6xl">🌍</div>
-            <h3 class="mb-3 text-xl font-bold text-slate-900">Authentic Local Experiences</h3>
+          <Card class="rounded-2xl border border-slate-200 bg-white p-6 transition-all hover:shadow-lg">
+            <h3 class="mb-3 text-lg font-semibold text-slate-900">Authentic Local Experiences</h3>
             <p class="text-sm leading-relaxed text-slate-600">
               Every adventure is designed and led by locals who share their genuine culture, stories, and perspectives.
             </p>
           </Card>
 
-          <Card class="rounded-3xl border-2 border-green-200 bg-white p-8 text-center transition-all hover:shadow-xl hover:scale-105">
-            <div class="mb-4 text-6xl">🌱</div>
-            <h3 class="mb-3 text-xl font-bold text-slate-900">Sustainable & Responsible Tourism</h3>
+          <Card class="rounded-2xl border border-slate-200 bg-white p-6 transition-all hover:shadow-lg">
+            <h3 class="mb-3 text-lg font-semibold text-slate-900">Eco-Friendly & Sustainable</h3>
             <p class="text-sm leading-relaxed text-slate-600">
               We minimize environmental impact, respect local cultures, and ensure tourism benefits communities long-term.
             </p>
           </Card>
 
-          <Card class="rounded-3xl border-2 border-sky-200 bg-white p-8 text-center transition-all hover:shadow-xl hover:scale-105">
-            <div class="mb-4 text-6xl">👥</div>
-            <h3 class="mb-3 text-xl font-bold text-slate-900">Small Groups, Big Impact</h3>
+          <Card class="rounded-2xl border border-slate-200 bg-white p-6 transition-all hover:shadow-lg">
+            <h3 class="mb-3 text-lg font-semibold text-slate-900">Fair Remuneration</h3>
             <p class="text-sm leading-relaxed text-slate-600">
-              Intimate group sizes mean personalized experiences and deeper connections with places and people.
+              Our partners receive fair compensation for their work. We believe in equitable tourism that benefits everyone.
             </p>
           </Card>
 
-          <Card class="rounded-3xl border-2 border-purple-200 bg-white p-8 text-center transition-all hover:shadow-xl hover:scale-105">
-            <div class="mb-4 text-6xl">🛡️</div>
-            <h3 class="mb-3 text-xl font-bold text-slate-900">Safety & Quality First</h3>
+          <Card class="rounded-2xl border border-slate-200 bg-white p-6 transition-all hover:shadow-lg">
+            <h3 class="mb-3 text-lg font-semibold text-slate-900">Best Market Prices</h3>
             <p class="text-sm leading-relaxed text-slate-600">
-              Licensed guides, comprehensive insurance, proper equipment, and rigorous safety protocols on every adventure.
+              Quality experiences at fair prices. We hate tourist traps - you pay what's right for quality service.
             </p>
           </Card>
         </div>
@@ -87,28 +83,31 @@
     <section class="py-20 lg:py-32">
       <div class="container mx-auto px-4">
         <div class="mx-auto max-w-5xl">
-          <Card class="overflow-hidden rounded-3xl border-2 border-orange-200">
+          <Card class="overflow-hidden rounded-2xl border border-slate-200">
             <div class="grid gap-12 p-8 lg:grid-cols-2 lg:p-12">
               <div>
-                <div class="mb-6 aspect-square overflow-hidden rounded-3xl bg-gradient-to-br from-orange-400 to-pink-500">
-                  <div class="flex h-full items-center justify-center text-9xl text-white">
-                    🧗
+                <div class="mb-6 aspect-square overflow-hidden rounded-2xl bg-gradient-to-br from-[#FF6B35] to-[#F7931E]">
+                  <div class="flex h-full items-center justify-center text-8xl text-white">
+                    🏞️
                   </div>
                 </div>
               </div>
               <div class="flex flex-col justify-center">
-                <div class="mb-2 text-sm font-semibold text-orange-600">Founder & Lead Guide</div>
-                <h2 class="mb-4 text-4xl font-black text-slate-900">Meet Our Founder</h2>
-                <p class="mb-6 leading-relaxed text-slate-700">
-                  Born in Kathmandu and raised in the shadow of the Himalayas, our founder has been leading adventures for over 15 years. What started as a passion for sharing Nepal's beauty has grown into a mission to transform tourism into a force for good.
+                <div class="mb-2 text-sm font-medium text-slate-600">Founder</div>
+                <h2 class="mb-4 text-3xl font-semibold text-slate-900">Timothy Alcaide</h2>
+                <p class="mb-4 leading-relaxed text-slate-700">
+                  I’m a software engineer who quit my job in 2024 to travel the world. Passionate about adventure sports and mountains, I explored Madagascar, Thailand, Vietnam, Nepal, and Morocco.
+                </p>
+                <p class="mb-4 leading-relaxed text-slate-700">
+                  Everywhere I went, I met incredible local guides who were passionate about their craft but struggled to find clients fairly. That's why I created Zamzam Experience in 2025.
                 </p>
                 <p class="mb-6 leading-relaxed text-slate-700">
-                  "I believe travel should enrich everyone involved—the traveler discovers new perspectives, the guide shares their world with pride, and the community thrives from sustainable, respectful tourism. That's what we build with every adventure."
+                  (Fun fact: "zamzam" is a Nepali word meaning "let's go!" – it perfectly captures our spirit of adventure.)
                 </p>
-                <div class="flex flex-wrap gap-3">
-                  <Badge class="bg-orange-500 px-3 py-2 font-semibold">15+ Years Experience</Badge>
-                  <Badge class="bg-sky-500 px-3 py-2 font-semibold">Licensed Guide</Badge>
-                  <Badge class="bg-green-500 px-3 py-2 font-semibold">Certified Wilderness First Responder</Badge>
+                <div class="flex flex-wrap gap-2">
+                  <Badge class="bg-slate-900 px-3 py-1.5 text-xs font-medium text-white">Software Engineer</Badge>
+                  <Badge class="bg-slate-900 px-3 py-1.5 text-xs font-medium text-white">World Traveler</Badge>
+                  <Badge class="bg-slate-900 px-3 py-1.5 text-xs font-medium text-white">Adventure Enthusiast</Badge>
                 </div>
               </div>
             </div>
@@ -118,38 +117,35 @@
     </section>
 
     <!-- Local Partners -->
-    <section class="bg-gradient-to-br from-sky-50 to-purple-50 py-20 lg:py-32">
+    <section class="bg-slate-50 py-20 lg:py-32">
       <div class="container mx-auto px-4">
         <div class="mx-auto max-w-4xl text-center">
-          <h2 class="mb-6 text-4xl font-black text-slate-900 lg:text-5xl">
+          <h2 class="mb-6 text-3xl font-semibold text-slate-900">
             Our Local Partners
           </h2>
           <p class="mb-12 text-lg leading-relaxed text-slate-600">
-            We work exclusively with local guides, family-run tea houses, community cooperatives, and small businesses. When you travel with us, you're directly supporting the people who call these places home.
+            We work exclusively with passionate local guides, family-run accommodations, and small businesses. When you travel with us, you're directly supporting the people who call these places home.
           </p>
 
           <div class="grid gap-8 md:grid-cols-3">
-            <div class="rounded-3xl bg-white p-8 shadow-lg">
-              <div class="mb-4 text-5xl">🏔️</div>
-              <h3 class="mb-2 text-xl font-bold text-slate-900">Sherpa Guides</h3>
+            <div class="rounded-2xl bg-white p-6 shadow-sm border border-slate-200">
+              <h3 class="mb-2 text-lg font-semibold text-slate-900">Local Guides</h3>
               <p class="text-sm text-slate-600">
-                Born and raised in mountain villages, our Sherpa guides are certified professionals with deep cultural knowledge.
+                Passionate professionals who know every trail, wave, and hidden gem in their region.
               </p>
             </div>
 
-            <div class="rounded-3xl bg-white p-8 shadow-lg">
-              <div class="mb-4 text-5xl">🏄</div>
-              <h3 class="mb-2 text-xl font-bold text-slate-900">Surf Instructors</h3>
+            <div class="rounded-2xl bg-white p-6 shadow-sm border border-slate-200">
+              <h3 class="mb-2 text-lg font-semibold text-slate-900">Local Businesses</h3>
               <p class="text-sm text-slate-600">
-                Local surfers who grew up riding Moroccan waves now share their passion and expertise with travelers.
+                Family-run operations that provide authentic accommodations and services.
               </p>
             </div>
 
-            <div class="rounded-3xl bg-white p-8 shadow-lg">
-              <div class="mb-4 text-5xl">🏠</div>
-              <h3 class="mb-2 text-xl font-bold text-slate-900">Family Guesthouses</h3>
+            <div class="rounded-2xl bg-white p-6 shadow-sm border border-slate-200">
+              <h3 class="mb-2 text-lg font-semibold text-slate-900">Community Partners</h3>
               <p class="text-sm text-slate-600">
-                Stay with families who treat guests like relatives, sharing meals, stories, and genuine hospitality.
+                Cooperatives and organizations dedicated to sustainable, community-based tourism.
               </p>
             </div>
           </div>
@@ -162,8 +158,8 @@
       <div class="container mx-auto px-4">
         <div class="mx-auto max-w-4xl">
           <div class="mb-16 text-center">
-            <h2 class="mb-4 text-4xl font-black text-slate-900 lg:text-5xl">
-              Our Commitment to Equity & Impact
+            <h2 class="mb-4 text-3xl font-semibold text-slate-900">
+              Our Commitment to Fair Tourism
             </h2>
             <p class="text-lg text-slate-600">
               Tourism should benefit everyone, especially local communities
@@ -171,26 +167,25 @@
           </div>
 
           <div class="grid gap-8 md:grid-cols-2">
-            <Card class="rounded-3xl border-2 border-green-200 bg-green-50 p-8">
-              <h3 class="mb-4 flex items-center space-x-2 text-2xl font-bold text-slate-900">
-                <Icon name="mdi:currency-usd" class="h-7 w-7 text-green-600" />
-                <span>Fair Wages</span>
+            <Card class="rounded-2xl border border-slate-200 bg-white p-6">
+              <h3 class="mb-4 text-xl font-semibold text-slate-900">
+                Fair Remuneration
               </h3>
               <p class="mb-4 leading-relaxed text-slate-700">
-                All our guides, porters, and staff receive wages above industry standards, with benefits including health insurance and professional development opportunities.
+                All our partners receive fair compensation for their services. We believe in equitable partnerships where everyone benefits.
               </p>
               <ul class="space-y-2 text-sm text-slate-600">
                 <li class="flex items-start space-x-2">
                   <Icon name="mdi:check" class="mt-0.5 h-4 w-4 flex-shrink-0 text-green-600" />
-                  <span>Porter wages 30% above minimum</span>
+                  <span>Fair wages for all partners</span>
                 </li>
                 <li class="flex items-start space-x-2">
                   <Icon name="mdi:check" class="mt-0.5 h-4 w-4 flex-shrink-0 text-green-600" />
-                  <span>Health insurance for all staff</span>
+                  <span>Transparent pricing</span>
                 </li>
                 <li class="flex items-start space-x-2">
                   <Icon name="mdi:check" class="mt-0.5 h-4 w-4 flex-shrink-0 text-green-600" />
-                  <span>Annual training & certifications</span>
+                  <span>Direct partnerships with locals</span>
                 </li>
               </ul>
             </Card>
@@ -272,24 +267,20 @@
     </section>
 
     <!-- Stats -->
-    <section class="bg-gradient-to-r from-orange-500 via-pink-500 to-purple-500 py-20">
+    <section class="bg-gradient-to-r from-[#FF6B35] to-[#F7931E] py-20">
       <div class="container mx-auto px-4">
-        <div class="grid gap-8 md:grid-cols-4">
+        <div class="grid gap-8 md:grid-cols-3">
           <div class="text-center text-white">
-            <div class="mb-2 text-6xl font-black">15</div>
-            <div class="text-xl font-semibold">Years Experience</div>
+            <div class="mb-2 text-5xl font-semibold">100+</div>
+            <div class="text-lg">Happy Customers</div>
           </div>
           <div class="text-center text-white">
-            <div class="mb-2 text-6xl font-black">500+</div>
-            <div class="text-xl font-semibold">Happy Travelers</div>
+            <div class="mb-2 text-5xl font-semibold">10+</div>
+            <div class="text-lg">Local Partners</div>
           </div>
           <div class="text-center text-white">
-            <div class="mb-2 text-6xl font-black">40+</div>
-            <div class="text-xl font-semibold">Local Partners</div>
-          </div>
-          <div class="text-center text-white">
-            <div class="mb-2 text-6xl font-black">$50K+</div>
-            <div class="text-xl font-semibold">Community Investment</div>
+            <div class="mb-2 text-5xl font-semibold">2+</div>
+            <div class="text-lg">Countries</div>
           </div>
         </div>
       </div>
@@ -308,11 +299,11 @@
           <Button
             as-child
             size="lg"
-            class="rounded-full bg-orange-500 px-12 py-7 text-lg font-bold shadow-xl hover:bg-orange-600 hover:scale-105"
+            class="rounded-lg bg-gradient-to-r from-[#FF6B35] to-[#F7931E] px-12 py-6 text-base font-medium shadow-lg hover:shadow-xl"
           >
             <NuxtLink to="/contact">
               Get in Touch
-              <Icon name="mdi:arrow-right" class="ml-2 h-6 w-6" />
+              <Icon name="mdi:arrow-right" class="ml-2 h-5 w-5" />
             </NuxtLink>
           </Button>
         </div>
@@ -328,6 +319,6 @@ import { Button } from '~/components/ui/button'
 
 useSeoMeta({
   title: 'About Us',
-  description: 'Learn about ZamZam XP - our story, values, and commitment to sustainable, community-focused adventure tourism in Nepal and Morocco.',
+  description: 'Learn about Zamzam Experience - our story, values, and commitment to sustainable, community-focused adventure tourism.',
 })
 </script>

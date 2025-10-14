@@ -9,6 +9,6 @@
 
 <script setup lang="ts">
 useSeoMeta({
-  titleTemplate: '%s | ZamZam XP - Epic Adventures in Nepal & Morocco',
+  titleTemplate: '%s | Zamzam Experience - Fair Travel with Local Guides',
 })
 </script>

@@ -1,8 +1,9 @@
 <template>
   <div>
     <!-- Hero Section -->
-    <section class="relative py-24 lg:py-32 bg-slate-50">
-      <div class="container mx-auto px-6">
+    <section class="relative py-24 lg:py-32 overflow-hidden">
+      <div class="absolute inset-0 bg-gradient-to-br from-[#FF6B35]/10 to-[#F7931E]/10"></div>
+      <div class="container mx-auto px-6 relative">
         <div class="text-center max-w-3xl mx-auto">
           <h1 class="text-4xl font-semibold leading-tight text-slate-900 lg:text-5xl mb-6">
             Explore Our Destinations
@@ -31,19 +32,18 @@
               </div>
               <div class="p-6">
                 <div class="flex items-center mb-3">
-                  <span class="text-2xl mr-3">🇳🇵</span>
                   <h3 class="text-xl font-semibold text-slate-900">Nepal</h3>
                 </div>
                 <p class="text-slate-600 mb-4">
                   Experience world-class trekking and paragliding adventures in the Himalayas with stunning mountain views.
                 </p>
                 <div class="flex flex-wrap gap-2 mb-4">
-                  <span class="px-3 py-1 bg-orange-100 text-orange-700 text-sm rounded-full">Trekking</span>
-                  <span class="px-3 py-1 bg-sky-100 text-sky-700 text-sm rounded-full">Paragliding</span>
+                  <span class="px-3 py-1 bg-slate-100 text-slate-700 text-sm rounded-full">Trekking</span>
+                  <span class="px-3 py-1 bg-slate-100 text-slate-700 text-sm rounded-full">Paragliding</span>
                 </div>
                 <div class="flex items-center justify-between">
-                  <span class="text-slate-500 text-sm">5 experiences</span>
-                  <span class="text-orange-600 font-medium group-hover:translate-x-1 transition-transform">Explore →</span>
+                  <span class="text-slate-500 text-sm">6 experiences</span>
+                  <span class="text-slate-900 font-medium group-hover:translate-x-1 transition-transform">Explore →</span>
                 </div>
               </div>
             </div>
@@ -62,39 +62,38 @@
               </div>
               <div class="p-6">
                 <div class="flex items-center mb-3">
-                  <span class="text-2xl mr-3">🇲🇦</span>
                   <h3 class="text-xl font-semibold text-slate-900">Morocco</h3>
                 </div>
                 <p class="text-slate-600 mb-4">
                   Discover Atlantic coast surfing combined with rich Moroccan culture in charming coastal towns.
                 </p>
                 <div class="flex flex-wrap gap-2 mb-4">
-                  <span class="px-3 py-1 bg-sky-100 text-sky-700 text-sm rounded-full">Surfing</span>
-                  <span class="px-3 py-1 bg-purple-100 text-purple-700 text-sm rounded-full">Culture</span>
+                  <span class="px-3 py-1 bg-slate-100 text-slate-700 text-sm rounded-full">Surfing</span>
+                  <span class="px-3 py-1 bg-slate-100 text-slate-700 text-sm rounded-full">Culture</span>
                 </div>
                 <div class="flex items-center justify-between">
-                  <span class="text-slate-500 text-sm">3 experiences</span>
-                  <span class="text-orange-600 font-medium group-hover:translate-x-1 transition-transform">Explore →</span>
+                  <span class="text-slate-500 text-sm">4 experiences</span>
+                  <span class="text-slate-900 font-medium group-hover:translate-x-1 transition-transform">Explore →</span>
                 </div>
               </div>
             </div>
           </NuxtLink>
 
           <!-- Coming Soon Card -->
-          <div class="relative overflow-hidden rounded-2xl bg-gradient-to-br from-slate-100 to-slate-200 border-2 border-dashed border-slate-300">
-            <div class="aspect-[4/3] flex items-center justify-center">
-              <div class="text-center">
-                <div class="text-6xl mb-4">🌎</div>
-                <h3 class="text-xl font-semibold text-slate-600 mb-2">More Destinations</h3>
-                <p class="text-slate-500">Coming Soon</p>
+          <div class="relative overflow-hidden rounded-2xl bg-slate-50 border border-slate-200">
+            <div class="aspect-[4/3] flex items-center justify-center bg-slate-100">
+              <div class="text-center p-6">
+                <div class="text-5xl mb-4">🌎</div>
+                <h3 class="text-xl font-semibold text-slate-500 mb-2">More Destinations</h3>
+                <p class="text-slate-400">Coming Soon</p>
               </div>
             </div>
             <div class="p-6">
-              <p class="text-slate-600 mb-4">
-                We're constantly adding new exciting destinations to our portfolio. Stay tuned for more adventures!
+              <p class="text-slate-500 mb-4">
+                We're constantly adding new exciting destinations. Stay tuned for more adventures!
               </p>
               <div class="flex items-center justify-between">
-                <span class="text-slate-500 text-sm">Expanding soon</span>
+                <span class="text-slate-400 text-sm">Expanding soon</span>
                 <span class="text-slate-400 font-medium">Stay tuned</span>
               </div>
             </div>
@@ -117,32 +116,32 @@
 
         <div class="grid gap-8 md:grid-cols-3">
           <div class="text-center">
-            <div class="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
-              <Icon name="mdi:compass" class="h-8 w-8 text-orange-600" />
+            <div class="w-16 h-16 bg-slate-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <Icon name="mdi:compass" class="h-8 w-8 text-slate-900" />
             </div>
             <h3 class="text-lg font-semibold text-slate-900 mb-2">Expert Curation</h3>
             <p class="text-slate-600">
-              Each destination is handpicked by our travel experts for its unique experiences and natural beauty.
+              Each destination is handpicked for its unique experiences and natural beauty.
             </p>
           </div>
 
           <div class="text-center">
-            <div class="w-16 h-16 bg-sky-100 rounded-full flex items-center justify-center mx-auto mb-4">
-              <Icon name="mdi:shield-check" class="h-8 w-8 text-sky-600" />
+            <div class="w-16 h-16 bg-slate-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <Icon name="mdi:shield-check" class="h-8 w-8 text-slate-900" />
             </div>
             <h3 class="text-lg font-semibold text-slate-900 mb-2">Safety First</h3>
             <p class="text-slate-600">
-              All our destinations meet the highest safety standards with local emergency support and insurance coverage.
+              All destinations meet high safety standards with local emergency support.
             </p>
           </div>
 
           <div class="text-center">
-            <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-              <Icon name="mdi:heart" class="h-8 w-8 text-purple-600" />
+            <div class="w-16 h-16 bg-slate-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <Icon name="mdi:heart" class="h-8 w-8 text-slate-900" />
             </div>
             <h3 class="text-lg font-semibold text-slate-900 mb-2">Authentic Experiences</h3>
             <p class="text-slate-600">
-              Connect with local communities and experience authentic cultures through meaningful interactions.
+              Connect with local communities through meaningful interactions.
             </p>
           </div>
         </div>
@@ -163,7 +162,7 @@
             <Button
               as-child
               size="lg"
-              class="rounded-lg bg-orange-600 px-8 py-3 text-base font-medium text-white hover:bg-orange-700 transition-colors"
+              class="rounded-lg bg-gradient-to-r from-[#FF6B35] to-[#F7931E] px-8 py-3 text-base font-medium text-white transition-all"
             >
               <NuxtLink to="/contact">
                 Plan My Trip
