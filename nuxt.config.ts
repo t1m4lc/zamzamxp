@@ -22,6 +22,7 @@ export default defineNuxtConfig({
     "@nuxt/icon",
     "@nuxt/image",
     "motion-v/nuxt",
+    "nuxt-gtag",
   ],
 
   shadcn: {
@@ -52,5 +53,10 @@ export default defineNuxtConfig({
   runtimeConfig: {
     // Private keys - only available server-side
     smtpPass: process.env.SMTP_PASS,
+  },
+
+  gtag: {
+    enabled: process.env.NODE_ENV === "production",
+    id: "G-DB0652H3G7",
   },
 });
