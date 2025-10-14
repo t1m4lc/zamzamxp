@@ -139,7 +139,7 @@
           <div 
             v-for="member in teamMembers" 
             :key="member.id" 
-            class="group relative w-1/2 md:w-1/3 lg:w-1/6"
+            class="group relative w-[calc(50%-12px)] md:w-1/3 lg:w-1/6"
           >
             <div class="relative overflow-hidden rounded-2xl bg-gradient-to-br from-slate-100 to-slate-200 p-1 hover:scale-105 transition-all duration-300">
               <div class="relative aspect-square overflow-hidden rounded-xl bg-white">
@@ -166,30 +166,30 @@
         </div>
 
         <!-- Stats Bar -->
-        <div class="mt-16 grid grid-cols-4 gap-8 max-w-4xl mx-auto">
-          <div class="text-center p-6">
-            <div class="text-4xl font-semibold text-slate-900 mb-2">
+        <div class="mt-16 grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 max-w-4xl mx-auto">
+          <div class="text-center p-3 md:p-6">
+            <div class="text-2xl md:text-4xl font-semibold text-slate-900 mb-2">
               <NumberTicker :value="100" :decimal-places="0" />+
             </div>
-            <div class="text-sm text-slate-600">Happy Travelers</div>
+            <div class="text-xs md:text-sm text-slate-600">Happy Travelers</div>
           </div>
-          <div class="text-center p-6">
-            <div class="text-4xl font-semibold text-slate-900 mb-2">
+          <div class="text-center p-3 md:p-6">
+            <div class="text-2xl md:text-4xl font-semibold text-slate-900 mb-2">
               <NumberTicker :value="totalCountries" :decimal-places="0" />
             </div>
-            <div class="text-sm text-slate-600">Countries</div>
+            <div class="text-xs md:text-sm text-slate-600">Countries</div>
           </div>
-          <div class="text-center p-6">
-            <div class="text-4xl font-semibold text-slate-900 mb-2">
+          <div class="text-center p-3 md:p-6">
+            <div class="text-2xl md:text-4xl font-semibold text-slate-900 mb-2">
               <NumberTicker :value="totalActivities" :decimal-places="0" />
             </div>
-            <div class="text-sm text-slate-600">Activities</div>
+            <div class="text-xs md:text-sm text-slate-600">Activities</div>
           </div>
-          <div class="text-center p-6">
-            <div class="text-4xl font-semibold text-slate-900 mb-2">
+          <div class="text-center p-3 md:p-6">
+            <div class="text-2xl md:text-4xl font-semibold text-slate-900 mb-2">
               <NumberTicker :value="4.9" :decimal-places="1" />★
             </div>
-            <div class="text-sm text-slate-600">Average Rating</div>
+            <div class="text-xs md:text-sm text-slate-600">Average Rating</div>
           </div>
         </div>
       </div>
@@ -207,16 +207,16 @@
           </p>
         </div>
         
-        <div class="flex flex-wrap justify-center gap-6 max-w-4xl mx-auto">
+        <div class="flex flex-wrap justify-center gap-3 md:gap-6 max-w-4xl mx-auto">
           <NuxtLink 
             v-for="destination in destinations" 
             :key="destination.name"
             :to="destination.link"
             class="group relative overflow-hidden rounded-full bg-white shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
           >
-            <div class="flex items-center gap-4 px-3 py-3 pr-8">
+            <div class="flex items-center gap-2 md:gap-4 px-2 md:px-3 py-2 md:py-3 pr-4 md:pr-8">
               <!-- Country Image -->
-              <div class="w-16 h-16 rounded-full overflow-hidden flex-shrink-0 border-2 border-slate-100">
+              <div class="w-12 h-12 md:w-16 md:h-16 rounded-full overflow-hidden flex-shrink-0 border-2 border-slate-100">
                 <NuxtImg 
                   :src="destination.image" 
                   :alt="destination.name"
@@ -225,9 +225,9 @@
                 />
               </div>
               <!-- Country Name -->
-              <div class="flex items-center gap-2">
-                <span class="font-semibold text-slate-900 text-lg">{{ destination.name }}</span>
-                <Icon name="mdi:chevron-right" class="h-5 w-5 text-slate-400 transition-transform group-hover:translate-x-1" />
+              <div class="flex items-center gap-1 md:gap-2">
+                <span class="font-semibold text-slate-900 text-base md:text-lg">{{ destination.name }}</span>
+                <Icon name="mdi:chevron-right" class="h-4 w-4 md:h-5 md:w-5 text-slate-400 transition-transform group-hover:translate-x-1" />
               </div>
             </div>
           </NuxtLink>

@@ -13,16 +13,18 @@
         :href="whatsappUrl"
         target="_blank"
         rel="noopener noreferrer"
-        class="fixed bottom-6 right-6 z-50 flex h-16 w-16 items-center justify-center rounded-full bg-green-500 text-white shadow-lg transition-all duration-300 hover:scale-110 hover:bg-green-600 hover:shadow-xl md:hidden"
+        class="fixed bottom-4 right-6 z-50  flex h-16 w-16 items-center justify-center rounded-full bg-green-500 text-white shadow-lg transition-all duration-300 hover:scale-110 hover:bg-green-600 hover:shadow-xl md:hidden"
         aria-label="Chat on WhatsApp"
       >
-        <Icon name="mdi:whatsapp" class="h-10 w-10" />
+        <Icon name="mdi:whatsapp" class="h-12 w-12" />
       </a>
     </Transition>
   </Teleport>
 </template>
 
 <script setup lang="ts">
+import { APP_CONFIG } from '~/config/constants'
+
 const route = useRoute()
 const isVisible = ref(false)
 
@@ -46,7 +48,7 @@ onMounted(() => {
 })
 
 const whatsappUrl = computed(() => {
-  const phoneNumber = '33767503066' // Replace with actual WhatsApp number (international format without +)
+  const phoneNumber = APP_CONFIG.company.whatsapp
   let message = 'Hi! I\'m interested in your tours'
 
   // Dynamic message based on current page

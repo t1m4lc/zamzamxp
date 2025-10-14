@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="overflow-x-hidden">
     <NuxtLoadingIndicator color="#FF6B35" />
     <Header />
     <NuxtPage />

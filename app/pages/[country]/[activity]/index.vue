@@ -180,9 +180,20 @@ const getActivityIcon = (activityType: string) => {
 
 // Fetch experiences dynamically from content
 const { data: experiencesData } = await useAsyncData(`${country}-${activity}-experiences`, async () => {
-  return await queryCollection('content')
-    .where('path', 'LIKE', `/${country}/${activity}/%`)
-    .all()
+  const allExperiences = await queryCollection('content').all()
+  console.log('=== DEBUG: All Experiences ===')
+  console.log('Total experiences:', allExperiences.length)
+  console.log('First 3 items:', allExperiences.slice(0, 3).map((e: any) => ({ path: e.path, title: e.title })))
+  console.log('Looking for:', `${country}/${activity}/`)
+  
+  // Filter by country and activity - path format is "nepal/trekking/annapurna-circuit"
+  const filtered = allExperiences.filter((item: any) => 
+    item.path?.startsWith(`${country}/${activity}/`)
+  )
+  console.log('Filtered experiences:', filtered.length)
+  console.log('Filtered items:', filtered.map((e: any) => ({ path: e.path, title: e.title })))
+  
+  return filtered
 })
 
 const experiences = computed(() => {
