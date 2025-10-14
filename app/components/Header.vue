@@ -3,7 +3,9 @@
     <div class="container mx-auto flex h-20 items-center justify-between px-6">
       <!-- Logo -->
       <NuxtLink to="/" class="flex items-center space-x-2 transition-opacity hover:opacity-80">
-        <span class="text-2xl font-semibold text-slate-900">Zamzam <span class="text-sm font-mono text-slate-700">experience</span></span>
+        <span class="text-2xl font-semibold text-slate-900">Zamzam 
+          
+          <span class="text-sm font-mono text-slate-700">experience</span></span>
       </NuxtLink>
 
       <!-- Desktop Navigation -->

@@ -193,23 +193,23 @@
             <Card class="rounded-3xl border-2 border-orange-200 bg-orange-50 p-8">
               <h3 class="mb-4 flex items-center space-x-2 text-2xl font-bold text-slate-900">
                 <Icon name="mdi:account-group" class="h-7 w-7 text-orange-600" />
-                <span>Community Investment</span>
+                <span>Community Focus</span>
               </h3>
               <p class="mb-4 leading-relaxed text-slate-700">
-                5% of every booking goes directly to community projects chosen by local residents, from school improvements to environmental conservation.
+                We prioritize working with local businesses and family-run operations, ensuring tourism revenue stays within the community.
               </p>
               <ul class="space-y-2 text-sm text-slate-600">
                 <li class="flex items-start space-x-2">
                   <Icon name="mdi:check" class="mt-0.5 h-4 w-4 flex-shrink-0 text-orange-600" />
-                  <span>School infrastructure projects</span>
+                  <span>Direct partnerships with local families</span>
                 </li>
                 <li class="flex items-start space-x-2">
                   <Icon name="mdi:check" class="mt-0.5 h-4 w-4 flex-shrink-0 text-orange-600" />
-                  <span>Clean water initiatives</span>
+                  <span>Support for small local businesses</span>
                 </li>
                 <li class="flex items-start space-x-2">
                   <Icon name="mdi:check" class="mt-0.5 h-4 w-4 flex-shrink-0 text-orange-600" />
-                  <span>Reforestation programs</span>
+                  <span>Revenue stays in local communities</span>
                 </li>
               </ul>
             </Card>
@@ -241,23 +241,23 @@
             <Card class="rounded-3xl border-2 border-purple-200 bg-purple-50 p-8">
               <h3 class="mb-4 flex items-center space-x-2 text-2xl font-bold text-slate-900">
                 <Icon name="mdi:diversity" class="h-7 w-7 text-purple-600" />
-                <span>Women Empowerment</span>
+                <span>Inclusive Opportunities</span>
               </h3>
               <p class="mb-4 leading-relaxed text-slate-700">
-                We actively hire and train women guides, support women-led cooperatives, and create opportunities in traditionally male-dominated fields.
+                We're committed to working with diverse partners and supporting inclusive tourism. As we grow, we aim to create more opportunities for underrepresented groups in adventure tourism.
               </p>
               <ul class="space-y-2 text-sm text-slate-600">
                 <li class="flex items-start space-x-2">
                   <Icon name="mdi:check" class="mt-0.5 h-4 w-4 flex-shrink-0 text-purple-600" />
-                  <span>Women guide training program</span>
+                  <span>Open to all qualified guides</span>
                 </li>
                 <li class="flex items-start space-x-2">
                   <Icon name="mdi:check" class="mt-0.5 h-4 w-4 flex-shrink-0 text-purple-600" />
-                  <span>Partnership with women's cooperatives</span>
+                  <span>Building diverse partnerships</span>
                 </li>
                 <li class="flex items-start space-x-2">
                   <Icon name="mdi:check" class="mt-0.5 h-4 w-4 flex-shrink-0 text-purple-600" />
-                  <span>Equal opportunity hiring</span>
+                  <span>Equal opportunity approach</span>
                 </li>
               </ul>
             </Card>
