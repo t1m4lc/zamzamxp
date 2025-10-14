@@ -23,7 +23,7 @@ export default defineNuxtConfig({
 
   image: {
     quality: 85,
-    format: ['webp', 'jpg'],
+    format: ["webp", "jpg"],
     screens: {
       xs: 320,
       sm: 640,
@@ -36,5 +36,10 @@ export default defineNuxtConfig({
 
   vite: {
     plugins: [tailwindcss()],
+  },
+
+  runtimeConfig: {
+    // Private keys - only available server-side
+    smtpPass: process.env.SMTP_PASS,
   },
 });

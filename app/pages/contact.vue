@@ -32,7 +32,7 @@
                 size="lg"
                 class="w-full rounded-lg bg-green-500 font-medium hover:bg-green-600"
               >
-                <a href="https://wa.me/1234567890" target="_blank" rel="noopener">
+                <a :href="getWhatsAppUrl()" target="_blank" rel="noopener">
                   <Icon name="mdi:whatsapp" class="mr-2 h-5 w-5" />
                   Chat on WhatsApp
                 </a>
@@ -51,7 +51,7 @@
                 size="lg"
                 class="w-full rounded-lg bg-gradient-to-r from-[#FF6B35] to-[#F7931E] font-medium"
               >
-                <a href="mailto:hello@zamzamxp.com">
+                <a :href="`mailto:${APP_CONFIG.company.email}`">
                   <Icon name="mdi:email" class="mr-2 h-5 w-5" />
                   Email Us
                 </a>
@@ -65,18 +65,42 @@
               Send Us a Message
             </h2>
             
-            <form class="space-y-6">
+            <!-- Success Message -->
+            <div
+              v-if="formState.success"
+              class="mb-6 rounded-xl border-2 border-green-200 bg-green-50 p-4 text-center"
+            >
+              <Icon name="mdi:check-circle" class="mb-2 inline-block h-8 w-8 text-green-500" />
+              <p class="font-semibold text-green-800">
+                {{ formState.successMessage }}
+              </p>
+            </div>
+
+            <!-- Error Message -->
+            <div
+              v-if="formState.error"
+              class="mb-6 rounded-xl border-2 border-red-200 bg-red-50 p-4 text-center"
+            >
+              <Icon name="mdi:alert-circle" class="mb-2 inline-block h-8 w-8 text-red-500" />
+              <p class="font-semibold text-red-800">
+                {{ formState.errorMessage }}
+              </p>
+            </div>
+            
+            <form @submit.prevent="handleSubmit" class="space-y-6">
               <div class="grid gap-6 md:grid-cols-2">
                 <div>
                   <label for="name" class="mb-2 block text-sm font-semibold text-slate-900">
                     Your Name *
                   </label>
                   <input
+                    v-model="formData.name"
                     type="text"
                     id="name"
                     class="w-full rounded-xl border-2 border-slate-200 px-4 py-3 transition-colors focus:border-orange-500 focus:outline-none"
                     placeholder="John Doe"
                     required
+                    :disabled="formState.loading"
                   />
                 </div>
 
@@ -85,11 +109,13 @@
                     Email Address *
                   </label>
                   <input
+                    v-model="formData.email"
                     type="email"
                     id="email"
                     class="w-full rounded-xl border-2 border-slate-200 px-4 py-3 transition-colors focus:border-orange-500 focus:outline-none"
                     placeholder="john@example.com"
                     required
+                    :disabled="formState.loading"
                   />
                 </div>
               </div>
@@ -99,10 +125,12 @@
                   Subject
                 </label>
                 <input
+                  v-model="formData.subject"
                   type="text"
                   id="subject"
                   class="w-full rounded-xl border-2 border-slate-200 px-4 py-3 transition-colors focus:border-orange-500 focus:outline-none"
                   placeholder="Planning a trek to Nepal"
+                  :disabled="formState.loading"
                 />
               </div>
 
@@ -111,21 +139,30 @@
                   Message *
                 </label>
                 <textarea
+                  v-model="formData.message"
                   id="message"
                   rows="6"
                   class="w-full rounded-xl border-2 border-slate-200 px-4 py-3 transition-colors focus:border-orange-500 focus:outline-none"
                   placeholder="Tell us about your dream adventure..."
                   required
+                  :disabled="formState.loading"
                 ></textarea>
               </div>
 
               <Button
                 type="submit"
                 size="lg"
-                class="w-full rounded-full bg-orange-500 py-6 font-bold hover:bg-orange-600"
+                class="w-full rounded-full bg-orange-500 py-6 font-bold hover:bg-orange-600 disabled:opacity-50 disabled:cursor-not-allowed"
+                :disabled="formState.loading"
               >
-                Send Message
-                <Icon name="mdi:send" class="ml-2 h-5 w-5" />
+                <span v-if="formState.loading">
+                  <Icon name="mdi:loading" class="mr-2 h-5 w-5 animate-spin" />
+                  Sending...
+                </span>
+                <span v-else>
+                  Send Message
+                  <Icon name="mdi:send" class="ml-2 h-5 w-5" />
+                </span>
               </Button>
             </form>
 
@@ -139,19 +176,19 @@
             <div class="text-center">
               <div class="mb-3 text-4xl">📍</div>
               <div class="font-bold text-slate-900">Location</div>
-              <div class="text-sm text-slate-600">Montpellier, France</div>
+              <div class="text-sm text-slate-600">{{ APP_CONFIG.contact.location }}</div>
             </div>
 
             <div class="text-center">
               <div class="mb-3 text-4xl">⏰</div>
               <div class="font-bold text-slate-900">Response Time</div>
-              <div class="text-sm text-slate-600">Within 24 hours</div>
+              <div class="text-sm text-slate-600">{{ APP_CONFIG.contact.responseTime }}</div>
             </div>
 
             <div class="text-center">
               <div class="mb-3 text-4xl">🌐</div>
               <div class="font-bold text-slate-900">Languages</div>
-              <div class="text-sm text-slate-600">English & French</div>
+              <div class="text-sm text-slate-600">{{ APP_CONFIG.contact.languages }}</div>
             </div>
           </div>
 
@@ -164,9 +201,74 @@
 <script setup lang="ts">
 import { Card } from '~/components/ui/card'
 import { Button } from '~/components/ui/button'
+import { APP_CONFIG } from '~/config/constants'
+
+const { getWhatsAppUrl } = useContact()
 
 useSeoMeta({
   title: 'Contact Us',
   description: 'Get in touch with ZamZam XP. Plan your adventure in Nepal or Morocco. Quick response via WhatsApp or email.',
 })
+
+// Form data
+const formData = ref({
+  name: '',
+  email: '',
+  subject: '',
+  message: ''
+})
+
+// Form state
+const formState = ref({
+  loading: false,
+  success: false,
+  error: false,
+  successMessage: '',
+  errorMessage: ''
+})
+
+// Handle form submission
+const handleSubmit = async () => {
+  // Reset states
+  formState.value.success = false
+  formState.value.error = false
+  formState.value.loading = true
+
+  try {
+    const response = await $fetch<{ success: boolean; message: string }>('/api/contact', {
+      method: 'POST',
+      body: formData.value
+    })
+
+    // Show success message
+    formState.value.success = true
+    formState.value.successMessage = response.message || 'Your message has been sent successfully!'
+
+    // Reset form
+    formData.value = {
+      name: '',
+      email: '',
+      subject: '',
+      message: ''
+    }
+
+    // Scroll to success message
+    setTimeout(() => {
+      const successElement = document.querySelector('.border-green-200')
+      successElement?.scrollIntoView({ behavior: 'smooth', block: 'center' })
+    }, 100)
+
+  } catch (error: any) {
+    formState.value.error = true
+    formState.value.errorMessage = error.data?.statusMessage || 'Something went wrong. Please try again.'
+    
+    // Scroll to error message
+    setTimeout(() => {
+      const errorElement = document.querySelector('.border-red-200')
+      errorElement?.scrollIntoView({ behavior: 'smooth', block: 'center' })
+    }, 100)
+  } finally {
+    formState.value.loading = false
+  }
+}
 </script>

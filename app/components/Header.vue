@@ -43,9 +43,9 @@
       </nav>
 
       <!-- Mobile Menu Button -->
-      <button @click="mobileMenuOpen = !mobileMenuOpen" class="lg:hidden p-2 hover:bg-slate-50 rounded-lg">
-        <Icon v-if="!mobileMenuOpen" name="heroicons:bars-3" class="h-6 w-6 text-slate-700" />
-        <Icon v-else name="heroicons:x-mark" class="h-6 w-6 text-slate-700" />
+      <button @click="mobileMenuOpen = !mobileMenuOpen" class="lg:hidden p-2 hover:bg-slate-50 rounded-lg transition-all">
+        <Icon v-if="!mobileMenuOpen" name="lucide:menu" class="h-6 w-6 text-slate-700" />
+        <Icon v-else name="lucide:x" class="h-6 w-6 text-slate-700" />
       </button>
     </div>
 

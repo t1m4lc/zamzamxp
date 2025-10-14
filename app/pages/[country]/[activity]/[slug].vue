@@ -12,7 +12,7 @@
           size="lg"
           class="rounded-full bg-orange-500 px-8 font-bold"
         >
-          <a href="https://wa.me/1234567890" target="_blank" rel="noopener">
+          <a :href="whatsappUrl" target="_blank" rel="noopener">
             Book Now
           </a>
         </Button>
@@ -210,7 +210,7 @@
                     size="lg"
                     class="w-full rounded-full bg-orange-500 py-6 font-bold shadow-lg hover:bg-orange-600"
                   >
-                    <a href="https://wa.me/1234567890" target="_blank" rel="noopener">
+                    <a :href="whatsappUrl" target="_blank" rel="noopener">
                       <Icon name="mdi:whatsapp" class="mr-2 h-5 w-5" />
                       Book on WhatsApp
                     </a>
@@ -387,7 +387,7 @@
             size="lg"
             class="rounded-full bg-orange-500 px-12 py-8 text-xl font-bold text-white shadow-2xl transition-all hover:bg-orange-600 hover:scale-105"
           >
-            <a href="https://wa.me/1234567890" target="_blank" rel="noopener">
+            <a :href="whatsappUrl" target="_blank" rel="noopener">
               <Icon name="mdi:whatsapp" class="mr-2 h-7 w-7" />
               Book Now on WhatsApp
             </a>
@@ -1128,6 +1128,16 @@ const relatedActivities = computed(() => {
       exp.slug !== String(slug)
     )
     .slice(0, 3)
+})
+
+// WhatsApp URL with dynamic message
+const whatsappUrl = computed(() => {
+  const phoneNumber = '212666570222' // Replace with actual WhatsApp number
+  const message = experience.value 
+    ? `Hi! I'm interested in ${experience.value.title} - ${experience.value.duration} for $${experience.value.price}`
+    : "Hi! I'm interested in your tours"
+  
+  return `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(message)}`
 })
 
 if (experience.value) {

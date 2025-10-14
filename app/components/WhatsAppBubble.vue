@@ -13,7 +13,7 @@
         :href="whatsappUrl"
         target="_blank"
         rel="noopener noreferrer"
-        class="fixed bottom-6 right-6 z-50 flex h-16 w-16 items-center justify-center rounded-full bg-green-500 text-white shadow-lg transition-all duration-300 hover:scale-110 hover:bg-green-600 hover:shadow-xl"
+        class="fixed bottom-6 right-6 z-50 flex h-16 w-16 items-center justify-center rounded-full bg-green-500 text-white shadow-lg transition-all duration-300 hover:scale-110 hover:bg-green-600 hover:shadow-xl md:hidden"
         aria-label="Chat on WhatsApp"
       >
         <Icon name="mdi:whatsapp" class="h-10 w-10" />
@@ -46,7 +46,7 @@ onMounted(() => {
 })
 
 const whatsappUrl = computed(() => {
-  const phoneNumber = '1234567890' // Replace with actual WhatsApp number
+  const phoneNumber = '33767503066' // Replace with actual WhatsApp number (international format without +)
   let message = 'Hi! I\'m interested in your tours'
 
   // Dynamic message based on current page
@@ -69,7 +69,8 @@ const whatsappUrl = computed(() => {
     message = `Hi! I'm interested in ${countryName} adventures`
   }
 
-  return `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`
+  // Use api.whatsapp.com for better mobile redirect
+  return `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(message)}`
 })
 </script>
 
