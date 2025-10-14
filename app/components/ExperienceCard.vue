@@ -9,6 +9,8 @@
           :src="experience.image"
           :alt="experience.title"
           class="h-full w-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.04]"
+          sizes="xs:100vw sm:50vw md:50vw lg:33vw xl:33vw"
+          placeholder
           loading="lazy"
         />
       </div>

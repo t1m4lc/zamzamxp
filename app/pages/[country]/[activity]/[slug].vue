@@ -65,6 +65,9 @@
         :src="experience.image"
         :alt="experience.title"
         class="h-full w-full object-cover"
+        sizes="xs:100vw sm:100vw md:100vw lg:100vw xl:100vw"
+        placeholder
+        loading="lazy"
       />
       <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/40 to-transparent"></div>
       
@@ -91,19 +94,19 @@
       <div class="container mx-auto px-4">
         <div class="flex flex-wrap gap-6 text-sm">
           <div class="flex items-center space-x-2">
-            <Icon name="mdi:clock-outline" class="h-5 w-5 text-orange-500" />
+            <Icon name="material-symbols:schedule-outline" class="h-5 w-5 text-orange-500" />
             <span class="font-semibold text-slate-900">{{ experience.duration }}</span>
           </div>
           <div class="flex items-center space-x-2">
-            <Icon name="mdi:speedometer" class="h-5 w-5 text-orange-500" />
+            <Icon name="material-symbols:speed-outline" class="h-5 w-5 text-orange-500" />
             <span class="font-semibold text-slate-900">{{ experience.difficulty }}</span>
           </div>
           <div class="flex items-center space-x-2" v-if="experience.groupSize">
-            <Icon name="mdi:account-group" class="h-5 w-5 text-orange-500" />
+            <Icon name="material-symbols:group-outline" class="h-5 w-5 text-orange-500" />
             <span class="font-semibold text-slate-900">{{ experience.groupSize }}</span>
           </div>
           <div class="flex items-center space-x-2" v-if="experience.bestTime">
-            <Icon name="mdi:calendar" class="h-5 w-5 text-orange-500" />
+            <Icon name="material-symbols:calendar-month-outline" class="h-5 w-5 text-orange-500" />
             <span class="font-semibold text-slate-900">{{ experience.bestTime }}</span>
           </div>
         </div>
@@ -154,6 +157,8 @@
                     :src="image"
                     :alt="`${experience.title} - Image ${index + 1}`"
                     class="h-full w-full object-cover transition-transform hover:scale-110"
+                    sizes="xs:50vw sm:50vw md:33vw lg:25vw xl:20vw"
+                    placeholder
                     loading="lazy"
                   />
                 </div>
@@ -319,6 +324,9 @@
                     :src="experience.referee.image"
                     :alt="experience.referee.name"
                     class="h-full w-full object-cover"
+                    sizes="xs:100vw sm:100vw md:33vw lg:25vw xl:20vw"
+                    placeholder
+                    loading="lazy"
                   />
                   <div v-else class="flex h-full items-center justify-center text-7xl">
                     {{ experience.referee.emoji || '👨‍🏫' }}

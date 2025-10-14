@@ -27,6 +27,8 @@
                   src="https://images.unsplash.com/photo-1544735716-392fe2489ffa?w=800&auto=format&fit=crop&q=80"
                   alt="Nepal - Himalayan Adventures"
                   class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  sizes="xs:100vw sm:50vw md:50vw lg:33vw xl:33vw"
+                  placeholder
                   loading="lazy"
                 />
               </div>
@@ -56,6 +58,8 @@
                   src="https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?w=800&auto=format&fit=crop&q=80"
                   alt="Morocco - Atlantic Coast Surfing"
                   class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  sizes="xs:100vw sm:50vw md:50vw lg:33vw xl:33vw"
+                  placeholder
                   loading="lazy"
                 />
               </div>

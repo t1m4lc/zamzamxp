@@ -21,6 +21,8 @@
           :src="heroImage"
           :alt="`Adventures in ${countryName}`"
           class="h-full w-full object-cover"
+          sizes="xs:100vw sm:100vw md:100vw lg:100vw xl:100vw"
+          placeholder
           loading="eager"
         />
         <div class="absolute inset-0 bg-gradient-to-b from-slate-900/50 via-slate-900/30 to-slate-900/70"></div>

@@ -147,6 +147,8 @@
             :src="member.image" 
             :alt="member.name"
             class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
+            sizes="xs:50vw sm:50vw md:33vw lg:16vw xl:16vw"
+            placeholder
             loading="lazy"
           />
               </div>
@@ -221,6 +223,8 @@
                   :src="destination.image" 
                   :alt="destination.name"
                   class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  sizes="xs:48px sm:48px md:64px lg:64px xl:64px"
+                  placeholder
                   loading="lazy"
                 />
               </div>
