@@ -1,7 +1,7 @@
 <template>
-  <div>
+  <div class="overflow-x-hidden">
     <!-- Hero Section with Globe Background -->
-    <section class="relative bg-white overflow-visible" style="padding-bottom: 250px; padding-top: 40px;">
+    <section class="relative bg-white overflow-hidden" style="padding-bottom: 250px; padding-top: 40px;">
       <!-- Globe Background - Positioned lower -->
       <div class="absolute left-0 right-0 flex items-end justify-center pointer-events-none" style="top: 35%; transform: translateY(0);">
         <div class="relative w-full h-[600px] lg:h-[800px] max-w-[800px] lg:max-w-[1000px]">
@@ -75,8 +75,8 @@
     </section>
 
     <!-- Testimonials Section -->
-    <section class="py-20 lg:py-24 bg-slate-50">
-      <div class="container mx-auto px-6 relative flex w-full flex-col items-center justify-center ">
+    <section class="py-20 lg:py-24 bg-slate-50 overflow-x-hidden">
+      <div class="container mx-auto px-6 relative flex w-full flex-col items-center justify-center overflow-x-hidden">
 
         <div class="mb-12 text-center">
           <h2 class="text-3xl font-semibold text-slate-900 mb-3">
