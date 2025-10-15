@@ -161,7 +161,7 @@
               <div class="flex items-center justify-center gap-1">
           <Icon name="mdi:star" class="h-3 w-3 text-yellow-500" />
           <span class="text-xs font-medium text-slate-600">{{ member.rating }}</span>
-          <span class="text-xs text-slate-400">({{ member.trips }} trips)</span>
+          <span class="text-xs text-slate-400">({{ member.reviews }} reviews)</span>
               </div>
             </div>
           </div>
@@ -286,21 +286,21 @@ const firstRowReviews = [
     initials: "IT",
     name: "Isabelle Taen",
     location: "France",
-    text: "I did the 12-days Manaslu circuit trekking, and it was absolutely spectacular! Stunning views, truly a memory for life. Sandip is an amazing guide, who knows a lot about nature, culture, and the mountains. I always felt safe with him.",
+    text: "I did the 12-days Manaslu circuit trekking, and it was absolutely spectacular! Stunning views, truly a memory for life. Sandip is an amazing guide...",
     avatarClass: "bg-gradient-to-br from-blue-400 to-blue-600"
   },
   {
     initials: "SR",
     name: "Samuel Rowland-Jones",
     location: "UK",
-    text: "We just completed the Annapurna Circuit trek with Tilicho Lake. Sandip was incredible! Every guesthouse he chose exceeded our expectations. He checked in constantly on how we were feeling and paced the trek perfectly.",
+    text: "We just completed the Annapurna Circuit with Tilicho Lake. Sandip was incredible! Every guesthouse exceeded our expectations. He paced the trek perfectly...",
     avatarClass: "bg-gradient-to-br from-green-400 to-green-600"
   },
   {
     initials: "L",
     name: "Lisa",
     location: "Netherlands",
-    text: "The Annapurna Circuit including Tilicho Lake was truly once-in-a-lifetime. Sandip made everything smooth and memorable. He knows so much about the area, nature, and history. He always put our safety first and has a great sense of humor!",
+    text: "The Annapurna Circuit was truly once-in-a-lifetime! Sandip made everything smooth and memorable. He knows so much about the area and always put our safety first...",
     avatarClass: "bg-gradient-to-br from-purple-400 to-purple-600"
   },
 ]
@@ -310,21 +310,21 @@ const secondRowReviews = [
     initials: "MJ",
     name: "Michael Johnson",
     location: "Canada",
-    text: "The Everest Base Camp trek was the adventure of a lifetime! Sandip's knowledge of the Khumbu region is exceptional. He paced us perfectly for acclimatization and shared incredible stories about Sherpa culture along the way.",
+    text: "The Everest Base Camp trek was the adventure of a lifetime! Sandip's knowledge of the Khumbu region is exceptional and he shared incredible stories...",
     avatarClass: "bg-gradient-to-br from-orange-400 to-orange-600"
   },
   {
     initials: "AK",
     name: "Anna Kowalski",
     location: "Poland",
-    text: "Standing at Everest Base Camp was surreal! Sandip made sure we were well-prepared and safe throughout the journey. The teahouses were cozy, the views breathtaking, and his enthusiasm was contagious. Highly recommend!",
+    text: "Standing at Everest Base Camp was surreal! Sandip made sure we were well-prepared and safe. The teahouses were cozy, views breathtaking...",
     avatarClass: "bg-gradient-to-br from-pink-400 to-pink-600"
   },
   {
     initials: "DM",
     name: "David Martinez",
     location: "Spain",
-    text: "Everest Base Camp exceeded every expectation! Sandip's attention to detail and care for our wellbeing made all the difference. From Namche Bazaar to Kala Patthar, every moment was unforgettable. A true professional!",
+    text: "Everest Base Camp exceeded every expectation! Sandip's attention to detail made all the difference. From Namche Bazaar to Kala Patthar, unforgettable...",
     avatarClass: "bg-gradient-to-br from-teal-400 to-teal-600"
   },
 ]
@@ -356,31 +356,31 @@ const teamMembers = [
     role: "Nepal Trek Guide",
     image: "/images/pages/sandip-guide.jpeg",
     rating: "5.0",
-    trips: 89,
+    reviews: 89,
   },
-  {
-    id: 2,
-    name: "Sarah Mitchell",
-    role: "Travel Coordinator",
-    image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&auto=format&fit=crop&q=80",
-    rating: "4.9",
-    trips: 44,
-  },
-  {
+    {
     id: 3,
     name: "Hassan Alami",
     role: "Morocco Surf Instructor",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&auto=format&fit=crop&q=80",
+    image: "",
     rating: "4.9",
-    trips: 156,
+    reviews: 156,
+  },
+  {
+    id: 2,
+    name: "Biswash Gurung",
+    role: "Paragliding Instructor",
+    image: "/images/pages/biswash-gurung-paragliding.png",
+    rating: "4.9",
+    reviews: 44,
   },
   {
     id: 4,
-    name: "Maya Chen",
-    role: "Adventure Specialist",
-    image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&auto=format&fit=crop&q=80",
+    name: "Mohammed Darouch",
+    role: "Morocco Surf Instructor",
+    image: "",
     rating: "5.0",
-    trips: 93,
+    reviews: 8,
   },
  
 ]
