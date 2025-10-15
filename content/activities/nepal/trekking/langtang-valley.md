@@ -36,14 +36,30 @@ included:
   - "First aid medical supplies (carried by guide)"
   - "All official expenses and government taxes"
 notIncluded:
-  - "3 meals per day (breakfast, lunch, dinner)"
-  - "All drinks (tea, coffee, beer, etc.)"
   - "Your personal expenses"
+  - "All meals during trek (approx. $20-30/day)"
+  - "All drinks (tea, coffee, beer, etc.)"
   - "Travel insurance (required for emergency evacuation & medical rescue)"
   - "Tips for guide"
 bestTime: "March-May, September-November"
 minElevation: "1,400m"
 maxElevation: "4,773m (Kyanjin Ri)"
+reviews:
+  - name: "Sarah Mitchell"
+    initials: "SM"
+    location: "Canada"
+    quote: "Perfect trek for limited time! The Langtang Valley exceeded expectations. Beautiful rhododendron forests, welcoming Tamang villages, and stunning mountain views. Our guide was knowledgeable and caring..."
+    rating: 5
+  - name: "David Kim"
+    initials: "DK"
+    location: "South Korea"
+    quote: "Great introduction to Himalayan trekking! Less crowded than Everest or Annapurna but equally beautiful. The sunrise from Kyanjin Ri was absolutely breathtaking. Highly recommended..."
+    rating: 5
+  - name: "Emma Thompson"
+    initials: "ET"
+    location: "UK"
+    quote: "Loved every moment of Langtang Valley! The Tamang culture, yak cheese factories, and mountain vistas made this trek special. Professional guide who made sure we were comfortable throughout..."
+    rating: 5
 ---
 
 # Langtang Valley Trek

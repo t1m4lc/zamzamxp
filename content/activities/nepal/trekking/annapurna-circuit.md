@@ -8,13 +8,19 @@ priceLabel: "From $300/person (min. 2 people)"
 privatePrice: 490
 duration: "16 Days"
 difficulty: "Challenging"
-groupSize: "6-12 people"
+groupSize: "2-12 people"
 image: "/images/activities/nepal/trekking/OG-image-annapurna.png"
 gallery:
+  - "/images/activities/nepal/trekking/annapurna-circuit-trek-2.webp"
+  - "/images/activities/nepal/trekking/annapurna-lunch.jpeg"
+  - "/images/activities/nepal/trekking/annapurna-temple.webp"
+  - "/images/activities/nepal/trekking/annapurna-base-camp-hike-packing-list-main-image-hd-op.jpg"
+  - "/images/activities/nepal/trekking/annapurna-circuit-trek-torang-la-pass.webp"
   - "/images/activities/nepal/trekking/top-of-thorong-pass.jpeg"
   - "/images/activities/nepal/trekking/on-the-way-to-tilicho-base-camp.jpeg"
   - "/images/activities/nepal/trekking/green-lake-near-pisang-village.jpeg"
   - "/images/activities/nepal/trekking/ice-lake-side-trip-from-manang.jpeg"
+  - "/images/activities/nepal/trekking/annapurna-circuit-6.jpeg"
 highlights:
   - "Cross Thorong La Pass (5,416m)"
   - "Trek to Tilicho Lake (4,920m)"
@@ -32,13 +38,29 @@ included:
 notIncluded:
   - "International flights to/from Nepal"
   - "Nepal visa fees (USD 30-50)"
-  - "All meals during trek (approx. $25-30/day)"
+  - "All meals during trek (approx. $20-30/day)"
   - "Travel insurance (mandatory)"
   - "Personal expenses and tips"
   - "Hot showers and WiFi charges"
 bestTime: "March-May, September-November"
 minElevation: "1,120m"
 maxElevation: "5,416m"
+reviews:
+  - name: "Samuel Rowland-Jones"
+    initials: "SR"
+    location: "UK"
+    quote: "We just completed the Annapurna Circuit with Tilicho Lake. Sandip was incredible! Every guesthouse exceeded our expectations. He paced the trek perfectly and made sure we were acclimatizing safely..."
+    rating: 5
+  - name: "Lisa"
+    initials: "L"
+    location: "Netherlands"
+    quote: "The Annapurna Circuit was truly once-in-a-lifetime! Our guide made everything smooth and memorable. He knows so much about the area and always put our safety first. Great sense of humor too..."
+    rating: 5
+  - name: "Damodar Pradhan"
+    initials: "DP"
+    location: "Nepal"
+    quote: "The Annapurna Circuit trek was elevated from great to extraordinary! Deep knowledge of the trail, cultures, and altitude safety was invaluable, especially during Thorong La Pass crossing..."
+    rating: 5
 ---
 
 # The Ultimate Annapurna Adventure

@@ -35,14 +35,30 @@ included:
   - "First aid medical supplies"
   - "All government taxes and official expenses"
 notIncluded:
-  - "3 meals per day (breakfast, lunch, dinner)"
-  - "All drinks (tea, coffee, beer, etc.)"
   - "Your personal expenses"
+  - "All meals during trek (approx. $20-30/day)"
+  - "All drinks (tea, coffee, beer, etc.)"
   - "Travel insurance (required for emergency evacuation)"
   - "Tips for guide and porter"
 bestTime: "March-May, September-November"
 minElevation: "870m (Machha Khola)"
 maxElevation: "5,106m (Larkya La Pass)"
+reviews:
+  - name: "Isabelle Taen"
+    initials: "IT"
+    location: "France"
+    quote: "I did the 12-days Manaslu circuit trekking, and it was absolutely spectacular! Stunning views, truly a memory for life. Sandip is an amazing guide who knows a lot about nature and culture..."
+    rating: 5
+  - name: "Sophie Friedrich"
+    initials: "SF"
+    location: "Germany"
+    quote: "Amazing time on the Manaslu Circuit Trek! The guide was very knowledgeable and super friendly. I was struggling on the pass day, and he was so patient with me. Overall an absolutely great experience..."
+    rating: 5
+  - name: "Unigunda Meijere"
+    initials: "UM"
+    location: "Latvia"
+    quote: "We did Manaslu circuit and this was our first time trekking in Nepal - couldn't have asked for better experience. Our guide was knowledgeable and caring as well as a nice person to spend time with..."
+    rating: 5
 ---
 
 # Manaslu Circuit Trek - 12 Days

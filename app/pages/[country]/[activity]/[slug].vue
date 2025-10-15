@@ -376,36 +376,20 @@
         </div>
 
         <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          <TestimonialCard :testimonial="{
-            name: 'Vicky Sabel',
-            initials: 'VS',
-            location: 'USA',
-            quote: 'One of the best experiences of my life and having Sandip as a guide made it completely perfect. Can\'t recommend enough his service as a guide and hope to go back to Nepal and the Himalayas.',
-            rating: 5,
-            adventure: experience.title,
-            color: 'slate',
-            rotation: 0
-          }" />
-          <TestimonialCard :testimonial="{
-            name: 'Ella Upe',
-            initials: 'EU',
-            location: 'UK',
-            quote: 'Honestly could not fault our guide Sandip. Trekking in Nepal has always been a dream and this experience was something so special. He was full of knowledge and we always felt supported and safe on the journey.',
-            rating: 5,
-            adventure: experience.title,
-            color: 'slate',
-            rotation: 0
-          }" />
-          <TestimonialCard :testimonial="{
-            name: 'Rina Shatil',
-            initials: 'RS',
-            location: 'Israel',
-            quote: 'Unforgettable Everest Base Camp Trek with Sandip! He was experienced, friendly, and highly professional. He knew the trail perfectly, shared fascinating insights about the Himalayas, and ensured our safety at all times.',
-            rating: 5,
-            adventure: experience.title,
-            color: 'slate',
-            rotation: 0
-          }" />
+          <TestimonialCard 
+            v-for="(review, index) in activityReviews" 
+            :key="index"
+            :testimonial="{
+              name: review.name,
+              initials: review.initials,
+              location: review.location,
+              quote: review.quote,
+              rating: review.rating,
+              adventure: experience.title,
+              color: 'slate',
+              rotation: 0
+            }" 
+          />
         </div>
       </div>
     </section>
@@ -576,6 +560,38 @@ const experience = computed(() => {
     maxElevation: contentData.value.maxElevation,
     referee: contentData.value.referee
   } as ExperienceDetail
+})
+
+// Get activity-specific reviews from markdown
+const activityReviews = computed(() => {
+  const data = contentData.value as any
+  if (!data?.reviews || !Array.isArray(data.reviews) || data.reviews.length === 0) {
+    // Fallback reviews if not defined in markdown
+    return [
+      {
+        name: 'Happy Traveler',
+        initials: 'HT',
+        location: 'International',
+        quote: 'Amazing experience! Professional guides and unforgettable memories. Highly recommend this adventure to anyone looking for authentic experiences...',
+        rating: 5
+      },
+      {
+        name: 'Adventure Seeker',
+        initials: 'AS',
+        location: 'USA',
+        quote: 'One of the best trips I\'ve ever done! Everything was well-organized, the guide was knowledgeable, and the scenery was breathtaking...',
+        rating: 5
+      },
+      {
+        name: 'Nature Lover',
+        initials: 'NL',
+        location: 'Europe',
+        quote: 'Exceeded all expectations! The attention to detail and care for our safety was impressive. Would definitely book again...',
+        rating: 5
+      }
+    ]
+  }
+  return data.reviews
 })
 
 // Parse itinerary from the data

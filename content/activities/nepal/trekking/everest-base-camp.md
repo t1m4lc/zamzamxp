@@ -9,12 +9,13 @@ privatePrice: 900
 duration: "14 Days"
 difficulty: "Very Challenging"
 groupSize: "2-12 people"
-image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&auto=format&fit=crop&q=80"
+image: "/images/activities/nepal/trekking/everest-base-camp-landmark-stone-at-the-base-camp.jpg"
 gallery:
-  - "/images/activities/nepal/trekking/everest-1.jpg"
-  - "/images/activities/nepal/trekking/everest-2.jpg"
-  - "/images/activities/nepal/trekking/everest-3.jpg"
-  - "/images/activities/nepal/trekking/everest-4.jpg"
+  - "/images/activities/nepal/trekking/everest-base-camp-landmark-stone-at-the-base-camp.jpg"
+  - "/images/activities/nepal/trekking/everest-basecamp-gokyo-lake.webp"
+  - "/images/activities/nepal/trekking/everest-trek-gokyo-cho-la-pass-trek.jpg"
+  - "/images/activities/nepal/trekking/everest-base-camp-and-gokyo-lakes-trek.jpg"
+  - "/images/activities/nepal/trekking/everest-basecamp-gokyo_chola_pass_trek.jpg"
 highlights:
   - "Everest Base Camp (5,364m) achievement"
   - "Kala Patthar (5,555m) sunrise views"
@@ -32,13 +33,29 @@ included:
 notIncluded:
   - "International flights to/from Nepal"
   - "Nepal visa fees"
-  - "All meals during trek (approx. $30-35/day)"
+  - "All meals during trek (approx. $20-30/day)"
   - "Travel insurance (mandatory)"
   - "Personal expenses and tips"
   - "Emergency evacuation insurance"
 bestTime: "March-May, September-November"
 minElevation: "2,610m"
 maxElevation: "5,555m"
+reviews:
+  - name: "Rina Shatil"
+    initials: "RS"
+    location: "Israel"
+    quote: "Unforgettable Everest Base Camp Trek! Sandip was experienced, friendly, and highly professional. He knew the trail perfectly, shared fascinating insights about the Himalayas, and ensured our safety at all times..."
+    rating: 5
+  - name: "Michael Johnson"
+    initials: "MJ"
+    location: "Canada"
+    quote: "The EBC trek was the adventure of a lifetime! Our guide's knowledge of the Khumbu region is exceptional. He paced us perfectly for acclimatization and shared incredible stories about Sherpa culture..."
+    rating: 5
+  - name: "Anna Kowalski"
+    initials: "AK"
+    location: "Poland"
+    quote: "Standing at Everest Base Camp was surreal! The guide made sure we were well-prepared and safe throughout. The teahouses were cozy, the views breathtaking, and the enthusiasm was contagious..."
+    rating: 5
 ---
 
 # Everest Base Camp Ultimate Adventure - EBC, Gokyo & Cho La Pass

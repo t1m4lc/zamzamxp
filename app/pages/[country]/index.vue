@@ -177,7 +177,7 @@ const countryData: Record<string, any> = {
     },
     activityImages: {
       trekking: '/images/activities/nepal/trekking/nepal-trekking.jpg',
-      paragliding: '/images/activities/nepal/paragliding/nepal-paragliding.jpg'
+      paragliding: '/images/activities/nepal/paragliding/pokhara-paragliding-tandem.jpg'
     }
   },
   morocco: {

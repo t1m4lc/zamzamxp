@@ -1,5 +1,5 @@
 ---
-title: "Tsum Valley & Manaslu Circuit Trek"
+title: "Manaslu Circuit Trek & Tsum Valley "
 description: "Epic 18-day journey combining the sacred Tsum Valley with the Manaslu Circuit. Experience ancient monasteries, Tibetan culture, and cross Larkya La Pass at 5,106m."
 country: "nepal"
 activity: "trekking"
@@ -9,7 +9,7 @@ privatePrice: 740
 duration: "18 Days"
 difficulty: "Challenging"
 groupSize: "4-8 people"
-image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&auto=format&fit=crop&q=80"
+image: "/images/activities/nepal/trekking/manaslu-lark-pass-tim.jpeg"
 gallery:
   - "/images/activities/nepal/trekking/manaslu-trek-1.jpeg"
   - "/images/activities/nepal/trekking/manaslu-lark-pass-tim.jpeg"
@@ -17,7 +17,7 @@ gallery:
   - "/images/activities/nepal/trekking/manaslu-trek-5.jpeg"
   - "/images/activities/nepal/trekking/manaslu-trek-tim.jpeg"
   - "/images/activities/nepal/trekking/manaslu-trek-7.jpeg"
-  - "/images/activities/nepal/trekking/manaslu-sandip.jpeg"
+  - "/images/activities/nepal/trekking/manaslu-trek-0.jpeg"
 highlights:
   - "Sacred Tsum Valley exploration"
   - "Mu Gompa - largest monastery in region"
@@ -42,6 +42,22 @@ notIncluded:
 bestTime: "March-May, September-November"
 minElevation: "869m"
 maxElevation: "5,106m"
+reviews:
+  - name: "Patrick van Vreeswijk"
+    initials: "PV"
+    location: "Netherlands"
+    quote: "Had wonderful experience with 21 day Tsum Valley & Manaslu trek. Sandip took care of us every step of the way. The ancient monasteries and remote valleys were absolutely magical..."
+    rating: 5
+  - name: "Kellie Crooijmans"
+    initials: "KC"
+    location: "Netherlands"
+    quote: "We spent 21 days combining Manaslu and the sacred Tsum Valley and could not have wished for a better guide. Always there to help but knew perfectly when to give us time for ourselves..."
+    rating: 5
+  - name: "James Wright"
+    initials: "JW"
+    location: "USA"
+    quote: "The Tsum Valley was incredibly spiritual and untouched. Combined with Manaslu Circuit, this trek offered the best of both worlds - culture and adventure. Exceptional experience..."
+    rating: 5
 ---
 
 # Tsum Valley & Manaslu Circuit Trek - Sacred Himalayan Journey

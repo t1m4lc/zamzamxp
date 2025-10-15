@@ -7,12 +7,9 @@ price: 55
 duration: "20-60 minutes"
 difficulty: "Easy"
 groupSize: "1 person per flight"
-image: "https://images.unsplash.com/photo-1582967788606-a171c1080cb0?w=800&auto=format&fit=crop&q=80"
+image: "/images/activities/nepal/paragliding/paragliding-in-pokhara.jpg"
 gallery:
-  - "/images/activities/nepal/paragliding/pokhara-para-1.jpg"
-  - "/images/activities/nepal/paragliding/pokhara-para-2.jpg"
-  - "/images/activities/nepal/paragliding/pokhara-para-3.jpg"
-  - "/images/activities/nepal/paragliding/pokhara-para-4.jpg"
+  - "/images/activities/nepal/paragliding/pokhara-paragliding-tandem.jpg"
 highlights:
   - "Stunning Himalayan views"
   - "Professional tandem pilot"
@@ -30,6 +27,22 @@ notIncluded:
   - "Personal expenses"
   - "Tips for pilot (optional)"
 bestTime: "October-April (best), possible year-round"
+reviews:
+  - name: "Sophie Chen"
+    initials: "SC"
+    location: "Singapore"
+    quote: "Flying over Pokhara with the Annapurnas in the background was absolutely breathtaking! Biswash was a fantastic pilot - calm, professional, and made me feel completely safe..."
+    rating: 5
+  - name: "Mark Stevens"
+    initials: "MS"
+    location: "Australia"
+    quote: "This was my first time paragliding and it exceeded all expectations! The views of Phewa Lake and the mountains were incredible. Professional team and smooth experience..."
+    rating: 5
+  - name: "Elena Rodriguez"
+    initials: "ER"
+    location: "Spain"
+    quote: "What an amazing experience! The takeoff from Sarangkot was smooth and the flight was peaceful yet exhilarating. Photos and videos were a nice bonus. Highly recommend..."
+    rating: 5
 ---
 
 # Feel the Freedom of Flight

@@ -33,6 +33,22 @@ notIncluded:
   - "Alcoholic beverages"
   - "Additional activities"
 bestTime: "March-November (best for beginners)"
+reviews:
+  - name: "Tom Wilson"
+    initials: "TW"
+    location: "UK"
+    quote: "Perfect place to learn surfing! Hassan and the team were patient and professional. The waves in Sidi Kaouki are ideal for beginners and the surf lodge had a great vibe..."
+    rating: 5
+  - name: "Julia Martinez"
+    initials: "JM"
+    location: "USA"
+    quote: "Had an amazing week learning to surf! The instructors were fantastic, breaking everything down step by step. Caught my first wave on day 2! The Moroccan food was incredible too..."
+    rating: 5
+  - name: "Lars Petersen"
+    initials: "LP"
+    location: "Denmark"
+    quote: "Best surf camp experience! Mohammed was an excellent instructor - encouraging and knew exactly how to help me improve. The combination of surfing and exploring Essaouira was perfect..."
+    rating: 5
 ---
 
 # Discover Surfing in Sidi Kaouki
