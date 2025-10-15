@@ -3,9 +3,11 @@
     <Header />
     <NuxtPage />
     <Footer />
+    <SpeedInsights />
 </template>
 
 <script setup lang="ts">
+import { SpeedInsights } from "@vercel/speed-insights/nuxt"
 // Get route at the top level
 const route = useRoute()
 
