@@ -3,7 +3,7 @@ title: "Annapurna Circuit Trek - Thorong La Pass"
 description: "Epic 16-day trek around the Annapurna massif, crossing the legendary Thorong La Pass at 5,416m. Experience diverse landscapes from subtropical valleys to high alpine terrain."
 country: "nepal"
 activity: "trekking"
-price: 899
+price: 300
 duration: "16 Days"
 difficulty: "Challenging"
 groupSize: "6-12 people"
