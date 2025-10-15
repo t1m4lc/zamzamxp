@@ -87,11 +87,10 @@
             <div class="grid gap-12 p-8 lg:grid-cols-2 lg:p-12">
               <div>
                 <div class="mb-6 aspect-square overflow-hidden rounded-2xl">
-                  <img 
-                    src="/images/me-ai-update.png" 
-                    alt="Timothy Alcaide - Founder of Zamzam Experience"
-                    class="h-full w-full object-cover"
-                  />
+                                  <img 
+                    class="rounded-2xl object-cover w-full h-full" 
+                    src="/images/pages/me-ai-update.png" 
+                    alt="Profile picture of Timothy Alchin"
                 </div>
               </div>
               <div class="flex flex-col justify-center">

@@ -176,8 +176,8 @@ const countryData: Record<string, any> = {
       paragliding: 'Soar above valleys with the Annapurna range as your backdrop'
     },
     activityImages: {
-      trekking: '/images/nepal-trekking.jpg',
-      paragliding: '/images/nepal-paragliding.jpg'
+      trekking: '/images/activities/nepal/trekking/nepal-trekking.jpg',
+      paragliding: '/images/activities/nepal/paragliding/nepal-paragliding.jpg'
     }
   },
   morocco: {
@@ -188,7 +188,7 @@ const countryData: Record<string, any> = {
       surfing: 'Learn to surf or improve your skills on Morocco\'s perfect waves'
     },
     activityImages: {
-      surfing: '/images/morocco-surfing.jpg'
+      surfing: '/images/activities/morocco/surfing/morocco-surfing.jpg'
     }
   }
 }

@@ -7,12 +7,12 @@ price: 549
 duration: "7 Days"
 difficulty: "Easy"
 groupSize: "4-8 people"
-image: "/images/morocco-surfing.jpg"
+image: "/images/activities/morocco/surfing/morocco-surfing.jpg"
 gallery:
-  - "/images/sidi-kaouki-1.jpg"
-  - "/images/sidi-kaouki-2.jpg"
-  - "/images/sidi-kaouki-3.jpg"
-  - "/images/sidi-kaouki-4.jpg"
+  - "/images/activities/morocco/surfing/sidi-kaouki-1.jpg"
+  - "/images/activities/morocco/surfing/sidi-kaouki-2.jpg"
+  - "/images/activities/morocco/surfing/sidi-kaouki-3.jpg"
+  - "/images/activities/morocco/surfing/sidi-kaouki-4.jpg"
 highlights:
   - "Daily surf lessons with certified pros"
   - "Perfect beginner waves in protected bay"

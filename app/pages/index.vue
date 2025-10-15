@@ -396,12 +396,12 @@ const teamMembers = [
 const destinations = [
   {
     name: "Nepal",
-    image: "/images/nepal-hero.jpg",
+    image: "/images/pages/nepal-hero.jpg",
     link: "/nepal"
   },
   {
     name: "Morocco",
-    image: "/images/morocco-hero.jpg",
+    image: "/images/pages/morocco-hero.jpg",
     link: "/morocco"
   }
 ]
