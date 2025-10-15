@@ -4,6 +4,8 @@ description: "Epic 16-day trek around the Annapurna massif, crossing the legenda
 country: "nepal"
 activity: "trekking"
 price: 300
+priceLabel: "From $300/person (min. 2 people)"
+privatePrice: 500
 duration: "16 Days"
 difficulty: "Challenging"
 groupSize: "6-12 people"

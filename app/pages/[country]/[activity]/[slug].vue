@@ -199,6 +199,11 @@
                   <div class="mb-2 text-sm font-semibold text-slate-600 text">Starting from</div>
                   <div class="mb-2 text-5xl font-black text-slate-900">${{ experience.price }}</div>
                   <div class="text-xs text-slate-600">Per person</div>
+                  <div class="mt-2 text-xs font-medium text-slate-500">2 person minimum</div>
+                  <div v-if="experience.privatePrice" class="mt-1 text-xs text-orange-600">
+                    <Icon name="mdi:star" class="inline-block h-3 w-3" />
+                    Private booking available
+                  </div>
                 </div>
 
                 <div class="space-y-4 text-center">
@@ -216,42 +221,45 @@
                     </NuxtLink>
                   </Button>
 
-                  <!-- Group Discount Link -->
+                  <!-- Pricing Options Link -->
                   <Dialog>
                     <DialogTrigger as-child>
                       <button class="mt-2 cursor-pointer text-sm text-orange-600 hover:text-orange-700 underline decoration-dotted underline-offset-2 transition-colors">
-                        <Icon name="mdi:account-group" class="mr-1 inline-block h-4 w-4" />
-                        Group discounts available
+                        <Icon name="mdi:currency-usd" class="mr-1 inline-block h-4 w-4" />
+                        View all pricing options
                       </button>
                     </DialogTrigger>
                     <DialogContent class="sm:max-w-md rounded-3xl">
                       <DialogHeader>
-                        <DialogTitle class="text-2xl font-black text-slate-900">Group Discounts</DialogTitle>
+                        <DialogTitle class="text-2xl font-black text-slate-900">Pricing Options</DialogTitle>
                         <DialogDescription class="text-slate-600">
-                          Save more when you book with friends! Prices shown per person.
+                          Choose the option that works best for you. All prices are per person.
                         </DialogDescription>
                       </DialogHeader>
                       <div class="mt-4 space-y-3">
-                        <div v-for="(discount, index) in groupDiscounts" :key="index" class="flex items-center justify-between rounded-2xl border-2 p-4" :class="discount.discount > 0 ? 'border-green-200 bg-green-50' : 'border-slate-200 bg-slate-50'">
+                        <div v-for="(discount, index) in groupDiscounts" :key="index" class="flex items-center justify-between rounded-2xl border-2 p-4" :class="discount.isPrivate ? 'border-orange-200 bg-orange-50' : (discount.discount > 0 ? 'border-green-200 bg-green-50' : 'border-slate-200 bg-slate-50')">
                           <div class="flex items-center space-x-3">
-                            <div class="flex h-10 w-10 items-center justify-center rounded-full font-bold text-white" :class="discount.discount > 0 ? 'bg-green-500' : 'bg-slate-400'">
-                              <Icon :name="index === 0 ? 'mdi:account' : 'mdi:account-multiple'" class="h-5 w-5" />
+                            <div class="flex h-10 w-10 items-center justify-center rounded-full font-bold text-white" :class="discount.isPrivate ? 'bg-orange-500' : (discount.discount > 0 ? 'bg-green-500' : 'bg-slate-400')">
+                              <Icon :name="discount.isPrivate ? 'mdi:account' : 'mdi:account-multiple'" class="h-5 w-5" />
                             </div>
                             <div>
                               <div class="font-bold text-slate-900">{{ discount.label }}</div>
-                              <div v-if="discount.discount > 0" class="text-xs font-semibold text-green-600">
+                              <div v-if="discount.isPrivate" class="text-xs font-semibold text-orange-600">
+                                Premium experience
+                              </div>
+                              <div v-else-if="discount.discount > 0" class="text-xs font-semibold text-green-600">
                                 {{ discount.discount }}% OFF
                               </div>
                               <div v-else class="text-xs text-slate-500">
-                                Regular price
+                                Base price (min. 2)
                               </div>
                             </div>
                           </div>
                           <div class="text-right">
                             <div class="text-2xl font-black text-slate-900">
-                              ${{ calculateDiscountedPrice(experience.price, discount.discount) }}
+                              ${{ calculatePriceForGroup(experience, discount) }}
                             </div>
-                            <div v-if="discount.discount > 0" class="text-xs text-slate-500 line-through">
+                            <div v-if="discount.discount > 0 && !discount.isPrivate" class="text-xs text-slate-500 line-through">
                               ${{ experience.price }}
                             </div>
                           </div>
@@ -469,6 +477,8 @@ interface ExperienceDetail {
   title: string
   description: string
   price: number
+  priceLabel?: string
+  privatePrice?: number
   duration: string
   difficulty: string
   groupSize: string
@@ -611,6 +621,14 @@ const groupDiscounts = computed(() => {
 const calculateDiscountedPrice = (basePrice: number, discount: number) => {
   const discountedPrice = basePrice - (basePrice * discount / 100)
   return Math.round(discountedPrice)
+}
+
+// Calculate price for group considering private pricing
+const calculatePriceForGroup = (exp: any, discount: any) => {
+  if (discount.isPrivate && exp.privatePrice) {
+    return exp.privatePrice
+  }
+  return calculateDiscountedPrice(exp.price, discount.discount)
 }
 
 // WhatsApp URL with dynamic message

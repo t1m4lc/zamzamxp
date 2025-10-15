@@ -3,7 +3,9 @@ title: "Langtang Valley Trek"
 description: "Perfect 7-day trek through Langtang National Park. Ideal for those with limited time seeking Himalayan vistas, cultural immersion with rhododendron forests, Tamang villages, and panoramic views of Langtang Lirung (7,246m)."
 country: "nepal"
 activity: "trekking"
-price: 190
+price: 195
+priceLabel: "From $195/person (min. 2 people)"
+privatePrice: 290
 duration: "7 Days"
 difficulty: "Moderate"
 groupSize: "2-10 people"

@@ -4,6 +4,8 @@ description: "Epic 18-day journey combining the sacred Tsum Valley with the Mana
 country: "nepal"
 activity: "trekking"
 price: 560
+priceLabel: "From $560/person (min. 2 people)"
+privatePrice: 740
 duration: "18 Days"
 difficulty: "Challenging"
 groupSize: "4-8 people"

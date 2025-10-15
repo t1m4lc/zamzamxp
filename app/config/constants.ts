@@ -21,24 +21,29 @@ export const APP_CONFIG = {
   // Group discounts by activity type
   groupDiscounts: {
     trekking: [
-      { people: 1, discount: 0, label: "1 person" },
-      { people: 2, discount: 5, label: "2 people" },
-      { people: 3, discount: 10, label: "3-5 people", maxPeople: 5 },
-      { people: 6, discount: 15, label: "6+ people" },
+      {
+        people: 1,
+        discount: -50,
+        label: "Private (1 person)",
+        isPrivate: true,
+      },
+      { people: 2, discount: 0, label: "2 people", isPrivate: false },
+      { people: 3, discount: 5, label: "3 people", isPrivate: false },
+      { people: 4, discount: 10, label: "4+ people", isPrivate: false },
     ],
     surfing: [
-      { people: 1, discount: 0, label: "1 person" },
-      { people: 2, discount: 5, label: "2 people" },
-      { people: 3, discount: 10, label: "3+ people" },
+      { people: 1, discount: 0, label: "1 person", isPrivate: false },
+      { people: 2, discount: 5, label: "2 people", isPrivate: false },
+      { people: 3, discount: 10, label: "3+ people", isPrivate: false },
     ],
     paragliding: [
-      { people: 1, discount: 0, label: "1 person" },
-      { people: 2, discount: 5, label: "2+ people" },
+      { people: 1, discount: 0, label: "1 person", isPrivate: false },
+      { people: 2, discount: 5, label: "2+ people", isPrivate: false },
     ],
     default: [
-      { people: 1, discount: 0, label: "1 person" },
-      { people: 2, discount: 5, label: "2 people" },
-      { people: 3, discount: 10, label: "3+ people" },
+      { people: 1, discount: 0, label: "1 person", isPrivate: false },
+      { people: 2, discount: 5, label: "2 people", isPrivate: false },
+      { people: 3, discount: 10, label: "3+ people", isPrivate: false },
     ],
   },
 } as const;

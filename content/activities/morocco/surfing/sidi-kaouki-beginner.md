@@ -25,9 +25,7 @@ included:
   - "All meals (breakfast, lunch & dinner)"
   - "5 surf lessons (2.5 hours each)"
   - "Wetsuit & surfboard rental"
-  - "Airport transfer from Marrakech/Essaouira"
-  - "Essaouira cultural tour"
-  - "Traditional hammam experience"
+  - "Airport transfer"
 notIncluded:
   - "International flights"
   - "Travel insurance"
