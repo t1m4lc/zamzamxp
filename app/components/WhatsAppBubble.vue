@@ -49,27 +49,38 @@ onMounted(() => {
 
 const whatsappUrl = computed(() => {
   const phoneNumber = APP_CONFIG.company.whatsapp
-  let message = 'Hi! I\'m interested in your tours'
-
+  let activityName = ''
+  
   // Dynamic message based on current page
   const { country, activity, slug } = route.params
 
   if (slug && country && activity) {
     // On experience detail page
-    const title = String(slug).split('-').map(word => 
+    activityName = String(slug).split('-').map(word => 
       word.charAt(0).toUpperCase() + word.slice(1)
     ).join(' ')
-    message = `Hi! I'm interested in ${title}`
   } else if (activity && country) {
     // On activity list page
-    const activityName = String(activity).charAt(0).toUpperCase() + String(activity).slice(1)
-    const countryName = String(country).charAt(0).toUpperCase() + String(country).slice(1)
-    message = `Hi! I'm interested in ${activityName} in ${countryName}`
+    const activityStr = String(activity).charAt(0).toUpperCase() + String(activity).slice(1)
+    const countryStr = String(country).charAt(0).toUpperCase() + String(country).slice(1)
+    activityName = `${activityStr} in ${countryStr}`
   } else if (country) {
     // On country page
-    const countryName = String(country).charAt(0).toUpperCase() + String(country).slice(1)
-    message = `Hi! I'm interested in ${countryName} adventures`
+    const countryStr = String(country).charAt(0).toUpperCase() + String(country).slice(1)
+    activityName = `${countryStr} adventures`
+  } else {
+    activityName = 'your tours'
   }
+
+  // Create structured message template
+  const message = `Hello! I'm interested in:
+
+📍 Activity: ${activityName}
+📅 Preferred date: [To specify]
+⏱️ Flexibility: ± 3-8 days
+👥 Number of people: [To specify]
+
+Thank you for contacting me with more information.`
 
   // Use api.whatsapp.com for better mobile redirect
   return `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(message)}`
