@@ -33,12 +33,20 @@
   <div v-else>
     <!-- Sticky CTA Bar (Mobile) -->
     <div class="fixed bottom-0 left-0 right-0 z-40 border-t bg-white p-4 shadow-2xl lg:hidden">
-      <div class="flex items-center justify-between">
-        <div>
-          <div class="text-xs text-slate-500">From</div>
+      <div class="flex items-center justify-between gap-3">
+        <div class="flex-shrink-0">
+          <div class="text-xs font-medium text-slate-500">From</div>
           <div class="text-2xl font-black text-orange-600">${{ experience.price }}</div>
+          <div class="text-xs font-medium text-slate-600">
+            <span v-if="experience.minGroupSize && experience.minGroupSize > 1">
+              Min. {{ experience.minGroupSize }} {{ experience.minGroupSize === 2 ? 'person' : 'people' }}
+            </span>
+            <span v-else>
+              Per person
+            </span>
+          </div>
         </div>
-        <Button as-child size="lg" class="rounded-full bg-orange-500 px-8 font-bold">
+        <Button as-child size="lg" class="rounded-full bg-orange-500 px-6 font-bold flex-shrink-0">
           <a :href="whatsappUrl" target="_blank" rel="noopener">
             Book Now
           </a>
@@ -405,7 +413,15 @@
           <h2 class="mb-4 text-4xl font-black lg:text-5xl">
             Ready to Book {{ experience.title }}?
           </h2>
-          <div class="mb-8 text-6xl font-black text-orange-500">${{ experience.price }}</div>
+          <div class="mb-2 text-6xl font-black text-orange-500">${{ experience.price }}</div>
+          <div class="mb-8 text-lg text-slate-400">
+            <span v-if="experience.minGroupSize && experience.minGroupSize > 1">
+              Minimum {{ experience.minGroupSize }} {{ experience.minGroupSize === 2 ? 'person' : 'people' }} · Per person
+            </span>
+            <span v-else>
+              Per person
+            </span>
+          </div>
           <p class="mb-10 text-xl leading-relaxed text-slate-300">
             Don't miss out on this incredible adventure. Spots fill up quickly!
           </p>
@@ -546,25 +562,26 @@ const experience = computed(() => {
   }
 
   // Use data from content file
+  const data = contentData.value as any
   return {
-    title: contentData.value.title,
-    description: contentData.value.description,
-    price: contentData.value.price,
-    duration: contentData.value.duration,
-    difficulty: contentData.value.difficulty,
-    groupSize: contentData.value.groupSize,
-    minGroupSize: contentData.value.minGroupSize,
-    image: contentData.value.image,
-    bestTime: contentData.value.bestTime,
-    highlights: ensureArray(contentData.value.highlights),
-    gallery: ensureArray(contentData.value.gallery),
-    included: ensureArray(contentData.value.included),
-    notIncluded: ensureArray(contentData.value.notIncluded),
-    itinerary: ensureArray(contentData.value.itinerary),
-    body: contentData.value.body,
-    minElevation: contentData.value.minElevation,
-    maxElevation: contentData.value.maxElevation,
-    referee: contentData.value.referee
+    title: data.title,
+    description: data.description,
+    price: data.price,
+    duration: data.duration,
+    difficulty: data.difficulty,
+    groupSize: data.groupSize,
+    minGroupSize: data.minGroupSize,
+    image: data.image,
+    bestTime: data.bestTime,
+    highlights: ensureArray(data.highlights),
+    gallery: ensureArray(data.gallery),
+    included: ensureArray(data.included),
+    notIncluded: ensureArray(data.notIncluded),
+    itinerary: ensureArray(data.itinerary),
+    body: data.body,
+    minElevation: data.minElevation,
+    maxElevation: data.maxElevation,
+    referee: data.referee
   } as ExperienceDetail
 })
 
@@ -679,7 +696,7 @@ const calculatePriceForGroup = (exp: any, discount: any) => {
 
 // WhatsApp URL with dynamic message
 const whatsappUrl = computed(() => {
-  const phoneNumber = '212666570222' // Replace with actual WhatsApp number
+  const phoneNumber = APP_CONFIG.company.whatsapp
   const message = experience.value
     ? `Hi! I'm interested in ${experience.value.title} - ${experience.value.duration} for $${experience.value.price}`
     : "Hi! I'm interested in your tours"

@@ -32,7 +32,7 @@
     </section>
 
     <!-- Why Choose Us Section -->
-    <section class="py-20 lg:py-24">
+    <section class="py-12 lg:py-24">
       <div class="container mx-auto px-6">
         <div class="mb-12 text-center max-w-3xl mx-auto">
           <h2 class="text-3xl font-semibold text-slate-900 mb-4">

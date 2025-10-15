@@ -26,6 +26,12 @@ export default defineNuxtConfig({
     "@nuxtjs/seo",
   ],
 
+  icon: {
+    serverBundle: {
+      collections: ["mdi"], // Explicitly bundle mdi icons for SSR/SSG
+    },
+  },
+
   site: {
     url: process.env.NUXT_PUBLIC_SITE_URL || "https://zamzamxp.com",
     name: "Zamzam Experience",
