@@ -15,7 +15,6 @@ const route = useRoute()
 useSeoMeta({
   titleTemplate: "%s | Zamzam Experience",
   ogSiteName: "Zamzam Experience",
-  twitterSite: "@zamzamxp", // Update with your actual Twitter handle when available
 })
 
 // Set default language and canonical URL

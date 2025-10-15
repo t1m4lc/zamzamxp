@@ -75,8 +75,8 @@
     </section>
 
     <!-- Testimonials Section -->
-    <section class="py-20 lg:py-24 bg-slate-50 overflow-x-hidden">
-      <div class="container mx-auto px-6 relative flex w-full flex-col items-center justify-center overflow-x-hidden">
+    <section class="overflow-x-hidden">
+      <div class="relative flex w-full flex-col items-center justify-center overflow-x-hidden">
 
         <div class="mb-12 text-center">
           <h2 class="text-3xl font-semibold text-slate-900 mb-3">
