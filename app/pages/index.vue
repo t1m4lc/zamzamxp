@@ -128,7 +128,7 @@
       <div class="container mx-auto px-6">
         <div class="text-center mb-12">
           <h2 class="text-3xl font-semibold text-slate-900 mb-3">
-            Your Adventure Dream Team
+            Super Passionate Guides
           </h2>
           <p class="text-lg text-slate-600">
             Meet the passionate locals who'll make your journey unforgettable
@@ -217,16 +217,9 @@
             class="group relative overflow-hidden rounded-full bg-white shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
           >
             <div class="flex items-center gap-2 md:gap-4 px-2 md:px-3 py-2 md:py-3 pr-4 md:pr-8">
-              <!-- Country Image -->
-              <div class="w-12 h-12 md:w-16 md:h-16 rounded-full overflow-hidden flex-shrink-0 border-2 border-slate-100">
-                <NuxtImg 
-                  :src="destination.image" 
-                  :alt="destination.name"
-                  class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
-                  sizes="xs:48px sm:48px md:64px lg:64px xl:64px"
-                  placeholder
-                  loading="lazy"
-                />
+              <!-- Country Flag Emoji -->
+              <div class="w-12 h-12 md:w-16 md:h-16 rounded-full flex-shrink-0 flex items-center justify-center bg-slate-50 text-2xl md:text-4xl">
+                {{ destination.flag }}
               </div>
               <!-- Country Name -->
               <div class="flex items-center gap-1 md:gap-2">
@@ -396,11 +389,13 @@ const teamMembers = [
 const destinations = [
   {
     name: "Nepal",
+    flag: "🇳🇵",
     image: "/images/pages/nepal-hero.jpg",
     link: "/nepal"
   },
   {
     name: "Morocco",
+    flag: "🇲🇦",
     image: "/images/pages/morocco-hero.jpg",
     link: "/morocco"
   }

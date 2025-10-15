@@ -270,14 +270,14 @@
                     <Icon name="mdi:cash" class="mt-0.5 h-5 w-5 flex-shrink-0 text-slate-900" />
                     <div>
                       <div class="font-semibold text-slate-900">Best Market Prices</div>
-                      <div class="text-slate-600">Quality service at fair prices - check locally if you want!</div>
+                      <div class="text-slate-600">We guarantee the best prices on the market - unbeatable value for your adventure!</div>
                     </div>
                   </div>
                   <div class="flex items-start space-x-3">
                     <Icon name="mdi:handshake" class="mt-0.5 h-5 w-5 flex-shrink-0 text-slate-900" />
                     <div>
                       <div class="font-semibold text-slate-900">Fair Remuneration</div>
-                      <div class="text-slate-600">Our partners are paid fairly - see our values</div>
+                      <div class="text-slate-600">Our partners are paid fairly - <NuxtLink to="/about" class="text-[#FF6B35] hover:underline">see our values</NuxtLink></div>
                     </div>
                   </div>
                   <div class="flex items-start space-x-3">
