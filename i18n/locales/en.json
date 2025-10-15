@@ -1,0 +1,220 @@
+{
+  "nav": {
+    "destinations": "Destinations",
+    "about": "About",
+    "contact": "Contact",
+    "getStarted": "Get Started"
+  },
+  "home": {
+    "hero": {
+      "title": "Travel that's fair for everyone",
+      "subtitle": "Discover the best adventure experiences with passionate local guides. Pay honest prices. Support sustainable tourism. Real adventures, happy communities.",
+      "cta": "Explore Destinations"
+    },
+    "whyChoose": {
+      "title": "A Different Kind of Travel Agency",
+      "subtitle": "We believe travel should enrich everyone – the traveler, the guide, and the community.",
+      "fair": {
+        "title": "Fair for everyone",
+        "description": "Local guides get paid fairly. You get honest prices. Everyone wins."
+      },
+      "passionate": {
+        "title": "Passionate locals",
+        "description": "Our guides love what they do and can't wait to share it with you."
+      },
+      "sustainable": {
+        "title": "Sustainable tourism",
+        "description": "Eco-friendly practices that protect the places we love to explore."
+      }
+    },
+    "testimonials": {
+      "title": "Traveler reviews",
+      "subtitle": "See what our adventurers have to say"
+    },
+    "team": {
+      "title": "Your Adventure Dream Team",
+      "subtitle": "Meet the passionate locals who'll make your journey unforgettable",
+      "trips": "trips"
+    },
+    "stats": {
+      "travelers": "Happy Travelers",
+      "countries": "Countries",
+      "activities": "Activities",
+      "rating": "Average Rating"
+    },
+    "destinations": {
+      "title": "Explore our destinations",
+      "subtitle": "Discover amazing adventures in breathtaking locations around the world"
+    },
+    "cta": {
+      "title": "Ready to start planning?",
+      "subtitle": "Get in touch with our team to discuss your adventure.",
+      "contact": "Contact Us",
+      "whatsapp": "WhatsApp"
+    }
+  },
+  "destinations": {
+    "title": "Explore our destinations",
+    "subtitle": "Discover breathtaking adventures in carefully selected destinations around the world",
+    "nepal": {
+      "description": "Experience world-class trekking and paragliding adventures in the Himalayas with stunning mountain views.",
+      "experiences": "experiences"
+    },
+    "morocco": {
+      "description": "Discover Atlantic coast surfing combined with rich Moroccan culture in charming coastal towns.",
+      "experiences": "experiences"
+    },
+    "comingSoon": {
+      "title": "More Destinations",
+      "subtitle": "Coming Soon",
+      "description": "We're constantly adding new exciting experiences. Stay tuned for more adventures!",
+      "expanding": "Expanding soon",
+      "stayTuned": "Stay tuned"
+    },
+    "explore": "Explore"
+  },
+  "activities": {
+    "trekking": "Trekking",
+    "paragliding": "Paragliding",
+    "surfing": "Surfing",
+    "from": "From",
+    "days": "Days",
+    "viewDetails": "View Details",
+    "bookNow": "Book Now"
+  },
+  "footer": {
+    "description": "Connecting travelers with passionate local guides for authentic adventures around the world.",
+    "destinations": "Destinations",
+    "getInTouch": "Get in Touch",
+    "whatsapp": "WhatsApp",
+    "contactUs": "Contact Us",
+    "ecoFriendly": "Eco-Friendly & Sustainable",
+    "fairPay": "Fair Remuneration for Partners",
+    "rights": "All rights reserved",
+    "terms": "Terms",
+    "privacy": "Privacy",
+    "language": "Language"
+  },
+  "activityDetails": {
+    "overview": "Overview",
+    "itinerary": "Itinerary",
+    "included": "What's Included",
+    "notIncluded": "What's Not Included",
+    "bookNow": "Book Now",
+    "duration": "Duration",
+    "difficulty": "Difficulty",
+    "groupSize": "Group Size",
+    "bestTime": "Best Time",
+    "price": "Price",
+    "perPerson": "per person"
+  },
+  "difficulty": {
+    "Easy": "Easy",
+    "Moderate": "Moderate",
+    "Challenging": "Challenging",
+    "Very Challenging": "Very Challenging"
+  },
+  "currency": {
+    "symbol": "$",
+    "code": "USD"
+  },
+  "about": {
+    "hero": {
+      "title": "Who we are",
+      "subtitle": "Connecting travelers with passionate local guides for authentic adventures around the world."
+    },
+    "story": {
+      "title": "Our Story",
+      "paragraph1": "Zamzam Experience was born from a simple observation: around the world, talented local guides are passionate about sharing their culture and activities, but struggle to connect with travelers in a fair and equitable way.",
+      "paragraph2": "We're building a new kind of travel agency – one that puts local communities first, ensures fair compensation for guides and partners, and delivers authentic experiences that benefit everyone involved.",
+      "paragraph3": "Every adventure we offer creates meaningful connections, supports sustainable tourism, and helps preserve the destinations we love exploring."
+    },
+    "values": {
+      "title": "Our Values",
+      "subtitle": "What drives everything we do",
+      "authentic": {
+        "title": "Authentic Local Experiences",
+        "description": "Every adventure is designed and led by locals who share their genuine culture, stories, and perspectives."
+      },
+      "sustainable": {
+        "title": "Eco-Friendly & Sustainable",
+        "description": "We minimize environmental impact, respect local cultures, and ensure tourism benefits communities long-term."
+      },
+      "fair": {
+        "title": "Fair Remuneration",
+        "description": "Our partners receive fair compensation for their work. We believe in equitable tourism that benefits everyone."
+      },
+      "pricing": {
+        "title": "Best Market Prices",
+        "description": "Quality experiences at fair prices. We hate tourist traps - you pay what's right for quality service."
+      }
+    },
+    "founder": {
+      "label": "Founder",
+      "name": "Timothy Alcaide",
+      "bio1": "I'm a software engineer who quit my job in 2024 to travel the world. Passionate about adventure sports and mountains, I explored Madagascar, Thailand, Vietnam, Nepal, and Morocco.",
+      "bio2": "Everywhere I went, I met incredible local guides who were passionate about their craft but struggled to find clients fairly. That's why I created Zamzam Experience in 2025.",
+      "bio3": "(Fun fact: \"zamzam\" is a Nepali word meaning \"let's go!\" – it perfectly captures our spirit of adventure.)",
+      "badge1": "Software Engineer",
+      "badge2": "World Traveler",
+      "badge3": "Adventure Enthusiast"
+    },
+    "partners": {
+      "title": "Our local partners",
+      "subtitle": "We work exclusively with passionate local guides, family-run accommodations, and small businesses. When you travel with us, you're directly supporting the people who call these places home.",
+      "guides": {
+        "title": "Local Guides",
+        "description": "Passionate professionals who know every trail, wave, and hidden gem in their region."
+      },
+      "businesses": {
+        "title": "Local Businesses",
+        "description": "Family-run operations that provide authentic accommodations and services."
+      },
+      "community": {
+        "title": "Community Partners",
+        "description": "Cooperatives and organizations dedicated to sustainable, community-based tourism."
+      }
+    },
+    "commitment": {
+      "title": "Our commitment to fair tourism",
+      "subtitle": "Tourism should benefit everyone, especially local communities",
+      "remuneration": {
+        "title": "Fair Remuneration",
+        "description": "All our partners receive fair compensation for their services. We believe in equitable partnerships where everyone benefits.",
+        "point1": "Fair wages for all partners",
+        "point2": "Transparent pricing",
+        "point3": "Direct partnerships with locals"
+      },
+      "communityFocus": {
+        "title": "Community Focus",
+        "description": "We prioritize working with local businesses and family-run operations, ensuring tourism revenue stays within the community."
+      }
+    }
+  },
+  "routes": {
+    "about": "about",
+    "contact": "contact",
+    "destinations": "destinations",
+    "terms": "terms",
+    "privacy": "privacy"
+  },
+  "seo": {
+    "siteName": "Zamzam Experience",
+    "home": {
+      "title": "Zamzam Experience - Adventure Travel with Fair Prices & Local Guides",
+      "description": "A new kind of travel agency connecting you with passionate local guides. Fair prices, sustainable tourism, and authentic adventures in Nepal, Morocco & beyond."
+    },
+    "destinations": {
+      "title": "Explore Destinations - Zamzam Experience",
+      "description": "Discover breathtaking adventures in Nepal, Morocco, and more. Trekking, paragliding, surfing with local guides."
+    },
+    "about": {
+      "title": "About Us - Zamzam Experience",
+      "description": "Learn about our mission to create fair, sustainable adventure travel experiences with passionate local guides."
+    },
+    "contact": {
+      "title": "Contact Us - Zamzam Experience",
+      "description": "Get in touch with our team to plan your next adventure. WhatsApp, email, or contact form available."
+    }
+  }
+}

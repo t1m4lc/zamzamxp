@@ -24,7 +24,34 @@ export default defineNuxtConfig({
     "motion-v/nuxt",
     "nuxt-gtag",
     "@nuxtjs/seo",
+    "@nuxtjs/i18n",
   ],
+
+  i18n: {
+    locales: [
+      {
+        code: "en",
+        iso: "en-US",
+        name: "English",
+        file: "en.json",
+      },
+      {
+        code: "fr",
+        iso: "fr-FR",
+        name: "Français",
+        file: "fr.json",
+      },
+    ],
+    langDir: "locales",
+    defaultLocale: "en",
+    strategy: "no_prefix",
+    detectBrowserLanguage: false,
+    baseUrl: process.env.NUXT_PUBLIC_SITE_URL || "https://zamzamxp.com",
+    vueI18n: "./i18n.config.ts",
+    compilation: {
+      strictMessage: false,
+    },
+  },
 
   site: {
     url: process.env.NUXT_PUBLIC_SITE_URL || "https://zamzamxp.com",
@@ -65,7 +92,6 @@ export default defineNuxtConfig({
   },
 
   sitemap: {
-    strictNuxtContentPaths: true,
     // Automatically generate sitemap from routes and content
   },
 

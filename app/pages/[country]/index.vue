@@ -159,6 +159,8 @@ import {
 
 const route = useRoute()
 const country = route.params.country as string
+const { locale } = useI18n()
+const currentLocale = computed(() => locale.value)
 
 const { 
   extractSlug
@@ -200,15 +202,55 @@ const countryDescription = data.description
 const heroImage = data.heroImage
 
 // Fetch activities dynamically from content
-const { data: activityList } = await useAsyncData(`${country}-activities`, async () => {
+const { data: activityList } = await useAsyncData(
+  () => `${country}-activities-${currentLocale.value}`,
+  async () => {
   try {
-    // Query all experiences for this country using metadata
+    // Query all experiences for this country
     const allExperiences = await queryCollection('content').all()
-    const experiences = allExperiences.filter((exp: any) => exp.country === country)
     
-    // Extract unique activities from the experiences
-    const activities = [...new Set(experiences.map((exp: any) => exp.activity))].filter(Boolean)
-    return activities
+    // Filter by locale first
+    // New structure: /activities/{locale}/{country}/{activity}/{slug}
+    const localeExperiences = allExperiences.filter((exp: any) => {
+      if (!exp._path && !exp.path) return false
+      const pathToCheck = exp._path || exp.path
+      
+      const pathParts = pathToCheck.split('/').filter(Boolean)
+      // Check if path follows structure: activities/{locale}/...
+      if (pathParts.length < 2 || pathParts[0] !== 'activities') return false
+      
+      const itemLocale = pathParts[1]
+      return itemLocale === currentLocale.value && exp.country === country
+    })
+    
+    // Extract unique activity folder names from paths
+    // English path format: /activities/nepal/trekking/everest-base-camp
+    // French path format: /fr/activities/maroc/surf/sidi-kaouki-beginner
+    const activitySlugs = new Set<string>()
+    const activityMap = new Map<string, string>() // slug -> normalized name
+    
+    localeExperiences.forEach((exp: any) => {
+      const pathToCheck = exp._path || exp.path
+      if (!pathToCheck) return
+      const pathParts = pathToCheck.split('/').filter(Boolean)
+      
+      // New structure: activities/{locale}/{country}/{activity}/{slug}
+      // Activity is always at index 3
+      if (pathParts.length < 4 || pathParts[0] !== 'activities') return
+      
+      const activitySlug = pathParts[3] // Get the actual folder name (trekking or surf)
+      activitySlugs.add(activitySlug)
+      
+      // Store normalized activity name for display
+      if (exp.activity) {
+        activityMap.set(activitySlug, exp.activity)
+      }
+    })
+    
+    return Array.from(activitySlugs).map(slug => ({
+      slug,
+      normalized: activityMap.get(slug) || slug
+    }))
   } catch (error) {
     console.error('Error fetching activities:', error)
     return []
@@ -219,13 +261,16 @@ const { data: activityList } = await useAsyncData(`${country}-activities`, async
 const activities = computed(() => {
   if (!activityList.value || activityList.value.length === 0) return []
   
-  return activityList.value.map((activity: string) => ({
-    title: activity.charAt(0).toUpperCase() + activity.slice(1),
-    description: data.activityDescriptions?.[activity] || `Explore ${activity} adventures`,
-    link: `/${country}/${activity}`,
-    image: data.activityImages?.[activity] || '/images/default-activity.jpg',
-    color: activity === 'trekking' ? 'orange' as const : 'sky' as const
-  }))
+  return activityList.value.map((activity: { slug: string, normalized: string }) => {
+    const normalized = activity.normalized
+    return {
+      title: activity.slug.charAt(0).toUpperCase() + activity.slug.slice(1),
+      description: data.activityDescriptions?.[normalized] || `Explore ${activity.slug} adventures`,
+      link: `/${country}/${activity.slug}`, // Use the actual slug (trekking or randonnée)
+      image: data.activityImages?.[normalized] || '/images/default-activity.jpg',
+      color: normalized === 'trekking' ? 'orange' as const : 'sky' as const
+    }
+  })
 })
 
 useSeoMeta({

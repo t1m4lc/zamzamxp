@@ -522,19 +522,47 @@ interface ExperienceDetail {
 const route = useRoute()
 const { country, activity, slug } = route.params
 const { extractSlug } = useExperiences()
+const { locale } = useI18n()
+const currentLocale = computed(() => locale.value)
 
-// First try to load from content
-const { data: contentData } = await useAsyncData(`experience-${country}-${activity}-${slug}`, async () => {
+// First try to load from content using the path structure
+const { data: contentData } = await useAsyncData(
+  () => `experience-${country}-${activity}-${slug}-${currentLocale.value}`,
+  async () => {
   try {
-    // Query all content and find by slug, country and activity
+    // Query all content and find the matching one
     const allContent = await queryCollection('content').all()
     
-    // Find the matching content by comparing extracted slug, country and activity
+    // Find content by matching the path structure
+    // Build expected path based on locale
+    // English: /activities/nepal/trekking/everest-base-camp
+    // French: /fr/activities/maroc/surf/sidi-kaouki-beginner
     const found = allContent.find((item: any) => {
-      const itemSlug = extractSlug(item.path || '')
-      return itemSlug === String(slug) && 
-             item.country === String(country) && 
-             item.activity === String(activity)
+      if (!item.path || !item._path) return false
+      
+      // New structure: /activities/{locale}/{country}/{activity}/{slug}
+      // Example: /activities/en/nepal/trekking/everest-base-camp
+      // Example: /activities/fr/maroc/surf/sidi-kaouki-beginner
+      
+      const pathToCheck = item._path || item.path
+      const pathParts = pathToCheck.split('/').filter(Boolean)
+      
+      // Path format: activities/{locale}/{country}/{activity}/{slug}
+      if (pathParts.length < 5 || pathParts[0] !== 'activities') return false
+      
+      const itemLocale = pathParts[1]
+      const itemCountry = pathParts[2]
+      const itemActivity = pathParts[3]
+      const itemSlug = pathParts[4]
+      
+      // Skip if locale doesn't match
+      if (itemLocale !== currentLocale.value) return false
+      
+      const cleanSlug = itemSlug?.replace('.md', '') || itemSlug
+      
+      return cleanSlug === String(slug) && 
+             itemCountry === String(country) && 
+             itemActivity === String(activity)
     })
     
     return found || null
@@ -584,12 +612,28 @@ const parsedItinerary = computed(() => {
 })
 
 // Get related activities dynamically from content
-const { data: relatedExps } = await useAsyncData(`related-${country}-${slug}`, async () => {
+const { data: relatedExps } = await useAsyncData(
+  () => `related-${country}-${slug}-${currentLocale.value}`,
+  async () => {
   try {
     const allExp = await queryCollection('content').all()
     
+    // Filter by current locale first
+    // New structure: /activities/{locale}/{country}/{activity}/{slug}
+    const localeExperiences = allExp.filter((exp: any) => {
+      if (!exp._path && !exp.path) return false
+      const pathToCheck = exp._path || exp.path
+      const pathParts = pathToCheck.split('/').filter(Boolean)
+      
+      // Check if path follows new structure
+      if (pathParts.length < 5 || pathParts[0] !== 'activities') return false
+      
+      const itemLocale = pathParts[1]
+      return itemLocale === currentLocale.value
+    })
+    
     // Filter out current experience
-    const otherExperiences = allExp.filter((exp: any) => extractSlug(exp.path) !== String(slug))
+    const otherExperiences = localeExperiences.filter((exp: any) => extractSlug(exp.path || exp._path) !== String(slug))
     
     // Prioritize: same activity, same country first
     const sameActivity = otherExperiences.filter((exp: any) => 
@@ -622,7 +666,7 @@ const { data: relatedExps } = await useAsyncData(`related-${country}-${slug}`, a
       image: exp.image,
       country: exp.country || '',
       activity: exp.activity || '',
-      slug: extractSlug(exp.path) || ''
+      slug: extractSlug(exp.path || exp._path) || ''
     }))
   } catch (error) {
     return []

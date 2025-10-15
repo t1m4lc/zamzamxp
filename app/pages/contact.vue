@@ -293,4 +293,43 @@ const handleSubmit = async () => {
     formState.value.loading = false
   }
 }
+
+const { t, locale } = useI18n()
+
+const seoTitle = computed(() => t('seo.contact.title', 'Contact Us - Zamzam Experience', {}))
+const seoDescription = computed(() => t('seo.contact.description', 'Get in touch with our team', {}))
+const currentUrl = 'https://zamzamxp.com/contact'
+
+useHead({
+  htmlAttrs: {
+    lang: computed(() => locale.value)
+  },
+  link: [
+    {
+      rel: 'alternate',
+      hreflang: 'en',
+      href: currentUrl
+    },
+    {
+      rel: 'alternate',
+      hreflang: 'fr',
+      href: currentUrl
+    },
+    {
+      rel: 'alternate',
+      hreflang: 'x-default',
+      href: currentUrl
+    }
+  ]
+})
+
+useSeoMeta({
+  title: seoTitle,
+  description: seoDescription,
+  ogTitle: seoTitle,
+  ogDescription: seoDescription,
+  ogType: "website",
+  ogLocale: computed(() => locale.value === 'fr' ? 'fr_FR' : 'en_US'),
+  twitterCard: "summary_large_image",
+})
 </script>

@@ -325,14 +325,42 @@ import { Badge } from '~/components/ui/badge'
 import { Button } from '~/components/ui/button'
 import { NumberTicker } from '~/components/ui/number-ticker'
 
+const { t, locale } = useI18n()
+
+const seoTitle = computed(() => t('seo.about.title', 'About Zamzam Experience', {}))
+const seoDescription = computed(() => t('seo.about.description', 'Learn about our mission', {}))
+const currentUrl = 'https://zamzamxp.com/about'
+
+useHead({
+  htmlAttrs: {
+    lang: computed(() => locale.value)
+  },
+  link: [
+    {
+      rel: 'alternate',
+      hreflang: 'en',
+      href: currentUrl
+    },
+    {
+      rel: 'alternate',
+      hreflang: 'fr',
+      href: currentUrl
+    },
+    {
+      rel: 'alternate',
+      hreflang: 'x-default',
+      href: currentUrl
+    }
+  ]
+})
+
 useSeoMeta({
-  title: "About Us - Fair Adventure Travel | Zamzam Experience",
-  description:
-    "Learn about Zamzam Experience: connecting travelers with local guides for authentic adventures. Fair prices, sustainable tourism, and meaningful cultural experiences since 2025.",
-  ogTitle: "About Zamzam Experience - Fair Adventure Travel",
-  ogDescription:
-    "Our mission: authentic adventures that benefit travelers, guides, and local communities.",
+  title: seoTitle,
+  description: seoDescription,
+  ogTitle: seoTitle,
+  ogDescription: seoDescription,
   ogType: "website",
+  ogLocale: computed(() => locale.value === 'fr' ? 'fr_FR' : 'en_US'),
   twitterCard: "summary_large_image",
 })
 

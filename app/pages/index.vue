@@ -13,10 +13,10 @@
       <div class="container mx-auto px-6 relative z-10 flex items-start pt-10 lg:pt-20">
         <div class="max-w-3xl mx-auto text-center">
           <h1 class="text-5xl font-semibold leading-tight text-slate-900 lg:text-6xl mb-6">
-            Travel that's fair for everyone
+            {{ $t('home.hero.title') }}
           </h1>
           <p class="text-xl text-slate-600 mb-8">
-            Discover the best adventure experiences with passionate local guides. Pay honest prices. Support sustainable tourism. Real adventures, happy communities.
+            {{ $t('home.hero.subtitle') }}
           </p>
           <Button
             as-child
@@ -24,7 +24,7 @@
             class="rounded-lg bg-gradient-to-r from-[#FF6B35] to-[#F7931E] px-8 py-3 text-base font-medium text-white transition-all shadow-lg hover:shadow-xl"
           >
             <NuxtLink to="/destinations">
-              Explore Destinations
+              {{ $t('home.hero.cta') }}
             </NuxtLink>
           </Button>
         </div>
@@ -36,10 +36,10 @@
       <div class="container mx-auto px-6">
         <div class="mb-12 text-center max-w-3xl mx-auto">
           <h2 class="text-3xl font-semibold text-slate-900 mb-4">
-            A Different Kind of Travel Agency
+            {{ $t('home.whyChoose.title') }}
           </h2>
           <p class="text-lg text-slate-600">
-            We believe travel should enrich everyone – the traveler, the guide, and the community.
+            {{ $t('home.whyChoose.subtitle') }}
           </p>
         </div>
         <div class="grid gap-8 md:grid-cols-3">
@@ -47,27 +47,27 @@
             <div class="w-16 h-16 bg-slate-100 rounded-full flex items-center justify-center mx-auto mb-4">
               <Icon name="mdi:handshake" class="h-8 w-8 text-slate-900" />
             </div>
-            <h3 class="text-lg font-semibold text-slate-900 mb-2">Fair for everyone</h3>
+            <h3 class="text-lg font-semibold text-slate-900 mb-2">{{ $t('home.whyChoose.fair.title') }}</h3>
             <p class="text-slate-600">
-              Local guides get paid fairly. You get honest prices. Everyone wins.
+              {{ $t('home.whyChoose.fair.description') }}
             </p>
           </div>
           <div class="text-center">
             <div class="w-16 h-16 bg-slate-100 rounded-full flex items-center justify-center mx-auto mb-4">
               <Icon name="mdi:account-group" class="h-8 w-8 text-slate-900" />
             </div>
-            <h3 class="text-lg font-semibold text-slate-900 mb-2">Passionate locals</h3>
+            <h3 class="text-lg font-semibold text-slate-900 mb-2">{{ $t('home.whyChoose.passionate.title') }}</h3>
             <p class="text-slate-600">
-              Our guides love what they do and can't wait to share it with you.
+              {{ $t('home.whyChoose.passionate.description') }}
             </p>
           </div>
           <div class="text-center">
             <div class="w-16 h-16 bg-slate-100 rounded-full flex items-center justify-center mx-auto mb-4">
               <Icon name="mdi:leaf" class="h-8 w-8 text-slate-900" />
             </div>
-            <h3 class="text-lg font-semibold text-slate-900 mb-2">Sustainable tourism</h3>
+            <h3 class="text-lg font-semibold text-slate-900 mb-2">{{ $t('home.whyChoose.sustainable.title') }}</h3>
             <p class="text-slate-600">
-              Eco-friendly practices that protect the places we love to explore.
+              {{ $t('home.whyChoose.sustainable.description') }}
             </p>
           </div>
         </div>
@@ -80,10 +80,10 @@
 
         <div class="mb-12 text-center">
           <h2 class="text-3xl font-semibold text-slate-900 mb-3">
-            Traveler reviews
+            {{ $t('home.testimonials.title') }}
           </h2>
           <p class="text-slate-600">
-            See what our adventurers have to say
+            {{ $t('home.testimonials.subtitle') }}
           </p>
         </div>
 
@@ -128,10 +128,10 @@
       <div class="container mx-auto px-6">
         <div class="text-center mb-12">
           <h2 class="text-3xl font-semibold text-slate-900 mb-3">
-            Your Adventure Dream Team
+            {{ $t('home.team.title') }}
           </h2>
           <p class="text-lg text-slate-600">
-            Meet the passionate locals who'll make your journey unforgettable
+            {{ $t('home.team.subtitle') }}
           </p>
         </div>
         
@@ -161,7 +161,7 @@
               <div class="flex items-center justify-center gap-1">
           <Icon name="mdi:star" class="h-3 w-3 text-yellow-500" />
           <span class="text-xs font-medium text-slate-600">{{ member.rating }}</span>
-          <span class="text-xs text-slate-400">({{ member.trips }} trips)</span>
+          <span class="text-xs text-slate-400">({{ member.trips }} {{ $t('home.team.trips') }})</span>
               </div>
             </div>
           </div>
@@ -173,25 +173,25 @@
             <div class="text-2xl md:text-4xl font-semibold text-slate-900 mb-2">
               <NumberTicker :value="100" :decimal-places="0" />+
             </div>
-            <div class="text-xs md:text-sm text-slate-600">Happy Travelers</div>
+            <div class="text-xs md:text-sm text-slate-600">{{ $t('home.stats.travelers') }}</div>
           </div>
           <div class="text-center p-3 md:p-6">
             <div class="text-2xl md:text-4xl font-semibold text-slate-900 mb-2">
               <NumberTicker :value="totalCountries" :decimal-places="0" />
             </div>
-            <div class="text-xs md:text-sm text-slate-600">Countries</div>
+            <div class="text-xs md:text-sm text-slate-600">{{ $t('home.stats.countries') }}</div>
           </div>
           <div class="text-center p-3 md:p-6">
             <div class="text-2xl md:text-4xl font-semibold text-slate-900 mb-2">
               <NumberTicker :value="totalActivities" :decimal-places="0" />
             </div>
-            <div class="text-xs md:text-sm text-slate-600">Activities</div>
+            <div class="text-xs md:text-sm text-slate-600">{{ $t('home.stats.activities') }}</div>
           </div>
           <div class="text-center p-3 md:p-6">
             <div class="text-2xl md:text-4xl font-semibold text-slate-900 mb-2">
               <NumberTicker :value="4.9" :decimal-places="1" />★
             </div>
-            <div class="text-xs md:text-sm text-slate-600">Average Rating</div>
+            <div class="text-xs md:text-sm text-slate-600">{{ $t('home.stats.rating') }}</div>
           </div>
         </div>
       </div>
@@ -202,10 +202,10 @@
       <div class="container mx-auto px-6">
         <div class="text-center mb-12">
           <h2 class="text-3xl font-semibold text-slate-900 mb-3">
-            Explore our destinations
+            {{ $t('home.destinations.title') }}
           </h2>
           <p class="text-lg text-slate-600">
-            Discover amazing adventures in breathtaking locations around the world
+            {{ $t('home.destinations.subtitle') }}
           </p>
         </div>
         
@@ -244,10 +244,10 @@
       <div class="container mx-auto px-6">
         <div class="max-w-2xl">
           <h2 class="text-3xl font-semibold text-slate-900 mb-4">
-            Ready to start planning?
+            {{ $t('home.cta.title') }}
           </h2>
           <p class="text-lg text-slate-600 mb-8">
-            Get in touch with our team to discuss your adventure.
+            {{ $t('home.cta.subtitle') }}
           </p>
           <div class="flex flex-col sm:flex-row gap-4">
             <Button
@@ -256,7 +256,7 @@
               class="rounded-lg bg-gradient-to-r from-[#FF6B35] to-[#F7931E] px-8 py-3 text-base font-medium text-white transition-all shadow-lg hover:shadow-xl"
             >
               <NuxtLink to="/contact">
-                Contact Us
+                {{ $t('home.cta.contact') }}
               </NuxtLink>
             </Button>
             <Button
@@ -266,7 +266,7 @@
               class="rounded-lg border border-slate-300 px-8 py-3 text-base font-medium text-slate-700 hover:bg-slate-50 transition-colors"
             >
               <a href="https://wa.me/1234567890" target="_blank" rel="noopener">
-                WhatsApp
+                {{ $t('home.cta.whatsapp') }}
               </a>
             </Button>
           </div>
@@ -406,25 +406,46 @@ const destinations = [
   }
 ]
 
-useSeoMeta({
-  title: "Fair Adventure Travel with Local Guides | Zamzam Experience",
-  description:
-    "Discover authentic adventure experiences with passionate local guides. Fair prices, sustainable tourism, and unforgettable trekking, paragliding, and surfing adventures worldwide.",
-  ogTitle: "Fair Adventure Travel with Local Guides | Zamzam Experience",
-  ogDescription:
-    "Travel that's fair for everyone. Expert-guided adventure tours with honest pricing and sustainable tourism practices.",
-  ogImage: "/images/og-home.jpg",
-  ogType: "website",
-  twitterCard: "summary_large_image",
-  twitterTitle: "Fair Adventure Travel with Local Guides | Zamzam Experience",
-  twitterDescription:
-    "Discover authentic adventures with local guides. Fair prices, sustainable tourism.",
-  twitterImage: "/images/og-home.jpg",
+const { t, locale } = useI18n()
+
+const seoTitle = computed(() => t('seo.home.title', 'Zamzam Experience - Adventure Travel', {}))
+const seoDescription = computed(() => t('seo.home.description', 'Discover authentic adventure experiences', {}))
+const currentUrl = 'https://zamzamxp.com'
+
+useHead({
+  htmlAttrs: {
+    lang: computed(() => locale.value)
+  },
+  link: [
+    {
+      rel: 'alternate',
+      hreflang: 'en',
+      href: currentUrl
+    },
+    {
+      rel: 'alternate',
+      hreflang: 'fr',
+      href: currentUrl
+    },
+    {
+      rel: 'alternate',
+      hreflang: 'x-default',
+      href: currentUrl
+    }
+  ]
 })
 
-defineOgImageComponent("NuxtSeo", {
-  title: "Zamzam Experience",
-  description: "Travel that's fair for everyone",
-  theme: "#FF6B35",
+useSeoMeta({
+  title: seoTitle,
+  description: seoDescription,
+  ogTitle: seoTitle,
+  ogDescription: seoDescription,
+  ogImage: "/images/og-home.jpg",
+  ogType: "website",
+  ogLocale: computed(() => locale.value === 'fr' ? 'fr_FR' : 'en_US'),
+  twitterCard: "summary_large_image",
+  twitterTitle: seoTitle,
+  twitterDescription: seoDescription,
+  twitterImage: "/images/og-home.jpg",
 })
 </script>

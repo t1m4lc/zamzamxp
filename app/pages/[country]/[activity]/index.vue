@@ -146,6 +146,13 @@ const {
   extractSlug 
 } = useExperiences()
 
+const { locale } = useI18n()
+const currentLocale = computed(() => locale.value)
+const { getActivityTypeFromSlug, activityTypes, getCountryName } = useActivityTranslations()
+
+// Get the normalized activity type for data lookup (always use English key)
+const normalizedActivity = activity
+
 // Activity-specific data
 const activityData: Record<string, any> = {
   trekking: {
@@ -159,10 +166,10 @@ const activityData: Record<string, any> = {
   }
 }
 
-const data = activityData[activity] || activityData.trekking
+const data = activityData[normalizedActivity] || activityData.trekking
 const activityDescription = data.description
 
-const countryName = country.charAt(0).toUpperCase() + country.slice(1)
+const countryName = getCountryName(country)
 
 // Helper function to get icon based on activity
 const getActivityIcon = (activityType: string) => {
@@ -177,30 +184,55 @@ const getActivityIcon = (activityType: string) => {
 }
 
 // Fetch experiences dynamically from content
-const { data: experiencesData } = await useAsyncData(`${country}-${activity}-experiences`, async () => {
+const { data: experiencesData } = await useAsyncData(
+  () => `${country}-${activity}-experiences-${currentLocale.value}`,
+  async () => {
   const allExperiences = await queryCollection('content').all()
   
-  // Filter by country and activity using metadata fields
-  return allExperiences.filter((exp: any) => 
-    exp.country === country && exp.activity === activity
-  )
+  // Filter by locale, country and activity folder name from path
+  // New structure: /activities/{locale}/{country}/{activity}/{slug}
+  return allExperiences.filter((exp: any) => {
+    const pathToCheck = exp._path || exp.path
+    if (!pathToCheck) return false
+    
+    const pathParts = pathToCheck.split('/').filter(Boolean)
+    
+    // Check if path follows structure: activities/{locale}/{country}/{activity}/...
+    if (pathParts.length < 4 || pathParts[0] !== 'activities') return false
+    
+    const itemLocale = pathParts[1]
+    const itemCountry = pathParts[2]
+    const itemActivity = pathParts[3]
+    
+    return itemLocale === currentLocale.value && 
+           itemCountry === country && 
+           itemActivity === activity
+  })
 })
 
 const experiences = computed(() => {
   if (!experiencesData.value) return []
   
-  return experiencesData.value.map((exp: any) => ({
-    title: exp.title,
-    description: exp.description,
-    price: exp.price,
-    duration: exp.duration,
-    difficulty: exp.difficulty,
-    groupSize: exp.groupSize,
-    image: exp.image,
-    country: country,
-    activity: activity,
-    slug: extractSlug(exp.path)
-  }))
+  return experiencesData.value.map((exp: any) => {
+    // Extract the actual activity folder from path for the URL
+    // New structure: /activities/{locale}/{country}/{activity}/{slug}
+    const pathToCheck = exp._path || exp.path
+    const pathParts = pathToCheck.split('/').filter(Boolean)
+    const activityFromPath = pathParts[3] || activity // activity is at index 3
+    
+    return {
+      title: exp.title,
+      description: exp.description,
+      price: exp.price,
+      duration: exp.duration,
+      difficulty: exp.difficulty,
+      groupSize: exp.groupSize,
+      image: exp.image,
+      country: country,
+      activity: activityFromPath, // Use the actual activity slug from path
+      slug: extractSlug(pathToCheck)
+    }
+  })
 })
 
 const activityTitle = activity.charAt(0).toUpperCase() + activity.slice(1)

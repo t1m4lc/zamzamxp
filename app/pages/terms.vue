@@ -185,8 +185,7 @@
             </p>
             <ul class="text-slate-700">
               <li><strong>Email:</strong> hello@zamzamxp.com</li>
-              <li><strong>WhatsApp:</strong> +977 1234567890</li>
-              <li><strong>Address:</strong> Kathmandu, Nepal</li>
+              <li><strong>Address:</strong> Montpellier, France</li>
             </ul>
 
             <Card class="mt-12 rounded-2xl border-2 border-orange-200 bg-orange-50 p-8">

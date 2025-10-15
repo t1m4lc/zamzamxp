@@ -1,0 +1,221 @@
+{
+  "nav": {
+    "destinations": "Destinations",
+    "about": "À propos",
+    "contact": "Contact",
+    "getStarted": "Commencer"
+  },
+  "home": {
+    "hero": {
+      "title": "Un voyage équitable pour tous",
+      "subtitle": "Découvrez les meilleures expériences d’aventure avec des guides locaux passionnés. Payez des prix justes. Soutenez le tourisme durable. De vraies aventures, des communautés heureuses.",
+      "cta": "Explorer les destinations"
+    },
+    "whyChoose": {
+      "title": "Une agence de voyage différente",
+      "subtitle": "Nous croyons que le voyage doit enrichir tout le monde – le voyageur, le guide et la communauté.",
+      "fair": {
+        "title": "Équitable pour tous",
+        "description": "Les guides locaux sont rémunérés équitablement. Vous payez un prix honnête. Tout le monde y gagne."
+      },
+      "passionate": {
+        "title": "Des locaux passionnés",
+        "description": "Nos guides aiment ce qu’ils font et ont hâte de le partager avec vous."
+      },
+      "sustainable": {
+        "title": "Tourisme durable",
+        "description": "Des pratiques éco-responsables qui protègent les lieux que nous aimons explorer."
+      }
+    },
+    "testimonials": {
+      "title": "Avis des voyageurs",
+      "subtitle": "Découvrez ce que nos aventuriers en pensent"
+    },
+    "team": {
+      "title": "Votre équipe de rêve d’aventure",
+      "subtitle": "Rencontrez les locaux passionnés qui rendront votre voyage inoubliable",
+      "trips": "voyages"
+    },
+    "stats": {
+      "travelers": "Voyageurs heureux",
+      "countries": "Pays",
+      "activities": "Activités",
+      "rating": "Note moyenne"
+    },
+    "destinations": {
+      "title": "Explorez nos destinations",
+      "subtitle": "Découvrez des aventures incroyables dans des lieux à couper le souffle à travers le monde"
+    },
+    "cta": {
+      "title": "Prêt à planifier votre voyage ?",
+      "subtitle": "Contactez notre équipe pour discuter de votre aventure.",
+      "contact": "Nous contacter",
+      "whatsapp": "WhatsApp"
+    }
+  },
+  "destinations": {
+    "title": "Explorez nos destinations",
+    "subtitle": "Découvrez des aventures à couper le souffle dans des destinations soigneusement sélectionnées à travers le monde",
+    "nepal": {
+      "description": "Vivez des aventures de trekking et de parapente de classe mondiale dans l’Himalaya avec des vues imprenables sur les montagnes.",
+      "experiences": "expériences"
+    },
+    "morocco": {
+      "description": "Découvrez le surf sur la côte atlantique associé à la riche culture marocaine dans de charmantes villes côtières.",
+      "experiences": "expériences"
+    },
+    "comingSoon": {
+      "title": "Plus de destinations",
+      "subtitle": "Bientôt disponible",
+      "description": "Nous ajoutons constamment de nouvelles expériences passionnantes. Restez à l’écoute pour plus d’aventures !",
+      "expanding": "Expansion prochaine",
+      "stayTuned": "Restez à l’écoute"
+    },
+    "explore": "Explorer"
+  },
+  "activities": {
+    "trekking": "Trekking",
+    "paragliding": "Parapente",
+    "surfing": "Surf",
+    "from": "À partir de",
+    "days": "Jours",
+    "viewDetails": "Voir les détails",
+    "bookNow": "Réserver maintenant"
+  },
+  "footer": {
+    "description": "Relier les voyageurs à des guides locaux passionnés pour des aventures authentiques à travers le monde.",
+    "destinations": "Destinations",
+    "getInTouch": "Entrer en contact",
+    "whatsapp": "WhatsApp",
+    "email": "hello{'@'}zamzamxp.com",
+    "contactUs": "Nous contacter",
+    "ecoFriendly": "Éco-responsable et durable",
+    "fairPay": "Rémunération équitable pour les partenaires",
+    "rights": "Tous droits réservés",
+    "terms": "Conditions",
+    "privacy": "Confidentialité",
+    "language": "Langue"
+  },
+  "activityDetails": {
+    "overview": "Aperçu",
+    "itinerary": "Itinéraire",
+    "included": "Ce qui est inclus",
+    "notIncluded": "Ce qui n’est pas inclus",
+    "bookNow": "Réserver maintenant",
+    "duration": "Durée",
+    "difficulty": "Difficulté",
+    "groupSize": "Taille du groupe",
+    "bestTime": "Meilleure période",
+    "price": "Prix",
+    "perPerson": "par personne"
+  },
+  "difficulty": {
+    "Easy": "Facile",
+    "Moderate": "Modérée",
+    "Challenging": "Difficile",
+    "Very Challenging": "Très difficile"
+  },
+  "currency": {
+    "symbol": "$",
+    "code": "USD"
+  },
+  "about": {
+    "hero": {
+      "title": "Qui nous sommes",
+      "subtitle": "Connecter les voyageurs avec des guides locaux passionnés pour des aventures authentiques à travers le monde."
+    },
+    "story": {
+      "title": "Notre Histoire",
+      "paragraph1": "Zamzam Experience est né d'une observation simple : partout dans le monde, des guides locaux talentueux sont passionnés par le partage de leur culture et de leurs activités, mais peinent à se connecter avec les voyageurs de manière juste et équitable.",
+      "paragraph2": "Nous construisons un nouveau type d'agence de voyage - une agence qui place les communautés locales en premier, garantit une rémunération équitable pour les guides et partenaires, et propose des expériences authentiques qui profitent à tous.",
+      "paragraph3": "Chaque aventure que nous proposons crée des connexions significatives, soutient le tourisme durable et aide à préserver les destinations que nous aimons explorer."
+    },
+    "values": {
+      "title": "Nos Valeurs",
+      "subtitle": "Ce qui motive tout ce que nous faisons",
+      "authentic": {
+        "title": "Expériences Locales Authentiques",
+        "description": "Chaque aventure est conçue et dirigée par des locaux qui partagent leur culture, leurs histoires et leurs perspectives authentiques."
+      },
+      "sustainable": {
+        "title": "Écologique & Durable",
+        "description": "Nous minimisons l'impact environnemental, respectons les cultures locales et veillons à ce que le tourisme profite aux communautés à long terme."
+      },
+      "fair": {
+        "title": "Rémunération Équitable",
+        "description": "Nos partenaires reçoivent une compensation équitable pour leur travail. Nous croyons en un tourisme équitable qui profite à tous."
+      },
+      "pricing": {
+        "title": "Meilleurs Prix du Marché",
+        "description": "Des expériences de qualité à des prix justes. Nous détestons les pièges à touristes - vous payez ce qui est juste pour un service de qualité."
+      }
+    },
+    "founder": {
+      "label": "Fondateur",
+      "name": "Timothy Alcaide",
+      "bio1": "Je suis un ingénieur logiciel qui a quitté mon emploi en 2024 pour voyager à travers le monde. Passionné par les sports d'aventure et les montagnes, j'ai exploré Madagascar, la Thaïlande, le Vietnam, le Népal et le Maroc.",
+      "bio2": "Partout où je suis allé, j'ai rencontré des guides locaux incroyables passionnés par leur métier mais qui peinaient à trouver des clients équitablement. C'est pourquoi j'ai créé Zamzam Experience en 2025.",
+      "bio3": "(Fait amusant : \"zamzam\" est un mot népalais signifiant \"allons-y !\" - il capture parfaitement notre esprit d'aventure.)",
+      "badge1": "Ingénieur Logiciel",
+      "badge2": "Voyageur Mondial",
+      "badge3": "Passionné d'Aventure"
+    },
+    "partners": {
+      "title": "Nos partenaires locaux",
+      "subtitle": "Nous travaillons exclusivement avec des guides locaux passionnés, des hébergements familiaux et de petites entreprises. Lorsque vous voyagez avec nous, vous soutenez directement les personnes qui appellent ces lieux leur maison.",
+      "guides": {
+        "title": "Guides Locaux",
+        "description": "Des professionnels passionnés qui connaissent chaque sentier, chaque vague et chaque joyau caché de leur région."
+      },
+      "businesses": {
+        "title": "Entreprises Locales",
+        "description": "Des opérations familiales qui fournissent des hébergements et des services authentiques."
+      },
+      "community": {
+        "title": "Partenaires Communautaires",
+        "description": "Des coopératives et organisations dédiées au tourisme durable et communautaire."
+      }
+    },
+    "commitment": {
+      "title": "Notre engagement pour un tourisme équitable",
+      "subtitle": "Le tourisme devrait profiter à tous, en particulier aux communautés locales",
+      "remuneration": {
+        "title": "Rémunération Équitable",
+        "description": "Tous nos partenaires reçoivent une compensation équitable pour leurs services. Nous croyons en des partenariats équitables où tout le monde bénéficie.",
+        "point1": "Salaires équitables pour tous les partenaires",
+        "point2": "Tarification transparente",
+        "point3": "Partenariats directs avec les locaux"
+      },
+      "communityFocus": {
+        "title": "Focus Communautaire",
+        "description": "Nous priorisons le travail avec les entreprises locales et les opérations familiales, garantissant que les revenus du tourisme restent au sein de la communauté."
+      }
+    }
+  },
+  "routes": {
+    "about": "a-propos",
+    "contact": "contact",
+    "destinations": "destinations",
+    "terms": "conditions",
+    "privacy": "confidentialite"
+  },
+  "seo": {
+    "siteName": "Zamzam Experience",
+    "home": {
+      "title": "Zamzam Experience - Voyages d'Aventure avec Prix Équitables & Guides Locaux",
+      "description": "Un nouveau type d'agence de voyage vous connectant avec des guides locaux passionnés. Prix équitables, tourisme durable, et aventures authentiques au Népal, au Maroc et au-delà."
+    },
+    "destinations": {
+      "title": "Explorer les Destinations - Zamzam Experience",
+      "description": "Découvrez des aventures à couper le souffle au Népal, au Maroc et plus encore. Trekking, parapente, surf avec des guides locaux."
+    },
+    "about": {
+      "title": "À Propos - Zamzam Experience",
+      "description": "Découvrez notre mission de créer des expériences de voyage d'aventure équitables et durables avec des guides locaux passionnés."
+    },
+    "contact": {
+      "title": "Contactez-nous - Zamzam Experience",
+      "description": "Contactez notre équipe pour planifier votre prochaine aventure. WhatsApp, email ou formulaire de contact disponibles."
+    }
+  }
+}

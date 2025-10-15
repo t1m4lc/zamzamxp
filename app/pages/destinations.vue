@@ -6,10 +6,10 @@
       <div class="container mx-auto px-6 relative">
         <div class="text-center max-w-3xl mx-auto">
           <h1 class="text-4xl font-semibold leading-tight text-slate-900 lg:text-5xl mb-6">
-            Explore our destinations
+            {{ $t('destinations.title') }}
           </h1>
           <p class="text-xl text-slate-600 mb-8">
-            Discover breathtaking adventures in carefully selected destinations around the world
+            {{ $t('destinations.subtitle') }}
           </p>
         </div>
       </div>
@@ -37,14 +37,14 @@
                   <h3 class="text-xl font-semibold text-slate-900">Nepal</h3>
                 </div>
                 <p class="text-slate-600 mb-4">
-                  Experience world-class trekking and paragliding adventures in the Himalayas with stunning mountain views.
+                  {{ $t('destinations.nepal.description') }}
                 </p>
                 <div class="flex flex-wrap gap-2 mb-4">
                   <span v-for="activity in nepalData.activities" :key="activity" class="px-3 py-1 bg-slate-100 text-slate-700 text-sm rounded-full">{{ activity }}</span>
                 </div>
                 <div class="flex items-center justify-between">
-                  <span class="text-slate-500 text-sm">{{ nepalData.count }} experiences</span>
-                  <span class="text-slate-900 font-medium group-hover:translate-x-1 transition-transform">Explore →</span>
+                  <span class="text-slate-500 text-sm">{{ nepalData.count }} {{ $t('destinations.nepal.experiences') }}</span>
+                  <span class="text-slate-900 font-medium group-hover:translate-x-1 transition-transform">{{ $t('destinations.explore') }} →</span>
                 </div>
               </div>
             </div>
@@ -68,14 +68,14 @@
                   <h3 class="text-xl font-semibold text-slate-900">Morocco</h3>
                 </div>
                 <p class="text-slate-600 mb-4">
-                  Discover Atlantic coast surfing combined with rich Moroccan culture in charming coastal towns.
+                  {{ $t('destinations.morocco.description') }}
                 </p>
                 <div class="flex flex-wrap gap-2 mb-4">
                   <span v-for="activity in moroccoData.activities" :key="activity" class="px-3 py-1 bg-slate-100 text-slate-700 text-sm rounded-full">{{ activity }}</span>
                 </div>
                 <div class="flex items-center justify-between">
-                  <span class="text-slate-500 text-sm">{{ moroccoData.count }} experiences</span>
-                  <span class="text-slate-900 font-medium group-hover:translate-x-1 transition-transform">Explore →</span>
+                  <span class="text-slate-500 text-sm">{{ moroccoData.count }} {{ $t('destinations.morocco.experiences') }}</span>
+                  <span class="text-slate-900 font-medium group-hover:translate-x-1 transition-transform">{{ $t('destinations.explore') }} →</span>
                 </div>
               </div>
             </div>
@@ -86,17 +86,17 @@
             <div class="aspect-[4/3] flex items-center justify-center bg-slate-100">
               <div class="text-center p-6">
                 <div class="text-5xl mb-4">🌎</div>
-                <h3 class="text-xl font-semibold text-slate-500 mb-2">More Destinations</h3>
-                <p class="text-slate-400">Coming Soon</p>
+                <h3 class="text-xl font-semibold text-slate-500 mb-2">{{ $t('destinations.comingSoon.title') }}</h3>
+                <p class="text-slate-400">{{ $t('destinations.comingSoon.subtitle') }}</p>
               </div>
             </div>
             <div class="p-6">
               <p class="text-slate-500 mb-4">
-                We're constantly adding new exciting experiences. Stay tuned for more adventures!
+                {{ $t('destinations.comingSoon.description') }}
               </p>
               <div class="flex items-center justify-between">
-                <span class="text-slate-400 text-sm">Expanding soon</span>
-                <span class="text-slate-400 font-medium">Stay tuned</span>
+                <span class="text-slate-400 text-sm">{{ $t('destinations.comingSoon.expanding') }}</span>
+                <span class="text-slate-400 font-medium">{{ $t('destinations.comingSoon.stayTuned') }}</span>
               </div>
             </div>
           </div>
@@ -190,8 +190,13 @@
 <script setup lang="ts">
 import { Button } from '~/components/ui/button'
 
+const { locale } = useI18n()
+const currentLocale = computed(() => locale.value)
+
 // Fetch all content to get countries dynamically
-const { data: allContent } = await useAsyncData('all-content', async () => {
+const { data: allContent } = await useAsyncData(
+  () => `all-content-${currentLocale.value}`,
+  async () => {
   return await queryCollection('content').all()
 })
 
@@ -199,12 +204,25 @@ const { data: allContent } = await useAsyncData('all-content', async () => {
 const countriesData = computed(() => {
   if (!allContent.value) return []
   
-  const content = allContent.value as any[]
+  // Filter by current locale first
+  // New structure: /activities/{locale}/{country}/{activity}/{slug}
+  const localeFilteredContent = (allContent.value as any[]).filter((exp: any) => {
+    const pathToCheck = exp._path || exp.path
+    if (!pathToCheck) return false
+    
+    const pathParts = pathToCheck.split('/').filter(Boolean)
+    // Check if path follows structure: activities/{locale}/...
+    if (pathParts.length < 2 || pathParts[0] !== 'activities') return false
+    
+    const itemLocale = pathParts[1]
+    return itemLocale === currentLocale.value
+  })
+  
   // Extract unique countries
-  const countries = [...new Set(content.map((exp: any) => exp.country))].filter(Boolean)
+  const countries = [...new Set(localeFilteredContent.map((exp: any) => exp.country))].filter(Boolean)
   
   return countries.map(country => {
-    const countryExperiences = content.filter((item: any) => item.country === country)
+    const countryExperiences = localeFilteredContent.filter((item: any) => item.country === country)
     const count = countryExperiences.length
     
     // Extract unique activities for this country
@@ -227,23 +245,50 @@ const moroccoData = computed(() =>
   countriesData.value.find(c => c.slug === 'morocco') || { count: 0, activities: [] }
 )
 
+const { t } = useI18n()
+
+const seoTitle = computed(() => t('seo.destinations.title', 'Explore Destinations - Zamzam Experience', {}))
+const seoDescription = computed(() => t('seo.destinations.description', 'Discover breathtaking adventures', {}))
+const currentUrl = 'https://zamzamxp.com/destinations'
+
+useHead({
+  htmlAttrs: {
+    lang: computed(() => currentLocale.value)
+  },
+  link: [
+    {
+      rel: 'alternate',
+      hreflang: 'en',
+      href: currentUrl
+    },
+    {
+      rel: 'alternate',
+      hreflang: 'fr',
+      href: currentUrl
+    },
+    {
+      rel: 'alternate',
+      hreflang: 'x-default',
+      href: currentUrl
+    }
+  ]
+})
+
 useSeoMeta({
-  title: "Adventure Travel Destinations | Nepal, Morocco & More | Zamzam Experience",
-  description:
-    "Explore authentic adventure destinations with expert local guides. Trekking in Nepal's Himalayas, surfing Morocco's Atlantic coast, and more sustainable tourism experiences.",
-  ogTitle: "Adventure Travel Destinations | Zamzam Experience",
-  ogDescription:
-    "From Nepal's Himalayas to Morocco's Atlantic coast - discover authentic adventures with local guides.",
+  title: seoTitle,
+  description: seoDescription,
+  ogTitle: seoTitle,
+  ogDescription: seoDescription,
   ogType: "website",
+  ogLocale: computed(() => currentLocale.value === 'fr' ? 'fr_FR' : 'en_US'),
   twitterCard: "summary_large_image",
 })
 
 useSchemaOrg([
   defineWebPage({
     "@type": "CollectionPage",
-    name: "Adventure Destinations",
-    description:
-      "Browse our collection of adventure travel destinations around the world",
+    name: computed(() => t('destinations.title', 'Adventure Destinations', {})),
+    description: computed(() => t('destinations.subtitle', 'Browse adventure destinations', {})),
   }),
 ])
 </script>

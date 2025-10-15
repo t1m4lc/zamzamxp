@@ -256,8 +256,7 @@
               <ul class="mb-0 space-y-2 text-slate-700">
                 <li><strong>Email:</strong> privacy@zamzamxp.com</li>
                 <li><strong>General:</strong> hello@zamzamxp.com</li>
-                <li><strong>WhatsApp:</strong> +977 1234567890</li>
-                <li><strong>Address:</strong> ZamZam XP, Kathmandu, Nepal</li>
+                <li><strong>Address:</strong> Zamzam Experience, Montpellier, France</li>
               </ul>
             </Card>
 
