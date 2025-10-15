@@ -176,7 +176,7 @@
               variant="outline"
               class="rounded-lg border border-slate-300 px-8 py-3 text-base font-medium text-slate-700 hover:bg-slate-50 transition-colors"
             >
-              <a href="https://wa.me/1234567890" target="_blank" rel="noopener">
+              <a :href="'https://wa.me/' + APP_CONFIG.company.whatsapp" target="_blank" rel="noopener">
                 WhatsApp Us
               </a>
             </Button>
@@ -189,6 +189,7 @@
 
 <script setup lang="ts">
 import { Button } from '~/components/ui/button'
+import { APP_CONFIG } from '~/config/constants'
 
 // Fetch all content to get countries dynamically
 const { data: allContent } = await useAsyncData('all-content', async () => {

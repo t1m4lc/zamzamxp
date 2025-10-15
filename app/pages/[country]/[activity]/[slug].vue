@@ -81,7 +81,11 @@
             <Icon name="material-symbols:speed-outline" class="h-5 w-5 text-orange-500" />
             <span class="font-semibold text-slate-900">{{ experience.difficulty }}</span>
           </div>
-          <div class="flex items-center space-x-2" v-if="experience.groupSize">
+          <div class="flex items-center space-x-2" v-if="experience.minGroupSize">
+            <Icon name="material-symbols:group-outline" class="h-5 w-5 text-orange-500" />
+            <span class="font-semibold text-slate-900">Min. {{ experience.minGroupSize }} {{ experience.minGroupSize === 1 ? 'person' : 'people' }}</span>
+          </div>
+          <div class="flex items-center space-x-2" v-else-if="experience.groupSize">
             <Icon name="material-symbols:group-outline" class="h-5 w-5 text-orange-500" />
             <span class="font-semibold text-slate-900">{{ experience.groupSize }}</span>
           </div>
@@ -218,7 +222,7 @@
                   <div class="mb-2 text-sm font-semibold text-slate-600 text">Starting from</div>
                   <div class="mb-2 text-5xl font-black text-slate-900">${{ experience.price }}</div>
                   <div class="text-xs text-slate-600">Per person</div>
-                  <div class="mt-2 text-xs font-medium text-slate-500">2 person minimum</div>
+                  <div v-if="experience.minGroupSize && experience.minGroupSize > 1" class="mt-2 text-xs font-medium text-slate-500">{{ experience.minGroupSize }} {{ experience.minGroupSize === 2 ? 'person' : 'people' }} minimum</div>
                   <div v-if="experience.privatePrice" class="mt-1 text-xs text-orange-600">
                     <Icon name="mdi:star" class="inline-block h-3 w-3" />
                     Private booking available
@@ -490,6 +494,7 @@ interface ExperienceDetail {
   duration: string
   difficulty: string
   groupSize: string
+  minGroupSize?: number
   image: string
   bestTime?: string
   highlights: string[]
@@ -548,10 +553,11 @@ const experience = computed(() => {
     duration: contentData.value.duration,
     difficulty: contentData.value.difficulty,
     groupSize: contentData.value.groupSize,
+    minGroupSize: contentData.value.minGroupSize,
     image: contentData.value.image,
     bestTime: contentData.value.bestTime,
     highlights: ensureArray(contentData.value.highlights),
-    gallery: ensureArray(contentData.value.gallery).length > 0 ? ensureArray(contentData.value.gallery) : [contentData.value.image],
+    gallery: ensureArray(contentData.value.gallery),
     included: ensureArray(contentData.value.included),
     notIncluded: ensureArray(contentData.value.notIncluded),
     itinerary: ensureArray(contentData.value.itinerary),

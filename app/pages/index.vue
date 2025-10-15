@@ -1,11 +1,11 @@
 <template>
   <div class="overflow-x-hidden">
     <!-- Hero Section with Globe Background -->
-    <section class="relative bg-white overflow-hidden" style="padding-bottom: 250px; padding-top: 40px;">
+    <section class="relative bg-gradient-to-b from-slate-50 to-white" style="padding-bottom: 350px; padding-top: 40px;">
       <!-- Globe Background - Positioned lower -->
-      <div class="absolute left-0 right-0 flex items-end justify-center pointer-events-none" style="top: 35%; transform: translateY(0);">
-        <div class="relative w-full h-[600px] lg:h-[800px] max-w-[800px] lg:max-w-[1000px]">
-          <Globe class="scale-110 opacity-20" />
+      <div class="absolute left-0 right-0 flex items-end justify-center pointer-events-none" style="top: 25%; transform: translateY(0);">
+        <div class="relative w-full h-[700px] lg:h-[900px] max-w-[900px] lg:max-w-[1100px]">
+          <Globe />
         </div>
       </div>
 
@@ -258,7 +258,7 @@
               variant="outline"
               class="rounded-lg border border-slate-300 px-8 py-3 text-base font-medium text-slate-700 hover:bg-slate-50 transition-colors"
             >
-              <a href="https://wa.me/1234567890" target="_blank" rel="noopener">
+              <a :href="`https://wa.me/${APP_CONFIG.company.whatsapp}`" target="_blank" rel="noopener">
                 WhatsApp
               </a>
             </Button>
@@ -275,6 +275,7 @@ import { Card } from '~/components/ui/card'
 import Globe from '~/components/ui/globe/Globe.vue'
 import { Marquee } from '~/components/ui/marquee'
 import { NumberTicker } from '~/components/ui/number-ticker'
+import { APP_CONFIG } from '~/config/constants'
 
 useSeoMeta({
   title: 'Zamzam Experience - Adventure Travel with Fair Prices & Local Guides',

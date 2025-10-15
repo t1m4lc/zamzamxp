@@ -91,7 +91,7 @@
                   size="lg"
                   class="w-full rounded-lg bg-gradient-to-r from-rose-500 to-orange-500 hover:from-rose-600 hover:to-orange-600 transition-all shadow-lg hover:shadow-xl font-medium"
                 >
-                  <a href="https://wa.me/1234567890" target="_blank" rel="noopener">
+                  <a :href="'https://wa.me/' + APP_CONFIG.company.whatsapp" target="_blank" rel="noopener">
                     <Icon name="mdi:whatsapp" class="mr-2 h-5 w-5" />
                     Chat on WhatsApp
                   </a>
@@ -138,6 +138,7 @@ import {
   EmptyMedia, 
   EmptyTitle 
 } from '~/components/ui/empty'
+import { APP_CONFIG } from '~/config/constants'
 
 const route = useRoute()
 const country = route.params.country as string

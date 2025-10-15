@@ -9,6 +9,7 @@ privatePrice: 900
 duration: "14 Days"
 difficulty: "Very Challenging"
 groupSize: "2-12 people"
+minGroupSize: 2
 image: "/images/activities/nepal/trekking/everest-base-camp-landmark-stone-at-the-base-camp.jpg"
 gallery:
   - "/images/activities/nepal/trekking/everest-base-camp-landmark-stone-at-the-base-camp.jpg"
