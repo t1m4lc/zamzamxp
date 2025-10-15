@@ -86,10 +86,12 @@
           <Card class="overflow-hidden rounded-2xl border border-slate-200">
             <div class="grid gap-12 p-8 lg:grid-cols-2 lg:p-12">
               <div>
-                <div class="mb-6 aspect-square overflow-hidden rounded-2xl bg-gradient-to-br from-[#FF6B35] to-[#F7931E]">
-                  <div class="flex h-full items-center justify-center text-8xl text-white">
-                    🏞️
-                  </div>
+                <div class="mb-6 aspect-square overflow-hidden rounded-2xl">
+                  <img 
+                    src="/images/me-ai-update.png" 
+                    alt="Timothy Alcaide - Founder of Zamzam Experience"
+                    class="h-full w-full object-cover"
+                  />
                 </div>
               </div>
               <div class="flex flex-col justify-center">
@@ -104,11 +106,6 @@
                 <p class="mb-6 leading-relaxed text-slate-700">
                   (Fun fact: "zamzam" is a Nepali word meaning "let's go!" – it perfectly captures our spirit of adventure.)
                 </p>
-                <div class="flex flex-wrap gap-2">
-                  <Badge class="bg-slate-900 px-3 py-1.5 text-xs font-medium text-white">Software Engineer</Badge>
-                  <Badge class="bg-slate-900 px-3 py-1.5 text-xs font-medium text-white">World Traveler</Badge>
-                  <Badge class="bg-slate-900 px-3 py-1.5 text-xs font-medium text-white">Adventure Enthusiast</Badge>
-                </div>
               </div>
             </div>
           </Card>
