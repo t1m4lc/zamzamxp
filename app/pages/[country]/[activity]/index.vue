@@ -1,5 +1,6 @@
 <template>
   <div>
+    <WhatsAppBubble />
     <!-- Breadcrumb -->
     <section class="border-b bg-slate-50 py-6">
       <div class="container mx-auto px-4">

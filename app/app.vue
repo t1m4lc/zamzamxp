@@ -3,7 +3,6 @@
     <Header />
     <NuxtPage />
     <Footer />
-    <WhatsAppBubble />
 </template>
 
 <script setup lang="ts">
