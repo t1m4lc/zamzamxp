@@ -13,22 +13,13 @@
           We couldn't find the experience you're looking for. It may have been moved or doesn't exist yet.
         </p>
         <div class="flex flex-col sm:flex-row gap-4 justify-center">
-          <Button
-            as-child
-            size="lg"
-            class="rounded-full bg-orange-500 px-8 font-bold hover:bg-orange-600"
-          >
+          <Button as-child size="lg" class="rounded-full bg-orange-500 px-8 font-bold hover:bg-orange-600">
             <NuxtLink :to="`/${country}/${activity}`">
               <Icon name="mdi:arrow-left" class="mr-2 h-5 w-5" />
               <span class="capitalize">Back to {{ activity }}</span>
             </NuxtLink>
           </Button>
-          <Button
-            as-child
-            size="lg"
-            variant="outline"
-            class="rounded-full border-2 border-slate-300 font-bold hover:bg-slate-100"
-          >
+          <Button as-child size="lg" variant="outline" class="rounded-full border-2 border-slate-300 font-bold hover:bg-slate-100">
             <NuxtLink to="/destinations">
               <Icon name="mdi:map-marker" class="mr-2 h-5 w-5" />
               All Destinations
@@ -47,11 +38,7 @@
           <div class="text-xs text-slate-500">From</div>
           <div class="text-2xl font-black text-orange-600">${{ experience.price }}</div>
         </div>
-        <Button
-          as-child
-          size="lg"
-          class="rounded-full bg-orange-500 px-8 font-bold"
-        >
+        <Button as-child size="lg" class="rounded-full bg-orange-500 px-8 font-bold">
           <a :href="whatsappUrl" target="_blank" rel="noopener">
             Book Now
           </a>
@@ -61,16 +48,9 @@
 
     <!-- Hero Image -->
     <section class="relative h-[60vh] overflow-hidden">
-      <NuxtImg
-        :src="experience.image"
-        :alt="experience.title"
-        class="h-full w-full object-cover"
-        sizes="xs:100vw sm:100vw md:100vw lg:100vw xl:100vw"
-        placeholder
-        loading="lazy"
-      />
+      <NuxtImg :src="experience.image" :alt="experience.title" class="h-full w-full object-cover" sizes="xs:100vw sm:100vw md:100vw lg:100vw xl:100vw" placeholder loading="lazy" />
       <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/40 to-transparent"></div>
-      
+
       <!-- Title Overlay -->
       <div class="absolute bottom-0 left-0 right-0 p-8 text-white">
         <div class="container mx-auto">
@@ -133,11 +113,7 @@
             <div v-if="experience.highlights && experience.highlights.length">
               <h2 class="mb-6 text-3xl font-black text-slate-900">Highlights</h2>
               <div class="grid gap-4 md:grid-cols-2">
-                <div
-                  v-for="(highlight, index) in experience.highlights"
-                  :key="index"
-                  class="flex items-start space-x-3 rounded-2xl bg-orange-50 p-4"
-                >
+                <div v-for="(highlight, index) in experience.highlights" :key="index" class="flex items-start space-x-3 rounded-2xl bg-orange-50 p-4">
                   <Icon name="mdi:star" class="mt-1 h-5 w-5 flex-shrink-0 text-orange-500" />
                   <span class="font-medium text-slate-900">{{ highlight }}</span>
                 </div>
@@ -148,19 +124,8 @@
             <div v-if="experience.gallery && experience.gallery.length">
               <h2 class="mb-6 text-3xl font-black text-slate-900">Gallery</h2>
               <div class="grid grid-cols-2 gap-4 md:grid-cols-3">
-                <div
-                  v-for="(image, index) in experience.gallery"
-                  :key="index"
-                  class="aspect-square overflow-hidden rounded-2xl bg-gradient-to-br from-orange-50 to-slate-100"
-                >
-                  <NuxtImg
-                    :src="image"
-                    :alt="`${experience.title} - Image ${index + 1}`"
-                    class="h-full w-full object-cover transition-transform hover:scale-110"
-                    sizes="xs:50vw sm:50vw md:33vw lg:25vw xl:20vw"
-                    placeholder
-                    loading="lazy"
-                  />
+                <div v-for="(image, index) in experience.gallery" :key="index" class="aspect-square overflow-hidden rounded-2xl bg-gradient-to-br from-orange-50 to-slate-100">
+                  <NuxtImg :src="image" :alt="`${experience.title} - Image ${index + 1}`" class="h-full w-full object-cover transition-transform hover:scale-110" sizes="xs:50vw sm:50vw md:33vw lg:25vw xl:20vw" placeholder loading="lazy" />
                 </div>
               </div>
             </div>
@@ -169,12 +134,7 @@
             <div v-if="parsedItinerary && parsedItinerary.length">
               <h2 class="mb-6 text-3xl font-black text-slate-900">Itinerary</h2>
               <Accordion type="single" collapsible class="space-y-4">
-                <AccordionItem
-                  v-for="(item, index) in parsedItinerary"
-                  :key="index"
-                  :value="`item-${index}`"
-                  class="rounded-2xl border-2 border-slate-200 px-6"
-                >
+                <AccordionItem v-for="(item, index) in parsedItinerary" :key="index" :value="`item-${index}`" class="rounded-2xl border-2 border-slate-200 px-6">
                   <AccordionTrigger class="text-left hover:no-underline">
                     <div class="flex items-center space-x-4">
                       <div class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-orange-100 font-bold text-white">
@@ -201,11 +161,7 @@
                     <span>Included</span>
                   </h3>
                   <ul class="space-y-2">
-                    <li
-                      v-for="(item, index) in experience.included"
-                      :key="index"
-                      class="flex items-start space-x-2 text-sm text-green-900"
-                    >
+                    <li v-for="(item, index) in experience.included" :key="index" class="flex items-start space-x-2 text-sm text-green-900">
                       <Icon name="mdi:check" class="mt-0.5 h-4 w-4 flex-shrink-0" />
                       <span>{{ item }}</span>
                     </li>
@@ -219,11 +175,7 @@
                     <span>Not Included</span>
                   </h3>
                   <ul class="space-y-2">
-                    <li
-                      v-for="(item, index) in experience.notIncluded"
-                      :key="index"
-                      class="flex items-start space-x-2 text-sm text-slate-700"
-                    >
+                    <li v-for="(item, index) in experience.notIncluded" :key="index" class="flex items-start space-x-2 text-sm text-slate-700">
                       <Icon name="mdi:close" class="mt-0.5 h-4 w-4 flex-shrink-0" />
                       <span>{{ item }}</span>
                     </li>
@@ -243,35 +195,70 @@
             <div class="sticky top-24 space-y-6">
               <!-- Booking Card -->
               <Card class="rounded-3xl border-2 border-slate-200 bg-white p-8 shadow-sm">
-                <div class="mb-6 text-center">
+                <div class="mb-4 text-center">
                   <div class="mb-2 text-sm font-semibold text-slate-600 text">Starting from</div>
-                  <div class="mb-4 text-5xl font-black text-slate-900">${{ experience.price }}</div>
+                  <div class="mb-2 text-5xl font-black text-slate-900">${{ experience.price }}</div>
                   <div class="text-xs text-slate-600">Per person</div>
                 </div>
 
-                <div class="space-y-4">
-                  <Button
-                    as-child
-                    size="lg"
-                    class="w-full rounded-full bg-orange-500 py-6 font-bold shadow-lg hover:bg-orange-600"
-                  >
+                <div class="space-y-4 text-center">
+                  <Button as-child size="lg" class="w-full rounded-full bg-orange-500 py-6 font-bold shadow-lg hover:bg-orange-600">
                     <a :href="whatsappUrl" target="_blank" rel="noopener">
                       <Icon name="mdi:whatsapp" class="mr-2 h-5 w-5" />
                       Book on WhatsApp
                     </a>
                   </Button>
 
-                  <Button
-                    as-child
-                    size="lg"
-                    variant="outline"
-                    class="w-full rounded-full border-2 border-slate-300 font-bold hover:bg-slate-100"
-                  >
+                  <Button as-child size="lg" variant="outline" class="w-full rounded-full border-2 border-slate-300 font-bold hover:bg-slate-100">
                     <NuxtLink to="/contact">
                       <Icon name="mdi:email" class="mr-2 h-5 w-5" />
                       Email Us
                     </NuxtLink>
                   </Button>
+
+                  <!-- Group Discount Link -->
+                  <Dialog>
+                    <DialogTrigger as-child>
+                      <button class="mt-2 cursor-pointer text-sm text-orange-600 hover:text-orange-700 underline decoration-dotted underline-offset-2 transition-colors">
+                        <Icon name="mdi:account-group" class="mr-1 inline-block h-4 w-4" />
+                        Group discounts available
+                      </button>
+                    </DialogTrigger>
+                    <DialogContent class="sm:max-w-md rounded-3xl">
+                      <DialogHeader>
+                        <DialogTitle class="text-2xl font-black text-slate-900">Group Discounts</DialogTitle>
+                        <DialogDescription class="text-slate-600">
+                          Save more when you book with friends! Prices shown per person.
+                        </DialogDescription>
+                      </DialogHeader>
+                      <div class="mt-4 space-y-3">
+                        <div v-for="(discount, index) in groupDiscounts" :key="index" class="flex items-center justify-between rounded-2xl border-2 p-4" :class="discount.discount > 0 ? 'border-green-200 bg-green-50' : 'border-slate-200 bg-slate-50'">
+                          <div class="flex items-center space-x-3">
+                            <div class="flex h-10 w-10 items-center justify-center rounded-full font-bold text-white" :class="discount.discount > 0 ? 'bg-green-500' : 'bg-slate-400'">
+                              <Icon :name="index === 0 ? 'mdi:account' : 'mdi:account-multiple'" class="h-5 w-5" />
+                            </div>
+                            <div>
+                              <div class="font-bold text-slate-900">{{ discount.label }}</div>
+                              <div v-if="discount.discount > 0" class="text-xs font-semibold text-green-600">
+                                {{ discount.discount }}% OFF
+                              </div>
+                              <div v-else class="text-xs text-slate-500">
+                                Regular price
+                              </div>
+                            </div>
+                          </div>
+                          <div class="text-right">
+                            <div class="text-2xl font-black text-slate-900">
+                              ${{ calculateDiscountedPrice(experience.price, discount.discount) }}
+                            </div>
+                            <div v-if="discount.discount > 0" class="text-xs text-slate-500 line-through">
+                              ${{ experience.price }}
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </DialogContent>
+                  </Dialog>
                 </div>
               </Card>
 
@@ -319,15 +306,7 @@
             <div class="grid gap-8 p-8 md:grid-cols-3">
               <div class="md:col-span-1">
                 <div class="aspect-square overflow-hidden rounded-2xl bg-slate-100">
-                  <NuxtImg
-                    v-if="experience.referee.image"
-                    :src="experience.referee.image"
-                    :alt="experience.referee.name"
-                    class="h-full w-full object-cover"
-                    sizes="xs:100vw sm:100vw md:33vw lg:25vw xl:20vw"
-                    placeholder
-                    loading="lazy"
-                  />
+                  <NuxtImg v-if="experience.referee.image" :src="experience.referee.image" :alt="experience.referee.name" class="h-full w-full object-cover" sizes="xs:100vw sm:100vw md:33vw lg:25vw xl:20vw" placeholder loading="lazy" />
                   <div v-else class="flex h-full items-center justify-center text-7xl">
                     {{ experience.referee.emoji || '👨‍🏫' }}
                   </div>
@@ -336,11 +315,7 @@
               <div class="md:col-span-2">
                 <h3 class="mb-2 text-2xl font-semibold text-slate-900">{{ experience.referee.name || 'Passionate Professionals' }}</h3>
                 <div v-if="experience.referee.badges" class="mb-4 flex flex-wrap gap-2">
-                  <Badge
-                    v-for="(badge, index) in experience.referee.badges"
-                    :key="index"
-                    class="bg-slate-900 text-white font-medium text-xs"
-                  >
+                  <Badge v-for="(badge, index) in experience.referee.badges" :key="index" class="bg-slate-900 text-white font-medium text-xs">
                     {{ badge }}
                   </Badge>
                 </div>
@@ -348,11 +323,7 @@
                   {{ experience.referee.description || 'Our referees are passionate locals who know every detail of their craft. They love sharing their expertise and ensuring your safety and enjoyment are the top priorities.' }}
                 </p>
                 <div v-if="experience.referee.details" class="space-y-2 text-sm text-slate-600">
-                  <div
-                    v-for="(detail, index) in experience.referee.details"
-                    :key="index"
-                    class="flex items-center space-x-2"
-                  >
+                  <div v-for="(detail, index) in experience.referee.details" :key="index" class="flex items-center space-x-2">
                     <Icon :name="detail.icon || 'mdi:check'" class="h-4 w-4 text-orange-500" />
                     <span>{{ detail.text }}</span>
                   </div>
@@ -378,42 +349,36 @@
         </div>
 
         <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          <TestimonialCard
-            :testimonial="{
-              name: 'John Smith',
-              initials: 'JS',
-              location: 'Canada',
-              quote: 'Absolutely incredible experience! The guide was knowledgeable, the scenery was stunning, and every detail was perfectly planned.',
-              rating: 5,
-              adventure: experience.title,
-              color: 'slate',
-              rotation: 0
-            }"
-          />
-          <TestimonialCard
-            :testimonial="{
-              name: 'Lisa Anderson',
-              initials: 'LA',
-              location: 'Australia',
-              quote: 'This was the highlight of my trip! Professional team, amazing views, and memories that will last forever. Highly recommend!',
-              rating: 5,
-              adventure: experience.title,
-              color: 'slate',
-              rotation: 0
-            }"
-          />
-          <TestimonialCard
-            :testimonial="{
-              name: 'Pierre Dubois',
-              initials: 'PD',
-              location: 'France',
-              quote: 'Outstanding from start to finish. The guides really care about your experience and safety. Would do it again in a heartbeat!',
-              rating: 5,
-              adventure: experience.title,
-              color: 'slate',
-              rotation: 0
-            }"
-          />
+          <TestimonialCard :testimonial="{
+            name: 'John Smith',
+            initials: 'JS',
+            location: 'Canada',
+            quote: 'Absolutely incredible experience! The guide was knowledgeable, the scenery was stunning, and every detail was perfectly planned.',
+            rating: 5,
+            adventure: experience.title,
+            color: 'slate',
+            rotation: 0
+          }" />
+          <TestimonialCard :testimonial="{
+            name: 'Lisa Anderson',
+            initials: 'LA',
+            location: 'Australia',
+            quote: 'This was the highlight of my trip! Professional team, amazing views, and memories that will last forever. Highly recommend!',
+            rating: 5,
+            adventure: experience.title,
+            color: 'slate',
+            rotation: 0
+          }" />
+          <TestimonialCard :testimonial="{
+            name: 'Pierre Dubois',
+            initials: 'PD',
+            location: 'France',
+            quote: 'Outstanding from start to finish. The guides really care about your experience and safety. Would do it again in a heartbeat!',
+            rating: 5,
+            adventure: experience.title,
+            color: 'slate',
+            rotation: 0
+          }" />
         </div>
       </div>
     </section>
@@ -430,11 +395,7 @@
             Don't miss out on this incredible adventure. Spots fill up quickly!
           </p>
 
-          <Button
-            as-child
-            size="lg"
-            class="rounded-full bg-orange-500 px-12 py-8 text-xl font-bold text-white shadow-2xl transition-all hover:bg-orange-600 hover:scale-105"
-          >
+          <Button as-child size="lg" class="rounded-full bg-orange-500 px-12 py-8 text-xl font-bold text-white shadow-2xl transition-all hover:bg-orange-600 hover:scale-105">
             <a :href="whatsappUrl" target="_blank" rel="noopener">
               <Icon name="mdi:whatsapp" class="mr-2 h-7 w-7" />
               Book Now on WhatsApp
@@ -467,11 +428,7 @@
         </div>
 
         <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-          <ExperienceCard
-            v-for="relatedExp in relatedActivities"
-            :key="relatedExp.slug"
-            :experience="relatedExp"
-          />
+          <ExperienceCard v-for="relatedExp in relatedActivities" :key="relatedExp.slug" :experience="relatedExp" />
         </div>
       </div>
     </section>
@@ -488,6 +445,15 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from '~/components/ui/accordion'
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from '~/components/ui/dialog'
+import { APP_CONFIG } from '~/config/constants'
 
 interface RefereeDetail {
   title?: string
@@ -528,15 +494,15 @@ const { data: contentData } = await useAsyncData(`experience-${country}-${activi
   try {
     // Query all content and find by slug, country and activity
     const allContent = await queryCollection('content').all()
-    
+
     // Find the matching content by comparing extracted slug, country and activity
     const found = allContent.find((item: any) => {
       const itemSlug = extractSlug(item.path || '')
-      return itemSlug === String(slug) && 
-             item.country === String(country) && 
-             item.activity === String(activity)
+      return itemSlug === String(slug) &&
+        item.country === String(country) &&
+        item.activity === String(activity)
     })
-    
+
     return found || null
   } catch (error) {
     console.error('Error loading experience:', error)
@@ -547,7 +513,7 @@ const { data: contentData } = await useAsyncData(`experience-${country}-${activi
 // Transform content data
 const experience = computed(() => {
   if (!contentData.value) return null
-  
+
   // Ensure arrays are properly handled
   const ensureArray = (value: any) => {
     if (!value) return []
@@ -555,7 +521,7 @@ const experience = computed(() => {
     if (typeof value === 'string') return [value]
     return []
   }
-  
+
   // Use data from content file
   return {
     title: contentData.value.title,
@@ -587,31 +553,31 @@ const parsedItinerary = computed(() => {
 const { data: relatedExps } = await useAsyncData(`related-${country}-${slug}`, async () => {
   try {
     const allExp = await queryCollection('content').all()
-    
+
     // Filter out current experience
     const otherExperiences = allExp.filter((exp: any) => extractSlug(exp.path) !== String(slug))
-    
+
     // Prioritize: same activity, same country first
-    const sameActivity = otherExperiences.filter((exp: any) => 
-      exp.activity === String(activity) && 
+    const sameActivity = otherExperiences.filter((exp: any) =>
+      exp.activity === String(activity) &&
       exp.country === String(country)
     )
-    
+
     // Then: other activities in same country
-    const sameCountry = otherExperiences.filter((exp: any) => 
-      exp.country === String(country) && 
+    const sameCountry = otherExperiences.filter((exp: any) =>
+      exp.country === String(country) &&
       exp.activity !== String(activity)
     )
-    
+
     // Finally: same activity in other countries
-    const sameActivityOtherCountry = otherExperiences.filter((exp: any) => 
-      exp.activity === String(activity) && 
+    const sameActivityOtherCountry = otherExperiences.filter((exp: any) =>
+      exp.activity === String(activity) &&
       exp.country !== String(country)
     )
-    
+
     // Combine and limit to 3
     const combined = [...sameActivity, ...sameCountry, ...sameActivityOtherCountry].slice(0, 3)
-    
+
     return combined.map((exp: any) => ({
       title: exp.title,
       description: exp.description,
@@ -633,13 +599,27 @@ const relatedActivities = computed(() => {
   return relatedExps.value || []
 })
 
+// Get group discounts for current activity
+const groupDiscounts = computed(() => {
+  const activityType = String(activity)
+  const discounts = APP_CONFIG.groupDiscounts[activityType as keyof typeof APP_CONFIG.groupDiscounts]
+    || APP_CONFIG.groupDiscounts.default
+  return discounts
+})
+
+// Calculate discounted price
+const calculateDiscountedPrice = (basePrice: number, discount: number) => {
+  const discountedPrice = basePrice - (basePrice * discount / 100)
+  return Math.round(discountedPrice)
+}
+
 // WhatsApp URL with dynamic message
 const whatsappUrl = computed(() => {
   const phoneNumber = '212666570222' // Replace with actual WhatsApp number
-  const message = experience.value 
+  const message = experience.value
     ? `Hi! I'm interested in ${experience.value.title} - ${experience.value.duration} for $${experience.value.price}`
     : "Hi! I'm interested in your tours"
-  
+
   return `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(message)}`
 })
 
@@ -649,7 +629,7 @@ if (experience.value) {
   const activityStr = String(activity)
   const countryName = countryStr.charAt(0).toUpperCase() + countryStr.slice(1)
   const activityName = activityStr.charAt(0).toUpperCase() + activityStr.slice(1)
-  
+
   useSeoMeta({
     title: `${exp.title} - ${exp.duration} | Zamzam Experience`,
     description: `${exp.description} Book this ${exp.difficulty} ${activityStr} tour in ${countryStr}. From $${exp.price}. Expert local guides and sustainable tourism.`,
