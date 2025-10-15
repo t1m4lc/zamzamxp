@@ -89,7 +89,7 @@
                 <div class="mb-6 aspect-square overflow-hidden rounded-2xl">
                                   <img 
                     class="rounded-2xl object-cover w-full h-full" 
-                    src="/images/pages/me-ai-update.png" 
+                    src="/images/pages/timothy-alcaide-founder.jpg" 
                     alt="Profile picture of Timothy Alchin"
                 </div>
               </div>

@@ -123,10 +123,29 @@
             <!-- Image Gallery -->
             <div v-if="experience.gallery && experience.gallery.length">
               <h2 class="mb-6 text-3xl font-black text-slate-900">Gallery</h2>
-              <div class="grid grid-cols-2 gap-4 md:grid-cols-3">
-                <div v-for="(image, index) in experience.gallery" :key="index" class="aspect-square overflow-hidden rounded-2xl bg-gradient-to-br from-orange-50 to-slate-100">
-                  <NuxtImg :src="image" :alt="`${experience.title} - Image ${index + 1}`" class="h-full w-full object-cover transition-transform hover:scale-110" sizes="xs:50vw sm:50vw md:33vw lg:25vw xl:20vw" placeholder loading="lazy" />
+              <div class="space-y-4">
+                <!-- First 6 images -->
+                <div class="grid grid-cols-2 gap-4 md:grid-cols-3">
+                  <div v-for="(image, index) in experience.gallery.slice(0, 6)" :key="index" class="aspect-square overflow-hidden rounded-2xl bg-gradient-to-br from-orange-50 to-slate-100">
+                    <NuxtImg :src="image" :alt="`${experience.title} - Image ${index + 1}`" class="h-full w-full object-cover transition-transform hover:scale-110" sizes="xs:50vw sm:50vw md:33vw lg:25vw xl:20vw" placeholder loading="lazy" />
+                  </div>
                 </div>
+                
+                <!-- Collapsible for remaining images -->
+                <Collapsible v-if="experience.gallery.length > 6" v-slot="{ open }">
+                  <CollapsibleTrigger class="group cursor-pointer flex w-full items-center justify-center gap-2 rounded-2xl border border-slate-200 bg-white px-6 py-3 text-slate-600 font-medium transition-all hover:border-slate-300 hover:bg-slate-50 hover:text-slate-900">
+                    <Icon name="mdi:image-multiple" class="h-4 w-4" />
+                    <span class="text-sm">{{ open ? 'Show less' : `Show ${experience.gallery.length - 6} more ${experience.gallery.length - 6 === 1 ? 'photo' : 'photos'}` }}</span>
+                    <Icon name="mdi:chevron-down" class="h-4 w-4 transition-transform duration-200" :class="{ 'rotate-180': open }" />
+                  </CollapsibleTrigger>
+                  <CollapsibleContent class="mt-4 overflow-hidden data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0">
+                    <div class="grid grid-cols-2 gap-4 md:grid-cols-3">
+                      <div v-for="(image, index) in experience.gallery.slice(6)" :key="index + 6" class="aspect-square overflow-hidden rounded-2xl bg-gradient-to-br from-orange-50 to-slate-100">
+                        <NuxtImg :src="image" :alt="`${experience.title} - Image ${index + 7}`" class="h-full w-full object-cover transition-transform hover:scale-110" sizes="xs:50vw sm:50vw md:33vw lg:25vw xl:20vw" placeholder loading="lazy" />
+                      </div>
+                    </div>
+                  </CollapsibleContent>
+                </Collapsible>
               </div>
             </div>
 
@@ -453,6 +472,11 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from '~/components/ui/accordion'
+import {
+  Collapsible,
+  CollapsibleContent,
+  CollapsibleTrigger,
+} from '~/components/ui/collapsible'
 import {
   Dialog,
   DialogContent,

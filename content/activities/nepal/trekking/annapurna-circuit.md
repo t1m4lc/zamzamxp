@@ -3,18 +3,18 @@ title: "Annapurna Circuit Trek - Thorong La Pass"
 description: "Epic 16-day trek around the Annapurna massif, crossing the legendary Thorong La Pass at 5,416m. Experience diverse landscapes from subtropical valleys to high alpine terrain."
 country: "nepal"
 activity: "trekking"
-price: 300
+price: 390
 priceLabel: "From $300/person (min. 2 people)"
-privatePrice: 500
+privatePrice: 490
 duration: "16 Days"
 difficulty: "Challenging"
 groupSize: "6-12 people"
-image: "https://images.unsplash.com/photo-1544735716-392fe2489ffa?w=800&auto=format&fit=crop&q=80"
+image: "/images/activities/nepal/trekking/OG-image-annapurna.png"
 gallery:
-  - "/images/activities/nepal/trekking/annapurna-1.jpg"
-  - "/images/activities/nepal/trekking/annapurna-2.jpg"
-  - "/images/activities/nepal/trekking/annapurna-3.jpg"
-  - "/images/activities/nepal/trekking/annapurna-4.jpg"
+  - "/images/activities/nepal/trekking/top-of-thorong-pass.jpeg"
+  - "/images/activities/nepal/trekking/on-the-way-to-tilicho-base-camp.jpeg"
+  - "/images/activities/nepal/trekking/green-lake-near-pisang-village.jpeg"
+  - "/images/activities/nepal/trekking/ice-lake-side-trip-from-manang.jpeg"
 highlights:
   - "Cross Thorong La Pass (5,416m)"
   - "Trek to Tilicho Lake (4,920m)"

@@ -3,18 +3,20 @@ title: "Manaslu Circuit Trek"
 description: "Epic 12-day trek around Mount Manaslu (8,163m), the world's 8th highest peak. Cross the spectacular Larkya La Pass (5,106m) through pristine wilderness, Tibetan-influenced villages, and stunning mountain panoramas."
 country: "nepal"
 activity: "trekking"
-price: 400
+price: 390
 priceLabel: "From $400/person (min. 2 people)"
-privatePrice: 600
+privatePrice: 590
 duration: "12 Days"
 difficulty: "Challenging"
 groupSize: "2-10 people"
-image: "https://images.unsplash.com/photo-1544735716-392fe2489ffa?w=800&auto=format&fit=crop&q=80"
+image: "/images/activities/nepal/trekking/manaslu-trek-1.jpeg"
 gallery:
-  - "/images/activities/nepal/trekking/manaslu-1.jpg"
-  - "/images/activities/nepal/trekking/manaslu-2.jpg"
-  - "/images/activities/nepal/trekking/manaslu-3.jpg"
-  - "/images/activities/nepal/trekking/manaslu-4.jpg"
+  - "/images/activities/nepal/trekking/manaslu-trek-0.jpeg"
+  - "/images/activities/nepal/trekking/manaslu-trek-4.jpeg"
+  - "/images/activities/nepal/trekking/manaslu-lark-pass-tim.jpeg"
+  - "/images/activities/nepal/trekking/manaslu-trek-5.jpeg"
+  - "/images/activities/nepal/trekking/manaslu-trek-tim.jpeg"
+  - "/images/activities/nepal/trekking/manaslu-trek-7.jpeg"
 highlights:
   - "Larkya La Pass (5,106m) crossing"
   - "Mount Manaslu (8,163m) close-up views"

@@ -275,7 +275,6 @@ import { Card } from '~/components/ui/card'
 import Globe from '~/components/ui/globe/Globe.vue'
 import { Marquee } from '~/components/ui/marquee'
 import { NumberTicker } from '~/components/ui/number-ticker'
-import { APP_CONFIG } from '~/config/constants'
 
 useSeoMeta({
   title: 'Zamzam Experience - Adventure Travel with Fair Prices & Local Guides',
@@ -353,11 +352,11 @@ const totalCountries = computed(() => {
 const teamMembers = [
   {
     id: 1,
-    name: "Raj Sharma",
+    name: "Sandip Sodari",
     role: "Nepal Trek Guide",
-    image: "https://images.unsplash.com/photo-1599566150163-29194dcaad36?w=400&auto=format&fit=crop&q=80",
+    image: "/images/pages/sandip-guide.jpeg",
     rating: "5.0",
-    trips: 127,
+    trips: 89,
   },
   {
     id: 2,
@@ -365,7 +364,7 @@ const teamMembers = [
     role: "Travel Coordinator",
     image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&auto=format&fit=crop&q=80",
     rating: "4.9",
-    trips: 89,
+    trips: 44,
   },
   {
     id: 3,
