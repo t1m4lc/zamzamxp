@@ -283,48 +283,48 @@ useSeoMeta({
 
 const firstRowReviews = [
   {
-    initials: "SJ",
-    name: "Sarah Johnson",
-    location: "USA",
-    text: "The Everest Base Camp trek was life-changing. Our guide was incredible and the views were beyond words.",
+    initials: "IT",
+    name: "Isabelle Taen",
+    location: "France",
+    text: "I did the 12-days Manaslu circuit trekking, and it was absolutely spectacular! Stunning views, truly a memory for life. Sandip is an amazing guide, who knows a lot about nature, culture, and the mountains. I always felt safe with him.",
     avatarClass: "bg-gradient-to-br from-blue-400 to-blue-600"
   },
   {
-    initials: "MS",
-    name: "Marco Silva",
-    location: "Brazil",
-    text: "Learning to surf in Taghazout was amazing. The instructors were patient and I made friends for life.",
+    initials: "SR",
+    name: "Samuel Rowland-Jones",
+    location: "UK",
+    text: "We just completed the Annapurna Circuit trek with Tilicho Lake. Sandip was incredible! Every guesthouse he chose exceeded our expectations. He checked in constantly on how we were feeling and paced the trek perfectly.",
     avatarClass: "bg-gradient-to-br from-green-400 to-green-600"
   },
   {
-    initials: "EC",
-    name: "Emma Clarke",
-    location: "UK",
-    text: "Paragliding over Pokhara with the Annapurnas in view was absolutely breathtaking. Professional team.",
+    initials: "L",
+    name: "Lisa",
+    location: "Netherlands",
+    text: "The Annapurna Circuit including Tilicho Lake was truly once-in-a-lifetime. Sandip made everything smooth and memorable. He knows so much about the area, nature, and history. He always put our safety first and has a great sense of humor!",
     avatarClass: "bg-gradient-to-br from-purple-400 to-purple-600"
   },
 ]
 
 const secondRowReviews = [
   {
-    initials: "TK",
-    name: "Tom Kim",
-    location: "South Korea",
-    text: "The Annapurna Circuit exceeded all expectations. Beautiful landscapes, warm hospitality, and unforgettable moments.",
+    initials: "MJ",
+    name: "Michael Johnson",
+    location: "Canada",
+    text: "The Everest Base Camp trek was the adventure of a lifetime! Sandip's knowledge of the Khumbu region is exceptional. He paced us perfectly for acclimatization and shared incredible stories about Sherpa culture along the way.",
     avatarClass: "bg-gradient-to-br from-orange-400 to-orange-600"
   },
   {
-    initials: "LM",
-    name: "Lisa Martinez",
-    location: "Spain",
-    text: "Surfing in Morocco was a dream come true. Great waves, friendly locals, and stunning coastal views.",
+    initials: "AK",
+    name: "Anna Kowalski",
+    location: "Poland",
+    text: "Standing at Everest Base Camp was surreal! Sandip made sure we were well-prepared and safe throughout the journey. The teahouses were cozy, the views breathtaking, and his enthusiasm was contagious. Highly recommend!",
     avatarClass: "bg-gradient-to-br from-pink-400 to-pink-600"
   },
   {
-    initials: "JB",
-    name: "James Brown",
-    location: "Australia",
-    text: "The Manaslu Circuit trek was challenging but rewarding. Our guide's expertise made all the difference.",
+    initials: "DM",
+    name: "David Martinez",
+    location: "Spain",
+    text: "Everest Base Camp exceeded every expectation! Sandip's attention to detail and care for our wellbeing made all the difference. From Namche Bazaar to Kala Patthar, every moment was unforgettable. A true professional!",
     avatarClass: "bg-gradient-to-br from-teal-400 to-teal-600"
   },
 ]

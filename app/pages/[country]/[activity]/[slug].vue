@@ -377,30 +377,30 @@
 
         <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           <TestimonialCard :testimonial="{
-            name: 'John Smith',
-            initials: 'JS',
-            location: 'Canada',
-            quote: 'Absolutely incredible experience! The guide was knowledgeable, the scenery was stunning, and every detail was perfectly planned.',
+            name: 'Vicky Sabel',
+            initials: 'VS',
+            location: 'USA',
+            quote: 'One of the best experiences of my life and having Sandip as a guide made it completely perfect. Can\'t recommend enough his service as a guide and hope to go back to Nepal and the Himalayas.',
             rating: 5,
             adventure: experience.title,
             color: 'slate',
             rotation: 0
           }" />
           <TestimonialCard :testimonial="{
-            name: 'Lisa Anderson',
-            initials: 'LA',
-            location: 'Australia',
-            quote: 'This was the highlight of my trip! Professional team, amazing views, and memories that will last forever. Highly recommend!',
+            name: 'Ella Upe',
+            initials: 'EU',
+            location: 'UK',
+            quote: 'Honestly could not fault our guide Sandip. Trekking in Nepal has always been a dream and this experience was something so special. He was full of knowledge and we always felt supported and safe on the journey.',
             rating: 5,
             adventure: experience.title,
             color: 'slate',
             rotation: 0
           }" />
           <TestimonialCard :testimonial="{
-            name: 'Pierre Dubois',
-            initials: 'PD',
-            location: 'France',
-            quote: 'Outstanding from start to finish. The guides really care about your experience and safety. Would do it again in a heartbeat!',
+            name: 'Rina Shatil',
+            initials: 'RS',
+            location: 'Israel',
+            quote: 'Unforgettable Everest Base Camp Trek with Sandip! He was experienced, friendly, and highly professional. He knew the trail perfectly, shared fascinating insights about the Himalayas, and ensured our safety at all times.',
             rating: 5,
             adventure: experience.title,
             color: 'slate',
