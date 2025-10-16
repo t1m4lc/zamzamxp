@@ -28,7 +28,7 @@ export default defineNuxtConfig({
 
   icon: {
     serverBundle: {
-      collections: ["mdi"], // Explicitly bundle mdi icons for SSR/SSG
+      collections: ["mdi", "lucide", "material-symbols"], // Explicitly bundle all icon collections for SSR/SSG
     },
   },
 

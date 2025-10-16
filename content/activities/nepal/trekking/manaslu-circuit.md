@@ -4,7 +4,6 @@ description: "Epic 12-day trek around Mount Manaslu (8,163m), the world's 8th hi
 country: "nepal"
 activity: "trekking"
 price: 390
-priceLabel: "From $400/person (min. 2 people)"
 privatePrice: 590
 duration: "12 Days"
 difficulty: "Challenging"

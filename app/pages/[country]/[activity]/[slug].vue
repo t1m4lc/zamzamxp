@@ -505,7 +505,6 @@ interface ExperienceDetail {
   title: string
   description: string
   price: number
-  priceLabel?: string
   privatePrice?: number
   duration: string
   difficulty: string

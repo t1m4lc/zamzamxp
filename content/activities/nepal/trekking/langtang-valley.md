@@ -4,7 +4,6 @@ description: "Perfect 7-day trek through Langtang National Park. Ideal for those
 country: "nepal"
 activity: "trekking"
 price: 195
-priceLabel: "From $195/person (min. 2 people)"
 privatePrice: 290
 duration: "7 Days"
 difficulty: "Moderate"
