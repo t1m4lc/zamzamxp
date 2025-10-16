@@ -1,4 +1,4 @@
-import nodemailer from "nodemailer";
+import { Resend } from "resend";
 import { APP_CONFIG } from "~/config/constants";
 
 export default defineEventHandler(async (event) => {
@@ -22,22 +22,14 @@ export default defineEventHandler(async (event) => {
     });
   }
 
-  // Create transporter with Dynadot SMTP settings
-  const transporter = nodemailer.createTransport({
-    host: APP_CONFIG.smtp.host,
-    port: APP_CONFIG.smtp.port,
-    secure: false, // true for 465, false for other ports (587 uses STARTTLS)
-    auth: {
-      user: APP_CONFIG.smtp.user,
-      pass: config.smtpPass,
-    },
-  });
+  // Initialize Resend with API key
+  const resend = new Resend(config.resendApiKey);
 
   try {
-    // Send email
-    await transporter.sendMail({
-      from: `"${body.name}" <${APP_CONFIG.smtp.user}>`,
-      to: APP_CONFIG.company.email,
+    // Send email using Resend with verified domain
+    const { data, error } = await resend.emails.send({
+      from: "Zamzam Experience <hello@updates.zamzamxp.com>",
+      to: [APP_CONFIG.company.email],
       replyTo: body.email,
       subject: body.subject || "New Contact Form Submission - ZamZam XP",
       html: `
@@ -86,7 +78,7 @@ export default defineEventHandler(async (event) => {
         </html>
       `,
       text: `
-New Contact Form Submission - ZamZam XP
+New Contact Form Submission - Zamzam Experience
 
 From: ${body.name}
 Email: ${body.email}
@@ -100,15 +92,26 @@ This email was sent from the contact form on zamzamxp.com
       `,
     });
 
+    if (error) {
+      console.error("Resend API error:", error);
+      throw createError({
+        statusCode: 500,
+        statusMessage: "Failed to send email. Please try again later.",
+      });
+    }
+
     return {
       success: true,
       message: "Your message has been sent successfully!",
     };
   } catch (error: any) {
     console.error("Email sending error:", error);
+
+    // Provide user-friendly error message
     throw createError({
       statusCode: 500,
-      statusMessage: "Failed to send email. Please try again later.",
+      statusMessage:
+        "Failed to send email. Please contact us directly at hello@updates.zamzamxp.com",
     });
   }
 });

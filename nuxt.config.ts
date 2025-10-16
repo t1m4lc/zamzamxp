@@ -113,7 +113,7 @@ export default defineNuxtConfig({
 
   runtimeConfig: {
     // Private keys - only available server-side
-    smtpPass: process.env.SMTP_PASS,
+    resendApiKey: process.env.RESEND_API_KEY,
   },
 
   gtag: {

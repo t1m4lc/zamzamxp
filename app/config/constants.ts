@@ -9,7 +9,7 @@ export const APP_CONFIG = {
   smtp: {
     host: "webhost.dynadot.com",
     port: 587,
-    user: "hello@zamzamxp.com",
+    user: "hello@updates.zamzamxp.com",
   },
 
   contact: {
