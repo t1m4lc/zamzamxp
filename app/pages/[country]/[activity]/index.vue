@@ -101,20 +101,20 @@
               <Card class="rounded-xl border border-slate-200 bg-white p-6 mt-6">
                 <h4 class="mb-4 font-semibold text-slate-900">What's included</h4>
                 <ul class="space-y-3 text-sm text-slate-600">
-                  <li class="flex items-start space-x-2">
-                    <CheckCircle class="mt-0.5 h-5 w-5 flex-shrink-0 text-green-500" />
+                  <li class="flex items-center gap-2">
+                    <CheckCircle class="h-5 w-5 flex-shrink-0 text-green-500" />
                     <span>Professional guides included</span>
                   </li>
-                  <li class="flex items-start space-x-2">
-                    <CheckCircle class="mt-0.5 h-5 w-5 flex-shrink-0 text-green-500" />
+                  <li class="flex items-center gap-2">
+                    <CheckCircle class="h-5 w-5 flex-shrink-0 text-green-500" />
                     <span>Small group sizes (max 12)</span>
                   </li>
-                  <li class="flex items-start space-x-2">
-                    <CheckCircle class="mt-0.5 h-5 w-5 flex-shrink-0 text-green-500" />
+                  <li class="flex items-center gap-2">
+                    <CheckCircle class="h-5 w-5 flex-shrink-0 text-green-500" />
                     <span>All safety equipment provided</span>
                   </li>
-                  <li class="flex items-start space-x-2">
-                    <CheckCircle class="mt-0.5 h-5 w-5 flex-shrink-0 text-green-500" />
+                  <li class="flex items-center gap-2">
+                    <CheckCircle class="h-5 w-5 flex-shrink-0 text-green-500" />
                     <span>Flexible booking & cancellation</span>
                   </li>
                 </ul>

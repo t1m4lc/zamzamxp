@@ -3,7 +3,7 @@
     <!-- Hero Section with Globe Background -->
     <section class="relative bg-gradient-to-b from-slate-50 to-white" style="padding-bottom: 350px; padding-top: 40px;">
       <!-- Globe Background - Positioned lower -->
-      <div class="absolute left-0 right-0 flex items-end justify-center pointer-events-none" style="top: 25%; transform: translateY(0);">
+      <div class="absolute left-0 right-0 flex items-end justify-center pointer-events-none" style="top: 35%; transform: translateY(0);">
         <div class="relative w-full h-[700px] lg:h-[900px] max-w-[900px] lg:max-w-[1100px]">
           <Globe />
         </div>
@@ -146,7 +146,7 @@
           <NuxtImg 
             :src="member.image" 
             :alt="member.name"
-            class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
+            class="h-full w-full grayscale hover:grayscale-0  object-cover transition-all duration-500 group-hover:scale-110"
             sizes="xs:50vw sm:50vw md:33vw lg:16vw xl:16vw"
             placeholder
             loading="lazy"
@@ -170,25 +170,25 @@
         <!-- Stats Bar -->
         <div class="mt-16 grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 max-w-4xl mx-auto">
           <div class="text-center p-3 md:p-6">
-            <div class="text-2xl md:text-4xl font-semibold text-slate-900 mb-2">
+            <div class="text-2xl md:text-4xl font-semibold text-slate-800 mb-2">
               <NumberTicker :value="100" :decimal-places="0" />+
             </div>
             <div class="text-xs md:text-sm text-slate-600">Happy Travelers</div>
           </div>
           <div class="text-center p-3 md:p-6">
-            <div class="text-2xl md:text-4xl font-semibold text-slate-900 mb-2">
+            <div class="text-2xl md:text-4xl font-semibold text-slate-800 mb-2">
               <NumberTicker :value="totalCountries" :decimal-places="0" />
             </div>
             <div class="text-xs md:text-sm text-slate-600">Countries</div>
           </div>
           <div class="text-center p-3 md:p-6">
-            <div class="text-2xl md:text-4xl font-semibold text-slate-900 mb-2">
+            <div class="text-2xl md:text-4xl font-semibold text-slate-800 mb-2">
               <NumberTicker :value="totalActivities" :decimal-places="0" />
             </div>
             <div class="text-xs md:text-sm text-slate-600">Activities</div>
           </div>
           <div class="text-center p-3 md:p-6">
-            <div class="text-2xl md:text-4xl font-semibold text-slate-900 mb-2">
+            <div class="text-2xl md:text-4xl font-semibold text-slate-800 mb-2">
               <NumberTicker :value="4.9" :decimal-places="1" />★
             </div>
             <div class="text-xs md:text-sm text-slate-600">Average Rating</div>
