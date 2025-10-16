@@ -32,7 +32,7 @@
     </section>
 
     <!-- Why Choose Us Section -->
-    <section class="py-12 lg:py-24">
+    <section class="py-6 lg:py-12">
       <div class="container mx-auto px-6">
         <div class="mb-12 text-center max-w-3xl mx-auto">
           <h2 class="text-3xl font-semibold text-slate-900 mb-4">
@@ -363,7 +363,7 @@ const teamMembers = [
     id: 3,
     name: "Hassan Alami",
     role: "Morocco Surf Instructor",
-    image: "",
+    image: "/images/pages/hassan-alami-morocco-surf-instructor.jpg",
     rating: "4.9",
     reviews: 156,
   },
@@ -377,9 +377,9 @@ const teamMembers = [
   },
   {
     id: 4,
-    name: "Mohammed Darouch",
+    name: "Mohammed Sahli",
     role: "Morocco Surf Instructor",
-    image: "",
+    image: "/images/pages/mohammed-sahli-morocco-surf-instructor.jpg",
     rating: "5.0",
     reviews: 8,
   },
