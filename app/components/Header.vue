@@ -18,7 +18,7 @@
             <NavigationMenuItem>
               <NavigationMenuLink as-child>
                 <NuxtLink to="/destinations" class="inline-flex h-10 w-max items-center justify-center rounded-md px-4 py-2 text-sm font-medium transition-colors hover:bg-slate-50 hover:text-slate-900 focus:bg-slate-50">
-                  Destinations
+                  {{ $t('nav.destinations') }}
                 </NuxtLink>
               </NavigationMenuLink>
             </NavigationMenuItem>
@@ -27,7 +27,7 @@
             <NavigationMenuItem>
               <NavigationMenuLink as-child>
                 <NuxtLink to="/about" class="inline-flex h-10 w-max items-center justify-center rounded-md px-4 py-2 text-sm font-medium transition-colors hover:bg-slate-50 hover:text-slate-900 focus:bg-slate-50">
-                  About
+                  {{ $t('nav.about') }}
                 </NuxtLink>
               </NavigationMenuLink>
             </NavigationMenuItem>
@@ -37,7 +37,7 @@
         <!-- CTA Button -->
         <Button as-child class="ml-4 rounded-lg bg-gradient-to-r from-[#FF6B35] to-[#F7931E] px-6 py-2.5 text-sm font-medium text-white hover:from-[#FF5520] hover:to-[#E8820F] transition-all shadow-sm hover:shadow">
           <NuxtLink to="/contact">
-            Get Started
+            {{ $t('nav.contact') }}
           </NuxtLink>
         </Button>
       </nav>
@@ -55,18 +55,18 @@
         <nav class="container mx-auto space-y-1 px-4 py-4">
           <!-- Destinations -->
           <NuxtLink to="/destinations" class="block rounded-xl px-4 py-3 font-semibold text-slate-900 hover:bg-slate-100" @click="mobileMenuOpen = false">
-            Destinations
+            {{ $t('nav.destinations') }}
           </NuxtLink>
 
           <!-- Other Links -->
           <NuxtLink to="/about" class="block rounded-xl px-4 py-3 font-semibold text-slate-900 hover:bg-slate-100" @click="mobileMenuOpen = false">
-            About
+            {{ $t('nav.about') }}
           </NuxtLink>
 
           <!-- Mobile CTA -->
           <Button as-child class="w-full rounded-lg bg-gradient-to-r from-[#FF6B35] to-[#F7931E] py-6 text-base font-medium text-white">
             <NuxtLink to="/contact" @click="mobileMenuOpen = false">
-              Get Started
+              {{ $t('nav.contact') }}
             </NuxtLink>
           </Button>
         </nav>

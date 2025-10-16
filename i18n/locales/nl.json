@@ -1,0 +1,374 @@
+{
+  "common": {
+    "home": "Home",
+    "about": "Over ons",
+    "contact": "Contact",
+    "destinations": "Bestemmingen",
+    "activities": "Activiteiten",
+    "terms": "Voorwaarden",
+    "privacy": "Privacy",
+    "readMore": "Lees meer",
+    "bookNow": "Boek nu",
+    "getQuote": "Vraag offerte aan",
+    "from": "Vanaf",
+    "perPerson": "per persoon",
+    "day": "dag",
+    "dagen": "dagen",
+    "currency": "€"
+  },
+  "nav": {
+    "home": "Home",
+    "destinations": "Bestemmingen",
+    "about": "Over ons",
+    "contact": "Contact"
+  },
+  "footer": {
+    "brand": {
+      "description": "Reizigers verbinden met gepassioneerde lokale gidsen voor authentieke avonturen over de hele wereld."
+    },
+    "destinations": "Bestemmingen",
+    "getInTouch": "Neem contact op",
+    "whatsapp": "WhatsApp",
+    "email": "Email",
+    "contactUs": "Contacteer ons",
+    "language": "Taal",
+    "copyright": "© {year} Zamzam Experience. Alle rechten voorbehouden.",
+    "ecoFriendly": "Milieuvriendelijk & duurzaam",
+    "fairRemuneration": "Eerlijke vergoeding voor partners",
+    "allRightsReserved": "Alle rechten voorbehouden"
+  },
+  "countries": {
+    "nepal": "Nepal",
+    "morocco": "Marokko"
+  },
+  "countrySlug": {
+    "nepal": "nepal",
+    "morocco": "marokko"
+  },
+  "activities": {
+    "trekking": "Trekken",
+    "paragliding": "Paragliding",
+    "surfing": "Surfen",
+    "title": "{activity} in {country}",
+    "count": "{count} ervaring | {count} ervaringen",
+    "noExperiences": "Nog geen ervaringen",
+    "noExperiencesDesc": "We voegen momenteel {activity} ervaringen toe in {country}. Kom snel terug voor spannende nieuwe avonturen!"
+  },
+  "activitySlug": {
+    "trekking": "trekken",
+    "paragliding": "paragliding",
+    "surfing": "surfen"
+  },
+  "experience": {
+    "duration": "Duur",
+    "difficulty": "Moeilijkheidsgraad",
+    "groupSize": "Groepsgrootte",
+    "price": "Prijs",
+    "privatePrice": "Privéprijs",
+    "included": "Wat is inbegrepen",
+    "notIncluded": "Niet inbegrepen",
+    "highlights": "Hoogtepunten",
+    "bestTime": "Beste tijd om te gaan",
+    "reviews": "Beoordelingen",
+    "elevation": "Hoogte",
+    "minElevation": "Min. hoogte",
+    "maxElevation": "Max. hoogte",
+    "needHelp": "Hulp nodig bij kiezen?",
+    "needHelpDesc": "Niet zeker welk avontuur bij u past? Ons team kan u helpen.",
+    "chatWhatsApp": "Chat op WhatsApp",
+    "includedItems": {
+      "professionalGuides": "Professionele gidsen inbegrepen",
+      "smallGroups": "Kleine groepen (max 12)",
+      "safetyEquipment": "Alle veiligheidsuitrusting aanwezig",
+      "flexibleBooking": "Flexibel boeken en annuleren"
+    }
+  },
+  "contact": {
+    "hero": {
+      "title": "Laten we praten!",
+      "subtitle": "Plant u uw avontuur? We helpen u graag!"
+    },
+    "whatsapp": {
+      "title": "WhatsApp",
+      "description": "Snelle vragen? Chat direct met ons op WhatsApp. We reageren meestal binnen 30 minuten!",
+      "button": "Chat nu"
+    },
+    "email": {
+      "title": "Email",
+      "description": "Heeft u liever email? Stuur ons uw vragen en we antwoorden binnen 24 uur.",
+      "button": "Email versturen"
+    },
+    "form": {
+      "title": "Stuur ons een bericht",
+      "nameLabel": "Uw naam",
+      "namePlaceholder": "Jan de Vries",
+      "emailLabel": "E-mailadres",
+      "emailPlaceholder": "{'jan@voorbeeld.nl'}",
+      "subjectLabel": "Onderwerp",
+      "subjectPlaceholder": "Een trekking naar Nepal plannen",
+      "messageLabel": "Bericht",
+      "messagePlaceholder": "Vertel ons over uw droomavontuur...",
+      "sending": "Verzenden...",
+      "submit": "Verstuur bericht",
+      "privacyNote": "We respecteren uw privacy en zullen uw informatie nooit delen.",
+      "successMessage": "Bedankt! We nemen binnenkort contact met u op.",
+      "errorMessage": "Er is iets misgegaan. Probeer het opnieuw."
+    },
+    "info": {
+      "locationTitle": "Locatie",
+      "responseTimeTitle": "Reactietijd",
+      "languagesTitle": "Talen"
+    }
+  },
+  "home": {
+    "hero": {
+      "title": "Reizen dat eerlijk is voor iedereen",
+      "subtitle": "Ontdek de beste avonturenervaringen met gepassioneerde lokale gidsen. Betaal eerlijke prijzen. Ondersteun duurzaam toerisme. Echte avonturen, gelukkige gemeenschappen.",
+      "cta": "Verken bestemmingen"
+    },
+    "tagline": "Een ander soort reisbureau",
+    "taglineDesc": "Wij geloven dat reizen iedereen moet verrijken – de reiziger, de gids en de gemeenschap.",
+    "featured": "Uitgelichte ervaringen",
+    "testimonials": "Reizigersbeoordelingen",
+    "testimonialsDesc": "Bekijk wat onze avonturiers te zeggen hebben",
+    "reviews": {
+      "isabelle": "Ik heb de 12-daagse Manaslu circuit trekking gedaan, en het was absoluut spectaculair! Prachtige uitzichten, echt een herinnering voor het leven. Sandip is een geweldige gids...",
+      "samuel": "We hebben net de Annapurna Circuit met Tilicho Lake voltooid. Sandip was ongelooflijk! Elk gasthuis overtrof onze verwachtingen. Hij bepaalde het tempo van de trekking perfect...",
+      "lisa": "De Annapurna Circuit was echt eenmalig! Sandip maakte alles soepel en gedenkwaardig. Hij weet zoveel over het gebied en stelde altijd onze veiligheid voorop...",
+      "michael": "De Everest Base Camp trek was het avontuur van mijn leven! Sandips kennis van de Khumbu regio is uitzonderlijk en hij deelde ongelooflijke verhalen...",
+      "anna": "Staan op Everest Base Camp was surrealistisch! Sandip zorgde ervoor dat we goed voorbereid en veilig waren. De theehuizen waren gezellig, uitzichten adembenemend...",
+      "david": "Everest Base Camp overtrof alle verwachtingen! Sandips aandacht voor detail maakte het verschil. Van Namche Bazaar tot Kala Patthar, onvergetelijk..."
+    },
+    "fairForEveryone": "Eerlijk voor iedereen",
+    "fairForEveryoneDesc": "Lokale gidsen worden eerlijk betaald. U krijgt eerlijke prijzen. Iedereen wint.",
+    "passionateLocals": "Gepassioneerde lokale bevolking",
+    "passionateLocalsDesc": "Onze gidsen houden van wat ze doen en kunnen niet wachten om het met u te delen.",
+    "sustainableTourism": "Duurzaam toerisme",
+    "sustainableTourismDesc": "Milieuvriendelijke praktijken die de plaatsen beschermen die we graag verkennen.",
+    "stats": {
+      "happyTravelers": "Gelukkige Reizigers",
+      "countries": "Landen",
+      "activities": "Activiteiten",
+      "averageRating": "Gemiddelde Beoordeling",
+      "reviews": "beoordelingen"
+    },
+    "destinationsSection": {
+      "title": "Ontdek onze bestemmingen",
+      "subtitle": "Ontdek geweldige avonturen op adembenemende locaties over de hele wereld"
+    },
+    "finalCta": {
+      "title": "Klaar om te beginnen met plannen?",
+      "subtitle": "Neem contact op met ons team om uw avontuur te bespreken.",
+      "contactUs": "Contacteer ons",
+      "whatsapp": "WhatsApp"
+    }
+  },
+  "about": {
+    "title": "Wie we zijn",
+    "subtitle": "Reizigers verbinden met gepassioneerde lokale gidsen voor authentieke avonturen over de hele wereld.",
+    "ourStory": "Ons Verhaal",
+    "storyP1": "Zamzam Experience werd geboren uit een eenvoudige observatie: over de hele wereld zijn getalenteerde lokale gidsen gepassioneerd over het delen van hun cultuur en activiteiten, maar hebben ze moeite om op een eerlijke en rechtvaardige manier contact te maken met reizigers.",
+    "storyP2": "We bouwen een nieuw soort reisbureau – een dat lokale gemeenschappen op de eerste plaats zet, eerlijke compensatie voor gidsen en partners garandeert, en authentieke ervaringen biedt die iedereen ten goede komen.",
+    "storyP3": "Elk avontuur dat we aanbieden creëert betekenisvolle verbindingen, ondersteunt duurzaam toerisme en helpt de bestemmingen te behouden die we graag verkennen.",
+    "ourValues": "Onze Waarden",
+    "valuesDesc": "Wat alles wat we doen aandrijft",
+    "authenticTitle": "Authentieke Lokale Ervaringen",
+    "authenticDesc": "Elk avontuur is ontworpen en geleid door locals die hun authentieke cultuur, verhalen en perspectieven delen.",
+    "ecoTitle": "Milieuvriendelijk & Duurzaam",
+    "ecoDesc": "We minimaliseren de impact op het milieu, respecteren lokale culturen en zorgen ervoor dat toerisme gemeenschappen op lange termijn ten goede komt.",
+    "fairTitle": "Eerlijke Vergoeding",
+    "fairDesc": "Onze partners ontvangen eerlijke compensatie voor hun werk. We geloven in eerlijk toerisme dat iedereen ten goede komt.",
+    "pricesTitle": "Beste Marktprijzen",
+    "pricesDesc": "Kwaliteitservaringen tegen eerlijke prijzen. We haten toeristenvallen - u betaalt wat juist is voor kwaliteitsservice.",
+    "founder": {
+      "title": "Oprichter",
+      "name": "Timothy Alcaide",
+      "bio1": "Ik ben een software-engineer die zijn baan in 2024 opzegde om de wereld te bereizen. Gepassioneerd door avontuursport en bergen, verkende ik Madagaskar, Thailand, Vietnam, Nepal en Marokko.",
+      "bio2": "Overal waar ik kwam, ontmoette ik ongelooflijke lokale gidsen die gepassioneerd waren over hun ambacht maar moeite hadden om eerlijk klanten te vinden. Daarom heb ik Zamzam Experience in 2025 opgericht.",
+      "bio3": "(Leuk weetje: \"zamzam\" is een Nepalees woord dat \"laten we gaan!\" betekent – het vangt perfect onze avontuurlijke geest.)"
+    },
+    "partners": {
+      "title": "Onze lokale partners",
+      "description": "We werken exclusief samen met gepassioneerde lokale gidsen, familieaccommodaties en kleine bedrijven. Wanneer u met ons reist, ondersteunt u direct de mensen die deze plaatsen hun thuis noemen.",
+      "guidesTitle": "Lokale Gidsen",
+      "guidesDesc": "Gepassioneerde professionals die elk pad, golf en verborgen pareltje in hun regio kennen.",
+      "businessTitle": "Lokale Bedrijven",
+      "businessDesc": "Familiebedrijven die authentieke accommodaties en diensten bieden.",
+      "communityTitle": "Gemeenschapspartners",
+      "communityDesc": "Coöperaties en organisaties toegewijd aan duurzaam, gemeenschapsgebaseerd toerisme."
+    },
+    "commitment": {
+      "title": "Onze toewijding aan eerlijk toerisme",
+      "subtitle": "Toerisme moet iedereen ten goede komen, vooral lokale gemeenschappen",
+      "fairRemTitle": "Eerlijke Vergoeding",
+      "fairRemDesc": "Alle onze partners ontvangen eerlijke compensatie voor hun diensten. We geloven in rechtvaardige partnerschappen waar iedereen van profiteert.",
+      "fairRemBullet1": "Eerlijke lonen voor alle partners",
+      "fairRemBullet2": "Transparante prijzen",
+      "fairRemBullet3": "Directe partnerschappen met locals",
+      "communityTitle": "Gemeenschapsfocus",
+      "communityDesc": "We geven prioriteit aan samenwerking met lokale bedrijven en familiebedrijven, zodat toerisme-inkomsten binnen de gemeenschap blijven.",
+      "communityBullet1": "Directe partnerschappen met lokale families",
+      "communityBullet2": "Ondersteuning voor kleine lokale bedrijven",
+      "communityBullet3": "Inkomsten blijven in lokale gemeenschappen",
+      "envTitle": "Milieuzorg",
+      "envDesc": "We organiseren CO2-neutrale avonturen, nemen deel aan padonderhoud en leren reizigers Leave No Trace-principes.",
+      "envBullet1": "CO2-compensatiepartnerschappen",
+      "envBullet2": "Wekelijkse padopruimacties",
+      "envBullet3": "Plasticvrije operaties",
+      "inclusiveTitle": "Inclusieve Kansen",
+      "inclusiveDesc": "We zijn toegewijd aan samenwerking met diverse partners en het ondersteunen van inclusief toerisme. Naarmate we groeien, streven we ernaar meer kansen te creëren voor ondervertegenwoordigde groepen in avontuurtoerisme.",
+      "inclusiveBullet1": "Open voor alle gekwalificeerde gidsen",
+      "inclusiveBullet2": "Opbouwen van diverse partnerschappen",
+      "inclusiveBullet3": "Gelijke kansen benadering"
+    },
+    "stats": {
+      "customers": "Tevreden Klanten",
+      "partners": "Lokale Partners",
+      "countries": "Landen"
+    },
+    "cta": {
+      "title": "Sluit u aan bij ons volgende avontuur",
+      "subtitle": "Maak deel uit van een reisgemeenschap die positieve impact creëert",
+      "button": "Neem contact op"
+    }
+  },
+  "destinations": {
+    "title": "Ontdek onze bestemmingen",
+    "subtitle": "Ontdek adembenemende avonturen in zorgvuldig geselecteerde bestemmingen over de hele wereld",
+    "nepalDesc": "Ervaar trekking en paragliding-avonturen van wereldklasse in de Himalaya met prachtig uitzicht op de bergen.",
+    "moroccoDesc": "Ontdek surfen aan de Atlantische kust gecombineerd met rijke Marokkaanse cultuur in charmante kustplaatsen.",
+    "experiences": "ervaringen",
+    "explore": "Verkennen",
+    "comingSoon": {
+      "title": "Meer bestemmingen",
+      "subtitle": "Binnenkort beschikbaar",
+      "description": "We voegen voortdurend nieuwe spannende ervaringen toe. Blijf op de hoogte voor meer avonturen!",
+      "expanding": "Binnenkort uitbreiden",
+      "stayTuned": "Blijf op de hoogte"
+    },
+    "whyChoose": {
+      "title": "Waarom onze bestemmingen kiezen",
+      "subtitle": "We selecteren elke bestemming zorgvuldig op basis van unieke ervaringen, veiligheid en authentieke culturele verbindingen",
+      "expertTitle": "Deskundige Curatie",
+      "expertDesc": "Elke bestemming is zorgvuldig geselecteerd voor zijn unieke ervaringen en natuurlijke schoonheid.",
+      "safetyTitle": "Veiligheid Eerst",
+      "safetyDesc": "Alle bestemmingen voldoen aan hoge veiligheidsnormen met lokale noodhulp.",
+      "authenticTitle": "Authentieke Ervaringen",
+      "authenticDesc": "Maak contact met lokale gemeenschappen door betekenisvolle interacties."
+    },
+    "cta": {
+      "title": "Klaar om uw avontuur te beginnen?",
+      "subtitle": "Neem contact op met onze reisspecialisten om uw perfecte avontuur te plannen in een van onze geweldige bestemmingen.",
+      "planTrip": "Plan mijn reis",
+      "whatsapp": "WhatsApp ons"
+    }
+  },
+  "seo": {
+    "home": {
+      "title": "Zamzam Experience - Avontuurlijk Reizen met Eerlijke Prijzen en Lokale Gidsen",
+      "description": "Een nieuw soort reisbureau dat u verbindt met gepassioneerde lokale gidsen. Eerlijke prijzen, duurzaam toerisme en authentieke avonturen in Nepal, Marokko en daarbuiten."
+    },
+    "about": {
+      "title": "Over Ons - Eerlijk Avontuurlijk Reizen | Zamzam Experience",
+      "description": "Leer over Zamzam Experience: reizigers verbinden met lokale gidsen voor authentieke avonturen. Eerlijke prijzen, duurzaam toerisme en betekenisvolle culturele ervaringen sinds 2025.",
+      "ogTitle": "Over Zamzam Experience - Eerlijk Avontuurlijk Reizen",
+      "ogDescription": "Onze missie: authentieke avonturen die reizigers, gidsen en lokale gemeenschappen ten goede komen."
+    },
+    "destinations": {
+      "title": "Avontuurlijke Reisbestemmingen | Nepal, Marokko en Meer | Zamzam Experience",
+      "description": "Ontdek authentieke avontuurbestemmingen met ervaren lokale gidsen. Trekking in de Himalaya van Nepal, surfen aan de Atlantische kust van Marokko en meer duurzame toerisme-ervaringen.",
+      "ogTitle": "Avontuurlijke Reisbestemmingen | Zamzam Experience",
+      "ogDescription": "Van de Himalaya van Nepal tot de Atlantische kust van Marokko - ontdek authentieke avonturen met lokale gidsen."
+    },
+    "contact": {
+      "title": "Neem Contact Op - Plan Uw Avontuur | Zamzam Experience",
+      "description": "Neem contact op om uw avontuur te plannen. Snelle reactie via WhatsApp of email. Deskundig advies over trekking in Nepal, surfen in Marokko en duurzaam avontuurlijk reizen.",
+      "ogTitle": "Neem Contact Op met Zamzam Experience",
+      "ogDescription": "Klaar om uw volgende avontuur te plannen? Neem contact op met ons team."
+    }
+  },
+  "countryPage": {
+    "heroTitle": "Avonturen in {country}",
+    "activitiesTitle": "Activiteiten",
+    "noActivitiesTitle": "Geen activiteiten beschikbaar",
+    "noActivitiesDesc": "We werken aan het toevoegen van spannende activiteiten voor {country}. Kom snel terug voor nieuwe avonturen!",
+    "whyTravelTitle": "Waarom met ons reizen",
+    "localExpertsTitle": "Lokale experts",
+    "localExpertsDesc": "Onze gidsen zijn lokale experts die elk pad en verborgen juweeltje kennen.",
+    "smallGroupsTitle": "Kleine groepen",
+    "smallGroupsDesc": "Maximum 12 personen per groep voor persoonlijke aandacht.",
+    "safetyFirstTitle": "Veiligheid eerst",
+    "safetyFirstDesc": "Gelicentieerd, verzekerd en uitgerust met uitgebreide veiligheidsprotocollen.",
+    "ctaTitle": "Plan uw {country} avontuur",
+    "ctaDesc": "Neem contact op met ons team om uw reis te bespreken.",
+    "contactUs": "Neem contact op",
+    "whatsapp": "WhatsApp",
+    "countryDescriptions": {
+      "nepal": "Ervaar trekking en paragliding van wereldklasse in de Himalaya.",
+      "morocco": "Ontdek geweldige surfspots en kustavonturen langs de Atlantische Oceaan."
+    },
+    "activityDescriptions": {
+      "trekking": "Meerdaagse trektochten door de Himalaya met prachtig uitzicht op de bergen",
+      "paragliding": "Zweef boven valleien met het Annapurna-gebergte als achtergrond",
+      "surfing": "Rijd op de golven aan de prachtige Atlantische kust van Marokko"
+    }
+  },
+  "detailPage": {
+    "notFound": {
+      "title": "Ervaring niet gevonden",
+      "description": "We konden de ervaring die u zoekt niet vinden. Het kan verplaatst zijn of nog niet bestaan.",
+      "backButton": "Terug naar {activity}",
+      "allDestinations": "Alle bestemmingen"
+    },
+    "sidebar": {
+      "startingFrom": "Vanaf",
+      "perPerson": "Per persoon",
+      "minimum": "minimum",
+      "person": "persoon",
+      "people": "personen",
+      "privateAvailable": "Privé boeking beschikbaar",
+      "bookWhatsApp": "Boek via WhatsApp",
+      "emailUs": "Stuur ons een email",
+      "viewPricing": "Bekijk alle prijsopties",
+      "whyBookTitle": "Waarom bij ons boeken",
+      "bestPrices": "Beste marktprijzen",
+      "bestPricesDesc": "We garanderen de beste prijzen op de markt - onverslaanbare waarde voor uw avontuur!",
+      "fairRemuneration": "Eerlijke vergoeding",
+      "fairRemunerationDesc": "Onze partners worden eerlijk betaald - ",
+      "seeValues": "zie onze waarden",
+      "ecoFriendly": "Milieuvriendelijk",
+      "ecoFriendlyDesc": "Duurzame toerismepraktijken"
+    },
+    "pricing": {
+      "title": "Prijsopties",
+      "description": "Kies de optie die het beste bij u past. Alle prijzen zijn per persoon.",
+      "premiumExperience": "Premium ervaring",
+      "off": "KORTING",
+      "basePrice": "Basisprijs (min. 2)"
+    },
+    "included": "Inbegrepen",
+    "notIncluded": "Niet inbegrepen",
+    "referee": {
+      "defaultTitle": "Ontmoet uw begeleider"
+    },
+    "reviews": {
+      "title": "Reizigersbeoordelingen",
+      "from": "van",
+      "reviews": "beoordelingen"
+    },
+    "cta": {
+      "title": "Klaar om {title} te boeken?",
+      "minimum": "Minimum {count} {people}",
+      "perPerson": "Per persoon",
+      "description": "Mis dit ongelooflijke avontuur niet. Plaatsen raken snel vol!",
+      "bookNow": "Boek nu via WhatsApp",
+      "questions": "Vragen? Neem op elk moment contact met ons op via {'hello@zamzamxp.com'}"
+    },
+    "related": {
+      "title": "Dit vind je misschien ook leuk",
+      "sameActivity": "Meer {activity} avonturen in {country}",
+      "sameCountry": "Ontdek meer avonturen in {country}",
+      "similarActivity": "Vergelijkbare {activity} ervaringen wereldwijd"
+    }
+  }
+}

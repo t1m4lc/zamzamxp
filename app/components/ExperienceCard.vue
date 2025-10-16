@@ -1,6 +1,6 @@
 <template>
   <NuxtLink
-    :to="`/${experience.country}/${experience.activity}/${experience.slug}`"
+    :to="experiencePath"
     class="block group"
   >
     <div class="relative">
@@ -54,7 +54,13 @@ interface Experience {
   slug: string
 }
 
-defineProps<{
+const props = defineProps<{
   experience: Experience
 }>()
+
+const { getExperiencePath } = useLocalizedRoutes()
+
+const experiencePath = computed(() => {
+  return getExperiencePath(props.experience.country, props.experience.activity, props.experience.slug)
+})
 </script>

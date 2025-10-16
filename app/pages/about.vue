@@ -6,10 +6,10 @@
       <div class="container mx-auto px-4 relative">
         <div class="mx-auto max-w-4xl text-center">
           <h1 class="mb-6 text-5xl font-semibold text-slate-900 lg:text-6xl">
-            Who we are
+            {{ $t('about.title') }}
           </h1>
           <p class="text-xl leading-relaxed text-slate-600 lg:text-2xl">
-            Connecting travelers with passionate local guides for authentic adventures around the world.
+            {{ $t('about.subtitle') }}
           </p>
         </div>
       </div>
@@ -19,60 +19,60 @@
     <section class="py-20 lg:py-32">
       <div class="container mx-auto px-4">
         <div class="mx-auto max-w-3xl">
-          <h2 class="mb-8 text-3xl font-semibold text-slate-900">Our Story</h2>
+          <h2 class="mb-8 text-3xl font-semibold text-slate-900">{{ $t('about.ourStory') }}</h2>
           <div class="prose prose-lg space-y-6 text-slate-700">
             <p>
-              Zamzam Experience was born from a simple observation: around the world, talented local guides are passionate about sharing their culture and activities, but struggle to connect with travelers in a fair and equitable way.
+              {{ $t('about.storyP1') }}
             </p>
             <p>
-              We’re building a new kind of travel agency – one that puts local communities first, ensures fair compensation for guides and partners, and delivers authentic experiences that benefit everyone involved.
+              {{ $t('about.storyP2') }}
             </p>
             <p>
-              Every adventure we offer creates meaningful connections, supports sustainable tourism, and helps preserve the destinations we love exploring.
+              {{ $t('about.storyP3') }}
             </p>
           </div>
         </div>
       </div>
-    </section>
-
+    </section>    
+    
     <!-- Values -->
     <section class="bg-slate-50 py-20 lg:py-32">
       <div class="container mx-auto px-4">
         <div class="mb-16 text-center">
           <h2 class="mb-4 text-4xl font-black text-slate-900 lg:text-5xl">
-            Our Values
+            {{ $t('about.ourValues') }}
           </h2>
           <p class="text-lg text-slate-600">
-            What drives everything we do
+            {{ $t('about.valuesDesc') }}
           </p>
         </div>
 
         <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
           <Card class="rounded-2xl border border-slate-200 bg-white p-6 transition-all hover:shadow-lg">
-            <h3 class="mb-3 text-lg font-semibold text-slate-900">Authentic Local Experiences</h3>
+            <h3 class="mb-3 text-lg font-semibold text-slate-900">{{ $t('about.authenticTitle') }}</h3>
             <p class="text-sm leading-relaxed text-slate-600">
-              Every adventure is designed and led by locals who share their genuine culture, stories, and perspectives.
+              {{ $t('about.authenticDesc') }}
             </p>
           </Card>
 
           <Card class="rounded-2xl border border-slate-200 bg-white p-6 transition-all hover:shadow-lg">
-            <h3 class="mb-3 text-lg font-semibold text-slate-900">Eco-Friendly & Sustainable</h3>
+            <h3 class="mb-3 text-lg font-semibold text-slate-900">{{ $t('about.ecoTitle') }}</h3>
             <p class="text-sm leading-relaxed text-slate-600">
-              We minimize environmental impact, respect local cultures, and ensure tourism benefits communities long-term.
+              {{ $t('about.ecoDesc') }}
             </p>
           </Card>
 
           <Card class="rounded-2xl border border-slate-200 bg-white p-6 transition-all hover:shadow-lg">
-            <h3 class="mb-3 text-lg font-semibold text-slate-900">Fair Remuneration</h3>
+            <h3 class="mb-3 text-lg font-semibold text-slate-900">{{ $t('about.fairTitle') }}</h3>
             <p class="text-sm leading-relaxed text-slate-600">
-              Our partners receive fair compensation for their work. We believe in equitable tourism that benefits everyone.
+              {{ $t('about.fairDesc') }}
             </p>
           </Card>
 
           <Card class="rounded-2xl border border-slate-200 bg-white p-6 transition-all hover:shadow-lg">
-            <h3 class="mb-3 text-lg font-semibold text-slate-900">Best Market Prices</h3>
+            <h3 class="mb-3 text-lg font-semibold text-slate-900">{{ $t('about.pricesTitle') }}</h3>
             <p class="text-sm leading-relaxed text-slate-600">
-              Quality experiences at fair prices. We hate tourist traps - you pay what's right for quality service.
+              {{ $t('about.pricesDesc') }}
             </p>
           </Card>
         </div>
@@ -93,17 +93,17 @@
                     alt="Profile picture of Timothy Alchin"
                 </div>
               </div>
-              <div class="flex flex-col justify-center">
-                <div class="mb-2 text-sm font-medium text-slate-600">Founder</div>
+                            <div class="flex flex-col justify-center">
+                <div class="mb-2 text-sm font-medium text-slate-600">{{ $t('about.founder.title') }}</div>
                 <h2 class="mb-4 text-3xl font-semibold text-slate-900">Timothy Alcaide</h2>
                 <p class="mb-4 leading-relaxed text-slate-700">
-                  I’m a software engineer who quit my job in 2024 to travel the world. Passionate about adventure sports and mountains, I explored Madagascar, Thailand, Vietnam, Nepal, and Morocco.
+                  {{ $t('about.founder.bio1') }}
                 </p>
                 <p class="mb-4 leading-relaxed text-slate-700">
-                  Everywhere I went, I met incredible local guides who were passionate about their craft but struggled to find clients fairly. That's why I created Zamzam Experience in 2025.
+                  {{ $t('about.founder.bio2') }}
                 </p>
                 <p class="mb-6 leading-relaxed text-slate-700">
-                  (Fun fact: "zamzam" is a Nepali word meaning "let's go!" – it perfectly captures our spirit of adventure.)
+                  {{ $t('about.founder.bio3') }}
                 </p>
               </div>
             </div>
@@ -117,31 +117,31 @@
       <div class="container mx-auto px-4">
         <div class="mx-auto max-w-4xl text-center">
           <h2 class="mb-6 text-3xl font-semibold text-slate-900">
-            Our local partners
+            {{ $t('about.partners.title') }}
           </h2>
           <p class="mb-12 text-lg leading-relaxed text-slate-600">
-            We work exclusively with passionate local guides, family-run accommodations, and small businesses. When you travel with us, you're directly supporting the people who call these places home.
+            {{ $t('about.partners.description') }}
           </p>
 
           <div class="grid gap-8 md:grid-cols-3">
             <div class="rounded-2xl bg-white p-6 shadow-sm border border-slate-200">
-              <h3 class="mb-2 text-lg font-semibold text-slate-900">Local Guides</h3>
+              <h3 class="mb-2 text-lg font-semibold text-slate-900">{{ $t('about.partners.guidesTitle') }}</h3>
               <p class="text-sm text-slate-600">
-                Passionate professionals who know every trail, wave, and hidden gem in their region.
+                {{ $t('about.partners.guidesDesc') }}
               </p>
             </div>
 
             <div class="rounded-2xl bg-white p-6 shadow-sm border border-slate-200">
-              <h3 class="mb-2 text-lg font-semibold text-slate-900">Local Businesses</h3>
+              <h3 class="mb-2 text-lg font-semibold text-slate-900">{{ $t('about.partners.businessTitle') }}</h3>
               <p class="text-sm text-slate-600">
-                Family-run operations that provide authentic accommodations and services.
+                {{ $t('about.partners.businessDesc') }}
               </p>
             </div>
 
             <div class="rounded-2xl bg-white p-6 shadow-sm border border-slate-200">
-              <h3 class="mb-2 text-lg font-semibold text-slate-900">Community Partners</h3>
+              <h3 class="mb-2 text-lg font-semibold text-slate-900">{{ $t('about.partners.communityTitle') }}</h3>
               <p class="text-sm text-slate-600">
-                Cooperatives and organizations dedicated to sustainable, community-based tourism.
+                {{ $t('about.partners.communityDesc') }}
               </p>
             </div>
           </div>
@@ -155,10 +155,10 @@
         <div class="mx-auto max-w-4xl">
           <div class="mb-16 text-center">
             <h2 class="mb-4 text-3xl font-semibold text-slate-900">
-              Our commitment to fair tourism
+              {{ $t('about.commitment.title') }}
             </h2>
             <p class="text-lg text-slate-600">
-              Tourism should benefit everyone, especially local communities
+              {{ $t('about.commitment.subtitle') }}
             </p>
           </div>
 
@@ -166,23 +166,23 @@
             <Card class="rounded-2xl border border-slate-200 bg-white p-6">
               <h3 class="mb-4 flex items-center space-x-2 text-xl font-semibold text-slate-900">
                 <Banknote class="h-6 w-6 text-green-600" />
-                <span>Fair Remuneration</span>
+                <span>{{ $t('about.commitment.fairRemTitle') }}</span>
               </h3>
               <p class="mb-4 leading-relaxed text-slate-700">
-                All our partners receive fair compensation for their services. We believe in equitable partnerships where everyone benefits.
+                {{ $t('about.commitment.fairRemDesc') }}
               </p>
               <ul class="space-y-2 text-sm text-slate-600">
                 <li class="flex items-start space-x-2">
                   <Check class="mt-0.5 h-4 w-4 flex-shrink-0 text-green-600" />
-                  <span>Fair wages for all partners</span>
+                  <span>{{ $t('about.commitment.fairRemBullet1') }}</span>
                 </li>
                 <li class="flex items-start space-x-2">
                   <Check class="mt-0.5 h-4 w-4 flex-shrink-0 text-green-600" />
-                  <span>Transparent pricing</span>
+                  <span>{{ $t('about.commitment.fairRemBullet2') }}</span>
                 </li>
                 <li class="flex items-start space-x-2">
                   <Check class="mt-0.5 h-4 w-4 flex-shrink-0 text-green-600" />
-                  <span>Direct partnerships with locals</span>
+                  <span>{{ $t('about.commitment.fairRemBullet3') }}</span>
                 </li>
               </ul>
             </Card>
@@ -190,47 +190,45 @@
             <Card class="rounded-3xl border-2 border-slate-200 bg-white/95 backdrop-blur-sm p-8">
               <h3 class="mb-4 flex items-center space-x-2 text-2xl font-bold text-slate-900">
                 <Users class="h-7 w-7 text-[#FF6B35]" />
-                <span>Community Focus</span>
+                <span>{{ $t('about.commitment.communityTitle') }}</span>
               </h3>
               <p class="mb-4 leading-relaxed text-slate-700">
-                We prioritize working with local businesses and family-run operations, ensuring tourism revenue stays within the community.
+                {{ $t('about.commitment.communityDesc') }}
               </p>
               <ul class="space-y-2 text-sm text-slate-600">
                 <li class="flex items-start space-x-2">
                   <Check class="mt-0.5 h-4 w-4 flex-shrink-0 text-[#FF6B35]" />
-                  <span>Direct partnerships with local families</span>
+                  <span>{{ $t('about.commitment.communityBullet1') }}</span>
                 </li>
                 <li class="flex items-start space-x-2">
                   <Check class="mt-0.5 h-4 w-4 flex-shrink-0 text-[#FF6B35]" />
-                  <span>Support for small local businesses</span>
+                  <span>{{ $t('about.commitment.communityBullet2') }}</span>
                 </li>
                 <li class="flex items-start space-x-2">
                   <Check class="mt-0.5 h-4 w-4 flex-shrink-0 text-[#FF6B35]" />
-                  <span>Revenue stays in local communities</span>
+                  <span>{{ $t('about.commitment.communityBullet3') }}</span>
                 </li>
               </ul>
-            </Card>
-
-            <Card class="rounded-3xl border-2 border-slate-200 bg-white/95 backdrop-blur-sm p-8">
+            </Card>            <Card class="rounded-3xl border-2 border-slate-200 bg-white/95 backdrop-blur-sm p-8">
               <h3 class="mb-4 flex items-center space-x-2 text-2xl font-bold text-slate-900">
                 <Leaf class="h-7 w-7 text-green-600" />
-                <span>Environmental Care</span>
+                <span>{{ $t('about.commitment.envTitle') }}</span>
               </h3>
               <p class="mb-4 leading-relaxed text-slate-700">
-                We operate carbon-neutral adventures, participate in trail maintenance, and educate travelers on Leave No Trace principles.
+                {{ $t('about.commitment.envDesc') }}
               </p>
               <ul class="space-y-2 text-sm text-slate-600">
                 <li class="flex items-start space-x-2">
                   <Check class="mt-0.5 h-4 w-4 flex-shrink-0 text-green-600" />
-                  <span>Carbon offset partnerships</span>
+                  <span>{{ $t('about.commitment.envBullet1') }}</span>
                 </li>
                 <li class="flex items-start space-x-2">
                   <Check class="mt-0.5 h-4 w-4 flex-shrink-0 text-green-600" />
-                  <span>Weekly trail cleanups</span>
+                  <span>{{ $t('about.commitment.envBullet2') }}</span>
                 </li>
                 <li class="flex items-start space-x-2">
                   <Check class="mt-0.5 h-4 w-4 flex-shrink-0 text-green-600" />
-                  <span>Plastic-free operations</span>
+                  <span>{{ $t('about.commitment.envBullet3') }}</span>
                 </li>
               </ul>
             </Card>
@@ -238,23 +236,23 @@
             <Card class="rounded-3xl border-2 border-slate-200 bg-white/95 backdrop-blur-sm p-8">
               <h3 class="mb-4 flex items-center space-x-2 text-2xl font-bold text-slate-900">
                 <UserCheck class="h-7 w-7 text-purple-600" />
-                <span>Inclusive Opportunities</span>
+                <span>{{ $t('about.commitment.inclusiveTitle') }}</span>
               </h3>
               <p class="mb-4 leading-relaxed text-slate-700">
-                We're committed to working with diverse partners and supporting inclusive tourism. As we grow, we aim to create more opportunities for underrepresented groups in adventure tourism.
+                {{ $t('about.commitment.inclusiveDesc') }}
               </p>
               <ul class="space-y-2 text-sm text-slate-600">
                 <li class="flex items-start space-x-2">
                   <Check class="mt-0.5 h-4 w-4 flex-shrink-0 text-purple-600" />
-                  <span>Open to all qualified guides</span>
+                  <span>{{ $t('about.commitment.inclusiveBullet1') }}</span>
                 </li>
                 <li class="flex items-start space-x-2">
                   <Check class="mt-0.5 h-4 w-4 flex-shrink-0 text-purple-600" />
-                  <span>Building diverse partnerships</span>
+                  <span>{{ $t('about.commitment.inclusiveBullet2') }}</span>
                 </li>
                 <li class="flex items-start space-x-2">
                   <Check class="mt-0.5 h-4 w-4 flex-shrink-0 text-purple-600" />
-                  <span>Equal opportunity approach</span>
+                  <span>{{ $t('about.commitment.inclusiveBullet3') }}</span>
                 </li>
               </ul>
             </Card>
@@ -271,19 +269,19 @@
             <div class="mb-2 text-5xl font-semibold text-slate-900">
               <NumberTicker :value="100" :decimal-places="0" />+
             </div>
-            <div class="text-lg text-slate-600">Happy Customers</div>
+            <div class="text-lg text-slate-600">{{ $t('about.stats.customers') }}</div>
           </div>
           <div class="text-center">
             <div class="mb-2 text-5xl font-semibold text-slate-900">
               <NumberTicker :value="10" :decimal-places="0" />+
             </div>
-            <div class="text-lg text-slate-600">Local Partners</div>
+            <div class="text-lg text-slate-600">{{ $t('about.stats.partners') }}</div>
           </div>
           <div class="text-center">
             <div class="mb-2 text-5xl font-semibold text-slate-900">
               <NumberTicker :value="2" :decimal-places="0" />+
             </div>
-            <div class="text-lg text-slate-600">Countries</div>
+            <div class="text-lg text-slate-600">{{ $t('about.stats.countries') }}</div>
           </div>
         </div>
       </div>
@@ -294,10 +292,10 @@
       <div class="container mx-auto px-4">
         <div class="mx-auto max-w-3xl text-center">
           <h2 class="mb-6 text-4xl font-black text-slate-900 lg:text-5xl">
-            Join Our Next Adventure
+            {{ $t('about.cta.title') }}
           </h2>
           <p class="mb-10 text-xl leading-relaxed text-slate-600">
-            Be part of a travel community that creates positive impact
+            {{ $t('about.cta.subtitle') }}
           </p>
           <Button
             as-child
@@ -305,7 +303,7 @@
             class="rounded-lg bg-gradient-to-r from-[#FF6B35] to-[#F7931E] px-12 py-6 text-base font-medium shadow-lg hover:shadow-xl"
           >
             <NuxtLink to="/contact">
-              Get in Touch
+              {{ $t('about.cta.button') }}
               <ArrowRight class="ml-2 h-5 w-5" />
             </NuxtLink>
           </Button>
@@ -317,18 +315,17 @@
 
 <script setup lang="ts">
 import { Card } from '~/components/ui/card'
-import { Badge } from '~/components/ui/badge'
 import { Button } from '~/components/ui/button'
 import { NumberTicker } from '~/components/ui/number-ticker'
 import { Banknote, Check, Users, Leaf, UserCheck, ArrowRight } from 'lucide-vue-next'
 
+const { t } = useI18n()
+
 useSeoMeta({
-  title: "About Us - Fair Adventure Travel | Zamzam Experience",
-  description:
-    "Learn about Zamzam Experience: connecting travelers with local guides for authentic adventures. Fair prices, sustainable tourism, and meaningful cultural experiences since 2025.",
-  ogTitle: "About Zamzam Experience - Fair Adventure Travel",
-  ogDescription:
-    "Our mission: authentic adventures that benefit travelers, guides, and local communities.",
+  title: () => t('seo.about.title'),
+  description: () => t('seo.about.description'),
+  ogTitle: () => t('seo.about.ogTitle'),
+  ogDescription: () => t('seo.about.ogDescription'),
   ogType: "website",
   twitterCard: "summary_large_image",
 })

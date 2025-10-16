@@ -7,22 +7,22 @@
           <Compass class="h-24 w-24 text-slate-300 mx-auto" />
         </div>
         <h1 class="text-4xl font-black text-slate-900 mb-4">
-          Experience not found
+          {{ $t('detailPage.notFound.title') }}
         </h1>
         <p class="text-lg text-slate-600 mb-8">
-          We couldn't find the experience you're looking for. It may have been moved or doesn't exist yet.
+          {{ $t('detailPage.notFound.description') }}
         </p>
         <div class="flex flex-col sm:flex-row gap-4 justify-center">
           <Button as-child size="lg" class="rounded-full bg-orange-500 px-8 font-bold hover:bg-orange-600">
             <NuxtLink :to="`/${country}/${activity}`">
               <ArrowLeft class="mr-2 h-5 w-5" />
-              <span class="capitalize">Back to {{ activity }}</span>
+              <span class="capitalize">{{ $t('detailPage.notFound.backButton', { activity: $t(`activities.${normalizedActivity}`) }) }}</span>
             </NuxtLink>
           </Button>
           <Button as-child size="lg" variant="outline" class="rounded-full border-2 border-slate-300 font-bold hover:bg-slate-100">
             <NuxtLink to="/destinations">
               <MapPin class="mr-2 h-5 w-5" />
-              All Destinations
+              {{ $t('detailPage.notFound.allDestinations') }}
             </NuxtLink>
           </Button>
         </div>
@@ -35,8 +35,8 @@
     <div class="fixed bottom-0 left-0 right-0 z-40 border-t bg-white p-4 shadow-2xl lg:hidden">
       <div class="flex items-center justify-between gap-3">
         <div class="flex-shrink-0">
-          <div class="text-xs font-medium text-slate-500">From</div>
-          <div class="text-2xl font-black text-orange-600">${{ experience.price }}</div>
+          <div class="text-xs font-medium text-slate-500">{{ $t('common.from') }}</div>
+          <div class="text-2xl font-black text-orange-600">{{ $t('common.currency') }}{{ experience.price }}</div>
           <div class="text-xs font-medium text-slate-600">
             <span v-if="experience.minGroupSize && experience.minGroupSize > 1">
               Min. {{ experience.minGroupSize }} {{ experience.minGroupSize === 2 ? 'person' : 'people' }}
@@ -203,7 +203,7 @@
                 <Card v-if="experience.notIncluded" class="rounded-3xl border-2 border-slate-200 bg-slate-50 p-6">
                   <h3 class="mb-4 flex items-center space-x-2 font-bold text-slate-900">
                     <XCircle class="size-5" />
-                    <span>Not Included</span>
+                    <span>{{ $t('detailPage.notIncluded') }}</span>
                   </h3>
                   <ul class="space-y-2">
                     <li v-for="(item, index) in experience.notIncluded" :key="index" class="flex items-start space-x-2 text-sm text-slate-700">
@@ -227,13 +227,13 @@
               <!-- Booking Card -->
               <Card class="rounded-3xl border-2 border-slate-200 bg-white p-8 shadow-sm">
                 <div class="mb-4 text-center">
-                  <div class="mb-2 text-sm font-semibold text-slate-600 text">Starting from</div>
-                  <div class="mb-2 text-5xl font-black text-slate-900">${{ experience.price }}</div>
-                  <div class="text-xs text-slate-600">Per person</div>
-                  <div v-if="experience.minGroupSize && experience.minGroupSize > 1" class="mt-2 text-xs font-medium text-slate-500">{{ experience.minGroupSize }} {{ experience.minGroupSize === 2 ? 'person' : 'people' }} minimum</div>
+                  <div class="mb-2 text-sm font-semibold text-slate-600 text">{{ $t('detailPage.sidebar.startingFrom') }}</div>
+                  <div class="mb-2 text-5xl font-black text-slate-900">{{ $t('common.currency') }}{{ experience.price }}</div>
+                  <div class="text-xs text-slate-600">{{ $t('detailPage.sidebar.perPerson') }}</div>
+                  <div v-if="experience.minGroupSize && experience.minGroupSize > 1" class="mt-2 text-xs font-medium text-slate-500">{{ experience.minGroupSize }} {{ experience.minGroupSize === 2 ? $t('detailPage.sidebar.person') : $t('detailPage.sidebar.people') }} {{ $t('detailPage.sidebar.minimum') }}</div>
                   <div v-if="experience.privatePrice" class="mt-1 text-xs text-orange-600">
                     <Star class="inline-block h-3 w-3" />
-                    Private booking available
+                    {{ $t('detailPage.sidebar.privateAvailable') }}
                   </div>
                 </div>
 
@@ -241,14 +241,14 @@
                   <Button as-child size="lg" class="w-full rounded-full bg-orange-500 py-6 font-bold shadow-lg hover:bg-orange-600">
                     <a :href="whatsappUrl" target="_blank" rel="noopener">
                       <MessageCircle class="mr-2 h-5 w-5" />
-                      Book on WhatsApp
+                      {{ $t('detailPage.sidebar.bookWhatsApp') }}
                     </a>
                   </Button>
 
                   <Button as-child size="lg" variant="outline" class="w-full rounded-full border-2 border-slate-300 font-bold hover:bg-slate-100">
                     <NuxtLink to="/contact">
                       <Mail class="mr-2 h-5 w-5" />
-                      Email Us
+                      {{ $t('detailPage.sidebar.emailUs') }}
                     </NuxtLink>
                   </Button>
 
@@ -257,14 +257,14 @@
                     <DialogTrigger as-child>
                       <button class="mt-2 cursor-pointer text-sm text-orange-600 hover:text-orange-700 underline decoration-dotted underline-offset-2 transition-colors">
                         <DollarSign class="mr-1 inline-block h-4 w-4" />
-                        View all pricing options
+                        {{ $t('detailPage.sidebar.viewPricing') }}
                       </button>
                     </DialogTrigger>
                     <DialogContent class="sm:max-w-md rounded-3xl">
                       <DialogHeader>
-                        <DialogTitle class="text-2xl font-black text-slate-900">Pricing Options</DialogTitle>
+                        <DialogTitle class="text-2xl font-black text-slate-900">{{ $t('detailPage.pricing.title') }}</DialogTitle>
                         <DialogDescription class="text-slate-600">
-                          Choose the option that works best for you. All prices are per person.
+                          {{ $t('detailPage.pricing.description') }}
                         </DialogDescription>
                       </DialogHeader>
                       <div class="mt-4 space-y-3">
@@ -277,22 +277,22 @@
                             <div>
                               <div class="font-bold text-slate-900">{{ discount.label }}</div>
                               <div v-if="discount.isPrivate" class="text-xs font-semibold text-orange-600">
-                                Premium experience
+                                {{ $t('detailPage.pricing.premiumExperience') }}
                               </div>
                               <div v-else-if="discount.discount > 0" class="text-xs font-semibold text-green-600">
-                                {{ discount.discount }}% OFF
+                                {{ discount.discount }}% {{ $t('detailPage.pricing.off') }}
                               </div>
                               <div v-else class="text-xs text-slate-500">
-                                Base price (min. 2)
+                                {{ $t('detailPage.pricing.basePrice') }}
                               </div>
                             </div>
                           </div>
                           <div class="text-right">
                             <div class="text-2xl font-black text-slate-900">
-                              ${{ calculatePriceForGroup(experience, discount) }}
+                              {{ $t('common.currency') }}{{ calculatePriceForGroup(experience, discount) }}
                             </div>
                             <div v-if="discount.discount > 0 && !discount.isPrivate" class="text-xs text-slate-500 line-through">
-                              ${{ experience.price }}
+                              {{ $t('common.currency') }}{{ experience.price }}
                             </div>
                           </div>
                         </div>
@@ -304,27 +304,27 @@
 
               <!-- Trust Badges -->
               <Card class="rounded-2xl border border-slate-200 bg-white p-6">
-                <h3 class="mb-4 font-semibold text-slate-900">Why Book With Us</h3>
+                <h3 class="mb-4 font-semibold text-slate-900">{{ $t('detailPage.sidebar.whyBookTitle') }}</h3>
                 <div class="space-y-4 text-sm">
                   <div class="flex items-start space-x-3">
                     <DollarSign class="mt-0.5 h-5 w-5 flex-shrink-0 text-slate-900" />
                     <div>
-                      <div class="font-semibold text-slate-900">Best Market Prices</div>
-                      <div class="text-slate-600">We guarantee the best prices on the market - unbeatable value for your adventure!</div>
+                      <div class="font-semibold text-slate-900">{{ $t('detailPage.sidebar.bestPrices') }}</div>
+                      <div class="text-slate-600">{{ $t('detailPage.sidebar.bestPricesDesc') }}</div>
                     </div>
                   </div>
                   <div class="flex items-start space-x-3">
                     <Handshake class="mt-0.5 h-5 w-5 flex-shrink-0 text-slate-900" />
                     <div>
-                      <div class="font-semibold text-slate-900">Fair Remuneration</div>
-                      <div class="text-slate-600">Our partners are paid fairly - <NuxtLink to="/about" class="text-[#FF6B35] hover:underline">see our values</NuxtLink></div>
+                      <div class="font-semibold text-slate-900">{{ $t('detailPage.sidebar.fairRemuneration') }}</div>
+                      <div class="text-slate-600">{{ $t('detailPage.sidebar.fairRemunerationDesc') }}<NuxtLink to="/about" class="text-[#FF6B35] hover:underline">{{ $t('detailPage.sidebar.seeValues') }}</NuxtLink></div>
                     </div>
                   </div>
                   <div class="flex items-start space-x-3">
                     <Leaf class="mt-0.5 h-5 w-5 flex-shrink-0 text-slate-900" />
                     <div>
-                      <div class="font-semibold text-slate-900">Eco-Friendly</div>
-                      <div class="text-slate-600">Sustainable tourism practices</div>
+                      <div class="font-semibold text-slate-900">{{ $t('detailPage.sidebar.ecoFriendly') }}</div>
+                      <div class="text-slate-600">{{ $t('detailPage.sidebar.ecoFriendlyDesc') }}</div>
                     </div>
                   </div>
                 </div>
@@ -341,7 +341,7 @@
     <section v-if="experience.referee" class="bg-slate-50 py-20">
       <div class="container mx-auto px-4">
         <div class="mx-auto max-w-4xl">
-          <h2 class="mb-12 text-center text-4xl font-black text-slate-900">{{ experience.referee.title || 'Meet Your Referee' }}</h2>
+          <h2 class="mb-12 text-center text-4xl font-black text-slate-900">{{ experience.referee.title || $t('detailPage.referee.defaultTitle') }}</h2>
           <Card class="overflow-hidden rounded-3xl border-2 border-slate-200 bg-white">
             <div class="grid gap-8 p-8 md:grid-cols-3">
               <div class="md:col-span-1">
@@ -379,12 +379,12 @@
     <section class="py-20 bg-slate-50">
       <div class="container mx-auto px-4">
         <div class="mb-12 text-center">
-          <h2 class="mb-4 text-4xl font-black text-slate-900">Traveler Reviews</h2>
+          <h2 class="mb-4 text-4xl font-black text-slate-900">{{ $t('detailPage.reviews.title') }}</h2>
           <div class="flex items-center justify-center space-x-2">
             <div class="flex">
               <Star v-for="i in 5" :key="i" class="h-6 w-6 text-yellow-400 fill-yellow-400" />
             </div>
-            <span class="text-lg font-bold text-slate-900">4.9/5 from 50+ reviews</span>
+            <span class="text-lg font-bold text-slate-900">4.9/5 {{ $t('detailPage.reviews.from') }} 50+ {{ $t('detailPage.reviews.reviews') }}</span>
           </div>
         </div>
 
@@ -412,30 +412,31 @@
       <div class="container mx-auto px-4">
         <div class="mx-auto max-w-3xl text-center text-white">
           <h2 class="mb-4 text-4xl font-black lg:text-5xl">
-            Ready to Book {{ experience.title }}?
+            {{ $t('detailPage.cta.title', { title: experience.title }) }}
           </h2>
-          <div class="mb-2 text-6xl font-black text-orange-500">${{ experience.price }}</div>
+          <div class="mb-2 text-xs font-medium text-slate-400">{{ $t('common.from') }}</div>
+          <div class="mb-2 text-6xl font-black text-orange-500">{{ $t('common.currency') }}{{ experience.price }}</div>
           <div class="mb-8 text-lg text-slate-400">
             <span v-if="experience.minGroupSize && experience.minGroupSize > 1">
-              Minimum {{ experience.minGroupSize }} {{ experience.minGroupSize === 2 ? 'person' : 'people' }} · Per person
+              {{ $t('detailPage.cta.minimum', { count: experience.minGroupSize, people: experience.minGroupSize === 2 ? $t('detailPage.sidebar.person') : $t('detailPage.sidebar.people') }) }} · {{ $t('detailPage.cta.perPerson') }}
             </span>
             <span v-else>
-              Per person
+              {{ $t('detailPage.cta.perPerson') }}
             </span>
           </div>
           <p class="mb-10 text-xl leading-relaxed text-slate-300">
-            Don't miss out on this incredible adventure. Spots fill up quickly!
+            {{ $t('detailPage.cta.description') }}
           </p>
 
           <Button as-child size="lg" class="rounded-full bg-orange-500 px-12 py-8 text-xl font-bold text-white shadow-2xl transition-all hover:bg-orange-600 hover:scale-105">
             <a :href="whatsappUrl" target="_blank" rel="noopener">
               <MessageCircle class="mr-2 h-7 w-7" />
-              Book Now on WhatsApp
+              {{ $t('detailPage.cta.bookNow') }}
             </a>
           </Button>
 
           <div class="mt-8 text-sm text-slate-400">
-            Questions? Contact us anytime at hello@zamzamxp.com
+            {{ $t('detailPage.cta.questions') }}
           </div>
         </div>
       </div>
@@ -445,16 +446,16 @@
     <section v-if="relatedActivities.length" class="py-20 bg-slate-50">
       <div class="container mx-auto px-4">
         <div class="mb-12 text-center">
-          <h2 class="mb-4 text-4xl font-black text-slate-900">You Might Also Like</h2>
+          <h2 class="mb-4 text-4xl font-black text-slate-900">{{ $t('detailPage.related.title') }}</h2>
           <p class="text-lg text-slate-600">
-            <span v-if="relatedActivities.some(exp => exp.activity === activity && exp.country === country)">
-              More <span class="capitalize">{{ activity }}</span> adventures in <span class="capitalize">{{ country }}</span>
+            <span v-if="relatedActivities.some(exp => exp.activity === normalizedActivity && exp.country === normalizedCountry)">
+              {{ $t('detailPage.related.sameActivity', { activity: $t(`activities.${normalizedActivity}`), country: $t(`countries.${normalizedCountry}`) }) }}
             </span>
-            <span v-else-if="relatedActivities.some(exp => exp.country === country)">
-              Explore more adventures in <span class="capitalize">{{ country }}</span>
+            <span v-else-if="relatedActivities.some(exp => exp.country === normalizedCountry)">
+              {{ $t('detailPage.related.sameCountry', { country: $t(`countries.${normalizedCountry}`) }) }}
             </span>
             <span v-else>
-              Similar <span class="capitalize">{{ activity }}</span> experiences worldwide
+              {{ $t('detailPage.related.similarActivity', { activity: $t(`activities.${normalizedActivity}`) }) }}
             </span>
           </p>
         </div>
@@ -547,8 +548,14 @@ interface ExperienceDetail {
 }
 
 const route = useRoute()
+const { locale } = useI18n()
 const { country, activity, slug } = route.params
 const { extractSlug } = useExperiences()
+const { normalizeCountry, normalizeActivity } = useActivitiesByLocale()
+
+// Normalize URL params to match file metadata
+const normalizedCountry = normalizeCountry(String(country))
+const normalizedActivity = normalizeActivity(String(activity))
 
 // First try to load from content
 const { data: contentData } = await useAsyncData(`experience-${country}-${activity}-${slug}`, async () => {
@@ -556,12 +563,13 @@ const { data: contentData } = await useAsyncData(`experience-${country}-${activi
     // Query all content and find by slug, country and activity
     const allContent = await queryCollection('content').all()
 
-    // Find the matching content by comparing extracted slug, country and activity
+    // Find the matching content by comparing extracted slug, country, activity AND locale
     const found = allContent.find((item: any) => {
       const itemSlug = extractSlug(item.path || '')
       return itemSlug === String(slug) &&
-        item.country === String(country) &&
-        item.activity === String(activity)
+        item.country === normalizedCountry &&
+        item.activity === normalizedActivity &&
+        item.path?.includes(`activities/${locale.value}/`)
     })
 
     return found || null
@@ -589,6 +597,7 @@ const experience = computed(() => {
     title: data.title,
     description: data.description,
     price: data.price,
+    privatePrice: data.privatePrice,
     duration: data.duration,
     difficulty: data.difficulty,
     groupSize: data.groupSize,
@@ -649,25 +658,28 @@ const { data: relatedExps } = await useAsyncData(`related-${country}-${slug}`, a
   try {
     const allExp = await queryCollection('content').all()
 
-    // Filter out current experience
-    const otherExperiences = allExp.filter((exp: any) => extractSlug(exp.path) !== String(slug))
+    // Filter out current experience and only show items in current locale
+    const otherExperiences = allExp.filter((exp: any) => 
+      extractSlug(exp.path) !== String(slug) &&
+      exp.path?.includes(`activities/${locale.value}/`)
+    )
 
     // Prioritize: same activity, same country first
     const sameActivity = otherExperiences.filter((exp: any) =>
-      exp.activity === String(activity) &&
-      exp.country === String(country)
+      exp.activity === normalizedActivity &&
+      exp.country === normalizedCountry
     )
 
     // Then: other activities in same country
     const sameCountry = otherExperiences.filter((exp: any) =>
-      exp.country === String(country) &&
-      exp.activity !== String(activity)
+      exp.country === normalizedCountry &&
+      exp.activity !== normalizedActivity
     )
 
     // Finally: same activity in other countries
     const sameActivityOtherCountry = otherExperiences.filter((exp: any) =>
-      exp.activity === String(activity) &&
-      exp.country !== String(country)
+      exp.activity === normalizedActivity &&
+      exp.country !== normalizedCountry
     )
 
     // Combine and limit to 3

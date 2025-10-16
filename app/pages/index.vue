@@ -13,10 +13,10 @@
       <div class="container mx-auto px-6 relative z-10 flex items-start pt-10 lg:pt-20">
         <div class="max-w-3xl mx-auto text-center">
           <h1 class="text-5xl font-semibold leading-tight text-slate-900 lg:text-6xl mb-6">
-            Travel that's fair for everyone
+            {{ $t('home.hero.title') }}
           </h1>
           <p class="text-xl text-slate-600 mb-8">
-            Discover the best adventure experiences with passionate local guides. Pay honest prices. Support sustainable tourism. Real adventures, happy communities.
+            {{ $t('home.hero.subtitle') }}
           </p>
           <Button
             as-child
@@ -24,7 +24,7 @@
             class="rounded-lg bg-gradient-to-r from-[#FF6B35] to-[#F7931E] px-8 py-3 text-base font-medium text-white transition-all shadow-lg hover:shadow-xl"
           >
             <NuxtLink to="/destinations">
-              Explore Destinations
+              {{ $t('home.hero.cta') }}
             </NuxtLink>
           </Button>
         </div>
@@ -36,10 +36,10 @@
       <div class="container mx-auto px-6">
         <div class="mb-12 text-center max-w-3xl mx-auto">
           <h2 class="text-3xl font-semibold text-slate-900 mb-4">
-            A different kind of travel agency
+            {{ $t('home.tagline') }}
           </h2>
           <p class="text-lg text-slate-600">
-            We believe travel should enrich everyone – the traveler, the guide, and the community.
+            {{ $t('home.taglineDesc') }}
           </p>
         </div>
         <div class="grid gap-8 md:grid-cols-3">
@@ -47,27 +47,27 @@
             <div class="w-16 h-16 bg-slate-100 rounded-full flex items-center justify-center mx-auto mb-4">
               <Handshake class="size-6 text-slate-900" />
             </div>
-            <h3 class="text-lg font-semibold text-slate-900 mb-2">Fair for everyone</h3>
+            <h3 class="text-lg font-semibold text-slate-900 mb-2">{{ $t('home.fairForEveryone') }}</h3>
             <p class="text-slate-600">
-              Local guides get paid fairly. You get honest prices. Everyone wins.
+              {{ $t('home.fairForEveryoneDesc') }}
             </p>
           </div>
           <div class="text-center">
             <div class="w-16 h-16 bg-slate-100 rounded-full flex items-center justify-center mx-auto mb-4">
               <Users class="size-6 text-slate-900" />
             </div>
-            <h3 class="text-lg font-semibold text-slate-900 mb-2">Passionate locals</h3>
+            <h3 class="text-lg font-semibold text-slate-900 mb-2">{{ $t('home.passionateLocals') }}</h3>
             <p class="text-slate-600">
-              Our guides love what they do and can't wait to share it with you.
+              {{ $t('home.passionateLocalsDesc') }}
             </p>
           </div>
           <div class="text-center">
             <div class="w-16 h-16 bg-slate-100 rounded-full flex items-center justify-center mx-auto mb-4">
               <Leaf class="size-6 text-slate-900" />
             </div>
-            <h3 class="text-lg font-semibold text-slate-900 mb-2">Sustainable tourism</h3>
+            <h3 class="text-lg font-semibold text-slate-900 mb-2">{{ $t('home.sustainableTourism') }}</h3>
             <p class="text-slate-600">
-              Eco-friendly practices that protect the places we love to explore.
+              {{ $t('home.sustainableTourismDesc') }}
             </p>
           </div>
         </div>
@@ -80,10 +80,10 @@
 
         <div class="mb-12 text-center">
           <h2 class="text-3xl font-semibold text-slate-900 mb-3">
-            Traveler reviews
+            {{ $t('home.testimonials') }}
           </h2>
           <p class="text-slate-600">
-            See what our adventurers have to say
+            {{ $t('home.testimonialsDesc') }}
           </p>
         </div>
 
@@ -161,7 +161,7 @@
               <div class="flex items-center justify-center gap-1">
           <Star class="h-3 w-3 text-yellow-500 fill-yellow-500" />
           <span class="text-xs font-medium text-slate-600">{{ member.rating }}</span>
-          <span class="text-xs text-slate-400">({{ member.reviews }} reviews)</span>
+          <span class="text-xs text-slate-400">({{ member.reviews }} {{ $t('home.stats.reviews') }})</span>
               </div>
             </div>
           </div>
@@ -173,25 +173,25 @@
             <div class="text-2xl md:text-4xl font-semibold text-slate-800 mb-2">
               <NumberTicker :value="100" :decimal-places="0" />+
             </div>
-            <div class="text-xs md:text-sm text-slate-600">Happy Travelers</div>
+            <div class="text-xs md:text-sm text-slate-600">{{ $t('home.stats.happyTravelers') }}</div>
           </div>
           <div class="text-center p-3 md:p-6">
             <div class="text-2xl md:text-4xl font-semibold text-slate-800 mb-2">
               <NumberTicker :value="totalCountries" :decimal-places="0" />
             </div>
-            <div class="text-xs md:text-sm text-slate-600">Countries</div>
+            <div class="text-xs md:text-sm text-slate-600">{{ $t('home.stats.countries') }}</div>
           </div>
           <div class="text-center p-3 md:p-6">
             <div class="text-2xl md:text-4xl font-semibold text-slate-800 mb-2">
               <NumberTicker :value="totalActivities" :decimal-places="0" />
             </div>
-            <div class="text-xs md:text-sm text-slate-600">Activities</div>
+            <div class="text-xs md:text-sm text-slate-600">{{ $t('home.stats.activities') }}</div>
           </div>
           <div class="text-center p-3 md:p-6">
             <div class="text-2xl md:text-4xl font-semibold text-slate-800 mb-2">
               <NumberTicker :value="4.9" :decimal-places="1" />★
             </div>
-            <div class="text-xs md:text-sm text-slate-600">Average Rating</div>
+            <div class="text-xs md:text-sm text-slate-600">{{ $t('home.stats.averageRating') }}</div>
           </div>
         </div>
       </div>
@@ -202,10 +202,10 @@
       <div class="container mx-auto px-6">
         <div class="text-center mb-12">
           <h2 class="text-3xl font-semibold text-slate-900 mb-3">
-            Explore our destinations
+            {{ $t('home.destinationsSection.title') }}
           </h2>
           <p class="text-lg text-slate-600">
-            Discover amazing adventures in breathtaking locations around the world
+            {{ $t('home.destinationsSection.subtitle') }}
           </p>
         </div>
         
@@ -237,10 +237,10 @@
       <div class="container mx-auto px-6">
         <div class="max-w-2xl">
           <h2 class="text-3xl font-semibold text-slate-900 mb-4">
-            Ready to start planning?
+            {{ $t('home.finalCta.title') }}
           </h2>
           <p class="text-lg text-slate-600 mb-8">
-            Get in touch with our team to discuss your adventure.
+            {{ $t('home.finalCta.subtitle') }}
           </p>
           <div class="flex flex-col sm:flex-row gap-4">
             <Button
@@ -249,7 +249,7 @@
               class="rounded-lg bg-gradient-to-r from-[#FF6B35] to-[#F7931E] px-8 py-3 text-base font-medium text-white transition-all shadow-lg hover:shadow-xl"
             >
               <NuxtLink to="/contact">
-                Contact Us
+                {{ $t('home.finalCta.contactUs') }}
               </NuxtLink>
             </Button>
             <Button
@@ -259,7 +259,7 @@
               class="rounded-lg border border-slate-300 px-8 py-3 text-base font-medium text-slate-700 hover:bg-slate-50 transition-colors"
             >
               <a :href="`https://wa.me/${APP_CONFIG.company.whatsapp}`" target="_blank" rel="noopener">
-                WhatsApp
+                {{ $t('home.finalCta.whatsapp') }}
               </a>
             </Button>
           </div>
@@ -278,58 +278,60 @@ import { NumberTicker } from '~/components/ui/number-ticker'
 import { APP_CONFIG } from '~/config/constants'
 import { Handshake, Users, Leaf, ChevronRight, Star } from 'lucide-vue-next'
 
+const { t } = useI18n()
+
 useSeoMeta({
-  title: 'Zamzam Experience - Adventure Travel with Fair Prices & Local Guides',
-  description: 'A new kind of travel agency connecting you with passionate local guides. Fair prices, sustainable tourism, and authentic adventures in Nepal, Morocco & beyond.',
+  title: () => t('seo.home.title'),
+  description: () => t('seo.home.description'),
 })
 
-const firstRowReviews = [
+const firstRowReviews = computed(() => [
   {
     initials: "IT",
     name: "Isabelle Taen",
     location: "France",
-    text: "I did the 12-days Manaslu circuit trekking, and it was absolutely spectacular! Stunning views, truly a memory for life. Sandip is an amazing guide...",
+    text: t('home.reviews.isabelle'),
     avatarClass: "bg-gradient-to-br from-blue-400 to-blue-600"
   },
   {
     initials: "SR",
     name: "Samuel Rowland-Jones",
     location: "UK",
-    text: "We just completed the Annapurna Circuit with Tilicho Lake. Sandip was incredible! Every guesthouse exceeded our expectations. He paced the trek perfectly...",
+    text: t('home.reviews.samuel'),
     avatarClass: "bg-gradient-to-br from-green-400 to-green-600"
   },
   {
     initials: "L",
     name: "Lisa",
     location: "Netherlands",
-    text: "The Annapurna Circuit was truly once-in-a-lifetime! Sandip made everything smooth and memorable. He knows so much about the area and always put our safety first...",
+    text: t('home.reviews.lisa'),
     avatarClass: "bg-gradient-to-br from-purple-400 to-purple-600"
   },
-]
+])
 
-const secondRowReviews = [
+const secondRowReviews = computed(() => [
   {
     initials: "MJ",
     name: "Michael Johnson",
     location: "Canada",
-    text: "The Everest Base Camp trek was the adventure of a lifetime! Sandip's knowledge of the Khumbu region is exceptional and he shared incredible stories...",
+    text: t('home.reviews.michael'),
     avatarClass: "bg-gradient-to-br from-orange-400 to-orange-600"
   },
   {
     initials: "AK",
     name: "Anna Kowalski",
     location: "Poland",
-    text: "Standing at Everest Base Camp was surreal! Sandip made sure we were well-prepared and safe. The teahouses were cozy, views breathtaking...",
+    text: t('home.reviews.anna'),
     avatarClass: "bg-gradient-to-br from-pink-400 to-pink-600"
   },
   {
     initials: "DM",
     name: "David Martinez",
     location: "Spain",
-    text: "Everest Base Camp exceeded every expectation! Sandip's attention to detail made all the difference. From Namche Bazaar to Kala Patthar, unforgettable...",
+    text: t('home.reviews.david'),
     avatarClass: "bg-gradient-to-br from-teal-400 to-teal-600"
   },
-]
+])
 
 // Count activities and countries dynamically from content
 const { data: activities } = await useAsyncData('activities-count', async () => {

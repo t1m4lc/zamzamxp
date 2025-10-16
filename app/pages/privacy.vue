@@ -179,7 +179,7 @@
 
             <h3 class="text-2xl font-bold text-slate-900">How to Exercise Rights</h3>
             <p class="text-slate-700">
-              Contact us at <strong>privacy@zamzamxp.com</strong> with your request. We'll respond within 30 days.
+              Contact us at <strong>hello@zamzamxp.com</strong> with your request. We'll respond within 30 days.
             </p>
 
             <h2 class="text-3xl font-black text-slate-900">Data Security</h2>
@@ -254,7 +254,6 @@
             <Card class="rounded-2xl border-2 border-orange-200 bg-orange-50 p-6">
               <h3 class="mt-0 text-xl font-bold text-slate-900">Data Protection Contact</h3>
               <ul class="mb-0 space-y-2 text-slate-700">
-                <li><strong>Email:</strong> privacy@zamzamxp.com</li>
                 <li><strong>General:</strong> hello@zamzamxp.com</li>
                 <li><strong>WhatsApp:</strong> +977 1234567890</li>
                 <li><strong>Address:</strong> ZamZam XP, Kathmandu, Nepal</li>

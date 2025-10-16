@@ -6,10 +6,10 @@
       <div class="container mx-auto px-6 relative">
         <div class="text-center max-w-3xl mx-auto">
           <h1 class="text-4xl font-semibold leading-tight text-slate-900 lg:text-5xl mb-6">
-            Explore our destinations
+            {{ $t('destinations.title') }}
           </h1>
           <p class="text-xl text-slate-600 mb-8">
-            Discover breathtaking adventures in carefully selected destinations around the world
+            {{ $t('destinations.subtitle') }}
           </p>
         </div>
       </div>
@@ -20,7 +20,7 @@
       <div class="container mx-auto px-6">
         <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           <!-- Nepal Card -->
-          <NuxtLink to="/nepal" class="block group">
+          <NuxtLink :to="getCountryPath('nepal')" class="block group">
             <div class="relative overflow-hidden rounded-2xl bg-white shadow-lg transition-all duration-300 group-hover:shadow-xl group-hover:-translate-y-1">
               <div class="aspect-[4/3] overflow-hidden">
                 <NuxtImg
@@ -34,24 +34,24 @@
               </div>
               <div class="p-6">
                 <div class="flex items-center mb-3">
-                  <h3 class="text-xl font-semibold text-slate-900">Nepal</h3>
+                  <h3 class="text-xl font-semibold text-slate-900">{{ $t('countries.nepal') }}</h3>
                 </div>
                 <p class="text-slate-600 mb-4">
-                  Experience world-class trekking and paragliding adventures in the Himalayas with stunning mountain views.
+                  {{ $t('destinations.nepalDesc') }}
                 </p>
                 <div class="flex flex-wrap gap-2 mb-4">
-                  <span v-for="activity in nepalData.activities" :key="activity" class="px-3 py-1 bg-slate-100 text-slate-700 text-sm rounded-full">{{ activity }}</span>
+                  <span v-for="activity in nepalData.activities" :key="activity" class="px-3 py-1 bg-slate-100 text-slate-700 text-sm rounded-full">{{ $t(`activities.${activity.toLowerCase()}`) }}</span>
                 </div>
                 <div class="flex items-center justify-between">
-                  <span class="text-slate-500 text-sm">{{ nepalData.count }} experiences</span>
-                  <span class="text-slate-900 font-medium group-hover:translate-x-1 transition-transform">Explore →</span>
+                  <span class="text-slate-500 text-sm">{{ nepalData.count }} {{ $t('destinations.experiences') }}</span>
+                  <span class="text-slate-900 font-medium group-hover:translate-x-1 transition-transform">{{ $t('destinations.explore') }} →</span>
                 </div>
               </div>
             </div>
           </NuxtLink>
 
           <!-- Morocco Card -->
-          <NuxtLink to="/morocco" class="block group">
+          <NuxtLink :to="getCountryPath('morocco')" class="block group">
             <div class="relative overflow-hidden rounded-2xl bg-white shadow-lg transition-all duration-300 group-hover:shadow-xl group-hover:-translate-y-1">
               <div class="aspect-[4/3] overflow-hidden">
                 <NuxtImg
@@ -65,17 +65,17 @@
               </div>
               <div class="p-6">
                 <div class="flex items-center mb-3">
-                  <h3 class="text-xl font-semibold text-slate-900">Morocco</h3>
+                  <h3 class="text-xl font-semibold text-slate-900">{{ $t('countries.morocco') }}</h3>
                 </div>
                 <p class="text-slate-600 mb-4">
-                  Discover Atlantic coast surfing combined with rich Moroccan culture in charming coastal towns.
+                  {{ $t('destinations.moroccoDesc') }}
                 </p>
                 <div class="flex flex-wrap gap-2 mb-4">
-                  <span v-for="activity in moroccoData.activities" :key="activity" class="px-3 py-1 bg-slate-100 text-slate-700 text-sm rounded-full">{{ activity }}</span>
+                  <span v-for="activity in moroccoData.activities" :key="activity" class="px-3 py-1 bg-slate-100 text-slate-700 text-sm rounded-full">{{ $t(`activities.${activity.toLowerCase()}`) }}</span>
                 </div>
                 <div class="flex items-center justify-between">
-                  <span class="text-slate-500 text-sm">{{ moroccoData.count }} experiences</span>
-                  <span class="text-slate-900 font-medium group-hover:translate-x-1 transition-transform">Explore →</span>
+                  <span class="text-slate-500 text-sm">{{ moroccoData.count }} {{ $t('destinations.experiences') }}</span>
+                  <span class="text-slate-900 font-medium group-hover:translate-x-1 transition-transform">{{ $t('destinations.explore') }} →</span>
                 </div>
               </div>
             </div>
@@ -86,17 +86,17 @@
             <div class="aspect-[4/3] flex items-center justify-center bg-slate-100">
               <div class="text-center p-6">
                 <div class="text-5xl mb-4">🌎</div>
-                <h3 class="text-xl font-semibold text-slate-500 mb-2">More Destinations</h3>
-                <p class="text-slate-400">Coming Soon</p>
+                <h3 class="text-xl font-semibold text-slate-500 mb-2">{{ $t('destinations.comingSoon.title') }}</h3>
+                <p class="text-slate-400">{{ $t('destinations.comingSoon.subtitle') }}</p>
               </div>
             </div>
             <div class="p-6">
               <p class="text-slate-500 mb-4">
-                We're constantly adding new exciting experiences. Stay tuned for more adventures!
+                {{ $t('destinations.comingSoon.description') }}
               </p>
               <div class="flex items-center justify-between">
-                <span class="text-slate-400 text-sm">Expanding soon</span>
-                <span class="text-slate-400 font-medium">Stay tuned</span>
+                <span class="text-slate-400 text-sm">{{ $t('destinations.comingSoon.expanding') }}</span>
+                <span class="text-slate-400 font-medium">{{ $t('destinations.comingSoon.stayTuned') }}</span>
               </div>
             </div>
           </div>
@@ -109,10 +109,10 @@
       <div class="container mx-auto px-6">
         <div class="max-w-3xl mx-auto text-center mb-12">
           <h2 class="text-3xl font-semibold text-slate-900 mb-4">
-            Why choose our destinations
+            {{ $t('destinations.whyChoose.title') }}
           </h2>
           <p class="text-lg text-slate-600">
-            We carefully select each destination based on unique experiences, safety, and authentic cultural connections
+            {{ $t('destinations.whyChoose.subtitle') }}
           </p>
         </div>
 
@@ -121,9 +121,9 @@
             <div class="w-16 h-16 bg-slate-100 rounded-full flex items-center justify-center mx-auto mb-4">
               <Compass class="size-5 text-slate-900" />
             </div>
-            <h3 class="text-lg font-semibold text-slate-900 mb-2">Expert Curation</h3>
+            <h3 class="text-lg font-semibold text-slate-900 mb-2">{{ $t('destinations.whyChoose.expertTitle') }}</h3>
             <p class="text-slate-600">
-              Each destination is handpicked for its unique experiences and natural beauty.
+              {{ $t('destinations.whyChoose.expertDesc') }}
             </p>
           </div>
 
@@ -131,9 +131,9 @@
             <div class="w-16 h-16 bg-slate-100 rounded-full flex items-center justify-center mx-auto mb-4">
               <ShieldCheck class="size-5 text-slate-900" />
             </div>
-            <h3 class="text-lg font-semibold text-slate-900 mb-2">Safety First</h3>
+            <h3 class="text-lg font-semibold text-slate-900 mb-2">{{ $t('destinations.whyChoose.safetyTitle') }}</h3>
             <p class="text-slate-600">
-              All destinations meet high safety standards with local emergency support.
+              {{ $t('destinations.whyChoose.safetyDesc') }}
             </p>
           </div>
 
@@ -141,9 +141,9 @@
             <div class="w-16 h-16 bg-slate-100 rounded-full flex items-center justify-center mx-auto mb-4">
               <Heart class="size-5 text-slate-900" />
             </div>
-            <h3 class="text-lg font-semibold text-slate-900 mb-2">Authentic Experiences</h3>
+            <h3 class="text-lg font-semibold text-slate-900 mb-2">{{ $t('destinations.whyChoose.authenticTitle') }}</h3>
             <p class="text-slate-600">
-              Connect with local communities through meaningful interactions.
+              {{ $t('destinations.whyChoose.authenticDesc') }}
             </p>
           </div>
         </div>
@@ -155,10 +155,10 @@
       <div class="container mx-auto px-6">
         <div class="max-w-2xl mx-auto text-center">
           <h2 class="text-3xl font-semibold text-slate-900 mb-4">
-            Ready to start your adventure?
+            {{ $t('destinations.cta.title') }}
           </h2>
           <p class="text-lg text-slate-600 mb-8">
-            Contact our travel specialists to plan your perfect adventure in any of our amazing destinations.
+            {{ $t('destinations.cta.subtitle') }}
           </p>
           <div class="flex flex-col sm:flex-row gap-4 justify-center">
             <Button
@@ -167,7 +167,7 @@
               class="rounded-lg bg-gradient-to-r from-[#FF6B35] to-[#F7931E] px-8 py-3 text-base font-medium text-white transition-all"
             >
               <NuxtLink to="/contact">
-                Plan My Trip
+                {{ $t('destinations.cta.planTrip') }}
               </NuxtLink>
             </Button>
             <Button
@@ -177,7 +177,7 @@
               class="rounded-lg border border-slate-300 px-8 py-3 text-base font-medium text-slate-700 hover:bg-slate-50 transition-colors"
             >
               <a :href="'https://wa.me/' + APP_CONFIG.company.whatsapp" target="_blank" rel="noopener">
-                WhatsApp Us
+                {{ $t('destinations.cta.whatsapp') }}
               </a>
             </Button>
           </div>
@@ -191,6 +191,8 @@
 import { Card } from '~/components/ui/card'
 import { Compass, ShieldCheck, Heart } from 'lucide-vue-next'
 import { APP_CONFIG } from '~/config/constants'
+
+const { getCountryPath } = useLocalizedRoutes()
 
 // Fetch all content to get countries dynamically
 const { data: allContent } = await useAsyncData('all-content', async () => {
@@ -229,13 +231,13 @@ const moroccoData = computed(() =>
   countriesData.value.find(c => c.slug === 'morocco') || { count: 0, activities: [] }
 )
 
+const { t } = useI18n()
+
 useSeoMeta({
-  title: "Adventure Travel Destinations | Nepal, Morocco & More | Zamzam Experience",
-  description:
-    "Explore authentic adventure destinations with expert local guides. Trekking in Nepal's Himalayas, surfing Morocco's Atlantic coast, and more sustainable tourism experiences.",
-  ogTitle: "Adventure Travel Destinations | Zamzam Experience",
-  ogDescription:
-    "From Nepal's Himalayas to Morocco's Atlantic coast - discover authentic adventures with local guides.",
+  title: () => t('seo.destinations.title'),
+  description: () => t('seo.destinations.description'),
+  ogTitle: () => t('seo.destinations.ogTitle'),
+  ogDescription: () => t('seo.destinations.ogDescription'),
   ogType: "website",
   twitterCard: "summary_large_image",
 })

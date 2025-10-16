@@ -33,7 +33,7 @@
       <div class="container relative mx-auto px-6">
         <div class="max-w-3xl text-white">
           <h1 class="text-5xl font-semibold lg:text-6xl mb-6">
-            Adventures in {{ countryName }}
+            {{ $t('countryPage.heroTitle', { country: countryName }) }}
           </h1>
           <p class="text-xl text-white/90">
             {{ countryDescription }}
@@ -47,7 +47,7 @@
       <div class="container mx-auto px-6">
         <div class="mb-12">
           <h2 class="text-3xl font-semibold text-slate-900 mb-3">
-            Activities
+            {{ $t('countryPage.activitiesTitle') }}
           </h2>
         </div>
 
@@ -65,9 +65,9 @@
           </EmptyMedia>
           <EmptyContent>
             <EmptyHeader>
-              <EmptyTitle>No Activities Available</EmptyTitle>
+              <EmptyTitle>{{ $t('countryPage.noActivitiesTitle') }}</EmptyTitle>
               <EmptyDescription>
-                We're working on adding exciting activities for {{ countryName }}. Check back soon for new adventures!
+                {{ $t('countryPage.noActivitiesDesc', { country: countryName }) }}
               </EmptyDescription>
             </EmptyHeader>
           </EmptyContent>
@@ -80,29 +80,29 @@
       <div class="container mx-auto px-6">
         <div class="mb-12">
           <h2 class="text-3xl font-semibold text-slate-900 mb-3">
-            Why travel with us
+            {{ $t('countryPage.whyTravelTitle') }}
           </h2>
         </div>
 
         <div class="grid gap-8 md:grid-cols-3">
           <div>
-            <h3 class="text-lg font-semibold text-slate-900 mb-2">Local Experts</h3>
+            <h3 class="text-lg font-semibold text-slate-900 mb-2">{{ $t('countryPage.localExpertsTitle') }}</h3>
             <p class="text-slate-600">
-              Our guides are local experts who know every trail and hidden gem.
+              {{ $t('countryPage.localExpertsDesc') }}
             </p>
           </div>
 
           <div>
-            <h3 class="text-lg font-semibold text-slate-900 mb-2">Small Groups</h3>
+            <h3 class="text-lg font-semibold text-slate-900 mb-2">{{ $t('countryPage.smallGroupsTitle') }}</h3>
             <p class="text-slate-600">
-              Maximum 12 people per group for personalized attention.
+              {{ $t('countryPage.smallGroupsDesc') }}
             </p>
           </div>
 
           <div>
-            <h3 class="text-lg font-semibold text-slate-900 mb-2">Safety First</h3>
+            <h3 class="text-lg font-semibold text-slate-900 mb-2">{{ $t('countryPage.safetyFirstTitle') }}</h3>
             <p class="text-slate-600">
-              Licensed, insured, and equipped with comprehensive safety protocols.
+              {{ $t('countryPage.safetyFirstDesc') }}
             </p>
           </div>
         </div>
@@ -114,10 +114,10 @@
       <div class="container mx-auto px-6">
         <div class="max-w-2xl">
           <h2 class="text-3xl font-semibold text-slate-900 mb-4">
-            Plan your {{ countryName }} adventure
+            {{ $t('countryPage.ctaTitle', { country: countryName }) }}
           </h2>
           <p class="text-lg text-slate-600 mb-8">
-            Get in touch with our team to discuss your trip.
+            {{ $t('countryPage.ctaDesc') }}
           </p>
 
           <div class="flex flex-col sm:flex-row gap-4">
@@ -127,7 +127,7 @@
               class="rounded-lg bg-gradient-to-r from-rose-500 to-orange-500 px-8 py-3 text-base font-medium text-white hover:from-rose-600 hover:to-orange-600 transition-all shadow-lg hover:shadow-xl"
             >
               <NuxtLink to="/contact">
-                Contact Us
+                {{ $t('countryPage.contactUs') }}
               </NuxtLink>
             </Button>
             <Button
@@ -137,7 +137,7 @@
               class="rounded-lg border-2 border-slate-300 px-8 py-3 text-base font-medium text-slate-700 hover:bg-slate-50 hover:border-slate-400 transition-all"
             >
               <a :href="`https://wa.me/${APP_CONFIG.company.whatsapp}`" target="_blank" rel="noopener">
-                WhatsApp
+                {{ $t('countryPage.whatsapp') }}
               </a>
             </Button>
           </div>
@@ -158,24 +158,27 @@ import {
   EmptyTitle 
 } from '~/components/ui/empty'
 import { Mountain } from 'lucide-vue-next'
+import { APP_CONFIG } from '~/config/constants'
 
 const route = useRoute()
 const country = route.params.country as string
+const { t } = useI18n()
 
 const { 
   extractSlug
 } = useExperiences()
 
-// Country-specific static data (keep for images and descriptions)
+const { normalizeCountry } = useActivitiesByLocale()
+const { getActivityPath } = useLocalizedRoutes()
+
+// Normalize the country parameter to English folder name
+const normalizedCountry = normalizeCountry(country)
+
+// Country-specific static data (keep for images)
 const countryData: Record<string, any> = {
   nepal: {
     name: 'Nepal',
-    description: 'Experience world-class trekking and paragliding adventures in the Himalayas.',
     heroImage: 'https://images.unsplash.com/photo-1544735716-392fe2489ffa?w=1920&auto=format&fit=crop&q=80',
-    activityDescriptions: {
-      trekking: 'Multi-day treks through the Himalayas with stunning mountain views',
-      paragliding: 'Soar above valleys with the Annapurna range as your backdrop'
-    },
     activityImages: {
       trekking: '/images/activities/nepal/trekking/nepal-trekking.jpg',
       paragliding: '/images/activities/nepal/paragliding/pokhara-paragliding-tandem.jpg'
@@ -183,30 +186,25 @@ const countryData: Record<string, any> = {
   },
   morocco: {
     name: 'Morocco',
-    description: 'Discover Atlantic coast surfing combined with rich Moroccan culture.',
     heroImage: 'https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?w=1920&auto=format&fit=crop&q=80',
-    activityDescriptions: {
-      surfing: 'Learn to surf or improve your skills on Morocco\'s perfect waves'
-    },
     activityImages: {
       surfing: '/images/activities/morocco/surfing/morocco-surfing.jpg'
     }
   }
 }
 
-import { APP_CONFIG } from '~/config/constants'
-
-const data = countryData[country] || countryData.nepal
-const countryName = data.name
-const countryDescription = data.description
+const data = countryData[normalizedCountry] || countryData.nepal
+const countryName = computed(() => t(`countries.${normalizedCountry}`))
+const countryDescription = computed(() => t(`countryPage.countryDescriptions.${normalizedCountry}`))
 const heroImage = data.heroImage
 
 // Fetch activities dynamically from content
 const { data: activityList } = await useAsyncData(`${country}-activities`, async () => {
   try {
-    // Query all experiences for this country using metadata
-    const allExperiences = await queryCollection('content').all()
-    const experiences = allExperiences.filter((exp: any) => exp.country === country)
+    // Query all experiences for this country
+    const experiences = await queryCollection('content')
+      .where('country', '=', normalizedCountry)
+      .all()
     
     // Extract unique activities from the experiences
     const activities = [...new Set(experiences.map((exp: any) => exp.activity))].filter(Boolean)
@@ -222,19 +220,19 @@ const activities = computed(() => {
   if (!activityList.value || activityList.value.length === 0) return []
   
   return activityList.value.map((activity: string) => ({
-    title: activity.charAt(0).toUpperCase() + activity.slice(1),
-    description: data.activityDescriptions?.[activity] || `Explore ${activity} adventures`,
-    link: `/${country}/${activity}`,
+    title: t(`activities.${activity}`),
+    description: t(`countryPage.activityDescriptions.${activity}`),
+    link: getActivityPath(normalizedCountry, activity),
     image: data.activityImages?.[activity] || '/images/default-activity.jpg',
     color: activity === 'trekking' ? 'orange' as const : 'sky' as const
   }))
 })
 
 useSeoMeta({
-  title: `${countryName} Adventure Travel & Tours | Zamzam Experience`,
-  description: `${countryDescription} Fair prices, expert local guides, and sustainable tourism in ${countryName}.`,
-  ogTitle: `Adventures in ${countryName} | Zamzam Experience`,
-  ogDescription: countryDescription,
+  title: () => `${countryName.value} Adventure Travel & Tours | Zamzam Experience`,
+  description: () => `${countryDescription.value} Fair prices, expert local guides, and sustainable tourism in ${countryName.value}.`,
+  ogTitle: () => t('countryPage.heroTitle', { country: countryName.value }),
+  ogDescription: () => countryDescription.value,
   ogType: "website",
   twitterCard: "summary_large_image",
 })
@@ -242,14 +240,14 @@ useSeoMeta({
 useSchemaOrg([
   defineWebPage({
     "@type": "CollectionPage",
-    name: `Adventures in ${countryName}`,
-    description: countryDescription,
+    name: () => t('countryPage.heroTitle', { country: countryName.value }),
+    description: () => countryDescription.value,
   }),
   defineBreadcrumb({
     itemListElement: [
       { name: "Home", item: "/" },
       { name: "Destinations", item: "/destinations" },
-      { name: countryName, item: `/${country}` },
+      { name: countryName.value, item: `/${country}` },
     ],
   }),
 ])

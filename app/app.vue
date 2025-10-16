@@ -8,25 +8,77 @@
 
 <script setup lang="ts">
 import { SpeedInsights } from "@vercel/speed-insights/nuxt"
-// Get route at the top level
+
+// Get route and i18n at the top level
 const route = useRoute()
+const { locale, locales } = useI18n()
+const switchLocalePath = useSwitchLocalePath()
 
 // Global SEO configuration
 useSeoMeta({
   titleTemplate: "%s | Zamzam Experience",
   ogSiteName: "Zamzam Experience",
+  ogLocale: computed(() => locale.value),
+  ogLocaleAlternate: computed(() => {
+    const alternates = locales.value
+      .filter((loc) => {
+        const code = typeof loc === 'string' ? loc : loc.code
+        return code !== locale.value
+      })
+      .map((loc) => typeof loc === 'string' ? loc : loc.code)
+    return alternates
+  }),
 })
 
-// Set default language and canonical URL
+// Base URL for the site
+const baseUrl = "https://zamzamxp.com"
+
+// Build hreflang links for all available locales
+const hreflangLinks = computed(() => {
+  const links = []
+  
+  // Add link for each locale
+  for (const loc of locales.value) {
+    const localeCode = typeof loc === 'string' ? loc : loc.code
+    const localePath = switchLocalePath(localeCode)
+    
+    links.push({
+      rel: "alternate",
+      hreflang: localeCode,
+      href: `${baseUrl}${localePath}`,
+    })
+  }
+  
+  // Add x-default for English (default locale)
+  links.push({
+    rel: "alternate",
+    hreflang: "x-default",
+    href: `${baseUrl}${switchLocalePath('en')}`,
+  })
+  
+  return links
+})
+
+// Set dynamic language attribute and SEO links
 useHead({
   htmlAttrs: {
-    lang: "en",
+    lang: locale,
   },
-  link: [
+  link: computed(() => [
+    // Canonical URL
     {
       rel: "canonical",
-      href: () => `https://zamzamxp.com${route.path}`,
+      href: `${baseUrl}${route.path}`,
     },
-  ],
+    // Hreflang tags for multilingual SEO
+    ...hreflangLinks.value,
+  ]),
+})
+
+// Watch for locale changes and update HTML lang attribute
+watch(locale, (newLocale) => {
+  if (import.meta.client) {
+    document.documentElement.setAttribute('lang', newLocale)
+  }
 })
 </script>

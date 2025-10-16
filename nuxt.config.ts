@@ -24,6 +24,7 @@ export default defineNuxtConfig({
     "motion-v/nuxt",
     "nuxt-gtag",
     "@nuxtjs/seo",
+    "@nuxtjs/i18n",
   ],
 
   icon: {
@@ -71,7 +72,6 @@ export default defineNuxtConfig({
   },
 
   sitemap: {
-    strictNuxtContentPaths: true,
     // Automatically generate sitemap from routes and content
   },
 
@@ -119,5 +119,20 @@ export default defineNuxtConfig({
   gtag: {
     enabled: process.env.NODE_ENV === "production",
     id: "G-DB0652H3G7",
+  },
+
+  i18n: {
+    defaultLocale: "en",
+    strategy: "no_prefix",
+    detectBrowserLanguage: {
+      useCookie: true,
+      cookieKey: "i18n_redirected",
+      redirectOn: "root",
+    },
+    locales: [
+      { code: "en", name: "English", file: "en.json", flag: "🇬🇧" },
+      { code: "nl", name: "Nederlands", file: "nl.json", flag: "🇳🇱" },
+      { code: "fr", name: "Français", file: "fr.json", flag: "🇫🇷" },
+    ],
   },
 });

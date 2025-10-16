@@ -5,11 +5,11 @@
     <section class="border-b bg-slate-50 py-6">
       <div class="container mx-auto px-4">
         <div class="flex items-center space-x-2 text-sm text-slate-600">
-          <NuxtLink to="/" class="hover:text-orange-600">Home</NuxtLink>
+          <NuxtLink to="/" class="hover:text-orange-600">{{ $t('common.home') }}</NuxtLink>
           <ChevronRight class="h-4 w-4" />
-          <NuxtLink :to="`/${country}`" class="hover:text-orange-600 capitalize">{{ country }}</NuxtLink>
+          <NuxtLink :to="getCountryPath(normalizedCountry)" class="hover:text-orange-600">{{ countryName }}</NuxtLink>
           <ChevronRight class="h-4 w-4" />
-          <span class="font-semibold text-slate-900 capitalize">{{ activity }}</span>
+          <span class="font-semibold text-slate-900">{{ activityName }}</span>
         </div>
       </div>
     </section>
@@ -18,8 +18,8 @@
     <section class="py-16 lg:py-20">
       <div class="container mx-auto px-6">
         <div class="max-w-2xl">
-          <h1 class="text-4xl font-semibold text-slate-900 lg:text-5xl mb-4 capitalize">
-            {{ activity }} in {{ countryName }}
+          <h1 class="text-4xl font-semibold text-slate-900 lg:text-5xl mb-4">
+            {{ $t('activities.title', { activity: activityName, country: countryName }) }}
           </h1>
           <p class="text-lg text-slate-600">
             {{ activityDescription }}
@@ -36,7 +36,7 @@
           <div class="lg:col-span-2">
             <div class="mb-8" v-if="experiences && experiences.length > 0">
               <h2 class="text-2xl font-semibold text-slate-900">
-                {{ experiences.length }} {{ experiences.length === 1 ? 'experience' : 'experiences' }}
+                {{ $t('activities.count', experiences.length) }}
               </h2>
             </div>
 
@@ -45,18 +45,7 @@
               <ExperienceCard
                 v-for="(experience, index) in experiences"
                 :key="experience.slug || index"
-                :experience="{
-                  title: experience.title || '',
-                  description: experience.description || '',
-                  price: experience.price || 0,
-                  duration: experience.duration || '',
-                  difficulty: experience.difficulty || '',
-                  groupSize: experience.groupSize || '',
-                  image: experience.image || '',
-                  country: country,
-                  activity: activity,
-                  slug: experience.slug || ''
-                }"
+                :experience="experience"
               />
             </div>
 
@@ -67,9 +56,9 @@
               </EmptyMedia>
               <EmptyContent>
                 <EmptyHeader>
-                  <EmptyTitle>No Experiences Yet</EmptyTitle>
+                  <EmptyTitle>{{ $t('activities.noExperiences') }}</EmptyTitle>
                   <EmptyDescription>
-                    We're currently adding {{ activity }} experiences in {{ countryName }}. Check back soon for exciting new adventures!
+                    {{ $t('activities.noExperiencesDesc', { activity: activityName, country: countryName }) }}
                   </EmptyDescription>
                 </EmptyHeader>
               </EmptyContent>
@@ -81,10 +70,10 @@
             <div class="sticky top-24">
               <Card class="rounded-xl border border-slate-200 p-8 bg-slate-50">
                 <h3 class="mb-3 text-xl font-semibold text-slate-900">
-                  Need help choosing?
+                  {{ $t('experience.needHelp') }}
                 </h3>
                 <p class="mb-6 text-slate-600">
-                  Not sure which adventure is right for you? Our team can help.
+                  {{ $t('experience.needHelpDesc') }}
                 </p>
                 <Button
                   as-child
@@ -93,29 +82,29 @@
                 >
                   <a :href="'https://wa.me/' + APP_CONFIG.company.whatsapp" target="_blank" rel="noopener">
                     <MessageCircle class="mr-2 h-5 w-5" />
-                    Chat on WhatsApp
+                    {{ $t('experience.chatWhatsApp') }}
                   </a>
                 </Button>
               </Card>
 
               <Card class="rounded-xl border border-slate-200 bg-white p-6 mt-6">
-                <h4 class="mb-4 font-semibold text-slate-900">What's included</h4>
+                <h4 class="mb-4 font-semibold text-slate-900">{{ $t('experience.included') }}</h4>
                 <ul class="space-y-3 text-sm text-slate-600">
                   <li class="flex items-center gap-2">
                     <CheckCircle class="h-5 w-5 flex-shrink-0 text-green-500" />
-                    <span>Professional guides included</span>
+                    <span>{{ $t('experience.includedItems.professionalGuides') }}</span>
                   </li>
                   <li class="flex items-center gap-2">
                     <CheckCircle class="h-5 w-5 flex-shrink-0 text-green-500" />
-                    <span>Small group sizes (max 12)</span>
+                    <span>{{ $t('experience.includedItems.smallGroups') }}</span>
                   </li>
                   <li class="flex items-center gap-2">
                     <CheckCircle class="h-5 w-5 flex-shrink-0 text-green-500" />
-                    <span>All safety equipment provided</span>
+                    <span>{{ $t('experience.includedItems.safetyEquipment') }}</span>
                   </li>
                   <li class="flex items-center gap-2">
                     <CheckCircle class="h-5 w-5 flex-shrink-0 text-green-500" />
-                    <span>Flexible booking & cancellation</span>
+                    <span>{{ $t('experience.includedItems.flexibleBooking') }}</span>
                   </li>
                 </ul>
               </Card>
@@ -145,42 +134,35 @@ const route = useRoute()
 const country = route.params.country as string
 const activity = route.params.activity as string
 
-const { 
-  extractSlug 
-} = useExperiences()
+const { locale } = useI18n()
+const { t } = useI18n()
+const { fetchActivitiesByType, normalizeCountry, normalizeActivity } = useActivitiesByLocale()
+const { extractSlug } = useExperiences()
+const { getCountryPath } = useLocalizedRoutes()
 
-// Activity-specific data
-const activityData: Record<string, any> = {
-  trekking: {
-    description: 'Multi-day treks through pristine mountain landscapes with experienced guides'
-  },
-  paragliding: {
-    description: 'Soar above breathtaking landscapes with certified tandem pilots'
-  },
-  surfing: {
-    description: 'Learn to surf or improve your skills on perfect Atlantic waves'
+// Normalize URL parameters to English keys for translation lookup
+const normalizedCountry = normalizeCountry(country)
+const normalizedActivity = normalizeActivity(activity)
+
+// Translate country and activity names using normalized keys
+const countryName = computed(() => t(`countries.${normalizedCountry}`))
+const activityName = computed(() => t(`activities.${normalizedActivity}`))
+const activityDescription = computed(() => t(`activities.noExperiencesDesc`, { 
+  activity: activityName.value, 
+  country: countryName.value 
+}))
+
+// Fetch experiences dynamically from content based on current locale
+const { data: experiencesData } = await useAsyncData(
+  `${locale.value}-${country}-${activity}-experiences`, 
+  () => fetchActivitiesByType(country, activity),
+  {
+    watch: [locale]
   }
-}
-
-const data = activityData[activity] || activityData.trekking
-const activityDescription = data.description
-
-const countryName = country.charAt(0).toUpperCase() + country.slice(1)
-
-// This function is no longer needed since we removed Icon components
-
-// Fetch experiences dynamically from content
-const { data: experiencesData } = await useAsyncData(`${country}-${activity}-experiences`, async () => {
-  const allExperiences = await queryCollection('content').all()
-  
-  // Filter by country and activity using metadata fields
-  return allExperiences.filter((exp: any) => 
-    exp.country === country && exp.activity === activity
-  )
-})
+)
 
 const experiences = computed(() => {
-  if (!experiencesData.value) return []
+  if (!experiencesData.value || !Array.isArray(experiencesData.value)) return []
   
   return experiencesData.value.map((exp: any) => ({
     title: exp.title,
@@ -190,19 +172,17 @@ const experiences = computed(() => {
     difficulty: exp.difficulty,
     groupSize: exp.groupSize,
     image: exp.image,
-    country: country,
-    activity: activity,
-    slug: extractSlug(exp.path)
+    country: normalizedCountry,
+    activity: normalizedActivity,
+    slug: extractSlug(exp._path || exp.path)
   }))
 })
 
-const activityTitle = activity.charAt(0).toUpperCase() + activity.slice(1)
-
 useSeoMeta({
-  title: `${activityTitle} Tours in ${countryName} | Zamzam Experience`,
-  description: `${activityDescription} Book authentic ${activity} adventures with expert local guides. Fair prices and sustainable tourism.`,
-  ogTitle: `${activityTitle} in ${countryName}`,
-  ogDescription: activityDescription,
+  title: `${activityName.value} Tours in ${countryName.value} | Zamzam Experience`,
+  description: `${activityDescription.value} Book authentic ${activityName.value} adventures with expert local guides. Fair prices and sustainable tourism.`,
+  ogTitle: `${activityName.value} in ${countryName.value}`,
+  ogDescription: activityDescription.value,
   ogType: "website",
   twitterCard: "summary_large_image",
 })
@@ -210,14 +190,14 @@ useSeoMeta({
 useSchemaOrg([
   defineWebPage({
     "@type": "CollectionPage",
-    name: `${activityTitle} in ${countryName}`,
-    description: activityDescription,
+    name: `${activityName.value} in ${countryName.value}`,
+    description: activityDescription.value,
   }),
   defineBreadcrumb({
     itemListElement: [
-      { name: "Home", item: "/" },
-      { name: countryName, item: `/${country}` },
-      { name: activityTitle, item: `/${country}/${activity}` },
+      { name: t('common.home'), item: "/" },
+      { name: countryName.value, item: `/${country}` },
+      { name: activityName.value, item: `/${country}/${activity}` },
     ],
   }),
 ])
