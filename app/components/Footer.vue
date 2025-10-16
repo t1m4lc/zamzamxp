@@ -49,7 +49,7 @@
                 rel="noopener"
                 class="flex items-center space-x-2 text-sm text-slate-600 transition-colors hover:text-green-600"
               >
-                <Icon name="mdi:whatsapp" class="h-5 w-5" />
+                <MessageCircle class="size-3" />
                 <span>WhatsApp</span>
               </a>
             </li>
@@ -58,7 +58,7 @@
                 href="mailto:hello@zamzamxp.com"
                 class="flex items-center space-x-2 text-sm text-slate-600 transition-colors hover:text-orange-600"
               >
-                <Icon name="mdi:email" class="h-5 w-5" />
+                <Mail class="size-3" />
                 <span>hello@zamzamxp.com</span>
               </a>
             </li>
@@ -67,7 +67,7 @@
                 to="/contact"
                 class="flex items-center space-x-2 text-sm text-slate-600 transition-colors hover:text-orange-600"
               >
-                <Icon name="mdi:phone" class="h-5 w-5" />
+                <Phone class="size-3" />
                 <span>Contact Us</span>
               </NuxtLink>
             </li>
@@ -76,11 +76,11 @@
           <!-- Trust Badges -->
           <div class="pt-4 space-y-2">
             <div class="flex items-center space-x-2 text-xs text-slate-500">
-              <Icon name="mdi:leaf" class="h-4 w-4 text-green-600" />
+              <Leaf class="size-3 text-green-600" />
               <span>Eco-Friendly & Sustainable</span>
             </div>
             <div class="flex items-center space-x-2 text-xs text-slate-500">
-              <Icon name="mdi:handshake" class="h-4 w-4 text-green-600" />
+              <Handshake class="size-3 text-green-600" />
               <span>Fair Remuneration for Partners</span>
             </div>
           </div>
@@ -105,4 +105,5 @@
 </template>
 <script setup lang="ts">
 import { APP_CONFIG } from '~/config/constants'
+import { MessageCircle, Mail, Phone, Leaf, Handshake } from 'lucide-vue-next'
 </script>

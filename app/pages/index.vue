@@ -36,7 +36,7 @@
       <div class="container mx-auto px-6">
         <div class="mb-12 text-center max-w-3xl mx-auto">
           <h2 class="text-3xl font-semibold text-slate-900 mb-4">
-            A Different Kind of Travel Agency
+            A different kind of travel agency
           </h2>
           <p class="text-lg text-slate-600">
             We believe travel should enrich everyone – the traveler, the guide, and the community.
@@ -45,7 +45,7 @@
         <div class="grid gap-8 md:grid-cols-3">
           <div class="text-center">
             <div class="w-16 h-16 bg-slate-100 rounded-full flex items-center justify-center mx-auto mb-4">
-              <Icon name="mdi:handshake" class="h-8 w-8 text-slate-900" />
+              <Handshake class="size-6 text-slate-900" />
             </div>
             <h3 class="text-lg font-semibold text-slate-900 mb-2">Fair for everyone</h3>
             <p class="text-slate-600">
@@ -54,7 +54,7 @@
           </div>
           <div class="text-center">
             <div class="w-16 h-16 bg-slate-100 rounded-full flex items-center justify-center mx-auto mb-4">
-              <Icon name="mdi:account-group" class="h-8 w-8 text-slate-900" />
+              <Users class="size-6 text-slate-900" />
             </div>
             <h3 class="text-lg font-semibold text-slate-900 mb-2">Passionate locals</h3>
             <p class="text-slate-600">
@@ -63,7 +63,7 @@
           </div>
           <div class="text-center">
             <div class="w-16 h-16 bg-slate-100 rounded-full flex items-center justify-center mx-auto mb-4">
-              <Icon name="mdi:leaf" class="h-8 w-8 text-slate-900" />
+              <Leaf class="size-6 text-slate-900" />
             </div>
             <h3 class="text-lg font-semibold text-slate-900 mb-2">Sustainable tourism</h3>
             <p class="text-slate-600">
@@ -75,7 +75,7 @@
     </section>
 
     <!-- Testimonials Section -->
-    <section class="overflow-x-hidden">
+    <section class="overflow-x-hidden pt-12">
       <div class="relative flex w-full flex-col items-center justify-center overflow-x-hidden">
 
         <div class="mb-12 text-center">
@@ -159,7 +159,7 @@
               <h3 class="font-semibold text-slate-900 text-sm">{{ member.name }}</h3>
               <p class="text-xs text-slate-500 mb-1">{{ member.role }}</p>
               <div class="flex items-center justify-center gap-1">
-          <Icon name="mdi:star" class="h-3 w-3 text-yellow-500" />
+          <Star class="h-3 w-3 text-yellow-500 fill-yellow-500" />
           <span class="text-xs font-medium text-slate-600">{{ member.rating }}</span>
           <span class="text-xs text-slate-400">({{ member.reviews }} reviews)</span>
               </div>
@@ -224,7 +224,7 @@
               <!-- Country Name -->
               <div class="flex items-center gap-1 md:gap-2">
                 <span class="font-semibold text-slate-900 text-base md:text-lg">{{ destination.name }}</span>
-                <Icon name="mdi:chevron-right" class="h-4 w-4 md:h-5 md:w-5 text-slate-400 transition-transform group-hover:translate-x-1" />
+                <ChevronRight class="h-4 w-4 md:h-5 md:w-5 text-slate-400 transition-transform group-hover:translate-x-1" />
               </div>
             </div>
           </NuxtLink>
@@ -276,6 +276,7 @@ import Globe from '~/components/ui/globe/Globe.vue'
 import { Marquee } from '~/components/ui/marquee'
 import { NumberTicker } from '~/components/ui/number-ticker'
 import { APP_CONFIG } from '~/config/constants'
+import { Handshake, Users, Leaf, ChevronRight, Star } from 'lucide-vue-next'
 
 useSeoMeta({
   title: 'Zamzam Experience - Adventure Travel with Fair Prices & Local Guides',

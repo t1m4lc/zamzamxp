@@ -6,9 +6,9 @@
       <div class="container mx-auto px-4">
         <div class="flex items-center space-x-2 text-sm text-slate-600">
           <NuxtLink to="/" class="hover:text-orange-600">Home</NuxtLink>
-          <Icon name="mdi:chevron-right" class="h-4 w-4" />
+          <ChevronRight class="h-4 w-4" />
           <NuxtLink :to="`/${country}`" class="hover:text-orange-600 capitalize">{{ country }}</NuxtLink>
-          <Icon name="mdi:chevron-right" class="h-4 w-4" />
+          <ChevronRight class="h-4 w-4" />
           <span class="font-semibold text-slate-900 capitalize">{{ activity }}</span>
         </div>
       </div>
@@ -63,7 +63,7 @@
             <!-- Empty State -->
             <Empty v-else class="py-12">
               <EmptyMedia>
-                <Icon :name="getActivityIcon(activity)" class="h-16 w-16 text-slate-400" />
+                <Mountain class="h-16 w-16 text-slate-400" />
               </EmptyMedia>
               <EmptyContent>
                 <EmptyHeader>
@@ -92,7 +92,7 @@
                   class="w-full rounded-lg bg-gradient-to-r from-rose-500 to-orange-500 hover:from-rose-600 hover:to-orange-600 transition-all shadow-lg hover:shadow-xl font-medium"
                 >
                   <a :href="'https://wa.me/' + APP_CONFIG.company.whatsapp" target="_blank" rel="noopener">
-                    <Icon name="mdi:whatsapp" class="mr-2 h-5 w-5" />
+                    <MessageCircle class="mr-2 h-5 w-5" />
                     Chat on WhatsApp
                   </a>
                 </Button>
@@ -102,19 +102,19 @@
                 <h4 class="mb-4 font-semibold text-slate-900">What's included</h4>
                 <ul class="space-y-3 text-sm text-slate-600">
                   <li class="flex items-start space-x-2">
-                    <Icon name="mdi:check-circle" class="mt-0.5 h-5 w-5 flex-shrink-0 text-green-500" />
+                    <CheckCircle class="mt-0.5 h-5 w-5 flex-shrink-0 text-green-500" />
                     <span>Professional guides included</span>
                   </li>
                   <li class="flex items-start space-x-2">
-                    <Icon name="mdi:check-circle" class="mt-0.5 h-5 w-5 flex-shrink-0 text-green-500" />
+                    <CheckCircle class="mt-0.5 h-5 w-5 flex-shrink-0 text-green-500" />
                     <span>Small group sizes (max 12)</span>
                   </li>
                   <li class="flex items-start space-x-2">
-                    <Icon name="mdi:check-circle" class="mt-0.5 h-5 w-5 flex-shrink-0 text-green-500" />
+                    <CheckCircle class="mt-0.5 h-5 w-5 flex-shrink-0 text-green-500" />
                     <span>All safety equipment provided</span>
                   </li>
                   <li class="flex items-start space-x-2">
-                    <Icon name="mdi:check-circle" class="mt-0.5 h-5 w-5 flex-shrink-0 text-green-500" />
+                    <CheckCircle class="mt-0.5 h-5 w-5 flex-shrink-0 text-green-500" />
                     <span>Flexible booking & cancellation</span>
                   </li>
                 </ul>
@@ -128,6 +128,7 @@
 </template>
 
 <script setup lang="ts">
+import { CheckCircle, ChevronRight, MessageCircle, Mountain } from 'lucide-vue-next'
 import { Button } from '~/components/ui/button'
 import { Card } from '~/components/ui/card'
 import { 
@@ -166,17 +167,7 @@ const activityDescription = data.description
 
 const countryName = country.charAt(0).toUpperCase() + country.slice(1)
 
-// Helper function to get icon based on activity
-const getActivityIcon = (activityType: string) => {
-  const icons: Record<string, string> = {
-    trekking: 'mdi:hiking',
-    paragliding: 'mdi:paragliding',
-    surfing: 'mdi:surfing',
-    climbing: 'mdi:climbing',
-    skiing: 'mdi:ski'
-  }
-  return icons[activityType] || 'mdi:map-marker-path'
-}
+// This function is no longer needed since we removed Icon components
 
 // Fetch experiences dynamically from content
 const { data: experiencesData } = await useAsyncData(`${country}-${activity}-experiences`, async () => {

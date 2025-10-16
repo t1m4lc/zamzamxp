@@ -61,7 +61,7 @@
 
         <Empty v-else class="py-12">
           <EmptyMedia>
-            <Icon name="mdi:hiking" class="h-16 w-16 text-slate-400" />
+            <Mountain class="h-16 w-16 text-slate-400" />
           </EmptyMedia>
           <EmptyContent>
             <EmptyHeader>
@@ -157,6 +157,7 @@ import {
   EmptyMedia, 
   EmptyTitle 
 } from '~/components/ui/empty'
+import { Mountain } from 'lucide-vue-next'
 
 const route = useRoute()
 const country = route.params.country as string

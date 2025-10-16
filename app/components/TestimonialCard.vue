@@ -7,12 +7,11 @@
     <CardContent class="p-6 space-y-4">
       <!-- Rating Stars -->
       <div class="flex space-x-1">
-        <Icon
+        <Star
           v-for="i in 5"
           :key="i"
-          name="mdi:star"
           class="h-5 w-5"
-          :class="i <= testimonial.rating ? 'text-yellow-400' : 'text-slate-200'"
+          :class="i <= testimonial.rating ? 'text-yellow-400 fill-yellow-400' : 'text-slate-200'"
         />
       </div>
 
@@ -46,6 +45,7 @@ import {
   CardContent,
 } from '~/components/ui/card'
 import { Badge } from '~/components/ui/badge'
+import { Star } from 'lucide-vue-next'
 
 interface Testimonial {
   name: string

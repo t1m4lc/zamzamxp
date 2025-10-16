@@ -165,7 +165,7 @@
           <div class="grid gap-8 md:grid-cols-2">
             <Card class="rounded-2xl border border-slate-200 bg-white p-6">
               <h3 class="mb-4 flex items-center space-x-2 text-xl font-semibold text-slate-900">
-                <Icon name="mdi:cash-multiple" class="h-6 w-6 text-green-600" />
+                <Banknote class="h-6 w-6 text-green-600" />
                 <span>Fair Remuneration</span>
               </h3>
               <p class="mb-4 leading-relaxed text-slate-700">
@@ -173,15 +173,15 @@
               </p>
               <ul class="space-y-2 text-sm text-slate-600">
                 <li class="flex items-start space-x-2">
-                  <Icon name="mdi:check" class="mt-0.5 h-4 w-4 flex-shrink-0 text-green-600" />
+                  <Check class="mt-0.5 h-4 w-4 flex-shrink-0 text-green-600" />
                   <span>Fair wages for all partners</span>
                 </li>
                 <li class="flex items-start space-x-2">
-                  <Icon name="mdi:check" class="mt-0.5 h-4 w-4 flex-shrink-0 text-green-600" />
+                  <Check class="mt-0.5 h-4 w-4 flex-shrink-0 text-green-600" />
                   <span>Transparent pricing</span>
                 </li>
                 <li class="flex items-start space-x-2">
-                  <Icon name="mdi:check" class="mt-0.5 h-4 w-4 flex-shrink-0 text-green-600" />
+                  <Check class="mt-0.5 h-4 w-4 flex-shrink-0 text-green-600" />
                   <span>Direct partnerships with locals</span>
                 </li>
               </ul>
@@ -189,7 +189,7 @@
 
             <Card class="rounded-3xl border-2 border-slate-200 bg-white/95 backdrop-blur-sm p-8">
               <h3 class="mb-4 flex items-center space-x-2 text-2xl font-bold text-slate-900">
-                <Icon name="mdi:account-group" class="h-7 w-7 text-[#FF6B35]" />
+                <Users class="h-7 w-7 text-[#FF6B35]" />
                 <span>Community Focus</span>
               </h3>
               <p class="mb-4 leading-relaxed text-slate-700">
@@ -197,15 +197,15 @@
               </p>
               <ul class="space-y-2 text-sm text-slate-600">
                 <li class="flex items-start space-x-2">
-                  <Icon name="mdi:check" class="mt-0.5 h-4 w-4 flex-shrink-0 text-[#FF6B35]" />
+                  <Check class="mt-0.5 h-4 w-4 flex-shrink-0 text-[#FF6B35]" />
                   <span>Direct partnerships with local families</span>
                 </li>
                 <li class="flex items-start space-x-2">
-                  <Icon name="mdi:check" class="mt-0.5 h-4 w-4 flex-shrink-0 text-[#FF6B35]" />
+                  <Check class="mt-0.5 h-4 w-4 flex-shrink-0 text-[#FF6B35]" />
                   <span>Support for small local businesses</span>
                 </li>
                 <li class="flex items-start space-x-2">
-                  <Icon name="mdi:check" class="mt-0.5 h-4 w-4 flex-shrink-0 text-[#FF6B35]" />
+                  <Check class="mt-0.5 h-4 w-4 flex-shrink-0 text-[#FF6B35]" />
                   <span>Revenue stays in local communities</span>
                 </li>
               </ul>
@@ -213,7 +213,7 @@
 
             <Card class="rounded-3xl border-2 border-slate-200 bg-white/95 backdrop-blur-sm p-8">
               <h3 class="mb-4 flex items-center space-x-2 text-2xl font-bold text-slate-900">
-                <Icon name="mdi:leaf" class="h-7 w-7 text-green-600" />
+                <Leaf class="h-7 w-7 text-green-600" />
                 <span>Environmental Care</span>
               </h3>
               <p class="mb-4 leading-relaxed text-slate-700">
@@ -221,15 +221,15 @@
               </p>
               <ul class="space-y-2 text-sm text-slate-600">
                 <li class="flex items-start space-x-2">
-                  <Icon name="mdi:check" class="mt-0.5 h-4 w-4 flex-shrink-0 text-green-600" />
+                  <Check class="mt-0.5 h-4 w-4 flex-shrink-0 text-green-600" />
                   <span>Carbon offset partnerships</span>
                 </li>
                 <li class="flex items-start space-x-2">
-                  <Icon name="mdi:check" class="mt-0.5 h-4 w-4 flex-shrink-0 text-green-600" />
+                  <Check class="mt-0.5 h-4 w-4 flex-shrink-0 text-green-600" />
                   <span>Weekly trail cleanups</span>
                 </li>
                 <li class="flex items-start space-x-2">
-                  <Icon name="mdi:check" class="mt-0.5 h-4 w-4 flex-shrink-0 text-green-600" />
+                  <Check class="mt-0.5 h-4 w-4 flex-shrink-0 text-green-600" />
                   <span>Plastic-free operations</span>
                 </li>
               </ul>
@@ -237,7 +237,7 @@
 
             <Card class="rounded-3xl border-2 border-slate-200 bg-white/95 backdrop-blur-sm p-8">
               <h3 class="mb-4 flex items-center space-x-2 text-2xl font-bold text-slate-900">
-                <Icon name="mdi:human-greeting" class="h-7 w-7 text-purple-600" />
+                <UserCheck class="h-7 w-7 text-purple-600" />
                 <span>Inclusive Opportunities</span>
               </h3>
               <p class="mb-4 leading-relaxed text-slate-700">
@@ -245,15 +245,15 @@
               </p>
               <ul class="space-y-2 text-sm text-slate-600">
                 <li class="flex items-start space-x-2">
-                  <Icon name="mdi:check" class="mt-0.5 h-4 w-4 flex-shrink-0 text-purple-600" />
+                  <Check class="mt-0.5 h-4 w-4 flex-shrink-0 text-purple-600" />
                   <span>Open to all qualified guides</span>
                 </li>
                 <li class="flex items-start space-x-2">
-                  <Icon name="mdi:check" class="mt-0.5 h-4 w-4 flex-shrink-0 text-purple-600" />
+                  <Check class="mt-0.5 h-4 w-4 flex-shrink-0 text-purple-600" />
                   <span>Building diverse partnerships</span>
                 </li>
                 <li class="flex items-start space-x-2">
-                  <Icon name="mdi:check" class="mt-0.5 h-4 w-4 flex-shrink-0 text-purple-600" />
+                  <Check class="mt-0.5 h-4 w-4 flex-shrink-0 text-purple-600" />
                   <span>Equal opportunity approach</span>
                 </li>
               </ul>
@@ -306,7 +306,7 @@
           >
             <NuxtLink to="/contact">
               Get in Touch
-              <Icon name="mdi:arrow-right" class="ml-2 h-5 w-5" />
+              <ArrowRight class="ml-2 h-5 w-5" />
             </NuxtLink>
           </Button>
         </div>
@@ -320,6 +320,7 @@ import { Card } from '~/components/ui/card'
 import { Badge } from '~/components/ui/badge'
 import { Button } from '~/components/ui/button'
 import { NumberTicker } from '~/components/ui/number-ticker'
+import { Banknote, Check, Users, Leaf, UserCheck, ArrowRight } from 'lucide-vue-next'
 
 useSeoMeta({
   title: "About Us - Fair Adventure Travel | Zamzam Experience",

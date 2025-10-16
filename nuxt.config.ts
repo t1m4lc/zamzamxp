@@ -28,7 +28,7 @@ export default defineNuxtConfig({
 
   icon: {
     serverBundle: {
-      collections: ["mdi", "lucide", "material-symbols"], // Explicitly bundle all icon collections for SSR/SSG
+      collections: ["lucide"], // Using lucide-vue-next directly, no iconify collections needed
     },
   },
 
@@ -93,6 +93,7 @@ export default defineNuxtConfig({
     quality: 85,
     format: ["webp", "jpg"],
     screens: {
+      xxs: 10,
       xs: 320,
       sm: 640,
       md: 768,
@@ -104,6 +105,9 @@ export default defineNuxtConfig({
 
   vite: {
     plugins: [tailwindcss()],
+    optimizeDeps: {
+      include: ["lucide-vue-next"],
+    },
   },
 
   runtimeConfig: {

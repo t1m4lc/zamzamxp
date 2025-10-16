@@ -119,7 +119,7 @@
         <div class="grid gap-8 md:grid-cols-3">
           <div class="text-center">
             <div class="w-16 h-16 bg-slate-100 rounded-full flex items-center justify-center mx-auto mb-4">
-              <Icon name="mdi:compass" class="h-8 w-8 text-slate-900" />
+              <Compass class="size-5 text-slate-900" />
             </div>
             <h3 class="text-lg font-semibold text-slate-900 mb-2">Expert Curation</h3>
             <p class="text-slate-600">
@@ -129,7 +129,7 @@
 
           <div class="text-center">
             <div class="w-16 h-16 bg-slate-100 rounded-full flex items-center justify-center mx-auto mb-4">
-              <Icon name="mdi:shield-check" class="h-8 w-8 text-slate-900" />
+              <ShieldCheck class="size-5 text-slate-900" />
             </div>
             <h3 class="text-lg font-semibold text-slate-900 mb-2">Safety First</h3>
             <p class="text-slate-600">
@@ -139,7 +139,7 @@
 
           <div class="text-center">
             <div class="w-16 h-16 bg-slate-100 rounded-full flex items-center justify-center mx-auto mb-4">
-              <Icon name="mdi:heart" class="h-8 w-8 text-slate-900" />
+              <Heart class="size-5 text-slate-900" />
             </div>
             <h3 class="text-lg font-semibold text-slate-900 mb-2">Authentic Experiences</h3>
             <p class="text-slate-600">
@@ -188,7 +188,8 @@
 </template>
 
 <script setup lang="ts">
-import { Button } from '~/components/ui/button'
+import { Card } from '~/components/ui/card'
+import { Compass, ShieldCheck, Heart } from 'lucide-vue-next'
 import { APP_CONFIG } from '~/config/constants'
 
 // Fetch all content to get countries dynamically

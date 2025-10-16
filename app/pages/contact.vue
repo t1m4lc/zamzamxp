@@ -21,42 +21,38 @@
         <div class="mx-auto max-w-4xl">
           <div class="mb-16 grid gap-8 md:grid-cols-2">
             <!-- WhatsApp -->
-            <Card class="rounded-2xl border border-slate-200 bg-white p-8 text-center transition-all hover:shadow-lg">
-              <Icon name="mdi:whatsapp" class="mx-auto mb-4 h-12 w-12 text-green-500" />
-              <h2 class="mb-4 text-xl font-semibold text-slate-900">WhatsApp</h2>
+            <div class="rounded-2xl border border-green-100 bg-green-50 p-8 text-center">
+              <MessageCircle class="mx-auto mb-4 size-8 text-green-500" />
+              <h3 class="mb-2 text-xl font-bold text-slate-900">WhatsApp</h3>
               <p class="mb-6 leading-relaxed text-slate-600">
                 Quick questions? Chat with us instantly on WhatsApp. We usually respond within 30 minutes!
               </p>
-              <Button
-                as-child
-                size="lg"
-                class="w-full rounded-lg bg-green-500 font-medium hover:bg-green-600"
+              <a
+                :href="getWhatsAppUrl()"
+                target="_blank"
+                rel="noopener"
+                class="inline-flex w-full items-center justify-center rounded-lg bg-green-500 px-6 py-3 font-medium text-white hover:bg-green-600 transition-colors"
               >
-                <a :href="getWhatsAppUrl()" target="_blank" rel="noopener">
-                  <Icon name="mdi:whatsapp" class="mr-2 h-5 w-5" />
-                  Chat on WhatsApp
-                </a>
-              </Button>
-            </Card>
+                <MessageCircle class="mr-2 h-5 w-5" />
+                Chat Now
+              </a>
+            </div>
 
             <!-- Email -->
-            <Card class="rounded-2xl border border-slate-200 bg-white p-8 text-center transition-all hover:shadow-lg">
-              <Icon name="mdi:email" class="mx-auto mb-4 h-12 w-12 text-orange-500" />
-              <h2 class="mb-4 text-xl font-semibold text-slate-900">Email</h2>
+            <div class="rounded-2xl border border-orange-100 bg-orange-50 p-8 text-center">
+              <Mail class="mx-auto mb-4 size-8 text-orange-500" />
+              <h3 class="mb-2 text-xl font-bold text-slate-900">Email</h3>
               <p class="mb-6 leading-relaxed text-slate-600">
                 Prefer email? Send us your questions and we'll get back to you within 24 hours.
               </p>
-              <Button
-                as-child
-                size="lg"
-                class="w-full rounded-lg bg-gradient-to-r from-[#FF6B35] to-[#F7931E] font-medium"
+              <a
+                href="mailto:hello@zamzamxp.com"
+                class="inline-flex w-full items-center justify-center rounded-lg bg-gradient-to-r from-[#FF6B35] to-[#F7931E] px-6 py-3 font-medium text-white hover:opacity-90 transition-opacity"
               >
-                <a :href="`mailto:${APP_CONFIG.company.email}`">
-                  <Icon name="mdi:email" class="mr-2 h-5 w-5" />
-                  Email Us
-                </a>
-              </Button>
-            </Card>
+                <Mail class="mr-2 h-5 w-5" />
+                Send Email
+              </a>
+            </div>
           </div>
 
           <!-- Contact Form -->
@@ -70,7 +66,7 @@
               v-if="formState.success"
               class="mb-6 rounded-xl border-2 border-green-200 bg-green-50 p-4 text-center"
             >
-              <Icon name="mdi:check-circle" class="mb-2 inline-block h-8 w-8 text-green-500" />
+              <CheckCircle2 class="mb-2 inline-block h-8 w-8 text-green-500" />
               <p class="font-semibold text-green-800">
                 {{ formState.successMessage }}
               </p>
@@ -81,7 +77,7 @@
               v-if="formState.error"
               class="mb-6 rounded-xl border-2 border-red-200 bg-red-50 p-4 text-center"
             >
-              <Icon name="mdi:alert-circle" class="mb-2 inline-block h-8 w-8 text-red-500" />
+              <AlertCircle class="mb-2 inline-block h-8 w-8 text-red-500" />
               <p class="font-semibold text-red-800">
                 {{ formState.errorMessage }}
               </p>
@@ -149,19 +145,14 @@
                 ></textarea>
               </div>
 
-              <Button
-                type="submit"
-                size="lg"
-                class="w-full rounded-full bg-orange-500 py-6 font-bold hover:bg-orange-600 disabled:opacity-50 disabled:cursor-not-allowed"
-                :disabled="formState.loading"
-              >
-                <span v-if="formState.loading">
-                  <Icon name="mdi:loading" class="mr-2 h-5 w-5 animate-spin" />
+              <Button type="submit" size="lg" class="w-full rounded-full bg-gradient-to-r from-[#FF6B35] to-[#F7931E] font-bold" :disabled="formState.loading">
+                <span v-if="formState.loading" class="flex items-center justify-center">
+                  <Loader2 class="mr-2 h-5 w-5 animate-spin" />
                   Sending...
                 </span>
-                <span v-else>
+                <span v-else class="flex items-center justify-center">
                   Send Message
-                  <Icon name="mdi:send" class="ml-2 h-5 w-5" />
+                  <Send class="ml-2 h-5 w-5" />
                 </span>
               </Button>
             </form>
@@ -202,6 +193,7 @@
 import { Card } from '~/components/ui/card'
 import { Button } from '~/components/ui/button'
 import { APP_CONFIG } from '~/config/constants'
+import { MessageCircle, Mail, CheckCircle2, AlertCircle, Loader2, Send } from 'lucide-vue-next'
 
 const { getWhatsAppUrl } = useContact()
 

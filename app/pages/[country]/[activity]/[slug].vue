@@ -4,7 +4,7 @@
     <div class="container mx-auto px-4 py-20">
       <div class="max-w-2xl mx-auto text-center">
         <div class="mb-8">
-          <Icon name="mdi:compass-off-outline" class="h-24 w-24 text-slate-300 mx-auto" />
+          <Compass class="h-24 w-24 text-slate-300 mx-auto" />
         </div>
         <h1 class="text-4xl font-black text-slate-900 mb-4">
           Experience not found
@@ -15,13 +15,13 @@
         <div class="flex flex-col sm:flex-row gap-4 justify-center">
           <Button as-child size="lg" class="rounded-full bg-orange-500 px-8 font-bold hover:bg-orange-600">
             <NuxtLink :to="`/${country}/${activity}`">
-              <Icon name="mdi:arrow-left" class="mr-2 h-5 w-5" />
+              <ArrowLeft class="mr-2 h-5 w-5" />
               <span class="capitalize">Back to {{ activity }}</span>
             </NuxtLink>
           </Button>
           <Button as-child size="lg" variant="outline" class="rounded-full border-2 border-slate-300 font-bold hover:bg-slate-100">
             <NuxtLink to="/destinations">
-              <Icon name="mdi:map-marker" class="mr-2 h-5 w-5" />
+              <MapPin class="mr-2 h-5 w-5" />
               All Destinations
             </NuxtLink>
           </Button>
@@ -82,23 +82,23 @@
       <div class="container mx-auto px-4">
         <div class="flex flex-wrap gap-6 text-sm">
           <div class="flex items-center space-x-2">
-            <Icon name="material-symbols:schedule-outline" class="h-5 w-5 text-orange-500" />
+            <Clock class="h-5 w-5 text-orange-500" />
             <span class="font-semibold text-slate-900">{{ experience.duration }}</span>
           </div>
           <div class="flex items-center space-x-2">
-            <Icon name="material-symbols:speed-outline" class="h-5 w-5 text-orange-500" />
+            <Gauge class="h-5 w-5 text-orange-500" />
             <span class="font-semibold text-slate-900">{{ experience.difficulty }}</span>
           </div>
           <div class="flex items-center space-x-2" v-if="experience.minGroupSize">
-            <Icon name="material-symbols:group-outline" class="h-5 w-5 text-orange-500" />
+            <UsersIcon class="h-5 w-5 text-orange-500" />
             <span class="font-semibold text-slate-900">Min. {{ experience.minGroupSize }} {{ experience.minGroupSize === 1 ? 'person' : 'people' }}</span>
           </div>
           <div class="flex items-center space-x-2" v-else-if="experience.groupSize">
-            <Icon name="material-symbols:group-outline" class="h-5 w-5 text-orange-500" />
+            <UsersIcon class="h-5 w-5 text-orange-500" />
             <span class="font-semibold text-slate-900">{{ experience.groupSize }}</span>
           </div>
           <div class="flex items-center space-x-2" v-if="experience.bestTime">
-            <Icon name="material-symbols:calendar-month-outline" class="h-5 w-5 text-orange-500" />
+            <Calendar class="h-5 w-5 text-orange-500" />
             <span class="font-semibold text-slate-900">{{ experience.bestTime }}</span>
           </div>
         </div>
@@ -125,8 +125,8 @@
             <div v-if="experience.highlights && experience.highlights.length">
               <h2 class="mb-6 text-3xl font-black text-slate-900">Highlights</h2>
               <div class="grid gap-4 md:grid-cols-2">
-                <div v-for="(highlight, index) in experience.highlights" :key="index" class="flex items-start space-x-3 rounded-2xl bg-orange-50 p-4">
-                  <Icon name="mdi:star" class="mt-1 h-5 w-5 flex-shrink-0 text-orange-500" />
+                <div v-for="(highlight, index) in experience.highlights" :key="index" class="flex items-center space-x-3 rounded-2xl bg-orange-50 p-4">
+                  <Star class="h-5 w-5 flex-shrink-0 text-orange-500" />
                   <span class="font-medium text-slate-900">{{ highlight }}</span>
                 </div>
               </div>
@@ -146,9 +146,9 @@
                 <!-- Collapsible for remaining images -->
                 <Collapsible v-if="experience.gallery.length > 6" v-slot="{ open }">
                   <CollapsibleTrigger class="group cursor-pointer flex w-full items-center justify-center gap-2 rounded-2xl border border-slate-200 bg-white px-6 py-3 text-slate-600 font-medium transition-all hover:border-slate-300 hover:bg-slate-50 hover:text-slate-900">
-                    <Icon name="mdi:image-multiple" class="h-4 w-4" />
+                    <Images class="h-4 w-4" />
                     <span class="text-sm">{{ open ? 'Show less' : `Show ${experience.gallery.length - 6} more ${experience.gallery.length - 6 === 1 ? 'photo' : 'photos'}` }}</span>
-                    <Icon name="mdi:chevron-down" class="h-4 w-4 transition-transform duration-200" :class="{ 'rotate-180': open }" />
+                    <ChevronDown class="h-4 w-4 transition-transform duration-200" :class="{ 'rotate-180': open }" />
                   </CollapsibleTrigger>
                   <CollapsibleContent class="mt-4 overflow-hidden data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0">
                     <div class="grid grid-cols-2 gap-4 md:grid-cols-3">
@@ -188,12 +188,12 @@
                 <!-- Included -->
                 <Card v-if="experience.included" class="rounded-3xl border-2 border-green-200 bg-green-50 p-6">
                   <h3 class="mb-4 flex items-center space-x-2 font-bold text-green-900">
-                    <Icon name="mdi:check-circle" class="h-6 w-6" />
+                    <CheckCircle2 class="size-5" />
                     <span>Included</span>
                   </h3>
                   <ul class="space-y-2">
                     <li v-for="(item, index) in experience.included" :key="index" class="flex items-start space-x-2 text-sm text-green-900">
-                      <Icon name="mdi:check" class="mt-0.5 h-4 w-4 flex-shrink-0" />
+                      <Check class="mt-0.5 h-4 w-4 flex-shrink-0" />
                       <span>{{ item }}</span>
                     </li>
                   </ul>
@@ -202,12 +202,12 @@
                 <!-- Not Included -->
                 <Card v-if="experience.notIncluded" class="rounded-3xl border-2 border-slate-200 bg-slate-50 p-6">
                   <h3 class="mb-4 flex items-center space-x-2 font-bold text-slate-900">
-                    <Icon name="mdi:close-circle" class="h-6 w-6" />
+                    <XCircle class="size-5" />
                     <span>Not Included</span>
                   </h3>
                   <ul class="space-y-2">
                     <li v-for="(item, index) in experience.notIncluded" :key="index" class="flex items-start space-x-2 text-sm text-slate-700">
-                      <Icon name="mdi:close" class="mt-0.5 h-4 w-4 flex-shrink-0" />
+                      <XIcon class="mt-0.5 h-4 w-4 flex-shrink-0" />
                       <span>{{ item }}</span>
                     </li>
                   </ul>
@@ -232,7 +232,7 @@
                   <div class="text-xs text-slate-600">Per person</div>
                   <div v-if="experience.minGroupSize && experience.minGroupSize > 1" class="mt-2 text-xs font-medium text-slate-500">{{ experience.minGroupSize }} {{ experience.minGroupSize === 2 ? 'person' : 'people' }} minimum</div>
                   <div v-if="experience.privatePrice" class="mt-1 text-xs text-orange-600">
-                    <Icon name="mdi:star" class="inline-block h-3 w-3" />
+                    <Star class="inline-block h-3 w-3" />
                     Private booking available
                   </div>
                 </div>
@@ -240,14 +240,14 @@
                 <div class="space-y-4 text-center">
                   <Button as-child size="lg" class="w-full rounded-full bg-orange-500 py-6 font-bold shadow-lg hover:bg-orange-600">
                     <a :href="whatsappUrl" target="_blank" rel="noopener">
-                      <Icon name="mdi:whatsapp" class="mr-2 h-5 w-5" />
+                      <MessageCircle class="mr-2 h-5 w-5" />
                       Book on WhatsApp
                     </a>
                   </Button>
 
                   <Button as-child size="lg" variant="outline" class="w-full rounded-full border-2 border-slate-300 font-bold hover:bg-slate-100">
                     <NuxtLink to="/contact">
-                      <Icon name="mdi:email" class="mr-2 h-5 w-5" />
+                      <Mail class="mr-2 h-5 w-5" />
                       Email Us
                     </NuxtLink>
                   </Button>
@@ -256,7 +256,7 @@
                   <Dialog>
                     <DialogTrigger as-child>
                       <button class="mt-2 cursor-pointer text-sm text-orange-600 hover:text-orange-700 underline decoration-dotted underline-offset-2 transition-colors">
-                        <Icon name="mdi:currency-usd" class="mr-1 inline-block h-4 w-4" />
+                        <DollarSign class="mr-1 inline-block h-4 w-4" />
                         View all pricing options
                       </button>
                     </DialogTrigger>
@@ -271,7 +271,8 @@
                         <div v-for="(discount, index) in groupDiscounts" :key="index" class="flex items-center justify-between rounded-2xl border-2 p-4" :class="discount.isPrivate ? 'border-orange-200 bg-orange-50' : (discount.discount > 0 ? 'border-green-200 bg-green-50' : 'border-slate-200 bg-slate-50')">
                           <div class="flex items-center space-x-3">
                             <div class="flex h-10 w-10 items-center justify-center rounded-full font-bold text-white" :class="discount.isPrivate ? 'bg-orange-500' : (discount.discount > 0 ? 'bg-green-500' : 'bg-slate-400')">
-                              <Icon :name="discount.isPrivate ? 'mdi:account' : 'mdi:account-multiple'" class="h-5 w-5" />
+                              <UsersIcon v-if="!discount.isPrivate" class="h-5 w-5" />
+                              <User v-else class="h-5 w-5" />
                             </div>
                             <div>
                               <div class="font-bold text-slate-900">{{ discount.label }}</div>
@@ -306,21 +307,21 @@
                 <h3 class="mb-4 font-semibold text-slate-900">Why Book With Us</h3>
                 <div class="space-y-4 text-sm">
                   <div class="flex items-start space-x-3">
-                    <Icon name="mdi:cash" class="mt-0.5 h-5 w-5 flex-shrink-0 text-slate-900" />
+                    <DollarSign class="mt-0.5 h-5 w-5 flex-shrink-0 text-slate-900" />
                     <div>
                       <div class="font-semibold text-slate-900">Best Market Prices</div>
                       <div class="text-slate-600">We guarantee the best prices on the market - unbeatable value for your adventure!</div>
                     </div>
                   </div>
                   <div class="flex items-start space-x-3">
-                    <Icon name="mdi:handshake" class="mt-0.5 h-5 w-5 flex-shrink-0 text-slate-900" />
+                    <Handshake class="mt-0.5 h-5 w-5 flex-shrink-0 text-slate-900" />
                     <div>
                       <div class="font-semibold text-slate-900">Fair Remuneration</div>
                       <div class="text-slate-600">Our partners are paid fairly - <NuxtLink to="/about" class="text-[#FF6B35] hover:underline">see our values</NuxtLink></div>
                     </div>
                   </div>
                   <div class="flex items-start space-x-3">
-                    <Icon name="mdi:leaf" class="mt-0.5 h-5 w-5 flex-shrink-0 text-slate-900" />
+                    <Leaf class="mt-0.5 h-5 w-5 flex-shrink-0 text-slate-900" />
                     <div>
                       <div class="font-semibold text-slate-900">Eco-Friendly</div>
                       <div class="text-slate-600">Sustainable tourism practices</div>
@@ -363,7 +364,7 @@
                 </p>
                 <div v-if="experience.referee.details" class="space-y-2 text-sm text-slate-600">
                   <div v-for="(detail, index) in experience.referee.details" :key="index" class="flex items-center space-x-2">
-                    <Icon :name="detail.icon || 'mdi:check'" class="h-4 w-4 text-orange-500" />
+                    <Check class="h-4 w-4 text-orange-500" />
                     <span>{{ detail.text }}</span>
                   </div>
                 </div>
@@ -381,7 +382,7 @@
           <h2 class="mb-4 text-4xl font-black text-slate-900">Traveler Reviews</h2>
           <div class="flex items-center justify-center space-x-2">
             <div class="flex">
-              <Icon v-for="i in 5" :key="i" name="mdi:star" class="h-6 w-6 text-yellow-400" />
+              <Star v-for="i in 5" :key="i" class="h-6 w-6 text-yellow-400 fill-yellow-400" />
             </div>
             <span class="text-lg font-bold text-slate-900">4.9/5 from 50+ reviews</span>
           </div>
@@ -428,7 +429,7 @@
 
           <Button as-child size="lg" class="rounded-full bg-orange-500 px-12 py-8 text-xl font-bold text-white shadow-2xl transition-all hover:bg-orange-600 hover:scale-105">
             <a :href="whatsappUrl" target="_blank" rel="noopener">
-              <Icon name="mdi:whatsapp" class="mr-2 h-7 w-7" />
+              <MessageCircle class="mr-2 h-7 w-7" />
               Book Now on WhatsApp
             </a>
           </Button>
@@ -490,6 +491,28 @@ import {
   DialogTrigger,
 } from '~/components/ui/dialog'
 import { APP_CONFIG } from '~/config/constants'
+import {
+  Compass,
+  ArrowLeft,
+  MapPin,
+  Clock,
+  Gauge,
+  Users as UsersIcon,
+  User,
+  Calendar,
+  Star,
+  Images,
+  ChevronDown,
+  CheckCircle2,
+  Check,
+  XCircle,
+  X as XIcon,
+  DollarSign,
+  Handshake,
+  Leaf,
+  MessageCircle,
+  Mail
+} from 'lucide-vue-next'
 
 interface RefereeDetail {
   title?: string
