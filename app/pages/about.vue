@@ -33,8 +33,8 @@
           </div>
         </div>
       </div>
-    </section>    
-    
+    </section>
+
     <!-- Values -->
     <section class="bg-slate-50 py-20 lg:py-32">
       <div class="container mx-auto px-4">
@@ -87,26 +87,30 @@
             <div class="grid gap-12 p-8 lg:grid-cols-2 lg:p-12">
               <div>
                 <div class="mb-6 aspect-square overflow-hidden rounded-2xl">
-                                  <img 
+                  <NuxtImg 
                     class="rounded-2xl object-cover w-full h-full" 
                     src="/images/pages/timothy-alcaide-founder.jpg" 
-                    alt="Profile picture of Timothy Alchin"
+                    alt="Profile picture of Timothy Alcaide" 
+                    sizes="xs:100vw sm:100vw md:50vw lg:33vw xl:25vw"
+                    placeholder
+                    loading="lazy"
+                  />
                 </div>
               </div>
-                            <div class="flex flex-col justify-center">
-                <div class="mb-2 text-sm font-medium text-slate-600">{{ $t('about.founder.title') }}</div>
-                <h2 class="mb-4 text-3xl font-semibold text-slate-900">Timothy Alcaide</h2>
-                <p class="mb-4 leading-relaxed text-slate-700">
-                  {{ $t('about.founder.bio1') }}
-                </p>
-                <p class="mb-4 leading-relaxed text-slate-700">
-                  {{ $t('about.founder.bio2') }}
-                </p>
-                <p class="mb-6 leading-relaxed text-slate-700">
-                  {{ $t('about.founder.bio3') }}
-                </p>
+              <div class="flex flex-col justify-center">
+                  <div class="mb-2 text-sm font-medium text-slate-600">{{ $t('about.founder.title') }}</div>
+                  <h2 class="mb-4 text-3xl font-semibold text-slate-900">Timothy Alcaide</h2>
+                  <p class="mb-4 leading-relaxed text-slate-700">
+                    {{ $t('about.founder.bio1') }}
+                  </p>
+                  <p class="mb-4 leading-relaxed text-slate-700">
+                    {{ $t('about.founder.bio2') }}
+                  </p>
+                  <p class="mb-6 leading-relaxed text-slate-700">
+                    {{ $t('about.founder.bio3') }}
+                  </p>
+                </div>
               </div>
-            </div>
           </Card>
         </div>
       </div>
@@ -209,7 +213,8 @@
                   <span>{{ $t('about.commitment.communityBullet3') }}</span>
                 </li>
               </ul>
-            </Card>            <Card class="rounded-3xl border-2 border-slate-200 bg-white/95 backdrop-blur-sm p-8">
+            </Card>
+            <Card class="rounded-3xl border-2 border-slate-200 bg-white/95 backdrop-blur-sm p-8">
               <h3 class="mb-4 flex items-center space-x-2 text-2xl font-bold text-slate-900">
                 <Leaf class="h-7 w-7 text-green-600" />
                 <span>{{ $t('about.commitment.envTitle') }}</span>
@@ -297,11 +302,7 @@
           <p class="mb-10 text-xl leading-relaxed text-slate-600">
             {{ $t('about.cta.subtitle') }}
           </p>
-          <Button
-            as-child
-            size="lg"
-            class="rounded-lg bg-gradient-to-r from-[#FF6B35] to-[#F7931E] px-12 py-6 text-base font-medium shadow-lg hover:shadow-xl"
-          >
+          <Button as-child size="lg" class="rounded-lg bg-gradient-to-r from-[#FF6B35] to-[#F7931E] px-12 py-6 text-base font-medium shadow-lg hover:shadow-xl">
             <NuxtLink to="/contact">
               {{ $t('about.cta.button') }}
               <ArrowRight class="ml-2 h-5 w-5" />
