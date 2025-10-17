@@ -34,21 +34,62 @@
     <!-- Sticky CTA Bar (Mobile) -->
     <div class="fixed bottom-0 left-0 right-0 z-40 border-t bg-white p-4 shadow-2xl lg:hidden">
       <div class="flex items-center justify-between gap-3">
-        <div class="flex-shrink-0">
-          <div class="text-xs font-medium text-slate-500">{{ $t('common.from') }}</div>
-          <div class="text-2xl font-black text-orange-600">{{ $t('common.currency') }}{{ experience.price }}</div>
-          <div class="text-xs font-medium text-slate-600">
-            <span v-if="experience.minGroupSize && experience.minGroupSize > 1">
-              Min. {{ experience.minGroupSize }} {{ experience.minGroupSize === 2 ? 'person' : 'people' }}
-            </span>
-            <span v-else>
-              Per person
-            </span>
-          </div>
-        </div>
-        <Button as-child size="lg" class="rounded-full bg-orange-500 px-6 font-bold flex-shrink-0">
+        <Dialog>
+          <DialogTrigger as-child>
+            <button class="flex-shrink-0 text-left">
+              <div class="text-xs font-medium text-slate-500">{{ $t('common.from') }}</div>
+              <div class="text-2xl font-black text-orange-600">{{ $t('common.currency') }}{{ experience.price }}</div>
+              <div class="text-xs font-medium text-orange-600 underline">
+                {{ $t('detailPage.sidebar.viewPricing') }}
+              </div>
+            </button>
+          </DialogTrigger>
+          <DialogContent class="sm:max-w-md rounded-3xl">
+            <DialogHeader>
+              <DialogTitle class="text-2xl font-black text-slate-900">{{ $t('detailPage.pricing.title') }}</DialogTitle>
+              <DialogDescription class="text-slate-600">
+                {{ $t('detailPage.pricing.description') }}
+              </DialogDescription>
+            </DialogHeader>
+            <div class="mt-4 space-y-3">
+              <div v-for="(discount, index) in groupDiscounts" :key="index" class="flex items-center justify-between rounded-2xl border-2 p-4" :class="discount.isPrivate ? 'border-orange-200 bg-orange-50' : (discount.discount > 0 ? 'border-green-200 bg-green-50' : 'border-slate-200 bg-slate-50')">
+                <div class="flex items-center space-x-3">
+                  <div class="flex h-10 w-10 items-center justify-center rounded-full font-bold text-white" :class="discount.isPrivate ? 'bg-orange-500' : (discount.discount > 0 ? 'bg-green-500' : 'bg-slate-400')">
+                    <UsersIcon v-if="!discount.isPrivate" class="h-5 w-5" />
+                    <User v-else class="h-5 w-5" />
+                  </div>
+                  <div>
+                    <div class="font-bold text-slate-900">{{ discount.label }}</div>
+                    <div v-if="discount.isPrivate" class="text-xs font-semibold text-orange-600">
+                      {{ $t('detailPage.pricing.premiumExperience') }}
+                    </div>
+                    <div v-else-if="discount.discount > 0" class="text-xs font-semibold text-green-600">
+                      {{ discount.discount }}% {{ $t('detailPage.pricing.off') }}
+                    </div>
+                    <div v-else-if="!discount.isPrivate" class="text-xs text-slate-500">
+                      {{ $t('detailPage.pricing.basePrice') }}
+                    </div>
+                  </div>
+                </div>
+                <div class="text-right">
+                  <div class="text-2xl font-black text-slate-900">
+                    {{ $t('common.currency') }}{{ calculatePriceForGroup(experience, discount) }}
+                  </div>
+                  <div v-if="discount.discount > 0 && !discount.isPrivate" class="text-xs text-slate-500 line-through">
+                    {{ $t('common.currency') }}{{ experience.price }}
+                  </div>
+                  <div v-if="discount.isPrivate && experience.privatePrice" class="text-xs text-slate-500">
+                    {{ $t('detailPage.pricing.basePrice') }}: {{ $t('common.currency') }}{{ experience.price }}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </DialogContent>
+        </Dialog>
+        <Button as-child size="lg" class="rounded-full bg-orange-500 px-6 py-3 font-bold flex-shrink-0">
           <a :href="whatsappUrl" target="_blank" rel="noopener">
-            Book Now
+            <MessageCircle class="mr-2 h-5 w-5" />
+            <span>{{ $t('detailPage.sidebar.bookWhatsApp') }}</span>
           </a>
         </Button>
       </div>
@@ -282,7 +323,7 @@
                               <div v-else-if="discount.discount > 0" class="text-xs font-semibold text-green-600">
                                 {{ discount.discount }}% {{ $t('detailPage.pricing.off') }}
                               </div>
-                              <div v-else class="text-xs text-slate-500">
+                              <div v-else-if="!discount.isPrivate" class="text-xs text-slate-500">
                                 {{ $t('detailPage.pricing.basePrice') }}
                               </div>
                             </div>
@@ -293,6 +334,9 @@
                             </div>
                             <div v-if="discount.discount > 0 && !discount.isPrivate" class="text-xs text-slate-500 line-through">
                               {{ $t('common.currency') }}{{ experience.price }}
+                            </div>
+                            <div v-if="discount.isPrivate && experience.privatePrice" class="text-xs text-slate-500">
+                              {{ $t('detailPage.pricing.basePrice') }}: {{ $t('common.currency') }}{{ experience.price }}
                             </div>
                           </div>
                         </div>
@@ -706,12 +750,57 @@ const relatedActivities = computed(() => {
   return relatedExps.value || []
 })
 
-// Get group discounts for current activity
+// Get group discounts for current activity and make them dynamic based on experience data
 const groupDiscounts = computed(() => {
-  const activityType = String(activity)
-  const discounts = APP_CONFIG.groupDiscounts[activityType as keyof typeof APP_CONFIG.groupDiscounts]
+  if (!experience.value) return []
+  
+  const exp = experience.value
+  const activityType = normalizedActivity
+  const baseDiscounts = APP_CONFIG.groupDiscounts[activityType as keyof typeof APP_CONFIG.groupDiscounts]
     || APP_CONFIG.groupDiscounts.default
-  return discounts
+  
+  // Build dynamic pricing options based on minGroupSize and privatePrice
+  const options: any[] = []
+  
+  // Add private option if privatePrice exists
+  if (exp.privatePrice) {
+    options.push({
+      people: 1,
+      discount: 0,
+      label: `Private (1 ${locale.value === 'en' ? 'person' : (locale.value === 'fr' ? 'personne' : 'persoon')})`,
+      isPrivate: true,
+      price: exp.privatePrice
+    })
+  }
+  
+  // Add base price option (minGroupSize or 2 by default)
+  const minSize = exp.minGroupSize || 2
+  options.push({
+    people: minSize,
+    discount: 0,
+    label: `${minSize} ${locale.value === 'en' ? 'people' : (locale.value === 'fr' ? 'personnes' : 'personen')}`,
+    isPrivate: false,
+    price: exp.price
+  })
+  
+  // Add discounted group options from config (only if > minGroupSize)
+  baseDiscounts.forEach((disc: any) => {
+    if (disc.people > minSize && disc.discount > 0) {
+      const label = disc.people === 4 && disc.label.includes('+') 
+        ? `${disc.people}+ ${locale.value === 'en' ? 'people' : (locale.value === 'fr' ? 'personnes' : 'personen')}`
+        : `${disc.people} ${locale.value === 'en' ? 'people' : (locale.value === 'fr' ? 'personnes' : 'personen')}`
+      
+      options.push({
+        people: disc.people,
+        discount: disc.discount,
+        label: label,
+        isPrivate: false,
+        price: calculateDiscountedPrice(exp.price, disc.discount)
+      })
+    }
+  })
+  
+  return options
 })
 
 // Calculate discounted price
@@ -720,12 +809,9 @@ const calculateDiscountedPrice = (basePrice: number, discount: number) => {
   return Math.round(discountedPrice)
 }
 
-// Calculate price for group considering private pricing
-const calculatePriceForGroup = (exp: any, discount: any) => {
-  if (discount.isPrivate && exp.privatePrice) {
-    return exp.privatePrice
-  }
-  return calculateDiscountedPrice(exp.price, discount.discount)
+// Calculate price for group - now directly from the option's price
+const calculatePriceForGroup = (exp: any, option: any) => {
+  return option.price || exp.price
 }
 
 // WhatsApp URL with dynamic message

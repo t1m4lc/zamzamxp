@@ -8,6 +8,7 @@ privatePrice: 639
 duration: "18 Dagen"
 difficulty: "Uitdagend"
 groupSize: "4-8 personen"
+minGroupSize: 4
 image: "/images/activities/nepal/trekking/manaslu-lark-pass-tim.jpeg"
 gallery:
   - "/images/activities/nepal/trekking/manaslu-trek-1.jpeg"

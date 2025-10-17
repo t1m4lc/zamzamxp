@@ -8,6 +8,7 @@ privatePrice: 249
 duration: "7 Jours"
 difficulty: "Modéré"
 groupSize: "2-10 personnes"
+minGroupSize: 2
 image: "/images/activities/nepal/trekking/langtang-valley-trek-0.jpeg"
 gallery:
   - "/images/activities/nepal/trekking/langtang-valley-trek-2.jpeg"

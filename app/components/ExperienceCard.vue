@@ -27,7 +27,7 @@
         </p>
         
         <div class="flex items-baseline gap-1">
-          <span class="text-base font-semibold text-slate-900">${{ experience.price }}</span>
+          <span class="text-base font-semibold text-slate-900">{{ $t('common.currency') }}{{ experience.price }}</span>
           <span class="text-sm text-slate-600">· {{ experience.duration }}</span>
         </div>
       </div>

@@ -193,22 +193,30 @@ import { Compass, ShieldCheck, Heart } from 'lucide-vue-next'
 import { APP_CONFIG } from '~/config/constants'
 
 const { getCountryPath } = useLocalizedRoutes()
+const { locale } = useI18n()
 
 // Fetch all content to get countries dynamically
 const { data: allContent } = await useAsyncData('all-content', async () => {
   return await queryCollection('content').all()
 })
 
-// Extract countries and count experiences per country
+// Extract countries and count experiences per country based on current locale
 const countriesData = computed(() => {
   if (!allContent.value) return []
   
   const content = allContent.value as any[]
+  // Filter by current locale first - check if path contains the locale directory
+  const localeContent = content.filter((exp: any) => {
+    const path = exp.path || exp._path || ''
+    // Match patterns like /activities/en/, /activities/fr/, /activities/nl/
+    return path.includes(`/activities/${locale.value}/`) || path.includes(`activities/${locale.value}/`)
+  })
+  
   // Extract unique countries
-  const countries = [...new Set(content.map((exp: any) => exp.country))].filter(Boolean)
+  const countries = [...new Set(localeContent.map((exp: any) => exp.country))].filter(Boolean)
   
   return countries.map(country => {
-    const countryExperiences = content.filter((item: any) => item.country === country)
+    const countryExperiences = localeContent.filter((item: any) => item.country === country)
     const count = countryExperiences.length
     
     // Extract unique activities for this country

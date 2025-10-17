@@ -8,6 +8,7 @@ privatePrice: 469
 duration: "16 Jours"
 difficulty: "Difficile"
 groupSize: "2-12 personnes"
+minGroupSize: 2
 image: "/images/activities/nepal/trekking/OG-image-annapurna.png"
 gallery:
   - "/images/activities/nepal/trekking/annapurna-circuit-trek-2.webp"

@@ -7,6 +7,7 @@ price: 55
 duration: "20-60 minutes"
 difficulty: "Easy"
 groupSize: "1 person per flight"
+minGroupSize: 1
 image: "/images/activities/nepal/paragliding/paragliding-in-pokhara.jpg"
 gallery:
   - "/images/activities/nepal/paragliding/pokhara-paragliding-tandem.jpg"

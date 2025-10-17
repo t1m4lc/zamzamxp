@@ -23,11 +23,16 @@ export const APP_CONFIG = {
     trekking: [
       {
         people: 1,
-        discount: -50,
+        discount: 0,
         label: "Private (1 person)",
         isPrivate: true,
       },
-      { people: 2, discount: 0, label: "2 people", isPrivate: false },
+      {
+        people: 2,
+        discount: 0,
+        label: "2 people",
+        isPrivate: false,
+      },
       { people: 3, discount: 5, label: "3 people", isPrivate: false },
       { people: 4, discount: 10, label: "4+ people", isPrivate: false },
     ],

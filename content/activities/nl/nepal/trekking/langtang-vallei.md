@@ -8,6 +8,7 @@ privatePrice: 249
 duration: "7 Dagen"
 difficulty: "Matig"
 groupSize: "2-10 personen"
+minGroupSize: 2
 image: "/images/activities/nepal/trekking/langtang-valley-trek-0.jpeg"
 gallery:
   - "/images/activities/nepal/trekking/langtang-valley-trek-2.jpeg"

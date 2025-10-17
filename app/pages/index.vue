@@ -344,13 +344,10 @@ const { data: activities } = await useAsyncData('activities-count', async () => 
     return []
   }
 })
-const totalActivities = computed(() => activities.value?.length || 10)
+const totalActivities = computed(() => (activities.value?.length || 3) / totalCountries.value)
 
-// Count unique countries (folders in content directory)
 const totalCountries = computed(() => {
-  if (!activities.value) return 2
-  const countries = new Set(activities.value.map((item: any) => item._path?.split('/')[1]).filter(Boolean))
-  return countries.size
+    return 2
 })
 
 const teamMembers = [

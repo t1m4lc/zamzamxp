@@ -126,6 +126,7 @@ import { MessageCircle, Mail, Phone, Leaf, Handshake } from 'lucide-vue-next'
 
 const { locale, locales, setLocale } = useI18n()
 const { getCountryPath } = useLocalizedRoutes()
+const route = useRoute()
 
 const availableLocales = computed(() => locales.value)
 const currentLocale = computed({
@@ -138,10 +139,18 @@ const switchLanguage = async (event: Event) => {
   const newLocale = target.value as 'en' | 'fr' | 'nl'
   await setLocale(newLocale)
   
-  // Force page reload to fetch content in new locale
-  // This is necessary because content is loaded server-side
-  if (import.meta.client) {
-    window.location.reload()
+  // Check if we're on a static page (homepage, about, contact, etc.)
+  // These pages don't have localized slugs, so we can stay on them
+  const staticPages = ['/', '/about', '/contact', '/destinations', '/terms', '/privacy']
+  const currentPath = route.path
+  
+  if (staticPages.includes(currentPath)) {
+    // Stay on the same static page
+    await navigateTo(currentPath)
+  } else {
+    // For dynamic pages with localized slugs, go to homepage
+    // to avoid 404s when slugs differ between languages
+    await navigateTo('/')
   }
 }
 </script>

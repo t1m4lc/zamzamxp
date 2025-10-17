@@ -57,7 +57,7 @@ const props = withDefaults(defineProps<Props>(), {
 
 defineEmits(["animationStart", "animationComplete"]);
 
-const currentWord = ref(props.words[0]);
+const currentWord = ref<string>(props.words[0] || '');
 const isVisible = ref(true);
 const timeoutId = ref<number | null>(null);
 
@@ -66,7 +66,7 @@ function startAnimation() {
 
   setTimeout(() => {
     const currentIndex = props.words.indexOf(currentWord.value);
-    const nextWord = props.words[currentIndex + 1] || props.words[0];
+    const nextWord = props.words[currentIndex + 1] || props.words[0] || '';
     currentWord.value = nextWord;
     isVisible.value = true;
   }, 600);
@@ -80,9 +80,9 @@ const splitWords = computed(() => {
 });
 
 function startTimeout() {
-  timeoutId.value = window.setTimeout(() => {
+  timeoutId.value = setTimeout(() => {
     startAnimation();
-  }, props.duration);
+  }, props.duration) as unknown as number;
 }
 
 onMounted(() => {

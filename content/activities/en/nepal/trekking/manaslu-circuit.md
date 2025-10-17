@@ -8,6 +8,7 @@ privatePrice: 590
 duration: "12 Days"
 difficulty: "Challenging"
 groupSize: "2-10 people"
+minGroupSize: 2
 image: "/images/activities/nepal/trekking/manaslu-trek-1.jpeg"
 gallery:
   - "/images/activities/nepal/trekking/manaslu-trek-0.jpeg"

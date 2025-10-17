@@ -230,21 +230,25 @@ const handleSubmit = async () => {
       message: ''
     }
 
-    // Scroll to success message
-    setTimeout(() => {
-      const successElement = document.querySelector('.border-green-200')
-      successElement?.scrollIntoView({ behavior: 'smooth', block: 'center' })
-    }, 100)
+    // Scroll to success message (client-only)
+    if (import.meta.client) {
+      setTimeout(() => {
+        const successElement = document.querySelector('.border-green-200')
+        successElement?.scrollIntoView({ behavior: 'smooth', block: 'center' })
+      }, 100)
+    }
 
   } catch (error: any) {
     formState.value.error = true
     formState.value.errorMessage = error.data?.statusMessage || 'Something went wrong. Please try again.'
 
-    // Scroll to error message
-    setTimeout(() => {
-      const errorElement = document.querySelector('.border-red-200')
-      errorElement?.scrollIntoView({ behavior: 'smooth', block: 'center' })
-    }, 100)
+    // Scroll to error message (client-only)
+    if (import.meta.client) {
+      setTimeout(() => {
+        const errorElement = document.querySelector('.border-red-200')
+        errorElement?.scrollIntoView({ behavior: 'smooth', block: 'center' })
+      }, 100)
+    }
   } finally {
     formState.value.loading = false
   }
