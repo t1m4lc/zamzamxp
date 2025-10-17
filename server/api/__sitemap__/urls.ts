@@ -6,6 +6,7 @@ export default defineSitemapEventHandler(async () => {
   const { join } = await import("path");
 
   const urls: any[] = [];
+  const activityTypesByLocale = new Map<string, Set<string>>();
 
   // Define the content directory path
   const contentDir = join(process.cwd(), "content", "activities");
@@ -27,18 +28,25 @@ export default defineSitemapEventHandler(async () => {
           // Parse the relative path to extract components
           const pathParts = relativePath.replace(".md", "").split("/");
 
-          if (pathParts.length >= 4) {
+          if (pathParts.length === 4) {
             // pathParts: [locale, country, activityType, slug]
+            const locale = pathParts[0];
             const country = pathParts[1];
             const activityType = pathParts[2];
             const slug = pathParts[3];
 
-            // Build the URL
-            const url = `/${country}/${activityType}/${slug}`;
+            // Build URLs for ALL locales (en, fr, nl)
+            // Track activity type pages per locale
+            const activityTypeKey = `${locale}:${country}/${activityType}`;
+            if (!activityTypesByLocale.has(activityTypeKey)) {
+              activityTypesByLocale.set(activityTypeKey, new Set());
+            }
 
+            // Add the individual experience page
+            const experienceUrl = `/${country}/${activityType}/${slug}`;
             urls.push(
               asSitemapUrl({
-                loc: url,
+                loc: experienceUrl,
                 changefreq: "monthly",
                 priority: 0.8,
               })
@@ -52,6 +60,18 @@ export default defineSitemapEventHandler(async () => {
   }
 
   await walkDir(contentDir);
+
+  // Add activity type pages (e.g., /morocco/surfing, /maroc/surf, /marokko/surfen)
+  activityTypesByLocale.forEach((_, activityTypeKey) => {
+    const [locale, path] = activityTypeKey.split(":");
+    urls.push(
+      asSitemapUrl({
+        loc: `/${path}`,
+        changefreq: "weekly",
+        priority: 0.9,
+      })
+    );
+  });
 
   return urls;
 });

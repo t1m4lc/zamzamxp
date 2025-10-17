@@ -68,7 +68,7 @@ export default defineNuxtConfig({
       {
         userAgent: ["*"],
         allow: ["/"],
-        disallow: ["/api/"],
+        disallow: ["/api/contact"],
       },
     ],
   },
@@ -76,9 +76,21 @@ export default defineNuxtConfig({
   sitemap: {
     enabled: true,
     xsl: false,
-    strictNuxtContentPaths: true,
-    urls: ["/", "/about", "/contact", "/destinations", "/terms", "/privacy"],
-    exclude: ["/api/**"],
+    sources: ["/api/__sitemap__/urls"],
+    urls: async () => [
+      { loc: "/", changefreq: "weekly", priority: 1.0 },
+      { loc: "/about", changefreq: "monthly", priority: 0.8 },
+      { loc: "/contact", changefreq: "monthly", priority: 0.8 },
+      { loc: "/destinations", changefreq: "weekly", priority: 0.9 },
+      { loc: "/terms", changefreq: "yearly", priority: 0.3 },
+      { loc: "/privacy", changefreq: "yearly", priority: 0.3 },
+    ],
+    exclude: [
+      "/api/**",
+      "/_vercel/**",
+      "/images/**",
+      "/**/*.{png,jpg,jpeg,gif,webp,svg,ico}",
+    ],
     defaults: {
       changefreq: "weekly",
       priority: 0.7,
@@ -104,7 +116,6 @@ export default defineNuxtConfig({
     quality: 85,
     format: ["webp", "jpg"],
     screens: {
-      xxs: 10,
       xs: 160,
       sm: 320,
       md: 640,
