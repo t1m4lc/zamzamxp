@@ -76,6 +76,8 @@ export default defineNuxtConfig({
   sitemap: {
     enabled: true,
     xsl: false,
+    autoLastmod: true,
+    discoverImages: false,
     sources: ["/api/__sitemap__/urls"],
     urls: async () => [
       { loc: "/", changefreq: "weekly", priority: 1.0 },
@@ -88,8 +90,10 @@ export default defineNuxtConfig({
     exclude: [
       "/api/**",
       "/_vercel/**",
+      "/__og-image__/**",
       "/images/**",
       "/**/*.{png,jpg,jpeg,gif,webp,svg,ico}",
+      "/**/_payload.json",
     ],
     defaults: {
       changefreq: "weekly",
