@@ -318,6 +318,20 @@
       "surfing": "Surfez sur les vagues de la magnifique côte atlantique du Maroc"
     }
   },
+  "notFound": {
+    "country": {
+      "title": "Pays introuvable",
+      "description": "Nous n'avons pas trouvé la destination que vous recherchez. Elle a peut-être été déplacée ou n'existe pas encore.",
+      "backButton": "Toutes les destinations",
+      "home": "Retour à l'accueil"
+    },
+    "activity": {
+      "title": "Activité introuvable",
+      "description": "Nous n'avons pas trouvé l'activité que vous recherchez en {country}. Elle a peut-être été déplacée ou n'existe pas encore.",
+      "backButton": "Retour à {country}",
+      "allDestinations": "Toutes les destinations"
+    }
+  },
   "detailPage": {
     "notFound": {
       "title": "Expérience introuvable",

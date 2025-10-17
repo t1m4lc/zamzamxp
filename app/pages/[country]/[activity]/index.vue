@@ -1,5 +1,36 @@
 <template>
-  <div>
+  <!-- 404 State for invalid activity -->
+  <div v-if="!activityExists" class="min-h-screen flex items-center justify-center bg-slate-50">
+    <div class="container mx-auto px-4 py-20">
+      <div class="max-w-2xl mx-auto text-center">
+        <div class="mb-8">
+          <Mountain class="h-24 w-24 text-slate-300 mx-auto" />
+        </div>
+        <h1 class="text-4xl font-black text-slate-900 mb-4">
+          {{ $t('notFound.activity.title') }}
+        </h1>
+        <p class="text-lg text-slate-600 mb-8">
+          {{ $t('notFound.activity.description', { country: countryName }) }}
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <Button as-child size="lg" class="rounded-full bg-orange-500 px-8 font-bold hover:bg-orange-600">
+            <NuxtLink :to="getCountryPath(normalizedCountry)">
+              <ArrowLeft class="mr-2 h-5 w-5" />
+              {{ $t('notFound.activity.backButton', { country: countryName }) }}
+            </NuxtLink>
+          </Button>
+          <Button as-child size="lg" variant="outline" class="rounded-full border-2 border-slate-300 font-bold hover:bg-slate-100">
+            <NuxtLink to="/destinations">
+              <MapPin class="mr-2 h-5 w-5" />
+              {{ $t('notFound.activity.allDestinations') }}
+            </NuxtLink>
+          </Button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div v-else>
     <WhatsAppBubble />
     <!-- Breadcrumb -->
     <section class="border-b bg-slate-50 py-6">
@@ -117,7 +148,7 @@
 </template>
 
 <script setup lang="ts">
-import { CheckCircle, ChevronRight, MessageCircle, Mountain } from 'lucide-vue-next'
+import { CheckCircle, ChevronRight, MessageCircle, Mountain, ArrowLeft, MapPin } from 'lucide-vue-next'
 import { Button } from '~/components/ui/button'
 import { Card } from '~/components/ui/card'
 import { 
@@ -144,13 +175,38 @@ const { getCountryPath } = useLocalizedRoutes()
 const normalizedCountry = normalizeCountry(country)
 const normalizedActivity = normalizeActivity(activity)
 
+// Valid countries and activities
+const validCountries = ['nepal', 'morocco']
+const validActivities = ['trekking', 'paragliding', 'surfing']
+
+// Check if activity exists for this country
+const activityExists = computed(() => {
+  if (!validCountries.includes(normalizedCountry)) return false
+  if (!validActivities.includes(normalizedActivity)) return false
+  
+  // Check if this activity is available for this country
+  if (normalizedCountry === 'nepal') {
+    return ['trekking', 'paragliding'].includes(normalizedActivity)
+  } else if (normalizedCountry === 'morocco') {
+    return ['surfing'].includes(normalizedActivity)
+  }
+  
+  return false
+})
+
+// If activity doesn't exist, set 404 status
+const event = useRequestEvent()
+if (!activityExists.value && event) {
+  setResponseStatus(event, 404)
+}
+
 // Translate country and activity names using normalized keys
 const countryName = computed(() => t(`countries.${normalizedCountry}`))
-const activityName = computed(() => t(`activities.${normalizedActivity}`))
-const activityDescription = computed(() => t(`activities.noExperiencesDesc`, { 
+const activityName = computed(() => activityExists.value ? t(`activities.${normalizedActivity}`) : '')
+const activityDescription = computed(() => activityExists.value ? t(`activities.noExperiencesDesc`, { 
   activity: activityName.value, 
   country: countryName.value 
-}))
+}) : '')
 
 // Fetch experiences dynamically from content based on current locale
 const { data: experiencesData } = await useAsyncData(

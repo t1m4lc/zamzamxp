@@ -321,6 +321,20 @@
       "surfing": "Ride the waves on Morocco's stunning Atlantic coast"
     }
   },
+  "notFound": {
+    "country": {
+      "title": "Country not found",
+      "description": "We couldn't find the destination you're looking for. It may have been moved or doesn't exist yet.",
+      "backButton": "All Destinations",
+      "home": "Back to Home"
+    },
+    "activity": {
+      "title": "Activity not found",
+      "description": "We couldn't find the activity you're looking for in {country}. It may have been moved or doesn't exist yet.",
+      "backButton": "Back to {country}",
+      "allDestinations": "All Destinations"
+    }
+  },
   "detailPage": {
     "notFound": {
       "title": "Experience not found",

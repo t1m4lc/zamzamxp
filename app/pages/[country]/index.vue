@@ -1,5 +1,36 @@
 <template>
-  <div>
+  <!-- 404 State for invalid country -->
+  <div v-if="!countryExists" class="min-h-screen flex items-center justify-center bg-slate-50">
+    <div class="container mx-auto px-4 py-20">
+      <div class="max-w-2xl mx-auto text-center">
+        <div class="mb-8">
+          <MapPin class="h-24 w-24 text-slate-300 mx-auto" />
+        </div>
+        <h1 class="text-4xl font-black text-slate-900 mb-4">
+          {{ $t('notFound.country.title') }}
+        </h1>
+        <p class="text-lg text-slate-600 mb-8">
+          {{ $t('notFound.country.description') }}
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <Button as-child size="lg" class="rounded-full bg-orange-500 px-8 font-bold hover:bg-orange-600">
+            <NuxtLink to="/destinations">
+              <MapPin class="mr-2 h-5 w-5" />
+              {{ $t('notFound.country.backButton') }}
+            </NuxtLink>
+          </Button>
+          <Button as-child size="lg" variant="outline" class="rounded-full border-2 border-slate-300 font-bold hover:bg-slate-100">
+            <NuxtLink to="/">
+              <ArrowLeft class="mr-2 h-5 w-5" />
+              {{ $t('notFound.country.home') }}
+            </NuxtLink>
+          </Button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div v-else>
     <WhatsAppBubble />
     <!-- Breadcrumb -->
     <div class="border-b bg-white">
@@ -157,7 +188,7 @@ import {
   EmptyMedia, 
   EmptyTitle 
 } from '~/components/ui/empty'
-import { Mountain } from 'lucide-vue-next'
+import { Mountain, MapPin, ArrowLeft } from 'lucide-vue-next'
 import { APP_CONFIG } from '~/config/constants'
 
 const route = useRoute()
@@ -173,6 +204,18 @@ const { getActivityPath } = useLocalizedRoutes()
 
 // Normalize the country parameter to English folder name
 const normalizedCountry = normalizeCountry(country)
+
+// Valid countries list
+const validCountries = ['nepal', 'morocco']
+
+// Check if country exists
+const countryExists = computed(() => validCountries.includes(normalizedCountry))
+
+// If country doesn't exist, set 404 status
+const event = useRequestEvent()
+if (!countryExists.value && event) {
+  setResponseStatus(event, 404)
+}
 
 // Country-specific static data (keep for images)
 const countryData: Record<string, any> = {
@@ -194,8 +237,8 @@ const countryData: Record<string, any> = {
 }
 
 const data = countryData[normalizedCountry] || countryData.nepal
-const countryName = computed(() => t(`countries.${normalizedCountry}`))
-const countryDescription = computed(() => t(`countryPage.countryDescriptions.${normalizedCountry}`))
+const countryName = computed(() => countryExists.value ? t(`countries.${normalizedCountry}`) : '')
+const countryDescription = computed(() => countryExists.value ? t(`countryPage.countryDescriptions.${normalizedCountry}`) : '')
 const heroImage = data.heroImage
 
 // Fetch activities dynamically from content

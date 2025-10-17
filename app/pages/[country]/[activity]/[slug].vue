@@ -653,6 +653,12 @@ const experience = computed(() => {
   } as ExperienceDetail
 })
 
+// Set 404 status if experience is not found
+const event = useRequestEvent()
+if (!experience.value && event) {
+  setResponseStatus(event, 404)
+}
+
 // Get activity-specific reviews from markdown
 const activityReviews = computed(() => {
   const data = contentData.value as any

@@ -313,6 +313,20 @@
       "surfing": "Rijd op de golven aan de prachtige Atlantische kust van Marokko"
     }
   },
+  "notFound": {
+    "country": {
+      "title": "Land niet gevonden",
+      "description": "We konden de bestemming die u zoekt niet vinden. Het kan verplaatst zijn of nog niet bestaan.",
+      "backButton": "Alle bestemmingen",
+      "home": "Terug naar Home"
+    },
+    "activity": {
+      "title": "Activiteit niet gevonden",
+      "description": "We konden de activiteit die u zoekt niet vinden in {country}. Het kan verplaatst zijn of nog niet bestaan.",
+      "backButton": "Terug naar {country}",
+      "allDestinations": "Alle bestemmingen"
+    }
+  },
   "detailPage": {
     "notFound": {
       "title": "Ervaring niet gevonden",
