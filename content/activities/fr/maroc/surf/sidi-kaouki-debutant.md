@@ -3,7 +3,7 @@ title: "Camp de Surf Débutant à Sidi Kaouki"
 description: "Parfait pour les surfeurs débutants. Apprenez les bases sur des vagues douces près d'Essaouira avec des instructeurs expérimentés dans ce joyau caché du surf marocain."
 country: "morocco"
 activity: "surfing"
-price: 549
+price: 469
 duration: "7 Jours"
 difficulty: "Facile"
 minGroupSize: 1
