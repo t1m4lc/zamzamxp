@@ -92,7 +92,8 @@ export default defineNuxtConfig({
       "/_vercel/**",
       "/__og-image__/**",
       "/images/**",
-      "/**/*.{png,jpg,jpeg,gif,webp,svg,ico}",
+      "/_nuxt/**",
+      "/**/*.{png,jpg,jpeg,gif,webp,svg,ico,wasm,js,css,json}",
       "/**/_payload.json",
     ],
     defaults: {
