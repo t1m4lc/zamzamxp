@@ -12,6 +12,7 @@ export default defineNuxtConfig({
     preset: "vercel-static",
     prerender: {
       failOnError: false,
+      routes: ['/sitemap.xml'],
     },
   },
 
@@ -75,11 +76,8 @@ export default defineNuxtConfig({
   sitemap: {
     enabled: true,
     xsl: false,
-    sources: [
-      "/api/__sitemap__/urls", // Dynamic URLs from content
-    ],
+    strictNuxtContentPaths: true,
     urls: [
-      // Static pages
       "/",
       "/about",
       "/contact",
@@ -88,7 +86,7 @@ export default defineNuxtConfig({
       "/privacy",
     ],
     exclude: [
-      "/api/**", // Exclude API routes
+      "/api/**",
     ],
   },
 
