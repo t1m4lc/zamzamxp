@@ -38,7 +38,7 @@ included:
 notIncluded:
   - "Internationale vluchten van/naar Nepal"
   - "Nepal visum kosten (USD 30-50)"
-  - "Alle maaltijden tijdens trek (ca. $20-30/dag)"
+  - "Alle maaltijden tijdens trek (ca. €20-30/dag)"
   - "Reisverzekering (verplicht)"
   - "Persoonlijke uitgaven en fooien"
   - "Warme douches en WiFi kosten"
@@ -214,7 +214,7 @@ Vroege ochtendwandeling naar Poon Hill voor zonsopgangzichten over de Annapurna 
 
 - **Internationale vluchten** van/naar Nepal
 - **Visum kosten** voor Nepal (USD 30-50)
-- **Alle maaltijden** tijdens de trek (ca. $20-30/dag)
+- **Alle maaltijden** tijdens de trek (ca. €20-30/dag)
 - **Reisverzekering** (verplicht voor noodevacuatie)
 - **Persoonlijke uitgaven** souvenirs, snacks, etc.
 - **Warme douches** en WiFi kosten in lodges

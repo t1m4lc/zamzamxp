@@ -37,7 +37,7 @@ included:
   - "Toutes les dépenses officielles et taxes gouvernementales"
 notIncluded:
   - "Vos dépenses personnelles"
-  - "Tous les repas pendant le trek (environ 20-30$/jour)"
+  - "Tous les repas pendant le trek (environ 20-30€/jour)"
   - "Toutes les boissons (thé, café, bière, etc.)"
   - "Assurance voyage (requise pour évacuation d'urgence et secours médical)"
   - "Pourboires pour le guide"
@@ -183,7 +183,7 @@ Retour en voiture à Katmandou à travers la campagne panoramique. Réfléchisse
 ## Ce qui n'est PAS Inclus
 
 **Repas :**
-- 3 repas par jour (petit-déjeuner, déjeuner, dîner) - environ 20-25$ par jour
+- 3 repas par jour (petit-déjeuner, déjeuner, dîner) - environ 20-25€ par jour
 - Les coûts alimentaires varient selon l'altitude et l'emplacement
 - Les options de menu incluent dal bhat, nouilles, soupes et plats internationaux
 
@@ -200,7 +200,7 @@ Retour en voiture à Katmandou à travers la campagne panoramique. Réfléchisse
 
 **Assurance et Pourboires :**
 - Assurance voyage (requise pour l'évacuation d'urgence et le secours médical)
-- Pourboires pour le guide (recommandé 5-7$ par jour)
+- Pourboires pour le guide (recommandé 4-6€ par jour)
 - Assurance accident personnel et santé
 
 ## Meilleure Période pour Faire le Trek

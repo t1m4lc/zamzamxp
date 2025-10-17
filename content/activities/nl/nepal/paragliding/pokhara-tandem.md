@@ -103,9 +103,9 @@ Je piloot kan het kalm en sereen maken of spannende acrobatische manoeuvres toev
 
 ## Vluchtopties
 
-**Korte Vlucht (20-30 minuten) - $55**: Perfect voor beginners. Soepele, landschappelijke vlucht met prachtige uitzichten op de vallei, meren en bergen.
+**Korte Vlucht (20-30 minuten)**: Perfect voor beginners. Soepele, landschappelijke vlucht met prachtige uitzichten op de vallei, meren en bergen.
 
-**Verlengde Vlucht (40-60 minuten) - Vanaf $85**: Langere vluchttijd om thermiek te vangen en je tijd in de lucht te maximaliseren. Meer mogelijkheden voor foto's en verlengd berg uitzicht.
+**Verlengde Vlucht (40-60 minuten)**: Langere vluchttijd om thermiek te vangen en je tijd in de lucht te maximaliseren. Meer mogelijkheden voor foto's en verlengd berg uitzicht.
 
 **Acrobatische Add-on (Optioneel)**: Voor sensatiezoekers! Inclusief spiralen, wingovers en andere spannende manoeuvres. Vraag dit aan je piloot als je je avontuurlijk voelt.
 

@@ -37,7 +37,7 @@ included:
   - "Alle officiële uitgaven en overheidsbelastingen"
 notIncluded:
   - "Uw persoonlijke uitgaven"
-  - "Alle maaltijden tijdens trek (ca. $20-30/dag)"
+  - "Alle maaltijden tijdens trek (ca. €20-30/dag)"
   - "Alle dranken (thee, koffie, bier, etc.)"
   - "Reisverzekering (vereist voor nood evacuatie & medische redding)"
   - "Fooien voor gids"
@@ -183,7 +183,7 @@ Rijd terug naar Kathmandu door het schilderachtige platteland. Reflecteer op je 
 ## Wat is NIET Inbegrepen
 
 **Maaltijden:**
-- 3 maaltijden per dag (ontbijt, lunch, diner) - ongeveer $20-25 per dag
+- 3 maaltijden per dag (ontbijt, lunch, diner) - ongeveer €20-25 per dag
 - Voedsel kosten variëren per hoogte en locatie
 - Menu opties inclusief dal bhat, noodles, soepen, en internationale gerechten
 
@@ -200,7 +200,7 @@ Rijd terug naar Kathmandu door het schilderachtige platteland. Reflecteer op je 
 
 **Verzekering & Fooien:**
 - Reisverzekering (vereist voor nood evacuatie)
-- Fooien voor gids (aanbevolen $5-7 per dag)
+- Fooien voor gids (aanbevolen €5-7 per dag)
 - Persoonlijke ongelukken en gezondheid verzekering
 
 ## Beste Tijd om te Trekken

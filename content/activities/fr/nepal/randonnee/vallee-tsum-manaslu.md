@@ -35,7 +35,7 @@ included:
 notIncluded:
   - "Vols internationaux vers/depuis le Népal"
   - "Frais de visa népalais"
-  - "Tous les repas pendant le trek (environ 20-30$/jour)"
+  - "Tous les repas pendant le trek (environ 20-30€/jour)"
   - "Assurance voyage (obligatoire)"
   - "Dépenses personnelles et pourboires"
   - "Frais de donation aux monastères"
@@ -269,7 +269,7 @@ Terminez votre trek épique avec un trajet panoramique de retour à la civilisat
 ## Ce qui n'est PAS inclus
 
 **Repas :**
-- 3 repas par jour pendant le trek (environ 20-30$ par jour)
+- 3 repas par jour pendant le trek (environ 20-30€ par jour)
 - Les coûts varient selon l'altitude et l'emplacement
 - Menu typique : dal bhat, nouilles, soupes, momos, plats internationaux
 

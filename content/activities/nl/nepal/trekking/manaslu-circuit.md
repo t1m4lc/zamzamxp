@@ -36,7 +36,7 @@ included:
   - "Alle overheidsbelastingen en officiële uitgaven"
 notIncluded:
   - "Uw persoonlijke uitgaven"
-  - "Alle maaltijden tijdens trek (ca. $20-30/dag)"
+  - "Alle maaltijden tijdens trek (ca. €20-30/dag)"
   - "Alle dranken (thee, koffie, bier, etc.)"
   - "Reisverzekering (vereist voor nood evacuatie)"
   - "Fooien voor gids en dragers"
@@ -224,7 +224,7 @@ Voltooi je trek met een schilderachtige rit terug naar de beschaving. Optie om d
 
 **Maaltijden:**
 - 3 maaltijden per dag (ontbijt, lunch, diner)
-- Gemiddelde kosten: $25-35 per dag
+- Gemiddelde kosten: €25-35 per dag
 - Prijzen stijgen met hoogte
 
 **Dranken:**
@@ -238,7 +238,7 @@ Voltooi je trek met een schilderachtige rit terug naar de beschaving. Optie om d
 
 **Verzekering & Fooien:**
 - Reisverzekering (verplicht)
-- Fooien voor gids (aanbevolen $7-10 per dag)
+- Fooien voor gids (aanbevolen €7-10 per dag)
 - Fooien voor drager indien ingehuurd
 
 ## Beste Tijd om te Trekken

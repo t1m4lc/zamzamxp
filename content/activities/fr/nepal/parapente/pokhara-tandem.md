@@ -103,9 +103,9 @@ Votre pilote peut rendre le vol calme et serein ou ajouter des manœuvres acroba
 
 ## Options de Vol
 
-**Vol Court (20-30 minutes) - 55 $** : Parfait pour les débutants. Vol fluide et panoramique avec de belles vues de la vallée, des lacs et des montagnes.
+**Vol Court (20-30 minutes)** : Parfait pour les débutants. Vol fluide et panoramique avec de belles vues de la vallée, des lacs et des montagnes.
 
-**Vol Prolongé (40-60 minutes) - À partir de 85 $** : Temps de vol plus long pour attraper les thermiques et maximiser votre temps dans les airs. Plus d'opportunités pour les photos et vues prolongées sur les montagnes.
+**Vol Prolongé (40-60 minutes)** : Temps de vol plus long pour attraper les thermiques et maximiser votre temps dans les airs. Plus d'opportunités pour les photos et vues prolongées sur les montagnes.
 
 **Module Acrobatique (Optionnel)** : Pour les amateurs de sensations fortes ! Comprend des spirales, des wingovers et d'autres manœuvres excitantes. Demandez-le à votre pilote si vous vous sentez aventureux.
 

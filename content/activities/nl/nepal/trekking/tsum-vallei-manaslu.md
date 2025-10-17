@@ -35,7 +35,7 @@ included:
 notIncluded:
   - "Internationale vluchten van/naar Nepal"
   - "Nepal visum kosten"
-  - "Alle maaltijden tijdens trek (ca. $20-30/dag)"
+  - "Alle maaltijden tijdens trek (ca. €20-30/dag)"
   - "Reisverzekering (verplicht)"
   - "Persoonlijke uitgaven en fooien"
   - "Klooster donatie kosten"
@@ -269,7 +269,7 @@ Voltooi je epische trek met een schilderachtige rit terug naar de beschaving. De
 ## Wat is NIET Inbegrepen
 
 **Maaltijden:**
-- 3 maaltijden per dag tijdens trek (ca. $20-30 per dag)
+- 3 maaltijden per dag tijdens trek (ca. €20-30 per dag)
 - Kosten variëren per hoogte en locatie
 - Typisch menu: dal bhat, noodles, soepen, momos, internationale gerechten
 

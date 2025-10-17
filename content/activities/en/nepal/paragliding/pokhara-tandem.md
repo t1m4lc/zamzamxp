@@ -103,9 +103,9 @@ Your pilot can make it calm and serene or add exciting acrobatic maneuvers if yo
 
 ## Flight Options
 
-**Short Flight (20-30 minutes) - $55**: Perfect for first-timers. Smooth, scenic flight with beautiful views of the valley, lakes, and mountains.
+**Short Flight (20-30 minutes)**: Perfect for first-timers. Smooth, scenic flight with beautiful views of the valley, lakes, and mountains.
 
-**Extended Flight (40-60 minutes) - From $85**: Longer flight time to catch thermals and maximize your time in the air. More opportunities for photos and extended mountain views.
+**Extended Flight (40-60 minutes)**: Longer flight time to catch thermals and maximize your time in the air. More opportunities for photos and extended mountain views.
 
 **Acrobatic Add-on (Optional)**: For thrill-seekers! Includes spirals, wingovers, and other exciting maneuvers. Request this with your pilot if you're feeling adventurous.
 

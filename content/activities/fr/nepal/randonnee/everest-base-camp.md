@@ -210,11 +210,10 @@ Vol matinal retour vers Kathmandu. Fin des services.
 ## Non Inclus
 
 ✗ **Vols internationaux** vers/depuis Kathmandu
-✗ **Visa népalais** (30 jours: $50 USD à l'arrivée)
-✗ **Tous les repas pendant le trek** (budget $20-30/jour pour 3 repas)
+✗ **Visa népalais** (30 jours: 50 USD à l'arrivée)
+✗ **Tous les repas pendant le trek** (budget €25-30/jour pour 3 repas)
 ✗ **Assurance voyage** (obligatoire avec couverture haute altitude)
 ✗ **Dépenses personnelles** (snacks, boissons, douches chaudes, recharge)
-✗ **Pourboires** pour le guide et les porteurs (recommandé: $150-200 pour le guide)
 ✗ **Assurance évacuation d'urgence** (fortement recommandée)
 
 ## Meilleure Période pour Partir

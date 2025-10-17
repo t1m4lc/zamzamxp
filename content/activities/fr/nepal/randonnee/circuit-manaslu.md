@@ -36,7 +36,7 @@ included:
   - "Toutes taxes gouvernementales et frais officiels"
 notIncluded:
   - "Vos dépenses personnelles"
-  - "Tous les repas pendant le trek (environ 20-30$/jour)"
+  - "Tous les repas pendant le trek (environ 20-30€/jour)"
   - "Toutes les boissons (thé, café, bière, etc.)"
   - "Assurance voyage (obligatoire pour évacuation d'urgence)"
   - "Pourboires pour le guide et les porteurs"
@@ -227,7 +227,7 @@ Terminez votre trek avec un trajet panoramique de retour à la civilisation. Opt
 ## Ce qui n'est PAS inclus
 
 **Repas :**
-- 3 repas par jour (petit-déjeuner, déjeuner, dîner) - environ 20-25$ par jour
+- 3 repas par jour (petit-déjeuner, déjeuner, dîner) - environ 20-25€ par jour
 - Les coûts de nourriture varient selon l'altitude et l'emplacement
 - Options de menu incluant dal bhat, nouilles, soupes et plats internationaux
 

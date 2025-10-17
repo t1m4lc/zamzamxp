@@ -224,7 +224,7 @@ Complete your trek with a scenic drive back to civilization. Option to continue 
 
 **Meals:**
 - 3 meals per day (breakfast, lunch, dinner)
-- Average cost: $25-35 per day
+- Average cost: $20-30 per day
 - Prices increase with altitude
 
 **Beverages:**

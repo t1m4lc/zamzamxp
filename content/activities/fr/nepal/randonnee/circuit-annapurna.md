@@ -38,7 +38,7 @@ included:
 notIncluded:
   - "Vols internationaux vers/depuis le Népal"
   - "Frais de visa népalais (30-50 USD)"
-  - "Tous les repas pendant le trek (environ 20-30$/jour)"
+  - "Tous les repas pendant le trek (environ 20-30€/jour)"
   - "Assurance voyage (obligatoire)"
   - "Dépenses personnelles et pourboires"
   - "Douches chaudes et frais WiFi"
@@ -214,7 +214,7 @@ Randonnée matinale à Poon Hill pour les vues au lever du soleil sur les chaîn
 
 - **Vols internationaux** vers/depuis le Népal
 - **Frais de visa** népalais (30-50 USD)
-- **Tous les repas** pendant le trek (environ 20-30$/jour)
+- **Tous les repas** pendant le trek (environ 20-30€/jour)
 - **Assurance voyage** (obligatoire pour évacuation d'urgence)
 - **Dépenses personnelles** souvenirs, snacks, etc.
 - **Douches chaudes** et frais WiFi dans les lodges
