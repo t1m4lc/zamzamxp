@@ -402,16 +402,16 @@ const destinations = [
 ]
 
 useSeoMeta({
-  title: "Fair Adventure Travel with Local Guides | Zamzam Experience",
+  title: "Fair Adventure Travel with Local Guides",
   description:
     "Discover authentic adventure experiences with passionate local guides. Fair prices, sustainable tourism, and unforgettable trekking, paragliding, and surfing adventures worldwide.",
-  ogTitle: "Fair Adventure Travel with Local Guides | Zamzam Experience",
+  ogTitle: "Fair Adventure Travel with Local Guides",
   ogDescription:
     "Travel that's fair for everyone. Expert-guided adventure tours with honest pricing and sustainable tourism practices.",
   ogImage: "/images/og-home.jpg",
   ogType: "website",
   twitterCard: "summary_large_image",
-  twitterTitle: "Fair Adventure Travel with Local Guides | Zamzam Experience",
+  twitterTitle: "Fair Adventure Travel with Local Guides",
   twitterDescription:
     "Discover authentic adventures with local guides. Fair prices, sustainable tourism.",
   twitterImage: "/images/og-home.jpg",
