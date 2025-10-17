@@ -12,7 +12,7 @@ export default defineNuxtConfig({
     preset: "vercel-static",
     prerender: {
       failOnError: false,
-      routes: ['/sitemap.xml'],
+      routes: ["/sitemap.xml"],
     },
   },
 
@@ -77,17 +77,13 @@ export default defineNuxtConfig({
     enabled: true,
     xsl: false,
     strictNuxtContentPaths: true,
-    urls: [
-      "/",
-      "/about",
-      "/contact",
-      "/destinations",
-      "/terms",
-      "/privacy",
-    ],
-    exclude: [
-      "/api/**",
-    ],
+    urls: ["/", "/about", "/contact", "/destinations", "/terms", "/privacy"],
+    exclude: ["/api/**"],
+    defaults: {
+      changefreq: "weekly",
+      priority: 0.7,
+      lastmod: new Date().toISOString(),
+    },
   },
 
   ogImage: {

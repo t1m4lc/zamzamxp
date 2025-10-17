@@ -1,4 +1,6 @@
-export default defineEventHandler(async () => {
+import { asSitemapUrl, defineSitemapEventHandler } from "#imports";
+
+export default defineSitemapEventHandler(async () => {
   // Dynamically import file system utilities
   const { readdir } = await import("fs/promises");
   const { join } = await import("path");
@@ -34,11 +36,13 @@ export default defineEventHandler(async () => {
             // Build the URL
             const url = `/${country}/${activityType}/${slug}`;
 
-            urls.push({
-              loc: url,
-              changefreq: "monthly",
-              priority: 0.8,
-            });
+            urls.push(
+              asSitemapUrl({
+                loc: url,
+                changefreq: "monthly",
+                priority: 0.8,
+              })
+            );
           }
         }
       }
