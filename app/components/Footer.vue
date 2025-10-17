@@ -97,6 +97,8 @@
             <NuxtLink to="/terms" class="hover:text-slate-600 transition-colors">{{ $t('common.terms') }}</NuxtLink>
             <span>•</span>
             <NuxtLink to="/privacy" class="hover:text-slate-600 transition-colors">{{ $t('common.privacy') }}</NuxtLink>
+            <span>•</span>
+            <a href="/sitemap.xml" class="hover:text-slate-600 transition-colors" target="_blank">Sitemap</a>
           </div>
           
           <!-- Language Selector -->

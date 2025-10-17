@@ -25,6 +25,7 @@ export default defineNuxtConfig({
     "nuxt-gtag",
     "@nuxtjs/seo",
     "@nuxtjs/i18n",
+    "@nuxtjs/sitemap",
   ],
 
   icon: {
@@ -72,7 +73,23 @@ export default defineNuxtConfig({
   },
 
   sitemap: {
-    // Automatically generate sitemap from routes and content
+    enabled: true,
+    xsl: false,
+    sources: [
+      "/api/__sitemap__/urls", // Dynamic URLs from content
+    ],
+    urls: [
+      // Static pages
+      "/",
+      "/about",
+      "/contact",
+      "/destinations",
+      "/terms",
+      "/privacy",
+    ],
+    exclude: [
+      "/api/**", // Exclude API routes
+    ],
   },
 
   ogImage: {
