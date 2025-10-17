@@ -104,6 +104,12 @@ const handleSubmit = async () => {
       body: formData.value
     })
 
+    // Track conversion
+    useTrackEvent('contact_form_submit', {
+      page: 'contact',
+      method: 'email_form'
+    })
+
     // Show success message
     formState.value.success = true
     formState.value.successMessage = response.message || 'Your message has been sent successfully!'

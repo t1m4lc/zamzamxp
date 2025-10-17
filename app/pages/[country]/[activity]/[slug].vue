@@ -84,7 +84,7 @@
           </DialogContent>
         </Dialog>
         <Button as-child size="lg" class="rounded-full bg-orange-500 px-6 py-3 font-bold flex-shrink-0">
-          <a :href="whatsappUrl" target="_blank" rel="noopener">
+          <a :href="whatsappUrl" target="_blank" rel="noopener" @click="trackWhatsAppBooking('sticky_mobile_cta')">
             <MessageCircle class="mr-2 h-5 w-5" />
             <span>{{ $t('detailPage.sidebar.bookWhatsApp') }}</span>
           </a>
@@ -273,17 +273,17 @@
 
                 <div class="space-y-4 text-center">
                   <Button as-child size="lg" class="w-full rounded-full bg-orange-500 py-6 font-bold shadow-lg hover:bg-orange-600">
-                    <a :href="whatsappUrl" target="_blank" rel="noopener">
+                    <a :href="whatsappUrl" target="_blank" rel="noopener" @click="trackWhatsAppBooking('sidebar')">
                       <MessageCircle class="mr-2 h-5 w-5" />
                       {{ $t('detailPage.sidebar.bookWhatsApp') }}
                     </a>
                   </Button>
 
                   <Button as-child size="lg" variant="outline" class="w-full rounded-full border-2 border-slate-300 font-bold hover:bg-slate-100">
-                    <NuxtLink to="/contact">
+                    <a href="mailto:hello@zamzamxp.com" @click="trackEmailBooking('sidebar')">
                       <Mail class="mr-2 h-5 w-5" />
                       {{ $t('detailPage.sidebar.emailUs') }}
-                    </NuxtLink>
+                    </a>
                   </Button>
 
                   <!-- Pricing Options Link -->
@@ -466,7 +466,7 @@
           </p>
 
           <Button as-child size="lg" class="rounded-full bg-orange-500 px-12 py-8 text-xl font-bold text-white shadow-2xl transition-all hover:bg-orange-600 hover:scale-105">
-            <a :href="whatsappUrl" target="_blank" rel="noopener">
+            <a :href="whatsappUrl" target="_blank" rel="noopener" @click="trackWhatsAppBooking('final_cta')">
               <MessageCircle class="mr-2 h-7 w-7" />
               {{ $t('detailPage.cta.bookNow') }}
             </a>
@@ -829,6 +829,34 @@ const whatsappUrl = computed(() => {
 
   return `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(message)}`
 })
+
+// Track WhatsApp booking click
+const trackWhatsAppBooking = (location: string) => {
+  useTrackEvent('booking_whatsapp', {
+    page: 'experience_detail',
+    method: 'whatsapp',
+    location: location,
+    country: normalizedCountry,
+    activity: normalizedActivity,
+    experience: String(slug),
+    price: experience.value?.price || 0,
+    experience_title: experience.value?.title || ''
+  })
+}
+
+// Track Email booking click
+const trackEmailBooking = (location: string) => {
+  useTrackEvent('booking_email', {
+    page: 'experience_detail',
+    method: 'email',
+    location: location,
+    country: normalizedCountry,
+    activity: normalizedActivity,
+    experience: String(slug),
+    price: experience.value?.price || 0,
+    experience_title: experience.value?.title || ''
+  })
+}
 
 if (experience.value) {
   const exp = experience.value

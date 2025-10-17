@@ -30,7 +30,7 @@
               </p>
               </div>
               <div>
-                <a :href="getWhatsAppUrl()" target="_blank" rel="noopener" class="inline-flex w-full items-center justify-center rounded-lg bg-green-500 px-6 py-3 font-medium text-white hover:bg-green-600 transition-colors">
+                <a :href="getWhatsAppUrl()" target="_blank" rel="noopener" class="inline-flex w-full items-center justify-center rounded-lg bg-green-500 px-6 py-3 font-medium text-white hover:bg-green-600 transition-colors" @click="trackWhatsAppClick">
                   <MessageCircle class="mr-2 h-5 w-5" />
                   {{ $t('contact.whatsapp.button') }}
                 </a>
@@ -48,7 +48,7 @@
 
               </div>
               <div>
-                <a href="mailto:hello@zamzamxp.com" class="inline-flex w-full items-center justify-center rounded-lg bg-gradient-to-r from-[#FF6B35] to-[#F7931E] px-6 py-3 font-medium text-white hover:opacity-90 transition-opacity">
+                <a href="mailto:hello@zamzamxp.com" class="inline-flex w-full items-center justify-center rounded-lg bg-gradient-to-r from-[#FF6B35] to-[#F7931E] px-6 py-3 font-medium text-white hover:opacity-90 transition-opacity" @click="trackEmailClick">
                   <Mail class="mr-2 h-5 w-5" />
                   {{ $t('contact.email.button') }}
                 </a>
@@ -92,6 +92,22 @@ import { MessageCircle, Mail } from 'lucide-vue-next'
 
 const { getWhatsAppUrl } = useContact()
 const { t } = useI18n()
+
+// Track WhatsApp click
+const trackWhatsAppClick = () => {
+  useTrackEvent('contact_whatsapp', {
+    page: 'contact',
+    method: 'whatsapp'
+  })
+}
+
+// Track Email click
+const trackEmailClick = () => {
+  useTrackEvent('contact_email', {
+    page: 'contact',
+    method: 'email'
+  })
+}
 
 useSeoMeta({
   title: () => t('seo.contact.title'),

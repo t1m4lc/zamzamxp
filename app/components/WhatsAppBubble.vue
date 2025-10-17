@@ -16,6 +16,7 @@
           rel="noopener noreferrer"
           class="fixed bottom-4 right-6 z-50 flex h-16 w-16 items-center justify-center rounded-full bg-[#25D366] text-white shadow-lg transition-all duration-300 hover:scale-110 hover:bg-[#128C7E] hover:shadow-xl md:hidden"
           aria-label="Chat on WhatsApp"
+          @click="trackWhatsAppBubbleClick"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -37,6 +38,18 @@ import { APP_CONFIG } from '~/config/constants'
 
 const route = useRoute()
 const isVisible = ref(false)
+
+// Track WhatsApp bubble click
+const trackWhatsAppBubbleClick = () => {
+  const { country, activity, slug } = route.params
+  useTrackEvent('contact_whatsapp', {
+    page: slug ? 'experience_detail' : (activity ? 'activity_list' : 'general'),
+    method: 'whatsapp_bubble',
+    country: String(country || ''),
+    activity: String(activity || ''),
+    experience: String(slug || '')
+  })
+}
 
 // Show WhatsApp bubble after scrolling down
 onMounted(() => {
