@@ -334,7 +334,6 @@
       "minimum": "minimum",
       "person": "person",
       "people": "people",
-      "privateAvailable": "Private booking available",
       "bookWhatsApp": "Book Now",
       "emailUs": "Email Us",
       "viewPricing": "Pricing Options",
@@ -350,7 +349,7 @@
     "pricing": {
       "title": "Pricing Options",
       "description": "Choose the option that works best for you. All prices are per person.",
-      "premiumExperience": "Premium experience",
+      "premiumExperience": "Solo booking",
       "off": "OFF",
       "basePrice": "Base price (min. 2)"
     },

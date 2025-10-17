@@ -326,7 +326,6 @@
       "minimum": "minimum",
       "person": "persoon",
       "people": "personen",
-      "privateAvailable": "Privé boeking beschikbaar",
       "bookWhatsApp": "Boeken",
       "emailUs": "Stuur ons een email",
       "viewPricing": "Prijsopties",
@@ -342,7 +341,7 @@
     "pricing": {
       "title": "Prijsopties",
       "description": "Kies de optie die het beste bij u past. Alle prijzen zijn per persoon.",
-      "premiumExperience": "Premium ervaring",
+      "premiumExperience": "Solo boeking",
       "off": "KORTING",
       "basePrice": "Basisprijs (min. 2)"
     },

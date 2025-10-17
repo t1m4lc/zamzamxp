@@ -38,7 +38,6 @@ notIncluded:
   - "All meals during trek (approx. $20-30/day)"
   - "Travel insurance (mandatory)"
   - "Personal expenses and tips"
-  - "Monastery donation fees"
 bestTime: "March-May, September-November"
 minElevation: "869m"
 maxElevation: "5,106m"

@@ -38,7 +38,6 @@ notIncluded:
   - "Tous les repas pendant le trek (environ 20-30€/jour)"
   - "Assurance voyage (obligatoire)"
   - "Dépenses personnelles et pourboires"
-  - "Frais de donation aux monastères"
 bestTime: "Mars-Mai, Septembre-Novembre"
 minElevation: "869m"
 maxElevation: "5 106m"

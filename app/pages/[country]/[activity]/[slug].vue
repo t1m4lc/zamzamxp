@@ -52,21 +52,21 @@
               </DialogDescription>
             </DialogHeader>
             <div class="mt-4 space-y-3">
-              <div v-for="(discount, index) in groupDiscounts" :key="index" class="flex items-center justify-between rounded-2xl border-2 p-4" :class="discount.isPrivate ? 'border-orange-200 bg-orange-50' : (discount.discount > 0 ? 'border-green-200 bg-green-50' : 'border-slate-200 bg-slate-50')">
+              <div v-for="(discount, index) in groupDiscounts" :key="index" class="flex items-center justify-between rounded-2xl border-2 p-4" :class="discount.people === 1 ? 'border-orange-200 bg-orange-50' : (discount.discount > 0 ? 'border-green-200 bg-green-50' : 'border-slate-200 bg-slate-50')">
                 <div class="flex items-center space-x-3">
-                  <div class="flex h-10 w-10 items-center justify-center rounded-full font-bold text-white" :class="discount.isPrivate ? 'bg-orange-500' : (discount.discount > 0 ? 'bg-green-500' : 'bg-slate-400')">
-                    <UsersIcon v-if="!discount.isPrivate" class="h-5 w-5" />
-                    <User v-else class="h-5 w-5" />
+                  <div class="flex h-10 w-10 items-center justify-center rounded-full font-bold text-white" :class="discount.people === 1 ? 'bg-orange-500' : (discount.discount > 0 ? 'bg-green-500' : 'bg-slate-400')">
+                    <User v-if="discount.people === 1" class="h-5 w-5" />
+                    <UsersIcon v-else class="h-5 w-5" />
                   </div>
                   <div>
                     <div class="font-bold text-slate-900">{{ discount.label }}</div>
-                    <div v-if="discount.isPrivate" class="text-xs font-semibold text-orange-600">
+                    <div v-if="discount.people === 1 && discount.isPrivate" class="text-xs font-semibold text-orange-600">
                       {{ $t('detailPage.pricing.premiumExperience') }}
                     </div>
                     <div v-else-if="discount.discount > 0" class="text-xs font-semibold text-green-600">
                       {{ discount.discount }}% {{ $t('detailPage.pricing.off') }}
                     </div>
-                    <div v-else-if="!discount.isPrivate" class="text-xs text-slate-500">
+                    <div v-else-if="discount.people > 1" class="text-xs text-slate-500">
                       {{ $t('detailPage.pricing.basePrice') }}
                     </div>
                   </div>
@@ -75,11 +75,8 @@
                   <div class="text-2xl font-black text-slate-900">
                     {{ $t('common.currency') }}{{ calculatePriceForGroup(experience, discount) }}
                   </div>
-                  <div v-if="discount.discount > 0 && !discount.isPrivate" class="text-xs text-slate-500 line-through">
+                  <div v-if="discount.discount > 0" class="text-xs text-slate-500 line-through">
                     {{ $t('common.currency') }}{{ experience.price }}
-                  </div>
-                  <div v-if="discount.isPrivate && experience.privatePrice" class="text-xs text-slate-500">
-                    {{ $t('detailPage.pricing.basePrice') }}: {{ $t('common.currency') }}{{ experience.price }}
                   </div>
                 </div>
               </div>
@@ -272,10 +269,6 @@
                   <div class="mb-2 text-5xl font-black text-slate-900">{{ $t('common.currency') }}{{ experience.price }}</div>
                   <div class="text-xs text-slate-600">{{ $t('detailPage.sidebar.perPerson') }}</div>
                   <div v-if="experience.minGroupSize && experience.minGroupSize > 1" class="mt-2 text-xs font-medium text-slate-500">{{ experience.minGroupSize }} {{ experience.minGroupSize === 2 ? $t('detailPage.sidebar.person') : $t('detailPage.sidebar.people') }} {{ $t('detailPage.sidebar.minimum') }}</div>
-                  <div v-if="experience.privatePrice" class="mt-1 text-xs text-orange-600">
-                    <Star class="inline-block h-3 w-3" />
-                    {{ $t('detailPage.sidebar.privateAvailable') }}
-                  </div>
                 </div>
 
                 <div class="space-y-4 text-center">
@@ -762,23 +755,30 @@ const groupDiscounts = computed(() => {
   // Build dynamic pricing options based on minGroupSize and privatePrice
   const options: any[] = []
   
-  // Add private option if privatePrice exists
+  const minSize = exp.minGroupSize || 2
+  
+  // Add single person option ONLY if privatePrice exists
   if (exp.privatePrice) {
+    const singleLabel = locale.value === 'en' 
+      ? '1 person' 
+      : locale.value === 'fr' 
+      ? '1 personne' 
+      : '1 persoon'
+    
     options.push({
       people: 1,
       discount: 0,
-      label: `Private (1 ${locale.value === 'en' ? 'person' : (locale.value === 'fr' ? 'personne' : 'persoon')})`,
+      label: singleLabel,
       isPrivate: true,
       price: exp.privatePrice
     })
   }
   
-  // Add base price option (minGroupSize or 2 by default)
-  const minSize = exp.minGroupSize || 2
+  // Add base price option for minGroupSize
   options.push({
     people: minSize,
     discount: 0,
-    label: `${minSize} ${locale.value === 'en' ? 'people' : (locale.value === 'fr' ? 'personnes' : 'personen')}`,
+    label: `${minSize} ${locale.value === 'en' ? (minSize === 1 ? 'person' : 'people') : (locale.value === 'fr' ? (minSize === 1 ? 'personne' : 'personnes') : (minSize === 1 ? 'persoon' : 'personen'))}`,
     isPrivate: false,
     price: exp.price
   })

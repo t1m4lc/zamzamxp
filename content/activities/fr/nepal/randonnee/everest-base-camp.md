@@ -33,7 +33,7 @@ included:
 notIncluded:
   - "Vols internationaux vers/depuis le Népal"
   - "Frais de visa népalais"
-  - "Tous les repas pendant le trek (environ $20-30/jour)"
+  - "Tous les repas pendant le trek (environ €20-30/jour)"
   - "Assurance voyage (obligatoire)"
   - "Dépenses personnelles et pourboires"
   - "Assurance évacuation d'urgence"
@@ -299,19 +299,19 @@ Vol matinal retour vers Kathmandu. Fin des services.
 ## FAQ
 
 **Q: Ai-je besoin d'un visa pour le Népal ?**
-R: Oui, la plupart des nationalités peuvent obtenir un visa à l'arrivée à l'aéroport de Kathmandu. Visa de 30 jours: $50 USD (photo passeport requise).
+R: Oui, la plupart des nationalités peuvent obtenir un visa à l'arrivée à l'aéroport de Kathmandu. Visa de 30 jours: 50 USD (photo passeport requise).
 
 **Q: Quelle est la difficulté du col de Cho La ?**
 R: Le col de Cho La est la section la plus difficile techniquement. Implique traversée de glacier, terrain rocheux, et gain d'altitude raide. Recommandé seulement pour trekkeurs expérimentés en bonne forme.
 
 **Q: Puis-je recharger mes appareils ?**
-R: Oui, la plupart des teahouses offrent recharge moyennant frais ($2-5/heure). Services limités à haute altitude. Apportez banques d'alimentation.
+R: Oui, la plupart des teahouses offrent recharge moyennant frais (€2-5/heure). Services limités à haute altitude. Apportez banques d'alimentation.
 
 **Q: Le WiFi est-il disponible ?**
-R: WiFi limité disponible dans certaines teahouses moyennant frais ($5-10/jour). La connectivité devient plus faible à haute altitude. Cartes SIM Ncell disponibles à Kathmandu.
+R: WiFi limité disponible dans certaines teahouses moyennant frais (€5-10/jour). La connectivité devient plus faible à haute altitude. Cartes SIM Ncell disponibles à Kathmandu.
 
 **Q: Et si le vol vers Lukla est annulé ?**
-R: Les vols vers Lukla peuvent être retardés en raison de la météo. Prévoyez 2-3 jours tampons dans votre itinéraire. Vol héliportère disponible (coût supplémentaire: $500-700).
+R: Les vols vers Lukla peuvent être retardés en raison de la météo. Prévoyez 2-3 jours tampons dans votre itinéraire. Vol héliportère disponible (coût supplémentaire: €500-700).
 
 **Q: Puis-je faire ce trek en solo ?**
 R: Les trekkeurs solo doivent engager un guide (obligatoire depuis 2023). Nous offrons arrangements pour trekkeurs solo avec prix privé.

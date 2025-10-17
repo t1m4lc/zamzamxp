@@ -331,7 +331,6 @@
       "minimum": "minimum",
       "person": "personne",
       "people": "personnes",
-      "privateAvailable": "Réservation privée disponible",
       "bookWhatsApp": "Réserver",
       "emailUs": "Nous envoyer un email",
       "viewPricing": "Options tarifaires",
@@ -347,7 +346,7 @@
     "pricing": {
       "title": "Options tarifaires",
       "description": "Choisissez l'option qui vous convient le mieux. Tous les prix sont par personne.",
-      "premiumExperience": "Expérience premium",
+      "premiumExperience": "Réservation solo",
       "off": "DE RÉDUCTION",
       "basePrice": "Prix de base (min. 2)"
     },
