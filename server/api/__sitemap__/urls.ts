@@ -1,5 +1,3 @@
-import { asSitemapUrl, defineSitemapEventHandler } from "#imports";
-
 export default defineSitemapEventHandler(async () => {
   // Dynamically import file system utilities
   const { readdir } = await import("fs/promises");
