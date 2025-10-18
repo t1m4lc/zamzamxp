@@ -33,7 +33,7 @@ included:
 notIncluded:
   - "Internationale vluchten van/naar Nepal"
   - "Nepal visum kosten"
-  - "Alle maaltijden tijdens trek (ca. €20-30/dag)"
+  - "Alle maaltijden tijdens trek  "
   - "Reisverzekering (verplicht)"
   - "Persoonlijke uitgaven en fooien"
   - "Nood evacuatie verzekering"
@@ -236,7 +236,7 @@ Ochtendvlucht naar Kathmandu (35 minuten). Vrije tijd voor sightseeing, winkelen
 
 - **Internationale vluchten** van/naar Nepal
 - **Nepal visum kosten**
-- **Alle maaltijden** tijdens trek (ca. €20-30/dag)
+- **Alle maaltijden** tijdens trek  
 - **Reisverzekering** (verplicht met grote hoogte dekking)
 - **Persoonlijke uitgaven** en fooien
 - **Nood evacuatie verzekering**

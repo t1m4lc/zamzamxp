@@ -35,7 +35,7 @@ included:
 notIncluded:
   - "Vols internationaux vers/depuis le Népal"
   - "Frais de visa népalais"
-  - "Tous les repas pendant le trek (environ 20-30€/jour)"
+  - "Tous les repas pendant le trek "
   - "Assurance voyage (obligatoire)"
   - "Dépenses personnelles et pourboires"
 bestTime: "Mars-Mai, Septembre-Novembre"

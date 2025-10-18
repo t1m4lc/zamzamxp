@@ -36,7 +36,7 @@ included:
   - "All government taxes and official expenses"
 notIncluded:
   - "Your personal expenses"
-  - "All meals during trek (approx. $20-30/day)"
+  - "All meals during trek  "
   - "All drinks (tea, coffee, beer, etc.)"
   - "Travel insurance (required for emergency evacuation)"
   - "Tips for guide and porter"

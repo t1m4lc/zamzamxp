@@ -35,7 +35,7 @@ included:
 notIncluded:
   - "International flights to/from Nepal"
   - "Nepal visa fees"
-  - "All meals during trek (approx. $20-30/day)"
+  - "All meals during trek  "
   - "Travel insurance (mandatory)"
   - "Personal expenses and tips"
 bestTime: "March-May, September-November"

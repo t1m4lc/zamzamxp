@@ -36,7 +36,7 @@ included:
   - "Alle overheidsbelastingen en officiële uitgaven"
 notIncluded:
   - "Uw persoonlijke uitgaven"
-  - "Alle maaltijden tijdens trek (ca. €20-30/dag)"
+  - "Alle maaltijden tijdens trek  "
   - "Alle dranken (thee, koffie, bier, etc.)"
   - "Reisverzekering (vereist voor nood evacuatie)"
   - "Fooien voor gids en dragers"

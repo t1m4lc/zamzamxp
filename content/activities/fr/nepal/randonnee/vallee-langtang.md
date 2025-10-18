@@ -37,7 +37,7 @@ included:
   - "Toutes les dépenses officielles et taxes gouvernementales"
 notIncluded:
   - "Vos dépenses personnelles"
-  - "Tous les repas pendant le trek (environ 20-30€/jour)"
+  - "Tous les repas pendant le trek "
   - "Toutes les boissons (thé, café, bière, etc.)"
   - "Assurance voyage (requise pour évacuation d'urgence et secours médical)"
   - "Pourboires pour le guide"

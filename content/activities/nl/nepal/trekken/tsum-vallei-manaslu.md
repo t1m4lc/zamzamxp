@@ -35,7 +35,7 @@ included:
 notIncluded:
   - "Internationale vluchten van/naar Nepal"
   - "Nepal visum kosten"
-  - "Alle maaltijden tijdens trek (ca. €20-30/dag)"
+  - "Alle maaltijden tijdens trek  "
   - "Reisverzekering (verplicht)"
   - "Persoonlijke uitgaven en fooien"
   - "Klooster donatie kosten"

@@ -38,7 +38,7 @@ included:
 notIncluded:
   - "International flights to/from Nepal"
   - "Nepal visa fees (USD 30-50)"
-  - "All meals during trek (approx. $20-30/day)"
+  - "All meals during trek  "
   - "Travel insurance (mandatory)"
   - "Personal expenses and tips"
   - "Hot showers and WiFi charges"
