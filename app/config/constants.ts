@@ -4,6 +4,7 @@ export const APP_CONFIG = {
     name: "Zamzam Experience",
     email: "timothyalcaide+zamzamxp@gmail.com",
     whatsapp: "+33767503066",
+    bookingFormUrl: "https://tally.so/r/mBP6K5",
   },
 
   smtp: {

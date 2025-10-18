@@ -84,9 +84,9 @@
           </DialogContent>
         </Dialog>
         <Button as-child size="lg" class="rounded-full bg-orange-500 px-6 py-3 font-bold flex-shrink-0">
-          <a :href="whatsappUrl" target="_blank" rel="noopener" @click="trackWhatsAppBooking('sticky_mobile_cta')">
-            <MessageCircle class="mr-2 h-5 w-5" />
-            <span>{{ $t('detailPage.sidebar.bookWhatsApp') }}</span>
+          <a :href="tallyUrl" target="_blank" rel="noopener" @click="trackTallyBooking('sticky_mobile_cta')">
+            <Calendar class="mr-2 h-5 w-5" />
+            <span>{{ $t('detailPage.sidebar.reserve') }}</span>
           </a>
         </Button>
       </div>
@@ -273,16 +273,16 @@
 
                 <div class="space-y-4 text-center">
                   <Button as-child size="lg" class="w-full rounded-full bg-orange-500 py-6 font-bold shadow-lg hover:bg-orange-600">
-                    <a :href="whatsappUrl" target="_blank" rel="noopener" @click="trackWhatsAppBooking('sidebar')">
-                      <MessageCircle class="mr-2 h-5 w-5" />
-                      {{ $t('detailPage.sidebar.bookWhatsApp') }}
+                    <a :href="tallyUrl" target="_blank" rel="noopener" @click="trackTallyBooking('sidebar')">
+                      <Calendar class="mr-2 h-5 w-5" />
+                      {{ $t('detailPage.sidebar.reserve') }}
                     </a>
                   </Button>
 
                   <Button as-child size="lg" variant="outline" class="w-full rounded-full border-2 border-slate-300 font-bold hover:bg-slate-100">
-                    <a href="mailto:timothyalcaide+zamzamxp@gmail.com" @click="trackEmailBooking('sidebar')">
-                      <Mail class="mr-2 h-5 w-5" />
-                      {{ $t('detailPage.sidebar.emailUs') }}
+                    <a :href="whatsappUrl" target="_blank" rel="noopener" @click="trackWhatsAppBooking('sidebar')">
+                      <MessageCircle class="mr-2 h-5 w-5" />
+                      {{ $t('detailPage.sidebar.bookWhatsApp') }}
                     </a>
                   </Button>
 
@@ -466,8 +466,8 @@
           </p>
 
           <Button as-child size="lg" class="rounded-full bg-orange-500 px-12 py-8 text-xl font-bold text-white shadow-2xl transition-all hover:bg-orange-600 hover:scale-105">
-            <a :href="whatsappUrl" target="_blank" rel="noopener" @click="trackWhatsAppBooking('final_cta')">
-              <MessageCircle class="mr-2 h-7 w-7" />
+            <a :href="tallyUrl" target="_blank" rel="noopener" @click="trackTallyBooking('final_cta')">
+              <Calendar class="mr-2 h-7 w-7" />
               {{ $t('detailPage.cta.bookNow') }}
             </a>
           </Button>
@@ -820,12 +820,20 @@ const calculatePriceForGroup = (exp: any, option: any) => {
   return option.price || exp.price
 }
 
-// WhatsApp URL with dynamic message
+// Tally URL with activity title and utm_campaign from query if present
+const tallyUrl = computed(() => {
+  const baseUrl = APP_CONFIG.company.bookingFormUrl
+  const activityTitle = experience.value?.title || 'Tour'
+  const utmCampaign = route.query.utm_campaign ? String(route.query.utm_campaign) : 'none'
+  return `${baseUrl}?activity=${encodeURIComponent(activityTitle)}&utm_campaign=${encodeURIComponent(utmCampaign)}`
+})
+
+// WhatsApp URL with dynamic message including trip dates
 const whatsappUrl = computed(() => {
   const phoneNumber = APP_CONFIG.company.whatsapp
   const message = experience.value
-    ? `Hi! I'm interested in ${experience.value.title} - ${experience.value.duration} for $${experience.value.price}`
-    : "Hi! I'm interested in your tours"
+    ? `Hi! I'm interested in ${experience.value.title}\n\nPlanned Trip Dates: \nReturn / Arrival Date: `
+    : "Hi! I'm interested in your tours\n\nPlanned Trip Dates: \nReturn / Arrival Date: "
 
   return `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(message)}`
 })
@@ -849,6 +857,20 @@ const trackEmailBooking = (location: string) => {
   useTrackEvent('booking_email', {
     page: 'experience_detail',
     method: 'email',
+    location: location,
+    country: normalizedCountry,
+    activity: normalizedActivity,
+    experience: String(slug),
+    price: experience.value?.price || 0,
+    experience_title: experience.value?.title || ''
+  })
+}
+
+// Track Tally booking click
+const trackTallyBooking = (location: string) => {
+  useTrackEvent('booking_tally', {
+    page: 'experience_detail',
+    method: 'tally_form',
     location: location,
     country: normalizedCountry,
     activity: normalizedActivity,
