@@ -195,7 +195,7 @@
     },
     "partners": {
       "title": "Our local partners",
-      "subtitle": "We work exclusively with passionate local guides, family-run accommodations, and small businesses. When you travel with us, you're directly supporting the people who call these places home.",
+      "description": "We work exclusively with passionate local guides, family-run accommodations, and small businesses. When you travel with us, you're directly supporting the people who call these places home.",
       "guidesTitle": "Local Guides",
       "guidesDesc": "Passionate professionals who know every trail, wave, and hidden gem in their region.",
       "businessTitle": "Local Businesses",
