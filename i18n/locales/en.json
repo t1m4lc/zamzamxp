@@ -208,32 +208,24 @@
       "subtitle": "Tourism should benefit everyone, especially local communities",
       "fairRemTitle": "Fair Remuneration",
       "fairRemDesc": "All our partners receive fair compensation for their services. We believe in equitable partnerships where everyone benefits.",
-      "fairRemPoints": [
-        "Fair wages for all partners",
-        "Transparent pricing",
-        "Direct partnerships with locals"
-      ],
+      "fairRemBullet1": "Fair wages for all partners",
+      "fairRemBullet2": "Transparent pricing",
+      "fairRemBullet3": "Direct partnerships with locals",
       "communityTitle": "Community Focus",
       "communityDesc": "We prioritize working with local businesses and family-run operations, ensuring tourism revenue stays within the community.",
-      "communityPoints": [
-        "Direct partnerships with local families",
-        "Support for small local businesses",
-        "Revenue stays in local communities"
-      ],
+      "communityBullet1": "Direct partnerships with local families",
+      "communityBullet2": "Support for small local businesses",
+      "communityBullet3": "Revenue stays in local communities",
       "envTitle": "Environmental Care",
       "envDesc": "We operate carbon-neutral adventures, participate in trail maintenance, and educate travelers on Leave No Trace principles.",
-      "envPoints": [
-        "Carbon offset partnerships",
-        "Weekly trail cleanups",
-        "Plastic-free operations"
-      ],
+      "envBullet1": "Carbon offset partnerships",
+      "envBullet2": "Weekly trail cleanups",
+      "envBullet3": "Plastic-free operations",
       "inclusiveTitle": "Inclusive Opportunities",
       "inclusiveDesc": "We're committed to working with diverse partners and supporting inclusive tourism. As we grow, we aim to create more opportunities for underrepresented groups in adventure tourism.",
-      "inclusivePoints": [
-        "Open to all qualified guides",
-        "Building diverse partnerships",
-        "Equal opportunity approach"
-      ]
+      "inclusiveBullet1": "Open to all qualified guides",
+      "inclusiveBullet2": "Building diverse partnerships",
+      "inclusiveBullet3": "Equal opportunity approach"
     },
     "stats": {
       "happyCustomers": "Happy Customers",

@@ -16,7 +16,7 @@ const switchLocalePath = useSwitchLocalePath()
 
 // Global SEO configuration
 useSeoMeta({
-  titleTemplate: "%s | Zamzam Experience",
+  titleTemplate: "%s",
   ogSiteName: "Zamzam Experience",
   ogLocale: computed(() => locale.value),
   ogLocaleAlternate: computed(() => {
