@@ -285,6 +285,75 @@ Complete your epic 18-day journey with a drive to Besisahar, then continue to Ka
 - **Monastery Schedules:** Some ceremonies seasonal
 - **Cultural Events:** Festival timings may enhance experience
 
+## What's Included in Your Package
+
+**Accommodation:**
+- 17 nights in teahouse/lodge accommodation
+- Shared rooms with basic bedding
+- Clean and comfortable mountain lodging
+
+**Transportation:**
+- Kathmandu to Machha Khola by private bus/jeep
+- Gho to Besisahar by shared jeep
+- Besisahar to Kathmandu or Pokhara by bus
+
+**Permits & Documentation:**
+- Special Tsum Valley permit (restricted area)
+- Manaslu Restricted Area Permit
+- Manaslu Conservation Area Permit
+- TIMS card
+- All necessary paperwork and government fees
+
+**Guide Services:**
+- Professional experienced English-speaking trekking guide
+- Guide's food, salary, accommodation, drinks
+- Guide transport and insurance
+- Professional knowledge of culture and terrain
+
+**Cultural Experiences:**
+- Monastery and gompa visits
+- Participation in ceremonies (if available)
+- Cultural interactions with local communities
+- Cultural interpretation by guide
+
+**Safety & Emergency:**
+- Emergency helicopter service arrangements
+- First aid medical supplies carried by guide
+- Emergency communication and evacuation procedures
+- Satellite phone for emergencies (if needed)
+
+## What's NOT Included
+
+**Meals:**
+- 3 meals per day (breakfast, lunch, dinner)
+- Average cost: $25-35 per day
+- Prices increase with altitude and remoteness
+
+**Beverages:**
+- All drinks including tea, coffee, beer
+- Hot drinks cost extra at higher altitudes
+- Bottled water or water purification supplies
+
+**Personal Expenses:**
+- Personal shopping and souvenirs
+- Snacks and additional food items
+- Phone calls and internet charges (very limited)
+- Battery charging fees at higher altitudes
+- Monastery donations and offerings
+
+**Travel Insurance:**
+- Comprehensive travel and medical insurance required
+- Must cover helicopter evacuation up to 6,000m
+- Trip cancellation and interruption coverage
+
+**International Flights:**
+- Flights to/from Nepal
+- Visa fees for Nepal ($50 for 30 days)
+
+**Tips & Gratuities:**
+- Guide tips (customary but not mandatory)
+- Suggested: $8-12 per day for guide for extended trek
+
 ## Essential Equipment for 18-Day Trek
 
 **Comprehensive Gear List:**

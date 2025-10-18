@@ -246,6 +246,67 @@ Morning flight to Kathmandu (35 minutes). Free time for sightseeing, shopping, o
 - **Mental Challenges:** Dealing with discomfort and fatigue
 - **Emergency Preparedness:** Evacuation plans and insurance
 
+## What's Included in Your Package
+
+**Accommodation:**
+- 13 nights in teahouse/lodge accommodation during trek
+- Shared rooms with basic bedding
+- Clean mountain lodging
+
+**Transportation:**
+- Kathmandu to Lukla flight (both ways)
+- All ground transportation during trek
+
+**Permits & Documentation:**
+- Sagarmatha National Park entry permit
+- TIMS (Trekkers' Information Management System) card
+- All necessary paperwork and government fees
+
+**Guide Services:**
+- Experienced English-speaking trekking guide
+- Guide's food, salary, accommodation, insurance
+- Professional guidance and local knowledge
+
+**Safety & Emergency:**
+- Emergency helicopter service arrangements
+- First aid medical supplies carried by guide
+- Emergency communication and evacuation procedures
+
+**Administrative:**
+- All official expenses and government taxes
+- Permit processing and arrangements
+
+## What's NOT Included
+
+**Meals:**
+- 3 meals per day (breakfast, lunch, dinner)
+- Average cost: $30-40 per day
+- Prices increase significantly with altitude
+
+**Beverages:**
+- All drinks including tea, coffee, beer, soft drinks
+- Hot drinks cost extra at higher altitudes
+- Bottled water or water purification supplies
+
+**Personal Expenses:**
+- Personal shopping and souvenirs
+- Snacks and additional food items
+- Phone calls and internet charges (limited availability)
+- Battery charging fees at higher altitudes
+
+**Travel Insurance:**
+- Comprehensive travel and medical insurance required
+- Must cover helicopter evacuation up to 6,000m
+- Trip cancellation and interruption coverage
+
+**International Flights:**
+- Flights to/from Nepal
+- Visa fees for Nepal ($50 for 30 days)
+
+**Tips & Gratuities:**
+- Guide tips (customary but not mandatory)
+- Suggested: $7-10 per day for guide
+
 ## Best Time for This Ultimate Trek
 
 **Prime Seasons:**
