@@ -45,6 +45,12 @@
     "nepal": "nepal",
     "morocco": "morocco"
   },
+  "thanks": {
+    "title": "Thank you for your request!",
+    "description": "We have received your request and will contact you as soon as possible to organize your next experience.",
+    "home": "Back to homepage",
+    "explore": "Explore destinations"
+  },
   "activities": {
     "trekking": "Trekking",
     "paragliding": "Paragliding",

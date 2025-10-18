@@ -45,6 +45,12 @@
     "nepal": "nepal",
     "morocco": "marokko"
   },
+  "thanks": {
+    "title": "Bedankt voor je aanvraag!",
+    "description": "We hebben je aanvraag ontvangen en nemen zo snel mogelijk contact met je op om je volgende ervaring te organiseren.",
+    "home": "Terug naar homepagina",
+    "explore": "Bestemmingen verkennen"
+  },
   "activities": {
     "trekking": "Trekken",
     "paragliding": "Paragliding",
