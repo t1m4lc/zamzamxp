@@ -84,7 +84,7 @@
           </DialogContent>
         </Dialog>
         <Button as-child size="lg" class="rounded-full bg-orange-500 px-6 py-3 font-bold flex-shrink-0">
-          <a :href="tallyUrl" target="_blank" rel="noopener" @click="trackTallyBooking('sticky_mobile_cta')">
+          <a :href="tallyUrl" target="_blank" rel="noopener" @click="trackTallyFormOpen()">
             <Calendar class="mr-2 h-5 w-5" />
             <span>{{ $t('detailPage.sidebar.reserve') }}</span>
           </a>
@@ -268,19 +268,19 @@
                   <div class="mb-2 text-sm font-semibold text-slate-600 text">{{ $t('detailPage.sidebar.startingFrom') }}</div>
                   <div class="mb-2 text-5xl font-black text-slate-900">{{ $t('common.currency') }}{{ experience.price }}</div>
                   <div class="text-xs text-slate-600">{{ $t('detailPage.sidebar.perPerson') }}</div>
-                  <div v-if="experience.minGroupSize && experience.minGroupSize > 1" class="mt-2 text-xs font-medium text-slate-500">{{ experience.minGroupSize }} {{ experience.minGroupSize === 2 ? $t('detailPage.sidebar.person') : $t('detailPage.sidebar.people') }} {{ $t('detailPage.sidebar.minimum') }}</div>
+                  <div v-if="experience.minGroupSize && experience.minGroupSize > 1" class="mt-1 text-xs text-slate-500">{{ experience.minGroupSize }} {{ experience.minGroupSize === 2 ? $t('detailPage.sidebar.person') : $t('detailPage.sidebar.people') }} {{ $t('detailPage.sidebar.minimum') }}</div>
                 </div>
 
                 <div class="space-y-4 text-center">
                   <Button as-child size="lg" class="w-full rounded-full bg-orange-500 py-6 font-bold shadow-lg hover:bg-orange-600">
-                    <a :href="tallyUrl" target="_blank" rel="noopener" @click="trackTallyBooking('sidebar')">
+                    <a :href="tallyUrl" target="_blank" rel="noopener" @click="trackTallyFormOpen()">
                       <Calendar class="mr-2 h-5 w-5" />
                       {{ $t('detailPage.sidebar.reserve') }}
                     </a>
                   </Button>
 
                   <Button as-child size="lg" variant="outline" class="w-full rounded-full border-2 border-slate-300 font-bold hover:bg-slate-100">
-                    <a :href="whatsappUrl" target="_blank" rel="noopener" @click="trackWhatsAppBooking('sidebar')">
+                    <a :href="whatsappUrl" target="_blank" rel="noopener" @click="trackWhatsAppClick()">
                       <MessageCircle class="mr-2 h-5 w-5" />
                       {{ $t('detailPage.sidebar.bookWhatsApp') }}
                     </a>
@@ -466,7 +466,7 @@
           </p>
 
           <Button as-child size="lg" class="rounded-full bg-orange-500 px-12 py-8 text-xl font-bold text-white shadow-2xl transition-all hover:bg-orange-600 hover:scale-105">
-            <a :href="tallyUrl" target="_blank" rel="noopener" @click="trackTallyBooking('final_cta')">
+            <a :href="tallyUrl" target="_blank" rel="noopener" @click="trackTallyFormOpen()">
               <Calendar class="mr-2 h-7 w-7" />
               {{ $t('detailPage.cta.bookNow') }}
             </a>
@@ -838,47 +838,30 @@ const whatsappUrl = computed(() => {
   return `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(message)}`
 })
 
-// Track WhatsApp booking click
-const trackWhatsAppBooking = (location: string) => {
-  useTrackEvent('booking_whatsapp', {
+// Add tracking for opening the Tally form
+const trackTallyFormOpen = () => {
+  useTrackEvent('book_tally', {
     page: 'experience_detail',
-    method: 'whatsapp',
-    location: location,
+    action: 'open_form',
     country: normalizedCountry,
     activity: normalizedActivity,
     experience: String(slug),
-    price: experience.value?.price || 0,
     experience_title: experience.value?.title || ''
-  })
-}
+  });
+};
 
-// Track Email booking click
-const trackEmailBooking = (location: string) => {
-  useTrackEvent('booking_email', {
+// Add tracking for clicking the WhatsApp booking button
+const trackWhatsAppClick = () => {
+  useTrackEvent('book_whatsapp', {
     page: 'experience_detail',
-    method: 'email',
-    location: location,
+    action: 'open_whatsapp',
     country: normalizedCountry,
     activity: normalizedActivity,
     experience: String(slug),
-    price: experience.value?.price || 0,
     experience_title: experience.value?.title || ''
-  })
-}
+  });
+};
 
-// Track Tally booking click
-const trackTallyBooking = (location: string) => {
-  useTrackEvent('booking_tally', {
-    page: 'experience_detail',
-    method: 'tally_form',
-    location: location,
-    country: normalizedCountry,
-    activity: normalizedActivity,
-    experience: String(slug),
-    price: experience.value?.price || 0,
-    experience_title: experience.value?.title || ''
-  })
-}
 
 if (experience.value) {
   const exp = experience.value
@@ -900,6 +883,8 @@ if (experience.value) {
     twitterImage: exp.image,
   })
 
+  
+
   useSchemaOrg([
     defineProduct({
       name: exp.title,
@@ -908,7 +893,7 @@ if (experience.value) {
       offers: {
         "@type": "Offer",
         price: exp.price,
-        priceCurrency: "USD",
+        priceCurrency: locale.value === "en" ? "USD" : "EUR",
         availability: "https://schema.org/InStock",
         url: `https://zamzamxp.com/${countryStr}/${activityStr}/${slug}`,
       },
