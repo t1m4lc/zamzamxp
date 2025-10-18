@@ -56,7 +56,7 @@ export default defineNuxtConfig({
         "@type": "ContactPoint",
         telephone: "+33767503066",
         contactType: "Customer Service",
-        email: "hello@zamzamxp.com",
+        email: "timothyalcaide+zamzamxp@gmail.com",
         availableLanguage: ["English", "French"],
       },
     },

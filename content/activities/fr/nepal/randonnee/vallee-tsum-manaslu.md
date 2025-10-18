@@ -38,7 +38,7 @@ notIncluded:
   - "Tous les repas pendant le trek "
   - "Assurance voyage (obligatoire)"
   - "Dépenses personnelles et pourboires"
-bestTime: "Mars-Mai, Septembre-Novembre"
+bestTime: "Mars-Mai, septembre-octobre"
 minElevation: "869m"
 maxElevation: "5 106m"
 reviews:
@@ -295,7 +295,7 @@ Terminez votre trek épique avec un trajet panoramique de retour à la civilisat
 
 ## Meilleure période
 
-**Saisons idéales :** Mars-Mai (printemps) et Septembre-Novembre (automne)
+**Saisons idéales :** Mars-Mai (printemps) et septembre-octobre (automne)
 
 **Printemps (Mars-Mai) :**
 - Forêts de rhododendrons en fleurs magnifiques
@@ -303,7 +303,7 @@ Terminez votre trek épique avec un trajet panoramique de retour à la civilisat
 - Jours plus longs pour le trekking
 - Moins de risque de chute de neige sur les cols
 
-**Automne (Septembre-Novembre) :**
+**Automne (septembre-octobre) :**
 - Ciel le plus clair de l'année
 - Meilleure visibilité sur les montagnes
 - Conditions météorologiques stables

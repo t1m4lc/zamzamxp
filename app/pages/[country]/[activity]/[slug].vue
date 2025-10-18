@@ -280,7 +280,7 @@
                   </Button>
 
                   <Button as-child size="lg" variant="outline" class="w-full rounded-full border-2 border-slate-300 font-bold hover:bg-slate-100">
-                    <a href="mailto:hello@zamzamxp.com" @click="trackEmailBooking('sidebar')">
+                    <a href="mailto:timothyalcaide+zamzamxp@gmail.com" @click="trackEmailBooking('sidebar')">
                       <Mail class="mr-2 h-5 w-5" />
                       {{ $t('detailPage.sidebar.emailUs') }}
                     </a>

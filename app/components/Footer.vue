@@ -53,15 +53,15 @@
                 <span>{{ $t('footer.whatsapp') }}</span>
               </a>
             </li>
-            <li>
+            <!-- <li>
               <a
-                href="mailto:hello@zamzamxp.com"
+                href="mailto:timothyalcaide+zamzamxp@gmail.com"
                 class="flex items-center space-x-2 text-sm text-slate-600 transition-colors hover:text-orange-600"
               >
                 <Mail class="size-3" />
-                <span>hello@zamzamxp.com</span>
+                <span>timothyalcaide+zamzamxp@gmail.com</span>
               </a>
-            </li>
+            </li> -->
             <li>
               <NuxtLink
                 to="/contact"

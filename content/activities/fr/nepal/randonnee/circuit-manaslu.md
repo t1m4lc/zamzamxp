@@ -40,7 +40,7 @@ notIncluded:
   - "Toutes les boissons (thé, café, bière, etc.)"
   - "Assurance voyage (obligatoire pour évacuation d'urgence)"
   - "Pourboires pour le guide et les porteurs"
-bestTime: "Mars-Mai, Septembre-Novembre"
+bestTime: "Mars-Mai, septembre-octobre"
 minElevation: "870m (Machha Khola)"
 maxElevation: "5 106m (Col de Larkya La)"
 reviews:
@@ -249,7 +249,7 @@ Terminez votre trek avec un trajet panoramique de retour à la civilisation. Opt
 
 ## Meilleure période
 
-**Saisons idéales :** Mars-Mai (printemps) et Septembre-Novembre (automne)
+**Saisons idéales :** Mars-Mai (printemps) et septembre-octobre (automne)
 
 **Printemps (Mars-Mai) :**
 - Forêts de rhododendrons en fleurs
@@ -257,7 +257,7 @@ Terminez votre trek avec un trajet panoramique de retour à la civilisation. Opt
 - Bonne visibilité des montagnes
 - Jours plus longs pour le trekking
 
-**Automne (Septembre-Novembre) :**
+**Automne (septembre-octobre) :**
 - Ciel le plus clair
 - Conditions météorologiques stables
 - Températures parfaites

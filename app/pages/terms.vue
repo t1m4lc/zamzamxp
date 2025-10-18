@@ -184,7 +184,7 @@
               Questions about these terms? Contact us:
             </p>
             <ul class="text-slate-700">
-              <li><strong>Email:</strong> hello@zamzamxp.com</li>
+              <li><strong>Email:</strong> timothyalcaide+zamzamxp@gmail.com</li>
               <li><strong>WhatsApp:</strong> +977 1234567890</li>
               <li><strong>Address:</strong> Kathmandu, Nepal</li>
             </ul>

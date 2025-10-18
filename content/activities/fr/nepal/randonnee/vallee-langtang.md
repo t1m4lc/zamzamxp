@@ -41,7 +41,7 @@ notIncluded:
   - "Toutes les boissons (thé, café, bière, etc.)"
   - "Assurance voyage (requise pour évacuation d'urgence et secours médical)"
   - "Pourboires pour le guide"
-bestTime: "Mars-Mai, Septembre-Novembre"
+bestTime: "Mars-Mai, septembre-octobre"
 minElevation: "1 400m"
 maxElevation: "4 773m (Kyanjin Ri)"
 reviews:
@@ -211,7 +211,7 @@ Retour en voiture à Katmandou à travers la campagne panoramique. Réfléchisse
 - Températures modérées
 - Conditions météorologiques stables
 
-**Saison Automne (Septembre-Novembre) :**
+**Saison Automne (septembre-octobre) :**
 - Cieux cristallins et excellente visibilité
 - Températures de trekking confortables
 - Conditions sèches et météo stable

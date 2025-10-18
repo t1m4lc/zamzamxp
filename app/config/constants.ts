@@ -2,7 +2,7 @@
 export const APP_CONFIG = {
   company: {
     name: "Zamzam Experience",
-    email: "hello@zamzamxp.com",
+    email: "timothyalcaide+zamzamxp@gmail.com",
     whatsapp: "+33767503066",
   },
 

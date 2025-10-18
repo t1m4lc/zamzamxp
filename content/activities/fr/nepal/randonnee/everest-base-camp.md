@@ -37,7 +37,7 @@ notIncluded:
   - "Assurance voyage (obligatoire)"
   - "Dépenses personnelles et pourboires"
   - "Assurance évacuation d'urgence"
-bestTime: "Mars-Mai, Septembre-Novembre"
+bestTime: "Mars-Mai, septembre-octobre"
 minElevation: "2,610m"
 maxElevation: "5,555m"
 reviews:
@@ -220,7 +220,7 @@ Vol matinal retour vers Kathmandu. Fin des services.
 
 **Saisons Optimales:**
 - **Mars-Mai (Printemps):** Temps clair, fleurs de rhododendron, températures modérées
-- **Septembre-Novembre (Automne):** Ciel cristallin, vues excellentes, temps stable
+- **septembre-octobre (Automne):** Ciel cristallin, vues excellentes, temps stable
 
 **Températures:**
 - **Lukla (2,804m):** 10-20°C jour, 0-10°C nuit

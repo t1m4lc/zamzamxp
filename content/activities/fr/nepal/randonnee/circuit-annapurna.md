@@ -42,7 +42,7 @@ notIncluded:
   - "Assurance voyage (obligatoire)"
   - "Dépenses personnelles et pourboires"
   - "Douches chaudes et frais WiFi"
-bestTime: "Mars-Mai, Septembre-Novembre"
+bestTime: "Mars-Mai, septembre-octobre"
 minElevation: "1 120m"
 maxElevation: "5 416m"
 reviews:
@@ -222,14 +222,14 @@ Randonnée matinale à Poon Hill pour les vues au lever du soleil sur les chaîn
 
 ## Meilleure période
 
-**Saisons idéales :** Mars-Mai (printemps) et Septembre-Novembre (automne)
+**Saisons idéales :** Mars-Mai (printemps) et septembre-octobre (automne)
 
 **Printemps (Mars-Mai) :**
 - Forêts de rhododendrons en fleurs
 - Températures agréables
 - Vues dégagées sur les montagnes
 
-**Automne (Septembre-Novembre) :**
+**Automne (septembre-octobre) :**
 - Ciel le plus clair
 - Conditions météorologiques stables
 - Températures parfaites pour le trekking

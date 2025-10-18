@@ -48,7 +48,7 @@
 
               </div>
               <div>
-                <a href="mailto:hello@zamzamxp.com" class="inline-flex w-full items-center justify-center rounded-lg bg-gradient-to-r from-[#FF6B35] to-[#F7931E] px-6 py-3 font-medium text-white hover:opacity-90 transition-opacity" @click="trackEmailClick">
+                <a href="mailto:timothyalcaide+zamzamxp@gmail.com" class="inline-flex w-full items-center justify-center rounded-lg bg-gradient-to-r from-[#FF6B35] to-[#F7931E] px-6 py-3 font-medium text-white hover:opacity-90 transition-opacity" @click="trackEmailClick">
                   <Mail class="mr-2 h-5 w-5" />
                   {{ $t('contact.email.button') }}
                 </a>
@@ -129,7 +129,7 @@ useSchemaOrg([
       "@type": "ContactPoint",
       telephone: "+33767503066",
       contactType: "Customer Service",
-      email: "hello@zamzamxp.com",
+      email: "timothyalcaide+zamzamxp@gmail.com",
       availableLanguage: ["English", "French"],
     },
   }),
