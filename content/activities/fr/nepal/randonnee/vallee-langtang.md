@@ -3,8 +3,8 @@ title: "Trek de la Vallée de Langtang"
 description: "Trek parfait de 7 jours à travers le parc national de Langtang. Idéal pour ceux qui ont un temps limité recherchant des vistas himalayennes, une immersion culturelle avec des forêts de rhododendrons, des villages Tamang et des vues panoramiques sur le Langtang Lirung (7 246m)."
 country: "nepal"
 activity: "trekking"
-price: 169
-privatePrice: 249
+price: 190
+privatePrice: 275
 duration: "7 Jours"
 difficulty: "Modéré"
 groupSize: "2-10 personnes"

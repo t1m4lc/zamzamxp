@@ -3,8 +3,8 @@ title: "Trek du Circuit du Manaslu"
 description: "Trek épique de 12 jours autour du Mont Manaslu (8 163m), le 8ème plus haut sommet du monde. Franchissez le spectaculaire col de Larkya La (5 106m) à travers une nature sauvage préservée, des villages d'influence tibétaine et des panoramas montagneux époustouflants."
 country: "nepal"
 activity: "trekking"
-price: 339
-privatePrice: 500
+price: 390
+privatePrice: 590
 duration: "12 Jours"
 difficulty: "Difficile"
 groupSize: "2-10 personnes"

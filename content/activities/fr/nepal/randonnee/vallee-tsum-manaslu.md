@@ -3,8 +3,8 @@ title: "Trek du Circuit du Manaslu & Vallée de Tsum"
 description: "Épique voyage de 18 jours combinant la vallée sacrée de Tsum avec le Circuit du Manaslu. Découvrez des monastères anciens, la culture tibétaine, et franchissez le col de Larkya La à 5 106m."
 country: "nepal"
 activity: "trekking"
-price: 479
-privatePrice: 639
+price: 549
+privatePrice: 720
 duration: "18 Jours"
 difficulty: "Difficile"
 groupSize: "2-8 personnes"

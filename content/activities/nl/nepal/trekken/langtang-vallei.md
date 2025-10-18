@@ -3,8 +3,8 @@ title: "Langtang Vallei Trek"
 description: "Perfecte 7-daagse trek door Langtang National Park. Ideaal voor degenen met beperkte tijd die op zoek zijn naar Himalaya vista's, culturele onderdompeling met rododendronbossen, Tamang dorpen, en panoramische uitzichten op Langtang Lirung (7.246m)."
 country: "nepal"
 activity: "trekking"
-price: 169
-privatePrice: 249
+price: 190
+privatePrice: 275
 duration: "7 Dagen"
 difficulty: "Matig"
 groupSize: "2-10 personen"

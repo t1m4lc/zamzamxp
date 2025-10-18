@@ -3,8 +3,8 @@ title: "Trek du Circuit des Annapurnas - Col de Thorong La"
 description: "Épique trek de 16 jours autour du massif des Annapurnas, en franchissant le légendaire col de Thorong La à 5 416m. Découvrez des paysages variés, des vallées subtropicales aux terrains alpins de haute altitude."
 country: "nepal"
 activity: "trekking"
-price: 375
-privatePrice: 469
+price: 320
+privatePrice: 460
 duration: "16 Jours"
 difficulty: "Difficile"
 groupSize: "2-12 personnes"

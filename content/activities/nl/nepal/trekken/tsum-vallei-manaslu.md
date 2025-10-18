@@ -3,8 +3,8 @@ title: "Manaslu Circuit Trek & Tsum Vallei"
 description: "Epische 18-daagse reis die de heilige Tsum Vallei combineert met het Manaslu Circuit. Ervaar oude kloosters, Tibetaanse cultuur, en steek de Larkya La Pas over op 5.106m."
 country: "nepal"
 activity: "trekking"
-price: 479
-privatePrice: 639
+price: 549
+privatePrice: 720
 duration: "18 Dagen"
 difficulty: "Uitdagend"
 groupSize: "4-8 personen"

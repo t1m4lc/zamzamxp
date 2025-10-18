@@ -3,8 +3,8 @@ title: "Manaslu Circuit Trek"
 description: "Epische 12-daagse trek rondom Mount Manaslu (8.163m), 's werelds 8e hoogste berg. Steek de spectaculaire Larkya La Pas (5.106m) over door ongerepte wildnis, Tibetaans beïnvloede dorpen, en adembenemende berg panorama's."
 country: "nepal"
 activity: "trekking"
-price: 339
-privatePrice: 500
+price: 390
+privatePrice: 590
 duration: "12 Dagen"
 difficulty: "Uitdagend"
 groupSize: "2-10 personen"

@@ -3,8 +3,8 @@ title: "Annapurna Circuit Trek - Thorong La Pas"
 description: "Epische 16-daagse trek rondom het Annapurna-massief, over de legendarische Thorong La-pas op 5.416m. Ervaar diverse landschappen van subtropische valleien tot hoogalpien terrein."
 country: "nepal"
 activity: "trekking"
-price: 375
-privatePrice: 469
+price: 320
+privatePrice: 460
 duration: "16 Dagen"
 difficulty: "Uitdagend"
 groupSize: "2-12 personen"

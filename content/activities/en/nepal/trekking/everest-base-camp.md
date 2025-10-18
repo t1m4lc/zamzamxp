@@ -4,7 +4,7 @@ description: "Ultimate 14-day Everest region adventure combining EBC trek with G
 country: "nepal"
 activity: "trekking"
 price: 680
-privatePrice: 900
+privatePrice: 890
 duration: "14 Days"
 difficulty: "Very Challenging"
 groupSize: "2-12 people"

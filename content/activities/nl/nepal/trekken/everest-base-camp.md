@@ -3,8 +3,8 @@ title: "Everest Base Camp met Gokyo Meren & Cho La Pas"
 description: "Ultieme 14-daagse Everest regio avontuur dat EBC trek combineert met Gokyo Meren en uitdagende Cho La Pas oversteek. Ervaar de complete Khumbu regio."
 country: "nepal"
 activity: "trekking"
-price: 580
-privatePrice: 770
+price: 585
+privatePrice: 765
 duration: "14 Dagen"
 difficulty: "Zeer Uitdagend"
 groupSize: "2-12 personen"

@@ -3,8 +3,8 @@ title: "Camp de Base de l'Everest avec les Lacs de Gokyo & le Col de Cho La"
 description: "Aventure ultime de 14 jours dans la région de l'Everest combinant le trek EBC avec les lacs de Gokyo et la traversée du col de Cho La. Vivez la région complète du Khumbu."
 country: "nepal"
 activity: "trekking"
-price: 580
-privatePrice: 770
+price: 585
+privatePrice: 765
 duration: "14 Jours"
 difficulty: "Difficile"
 groupSize: "2-12 personnes"
