@@ -21,7 +21,7 @@
         <div class="mx-auto max-w-4xl">
           <div class="mb-16 grid gap-8 md:grid-cols-2">
             <!-- WhatsApp -->
-            <div class="rounded-2xl flex flex-col justify-between border border-green-100 bg-green-50 p-8 text-center">
+            <div class="rounded-2xl flex flex-col justify-between border border-green-100 bg-green-50 p-8 text-center lg:hidden">
               <div>
                 <MessageCircle class="mx-auto mb-4 size-8 text-green-500" />
               <h3 class="mb-2 text-xl font-bold text-slate-900">{{ $t('contact.whatsapp.title') }}</h3>

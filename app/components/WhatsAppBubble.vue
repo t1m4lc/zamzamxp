@@ -14,7 +14,7 @@
           :href="whatsappUrl"
           target="_blank"
           rel="noopener noreferrer"
-          class="fixed bottom-4 right-6 z-50 flex h-16 w-16 items-center justify-center rounded-full bg-[#25D366] text-white shadow-lg transition-all duration-300 hover:scale-110 hover:bg-[#128C7E] hover:shadow-xl md:hidden"
+          class="fixed bottom-4 right-6 z-50 flex h-16 w-16 items-center justify-center rounded-full bg-[#25D366] text-white shadow-lg transition-all duration-300 hover:scale-110 hover:bg-[#128C7E] hover:shadow-xl lg:hidden"
           aria-label="Chat on WhatsApp"
           @click="trackWhatsAppBubbleClick"
         >

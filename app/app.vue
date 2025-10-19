@@ -2,7 +2,8 @@
     <NuxtLoadingIndicator color="#FF6B35" />
     <Header />
     <NuxtPage />
-    <Footer />
+    <LazyFooter />
+    <LazyWhatsAppBubble />
     <SpeedInsights />
 </template>
 

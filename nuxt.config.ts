@@ -8,6 +8,11 @@ export default defineNuxtConfig({
 
   ssr: true,
 
+  experimental: {
+    componentIslands: true,
+    viewTransition: true,
+  },
+
   nitro: {
     preset: "vercel-static",
     prerender: {
@@ -128,6 +133,32 @@ export default defineNuxtConfig({
       xl: 1024,
       xxl: 1280,
       xxxl: 1536,
+    },
+    presets: {
+      hero: {
+        modifiers: {
+          format: "webp",
+          quality: 90,
+          width: 1920,
+          height: 1080,
+        },
+      },
+      card: {
+        modifiers: {
+          format: "webp",
+          quality: 80,
+          width: 800,
+          height: 600,
+        },
+      },
+      avatar: {
+        modifiers: {
+          format: "webp",
+          quality: 85,
+          width: 400,
+          height: 400,
+        },
+      },
     },
   },
 

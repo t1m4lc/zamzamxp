@@ -2,12 +2,14 @@
   <div class="overflow-x-hidden">
     <!-- Hero Section with Globe Background -->
     <section class="relative bg-gradient-to-b from-slate-50 to-white" style="padding-bottom: 350px; padding-top: 40px;">
-      <!-- Globe Background - Positioned lower -->
-      <div class="absolute left-0 right-0 flex items-end justify-center pointer-events-none" style="top: 35%; transform: translateY(0);">
-        <div class="relative w-full h-[700px] lg:h-[900px] max-w-[900px] lg:max-w-[1100px]">
-          <Globe />
+      <!-- Globe Background - Positioned lower - Lazy loaded -->
+      <ClientOnly>
+        <div class="absolute left-0 right-0 flex items-end justify-center pointer-events-none" style="top: 35%; transform: translateY(0);">
+          <div class="relative w-full h-[700px] lg:h-[900px] max-w-[900px] lg:max-w-[1100px]">
+            <LazyGlobe />
+          </div>
         </div>
-      </div>
+      </ClientOnly>
 
       <!-- Hero Content -->
       <div class="container mx-auto px-6 relative z-10 flex items-start pt-10 lg:pt-20">
@@ -87,7 +89,7 @@
           </p>
         </div>
 
-        <Marquee :pause-on-hover="true" class="[--duration:30s] mb-6">
+        <LazyMarquee :pause-on-hover="true" class="[--duration:30s] mb-6">
           <Card v-for="review in firstRowReviews" :key="review.initials" class="mx-3 w-[350px] p-6 bg-white border border-slate-200 rounded-xl shadow-sm hover:shadow-md transition-shadow">
             <div class="flex items-center mb-4">
               <div :class="[review.avatarClass, 'w-12 h-12 rounded-full flex items-center justify-center font-medium text-white']">
@@ -102,9 +104,9 @@
               {{ review.text }}
             </p>
           </Card>
-        </Marquee>
+        </LazyMarquee>
 
-        <Marquee :pause-on-hover="true" :reverse="true" class="[--duration:30s]">
+        <LazyMarquee :pause-on-hover="true" :reverse="true" class="[--duration:30s]">
           <Card v-for="review in secondRowReviews" :key="review.initials" class="mx-3 w-[350px] p-6 bg-white border border-slate-200 rounded-xl shadow-sm hover:shadow-md transition-shadow">
             <div class="flex items-center mb-4">
               <div :class="[review.avatarClass, 'w-12 h-12 rounded-full flex items-center justify-center font-medium text-white']">
@@ -119,7 +121,7 @@
               {{ review.text }}
             </p>
           </Card>
-        </Marquee>
+        </LazyMarquee>
       </div>
     </section>
 
@@ -148,7 +150,7 @@
             :alt="member.name"
             class="h-full w-full grayscale hover:grayscale-0  object-cover transition-all duration-500 group-hover:scale-110"
             sizes="xs:50vw sm:50vw md:33vw lg:16vw xl:16vw"
-            placeholder
+            placeholder="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 400'%3E%3Cfilter id='b' color-interpolation-filters='sRGB'%3E%3CfeGaussianBlur stdDeviation='20'/%3E%3CfeColorMatrix values='1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 100 -1' result='s'/%3E%3CfeFlood x='0' y='0' width='100%25' height='100%25'/%3E%3CfeComposite operator='out' in='s'/%3E%3CfeComposite in2='SourceGraphic'/%3E%3CfeGaussianBlur stdDeviation='20'/%3E%3C/filter%3E%3Cimage width='100%25' height='100%25' x='0' y='0' preserveAspectRatio='none' style='filter:url(%23b)' href='data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWEREiMxUf/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=='/%3E%3C/svg%3E"
             loading="lazy"
           />
               </div>
@@ -256,7 +258,7 @@
               as-child
               size="lg"
               variant="outline"
-              class="rounded-lg border border-slate-300 px-8 py-3 text-base font-medium text-slate-700 hover:bg-slate-50 transition-colors"
+              class="rounded-lg border border-slate-300 px-8 py-3 text-base font-medium text-slate-700 hover:bg-slate-50 transition-colors lg:hidden"
             >
               <a :href="`https://wa.me/${APP_CONFIG.company.whatsapp}`" target="_blank" rel="noopener">
                 {{ $t('home.finalCta.whatsapp') }}
@@ -272,8 +274,6 @@
 <script setup lang="ts">
 import { Button } from '~/components/ui/button'
 import { Card } from '~/components/ui/card'
-import Globe from '~/components/ui/globe/Globe.vue'
-import { Marquee } from '~/components/ui/marquee'
 import { NumberTicker } from '~/components/ui/number-ticker'
 import { APP_CONFIG } from '~/config/constants'
 import { Handshake, Users, Leaf, ChevronRight, Star } from 'lucide-vue-next'

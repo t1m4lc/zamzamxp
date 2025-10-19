@@ -20,6 +20,7 @@
                 {{ $t('nav.blog') }}
               </NavigationMenuTrigger>
               <NavigationMenuContent>
+                <ClientOnly>
                 <div class="w-[400px]">
                   <div class="grid gap-3 p-3">
                     <!-- Recent posts list (limited to 3) -->
@@ -77,6 +78,7 @@
                     </NuxtLink>
                   </div>
                 </div>
+                </ClientOnly>
               </NavigationMenuContent>
             </NavigationMenuItem>
 
