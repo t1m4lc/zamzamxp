@@ -21,7 +21,7 @@
         <div class="mx-auto max-w-4xl">
           <div class="mb-16 grid gap-8 md:grid-cols-2">
             <!-- WhatsApp -->
-            <div class="rounded-2xl flex flex-col justify-between border border-green-100 bg-green-50 p-8 text-center lg:hidden">
+            <div class="rounded-2xl flex flex-col justify-between border border-green-100 bg-green-50 p-8 text-center">
               <div>
                 <MessageCircle class="mx-auto mb-4 size-8 text-green-500" />
               <h3 class="mb-2 text-xl font-bold text-slate-900">{{ $t('contact.whatsapp.title') }}</h3>
@@ -30,10 +30,16 @@
               </p>
               </div>
               <div>
-                <a :href="getWhatsAppUrl()" target="_blank" rel="noopener" class="inline-flex w-full items-center justify-center rounded-lg bg-green-500 px-6 py-3 font-medium text-white hover:bg-green-600 transition-colors" @click="trackWhatsAppClick">
+                <!-- Mobile: Clickable WhatsApp button -->
+                <a :href="getWhatsAppUrl()" target="_blank" rel="noopener" class="lg:hidden inline-flex w-full items-center justify-center rounded-lg bg-green-500 px-6 py-3 font-medium text-white hover:bg-green-600 transition-colors" @click="trackWhatsAppClick">
                   <MessageCircle class="mr-2 h-5 w-5" />
                   {{ $t('contact.whatsapp.button') }}
                 </a>
+                <!-- Desktop: Display phone number only -->
+                <div class="hidden lg:flex w-full items-center justify-center rounded-lg border-2 border-green-500 bg-white px-6 py-3 font-medium text-green-600">
+                  <MessageCircle class="mr-2 h-5 w-5" />
+                  {{ APP_CONFIG.company.whatsapp }}
+                </div>
               </div>
             </div>
 

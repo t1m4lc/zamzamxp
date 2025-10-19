@@ -468,13 +468,13 @@ const handleImageError = () => {
 
 // Fetch blog post
 const { data: post } = await useAsyncData(
-  `blog-post-${slug.value}`,
+  `blog-post-${locale.value}-${slug.value}`,
   () => fetchBlogPostBySlug(slug.value)
 );
 
 // Fetch linked experience if available
 const { data: linkedExperience } = await useAsyncData(
-  `blog-experience-${slug.value}`,
+  `blog-experience-${locale.value}-${slug.value}`,
   async () => {
     const experienceSlug = post.value?.relatedExperienceSlug;
     
@@ -500,7 +500,7 @@ const { data: linkedExperience } = await useAsyncData(
 
 // Fetch related posts
 const { data: relatedPosts } = await useAsyncData(
-  `blog-related-${slug.value}`,
+  `blog-related-${locale.value}-${slug.value}`,
   async () => {
     if (!post.value) return [];
     return await getRelatedPosts(slug.value, post.value.tags);

@@ -206,7 +206,7 @@ useHead({
 });
 
 // Fetch blog posts
-const { data: posts } = await useAsyncData('blog-posts', () => fetchBlogPosts());
+const { data: posts } = await useAsyncData(`blog-posts-${locale.value}`, () => fetchBlogPosts());
 
 // Extract slug from path
 const extractSlug = (path: string) => {

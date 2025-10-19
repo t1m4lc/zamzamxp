@@ -3,7 +3,7 @@
     <Header />
     <NuxtPage />
     <LazyFooter />
-    <LazyWhatsAppBubble />
+    <LazyWhatsAppBubble v-if="!isBlogPage" />
     <SpeedInsights />
 </template>
 
@@ -14,6 +14,11 @@ import { SpeedInsights } from "@vercel/speed-insights/nuxt"
 const route = useRoute()
 const { locale, locales } = useI18n()
 const switchLocalePath = useSwitchLocalePath()
+
+// Check if current page is a blog page
+const isBlogPage = computed(() => {
+  return route.path.includes('/blog')
+})
 
 // Global SEO configuration
 useSeoMeta({
