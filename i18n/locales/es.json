@@ -1,0 +1,394 @@
+{
+  "common": {
+    "home": "Inicio",
+    "about": "Acerca de",
+    "contact": "Contacto",
+    "destinations": "Destinos",
+    "activities": "Actividades",
+    "terms": "Términos",
+    "privacy": "Privacidad",
+    "readMore": "Leer Más",
+    "bookNow": "Reservar Ahora",
+    "getQuote": "Obtener Cotización",
+    "from": "Desde",
+    "perPerson": "por persona",
+    "day": "día",
+    "days": "días",
+    "currency": "€"
+  },
+  "nav": {
+    "home": "Inicio",
+    "destinations": "Destinos",
+    "about": "Acerca de",
+    "contact": "Contacto"
+  },
+  "footer": {
+    "brand": {
+      "description": "Conectando viajeros con guías locales apasionados para aventuras auténticas alrededor del mundo."
+    },
+    "destinations": "Destinos",
+    "getInTouch": "Contáctanos",
+    "whatsapp": "WhatsApp",
+    "email": "Email",
+    "contactUs": "Contáctanos",
+    "language": "Idioma",
+    "copyright": "© {year} Zamzam Experience. Todos los derechos reservados.",
+    "ecoFriendly": "Ecológico y Sostenible",
+    "fairRemuneration": "Remuneración Justa para Socios",
+    "allRightsReserved": "Todos los derechos reservados"
+  },
+  "countries": {
+    "nepal": "Nepal",
+    "morocco": "Marruecos"
+  },
+  "countrySlug": {
+    "nepal": "nepal",
+    "morocco": "marruecos"
+  },
+  "thanks": {
+    "title": "¡Gracias por tu solicitud!",
+    "description": "Hemos recibido tu solicitud y te contactaremos lo antes posible para organizar tu próxima experiencia.",
+    "home": "Volver al inicio",
+    "explore": "Explorar destinos"
+  },
+  "activities": {
+    "trekking": "Senderismo",
+    "paragliding": "Parapente",
+    "surfing": "Surf",
+    "title": "{activity} en {country}",
+    "count": "{count} experiencia | {count} experiencias",
+    "noExperiences": "Aún No Hay Experiencias",
+    "noExperiencesDesc": "Actualmente estamos agregando experiencias de {activity} en {country}. ¡Vuelve pronto para nuevas aventuras emocionantes!"
+  },
+  "activitySlug": {
+    "trekking": "senderismo",
+    "paragliding": "parapente",
+    "surfing": "surf"
+  },
+  "experience": {
+    "duration": "Duración",
+    "difficulty": "Dificultad",
+    "groupSize": "Tamaño del Grupo",
+    "price": "Precio",
+    "privatePrice": "Precio Privado",
+    "included": "Qué Está Incluido",
+    "notIncluded": "No Incluido",
+    "highlights": "Destacados",
+    "bestTime": "Mejor Época para Ir",
+    "reviews": "Reseñas",
+    "elevation": "Elevación",
+    "minElevation": "Elevación Mín",
+    "maxElevation": "Elevación Máx",
+    "needHelp": "¿Necesitas ayuda para elegir?",
+    "needHelpDesc": "¿No estás seguro de qué aventura es la adecuada para ti? Nuestro equipo puede ayudarte.",
+    "chatWhatsApp": "Chatear en WhatsApp",
+    "includedItems": {
+      "professionalGuides": "Guías profesionales incluidos",
+      "smallGroups": "Grupos pequeños (máx 12)",
+      "safetyEquipment": "Todo el equipo de seguridad proporcionado",
+      "flexibleBooking": "Reserva y cancelación flexibles"
+    }
+  },
+  "contact": {
+    "hero": {
+      "title": "¡Hablemos!",
+      "subtitle": "¿Planificando tu aventura? ¡Estamos aquí para ayudarte!"
+    },
+    "whatsapp": {
+      "title": "WhatsApp",
+      "description": "¿Preguntas rápidas? Chatea con nosotros instantáneamente en WhatsApp. ¡Normalmente respondemos en 30 minutos!",
+      "button": "Chatear Ahora"
+    },
+    "email": {
+      "title": "Email",
+      "description": "¿Prefieres email? Envíanos tus preguntas y te responderemos en 24 horas.",
+      "button": "Enviar Email"
+    },
+    "form": {
+      "title": "Envíanos un Mensaje",
+      "nameLabel": "Tu Nombre",
+      "namePlaceholder": "Juan Pérez",
+      "emailLabel": "Dirección de Email",
+      "emailPlaceholder": "{'juan@ejemplo.com'}",
+      "subjectLabel": "Asunto",
+      "subjectPlaceholder": "Planificando un trek a Nepal",
+      "messageLabel": "Mensaje",
+      "messagePlaceholder": "Cuéntanos sobre tu aventura soñada...",
+      "sending": "Enviando...",
+      "submit": "Enviar Mensaje",
+      "privacyNote": "Respetamos tu privacidad y nunca compartiremos tu información.",
+      "successMessage": "¡Gracias! Te responderemos pronto.",
+      "errorMessage": "Algo salió mal. Por favor, inténtalo de nuevo."
+    },
+    "info": {
+      "locationTitle": "Ubicación",
+      "responseTimeTitle": "Tiempo de Respuesta",
+      "languagesTitle": "Idiomas"
+    }
+  },
+  "home": {
+    "hero": {
+      "title": "Viajes justos para todos",
+      "subtitle": "Descubre las mejores experiencias de aventura con guías locales apasionados. Paga precios honestos. Apoya el turismo sostenible. Aventuras reales, comunidades felices.",
+      "cta": "Explorar Destinos"
+    },
+    "tagline": "Un tipo diferente de agencia de viajes",
+    "taglineDesc": "Creemos que los viajes deben enriquecer a todos: el viajero, el guía y la comunidad.",
+    "featured": "Experiencias Destacadas",
+    "testimonials": "Reseñas de viajeros",
+    "testimonialsDesc": "Mira lo que dicen nuestros aventureros",
+    "reviews": {
+      "isabelle": "Hice el trekking del circuito del Manaslu de 12 días, ¡y fue absolutamente espectacular! Vistas impresionantes, realmente un recuerdo para toda la vida. Sandip es un guía increíble...",
+      "samuel": "Acabamos de completar el Circuito de Annapurna con el Lago Tilicho. ¡Sandip fue increíble! Cada casa de huéspedes superó nuestras expectativas. Marcó el ritmo del trek perfectamente...",
+      "lisa": "¡El Circuito de Annapurna fue verdaderamente único! Sandip hizo que todo fuera fluido y memorable. Sabe mucho sobre el área y siempre puso nuestra seguridad primero...",
+      "michael": "¡El trek al Campo Base del Everest fue la aventura de mi vida! El conocimiento de Sandip sobre la región del Khumbu es excepcional y compartió historias increíbles...",
+      "anna": "¡Estar en el Campo Base del Everest fue surrealista! Sandip se aseguró de que estuviéramos bien preparados y seguros. Las casas de té fueron acogedoras, las vistas impresionantes...",
+      "david": "¡El Campo Base del Everest superó todas las expectativas! La atención al detalle de Sandip marcó la diferencia. De Namche Bazaar a Kala Patthar, inolvidable..."
+    },
+    "fairForEveryone": "Justo para todos",
+    "fairForEveryoneDesc": "Los guías locales reciben un pago justo. Tú obtienes precios honestos. Todos ganan.",
+    "passionateLocals": "Locales apasionados",
+    "passionateLocalsDesc": "Nuestros guías aman lo que hacen y están ansiosos por compartirlo contigo.",
+    "sustainableTourism": "Turismo sostenible",
+    "sustainableTourismDesc": "Prácticas ecológicas que protegen los lugares que nos encanta explorar.",
+    "stats": {
+      "happyTravelers": "Viajeros Felices",
+      "countries": "Países",
+      "activities": "Actividades",
+      "averageRating": "Calificación Promedio",
+      "reviews": "reseñas"
+    },
+    "destinationsSection": {
+      "title": "Explora nuestros destinos",
+      "subtitle": "Descubre aventuras increíbles en lugares impresionantes alrededor del mundo"
+    },
+    "finalCta": {
+      "title": "¿Listo para comenzar a planificar?",
+      "subtitle": "Ponte en contacto con nuestro equipo para discutir tu aventura.",
+      "contactUs": "Contáctanos",
+      "whatsapp": "WhatsApp"
+    }
+  },
+  "about": {
+    "title": "Quiénes somos",
+    "subtitle": "Conectando viajeros con guías locales apasionados para aventuras auténticas alrededor del mundo.",
+    "ourStory": "Nuestra Historia",
+    "storyP1": "Zamzam Experience nació de una simple observación: alrededor del mundo, guías locales talentosos son apasionados por compartir su cultura y actividades, pero luchan por conectar con los viajeros de manera justa y equitativa.",
+    "storyP2": "Estamos construyendo un nuevo tipo de agencia de viajes: una que pone a las comunidades locales primero, asegura una compensación justa para guías y socios, y ofrece experiencias auténticas que benefician a todos los involucrados.",
+    "storyP3": "Cada aventura que ofrecemos crea conexiones significativas, apoya el turismo sostenible y ayuda a preservar los destinos que amamos explorar.",
+    "ourValues": "Nuestros Valores",
+    "valuesDesc": "Lo que impulsa todo lo que hacemos",
+    "authenticTitle": "Experiencias Locales Auténticas",
+    "authenticDesc": "Cada aventura es diseñada y dirigida por locales que comparten su cultura, historias y perspectivas genuinas.",
+    "ecoTitle": "Ecológico y Sostenible",
+    "ecoDesc": "Minimizamos el impacto ambiental, respetamos las culturas locales y aseguramos que el turismo beneficie a las comunidades a largo plazo.",
+    "fairTitle": "Remuneración Justa",
+    "fairDesc": "Nuestros socios reciben una compensación justa por su trabajo. Creemos en un turismo equitativo que beneficia a todos.",
+    "pricesTitle": "Mejores Precios del Mercado",
+    "pricesDesc": "Experiencias de calidad a precios justos. Odiamos las trampas turísticas: pagas lo justo por un servicio de calidad.",
+    "founder": {
+      "title": "Fundador",
+      "name": "Timothy Alcaide",
+      "bio1": "Soy un ingeniero de software que dejó su trabajo en 2024 para viajar por el mundo. Apasionado por los deportes de aventura y las montañas, exploré Madagascar, Tailandia, Vietnam, Nepal y Marruecos.",
+      "bio2": "Dondequiera que fui, conocí guías locales increíbles que eran apasionados por su oficio pero luchaban por encontrar clientes de manera justa. Por eso creé Zamzam Experience en 2025.",
+      "bio3": "(Dato curioso: \"zamzam\" es una palabra nepalí que significa \"¡vamos!\" - captura perfectamente nuestro espíritu de aventura.)"
+    },
+    "partners": {
+      "title": "Nuestros socios locales",
+      "description": "Trabajamos exclusivamente con guías locales apasionados, alojamientos familiares y pequeños negocios. Cuando viajas con nosotros, estás apoyando directamente a las personas que llaman hogar a estos lugares.",
+      "guidesTitle": "Guías Locales",
+      "guidesDesc": "Profesionales apasionados que conocen cada sendero, ola y joya escondida en su región.",
+      "businessTitle": "Negocios Locales",
+      "businessDesc": "Operaciones familiares que proporcionan alojamientos y servicios auténticos.",
+      "communityTitle": "Socios Comunitarios",
+      "communityDesc": "Cooperativas y organizaciones dedicadas al turismo sostenible basado en la comunidad."
+    },
+    "commitment": {
+      "title": "Nuestro compromiso con el turismo justo",
+      "subtitle": "El turismo debe beneficiar a todos, especialmente a las comunidades locales",
+      "fairRemTitle": "Remuneración Justa",
+      "fairRemDesc": "Todos nuestros socios reciben una compensación justa por sus servicios. Creemos en asociaciones equitativas donde todos se benefician.",
+      "fairRemBullet1": "Salarios justos para todos los socios",
+      "fairRemBullet2": "Precios transparentes",
+      "fairRemBullet3": "Asociaciones directas con locales",
+      "communityTitle": "Enfoque Comunitario",
+      "communityDesc": "Priorizamos trabajar con negocios locales y operaciones familiares, asegurando que los ingresos del turismo permanezcan dentro de la comunidad.",
+      "communityBullet1": "Asociaciones directas con familias locales",
+      "communityBullet2": "Apoyo a pequeños negocios locales",
+      "communityBullet3": "Los ingresos permanecen en comunidades locales",
+      "envTitle": "Cuidado Ambiental",
+      "envDesc": "Operamos aventuras neutras en carbono, participamos en el mantenimiento de senderos y educamos a los viajeros sobre los principios de No Dejar Rastro.",
+      "envBullet1": "Asociaciones de compensación de carbono",
+      "envBullet2": "Limpiezas semanales de senderos",
+      "envBullet3": "Operaciones libres de plástico",
+      "inclusiveTitle": "Oportunidades Inclusivas",
+      "inclusiveDesc": "Estamos comprometidos a trabajar con socios diversos y apoyar el turismo inclusivo. A medida que crecemos, nuestro objetivo es crear más oportunidades para grupos subrepresentados en el turismo de aventura.",
+      "inclusiveBullet1": "Abierto a todos los guías calificados",
+      "inclusiveBullet2": "Construcción de asociaciones diversas",
+      "inclusiveBullet3": "Enfoque de igualdad de oportunidades"
+    },
+    "stats": {
+      "happyCustomers": "Clientes Felices",
+      "localPartners": "Socios Locales",
+      "countries": "Países"
+    },
+    "cta": {
+      "title": "Únete a Nuestra Próxima Aventura",
+      "subtitle": "Sé parte de una comunidad de viajes que crea un impacto positivo",
+      "button": "Ponte en Contacto"
+    }
+  },
+  "destinations": {
+    "title": "Explora nuestros destinos",
+    "subtitle": "Descubre aventuras impresionantes en destinos cuidadosamente seleccionados alrededor del mundo",
+    "nepalDesc": "Experimenta aventuras de trekking y parapente de clase mundial en el Himalaya con impresionantes vistas de montañas.",
+    "moroccoDesc": "Descubre el surf en la costa atlántica combinado con la rica cultura marroquí en encantadoras ciudades costeras.",
+    "experiences": "experiencias",
+    "explore": "Explorar",
+    "comingSoon": {
+      "title": "Más Destinos",
+      "subtitle": "Próximamente",
+      "description": "Estamos constantemente agregando nuevas experiencias emocionantes. ¡Mantente atento para más aventuras!",
+      "expanding": "Expandiendo pronto",
+      "stayTuned": "Mantente atento"
+    },
+    "whyChoose": {
+      "title": "Por qué elegir nuestros destinos",
+      "subtitle": "Seleccionamos cuidadosamente cada destino basándonos en experiencias únicas, seguridad y conexiones culturales auténticas",
+      "expertTitle": "Curación Experta",
+      "expertDesc": "Cada destino es seleccionado por sus experiencias únicas y belleza natural.",
+      "safetyTitle": "Seguridad Primero",
+      "safetyDesc": "Todos los destinos cumplen con altos estándares de seguridad con apoyo de emergencia local.",
+      "authenticTitle": "Experiencias Auténticas",
+      "authenticDesc": "Conéctate con comunidades locales a través de interacciones significativas."
+    },
+    "cta": {
+      "title": "¿Listo para comenzar tu aventura?",
+      "subtitle": "Contacta a nuestros especialistas en viajes para planificar tu aventura perfecta en cualquiera de nuestros increíbles destinos.",
+      "planTrip": "Planificar Mi Viaje",
+      "whatsapp": "Escríbenos por WhatsApp"
+    }
+  },
+  "seo": {
+    "home": {
+      "title": "Viajes de Aventura con Precios Justos y Guías Locales",
+      "description": "Un nuevo tipo de agencia de viajes que te conecta con guías locales apasionados. Precios justos, turismo sostenible y aventuras auténticas en Nepal, Marruecos y más."
+    },
+    "about": {
+      "title": "Acerca de - Viajes de Aventura Justos",
+      "description": "Conoce Zamzam Experience: conectando viajeros con guías locales para aventuras auténticas. Precios justos, turismo sostenible y experiencias culturales significativas desde 2025.",
+      "ogTitle": "Acerca de Zamzam Experience - Viajes de Aventura Justos",
+      "ogDescription": "Nuestra misión: aventuras auténticas que benefician a viajeros, guías y comunidades locales."
+    },
+    "destinations": {
+      "title": "Destinos de Viajes de Aventura | Nepal, Marruecos y Más",
+      "description": "Explora destinos de aventura auténticos con guías locales expertos. Trekking en el Himalaya de Nepal, surf en la costa atlántica de Marruecos y más experiencias de turismo sostenible.",
+      "ogTitle": "Destinos de Viajes de Aventura",
+      "ogDescription": "Del Himalaya de Nepal a la costa atlántica de Marruecos - descubre aventuras auténticas con guías locales."
+    },
+    "contact": {
+      "title": "Contáctanos - Planifica Tu Aventura",
+      "description": "Ponte en contacto para planificar tu aventura. Respuesta rápida vía WhatsApp o email. Asesoramiento experto sobre trekking en Nepal, surf en Marruecos y viajes de aventura sostenibles.",
+      "ogTitle": "Contáctanos",
+      "ogDescription": "¿Listo para planificar tu próxima aventura? Ponte en contacto con nuestro equipo."
+    }
+  },
+  "countryPage": {
+    "heroTitle": "Aventuras en {country}",
+    "activitiesTitle": "Actividades",
+    "noActivitiesTitle": "No Hay Actividades Disponibles",
+    "noActivitiesDesc": "Estamos trabajando en agregar actividades emocionantes para {country}. ¡Vuelve pronto para nuevas aventuras!",
+    "whyTravelTitle": "Por qué viajar con nosotros",
+    "localExpertsTitle": "Expertos Locales",
+    "localExpertsDesc": "Nuestros guías son expertos locales que conocen cada sendero y joya escondida.",
+    "smallGroupsTitle": "Grupos Pequeños",
+    "smallGroupsDesc": "Máximo 12 personas por grupo para atención personalizada.",
+    "safetyFirstTitle": "Seguridad Primero",
+    "safetyFirstDesc": "Con licencia, asegurados y equipados con protocolos de seguridad completos.",
+    "ctaTitle": "Planifica tu aventura en {country}",
+    "ctaDesc": "Ponte en contacto con nuestro equipo para discutir tu viaje.",
+    "contactUs": "Contáctanos",
+    "whatsapp": "WhatsApp",
+    "countryDescriptions": {
+      "nepal": "Experimenta aventuras de trekking y parapente de clase mundial en el Himalaya.",
+      "morocco": "Descubre increíbles spots de surf y aventuras costeras a lo largo del Océano Atlántico."
+    },
+    "activityDescriptions": {
+      "trekking": "Treks de varios días a través del Himalaya con impresionantes vistas de montañas",
+      "paragliding": "Vuela sobre valles con la cordillera del Annapurna como telón de fondo",
+      "surfing": "Surca las olas en la impresionante costa atlántica de Marruecos"
+    }
+  },
+  "notFound": {
+    "country": {
+      "title": "País no encontrado",
+      "description": "No pudimos encontrar el destino que buscas. Puede que haya sido movido o aún no existe.",
+      "backButton": "Todos los Destinos",
+      "home": "Volver al Inicio"
+    },
+    "activity": {
+      "title": "Actividad no encontrada",
+      "description": "No pudimos encontrar la actividad que buscas en {country}. Puede que haya sido movida o aún no existe.",
+      "backButton": "Volver a {country}",
+      "allDestinations": "Todos los Destinos"
+    }
+  },
+  "detailPage": {
+    "notFound": {
+      "title": "Experiencia no encontrada",
+      "description": "No pudimos encontrar la experiencia que buscas. Puede que haya sido movida o aún no existe.",
+      "backButton": "Volver a {activity}",
+      "allDestinations": "Todos los Destinos"
+    },
+    "sidebar": {
+      "startingFrom": "Desde",
+      "perPerson": "Por persona",
+      "minimum": "mínimo",
+      "person": "persona",
+      "people": "personas",
+      "reserve": "Reservar",
+      "bookWhatsApp": "Reservar en WhatsApp",
+      "emailUs": "Envíanos un Email",
+      "viewPricing": "Opciones de Precios",
+      "whyBookTitle": "Por Qué Reservar Con Nosotros",
+      "bestPrices": "Mejores Precios del Mercado",
+      "bestPricesDesc": "¡Garantizamos los mejores precios del mercado - valor inmejorable para tu aventura!",
+      "fairRemuneration": "Remuneración Justa",
+      "fairRemunerationDesc": "Nuestros socios reciben un pago justo - ",
+      "seeValues": "ver nuestros valores",
+      "ecoFriendly": "Ecológico",
+      "ecoFriendlyDesc": "Prácticas de turismo sostenible"
+    },
+    "pricing": {
+      "title": "Opciones de Precios",
+      "description": "Elige la opción que mejor te funcione. Todos los precios son por persona.",
+      "premiumExperience": "Reserva individual",
+      "off": "DE DESCUENTO",
+      "basePrice": "Precio base (mín. 2)"
+    },
+    "included": "Incluido",
+    "notIncluded": "No Incluido",
+    "referee": {
+      "defaultTitle": "Conoce a Tu Guía"
+    },
+    "reviews": {
+      "title": "Reseñas de Viajeros",
+      "from": "de",
+      "reviews": "reseñas"
+    },
+    "cta": {
+      "title": "¿Listo para Reservar {title}?",
+      "minimum": "Mínimo {count} {people}",
+      "perPerson": "Por persona",
+      "description": "No te pierdas esta increíble aventura. ¡Los lugares se llenan rápidamente!",
+      "bookNow": "Reservar ahora, pagar después",
+      "questions": "¿Preguntas? Contáctanos en cualquier momento en {'timothyalcaide+zamzamxp@gmail.com'}"
+    },
+    "related": {
+      "title": "También Te Puede Gustar",
+      "sameActivity": "Más aventuras de {activity} en {country}",
+      "sameCountry": "Explora más aventuras en {country}",
+      "similarActivity": "Experiencias similares de {activity} en todo el mundo"
+    }
+  }
+}

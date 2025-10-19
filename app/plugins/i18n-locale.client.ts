@@ -6,7 +6,7 @@ export default defineNuxtPlugin((nuxtApp) => {
   // Restore locale from localStorage on app load
   if (import.meta.client) {
     const savedLocale = localStorage.getItem("user-locale");
-    if (savedLocale && ["en", "fr", "nl"].includes(savedLocale)) {
+    if (savedLocale && ["en", "es", "fr", "nl"].includes(savedLocale)) {
       i18n.locale.value = savedLocale;
     }
   }

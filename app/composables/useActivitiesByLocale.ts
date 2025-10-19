@@ -9,6 +9,8 @@ export const useActivitiesByLocale = () => {
     // English
     morocco: "morocco",
     nepal: "nepal",
+    // Spanish
+    marruecos: "morocco",
     // French (no accents in URLs)
     maroc: "morocco",
     // Dutch
@@ -20,10 +22,12 @@ export const useActivitiesByLocale = () => {
     surfing: "surfing",
     trekking: "trekking",
     paragliding: "paragliding",
-    // French (no accents in URLs)
+    // Spanish
     surf: "surfing",
-    randonnee: "trekking",
+    senderismo: "trekking",
     parapente: "paragliding",
+    // French (no accents in URLs)
+    randonnee: "trekking",
     // Dutch
     surfen: "surfing",
     trekken: "trekking",
@@ -139,7 +143,7 @@ export const useActivitiesByLocale = () => {
   ) => {
     const normalizedCountry = normalizeCountry(country);
     const normalizedActivity = normalizeActivity(activityType);
-    const locales = ["en", "fr", "nl"];
+    const locales = ["en", "es", "fr", "nl"];
     const available: string[] = [];
 
     const allContent = await queryCollection("content").all();

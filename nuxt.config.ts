@@ -160,6 +160,7 @@ export default defineNuxtConfig({
       { code: "en", name: "English", file: "en.json", flag: "🇬🇧" },
       { code: "nl", name: "Nederlands", file: "nl.json", flag: "🇳🇱" },
       { code: "fr", name: "Français", file: "fr.json", flag: "🇫🇷" },
+      { code: "es", name: "Español", file: "es.json", flag: "🇪🇸" },
     ],
   },
 });
