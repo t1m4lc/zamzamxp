@@ -17,7 +17,17 @@ export default defineNuxtConfig({
     preset: "vercel-static",
     prerender: {
       failOnError: false,
-      routes: ["/sitemap.xml"],
+      crawlLinks: true,
+      routes: [
+        "/sitemap.xml",
+        "/",
+        "/about",
+        "/contact",
+        "/destinations",
+        "/blog",
+        "/terms",
+        "/privacy",
+      ],
     },
   },
 
@@ -83,14 +93,11 @@ export default defineNuxtConfig({
     xsl: false,
     autoLastmod: true,
     discoverImages: false,
-    sources: ["/api/__sitemap__/urls"],
-    urls: async () => [
-      { loc: "/", changefreq: "weekly", priority: 1.0 },
-      { loc: "/about", changefreq: "monthly", priority: 0.8 },
-      { loc: "/contact", changefreq: "monthly", priority: 0.8 },
-      { loc: "/destinations", changefreq: "weekly", priority: 0.9 },
-      { loc: "/terms", changefreq: "yearly", priority: 0.3 },
-      { loc: "/privacy", changefreq: "yearly", priority: 0.3 },
+    // Use multiple sources for better organization
+    sources: [
+      "/api/__sitemap__/activities",
+      "/api/__sitemap__/blog",
+      "/api/__sitemap__/countries",
     ],
     exclude: [
       "/api/**",
@@ -98,6 +105,7 @@ export default defineNuxtConfig({
       "/__og-image__/**",
       "/images/**",
       "/_nuxt/**",
+      "/thanks",
       "/**/*.{png,jpg,jpeg,gif,webp,svg,ico,wasm,js,css,json}",
       "/**/_payload.json",
     ],
