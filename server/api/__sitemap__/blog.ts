@@ -1,3 +1,9 @@
+/**
+ * Sitemap handler for blog pages
+ * Generates URLs for:
+ * - Individual blog posts (e.g., /blog/top-5-trekking-destinations-nepal)
+ * - Blog index page (/blog)
+ */
 export default defineSitemapEventHandler(async () => {
   const { readdir } = await import("fs/promises");
   const { join } = await import("path");
@@ -8,6 +14,7 @@ export default defineSitemapEventHandler(async () => {
   try {
     const entries = await readdir(blogDir, { withFileTypes: true });
 
+    // Add individual blog post URLs
     for (const entry of entries) {
       if (entry.isFile() && entry.name.endsWith(".md")) {
         const slug = entry.name.replace(".md", "");
@@ -26,6 +33,7 @@ export default defineSitemapEventHandler(async () => {
     console.error("Error reading blog directory:", error);
   }
 
+  // Add blog index page
   urls.push(
     asSitemapUrl({
       loc: "/blog",
