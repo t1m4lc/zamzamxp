@@ -3,7 +3,7 @@
     <Header />
     <NuxtPage />
     <LazyFooter />
-    <LazyWhatsAppBubble v-if="!isBlogPage" />
+    <!-- <LazyWhatsAppBubble v-if="!isBlogPage" /> -->
     <SpeedInsights />
 </template>
 
