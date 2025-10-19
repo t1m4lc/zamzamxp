@@ -19,6 +19,7 @@
   "nav": {
     "home": "Home",
     "destinations": "Bestemmingen",
+    "blog": "Blog",
     "about": "Over ons",
     "contact": "Contact"
   },
@@ -228,9 +229,11 @@
       "inclusiveBullet3": "Gelijke kansen benadering"
     },
     "stats": {
+      "happyCustomers": "Tevreden Klanten",
+      "localPartners": "Lokale Partners",
+      "countries": "Landen",
       "customers": "Tevreden Klanten",
-      "partners": "Lokale Partners",
-      "countries": "Landen"
+      "partners": "Lokale Partners"
     },
     "cta": {
       "title": "Sluit u aan bij ons volgende avontuur",
@@ -390,5 +393,50 @@
       "sameCountry": "Ontdek meer avonturen in {country}",
       "similarActivity": "Vergelijkbare {activity} ervaringen wereldwijd"
     }
+  },
+  "blog": {
+    "title": "Blog",
+    "description": "Reisverhalen, tips en inzichten van onze avonturen over de hele wereld.",
+    "by": "door",
+    "backToList": "Terug naar blog",
+    "recentPosts": "Recente Artikelen",
+    "viewAll": "Bekijk alle artikelen",
+    "latest": "Nieuwste",
+    "noPosts": {
+      "title": "Nog geen artikelen",
+      "description": "Kom snel terug voor reisverhalen en avontuurtips."
+    },
+    "notFound": {
+      "title": "Artikel niet gevonden",
+      "description": "Het artikel dat je zoekt bestaat niet of is verwijderd."
+    },
+    "cta": {
+      "title": "Klaar voor Jouw Avontuur?",
+      "description": "Laat ons je helpen de perfecte ervaring te plannen, op maat gemaakt voor jouw dromen.",
+      "startButton": "Begin met Plannen",
+      "exploreButton": "Bekijk Bestemmingen",
+      "or": "of"
+    },
+    "sidebar": {
+      "whyUs": "Waarom voor ons kiezen?",
+      "benefit1Title": "Lokale Experts",
+      "benefit1Text": "Authentieke ervaringen met gepassioneerde lokale gidsen",
+      "benefit2Title": "Duurzaam Reizen",
+      "benefit2Text": "Milieuvriendelijke avonturen met eerlijke vergoeding voor lokale gemeenschappen",
+      "benefit3Title": "Beste Prijs op de Markt",
+      "benefit3Text": "Concurrerende prijzen zonder kwaliteit in te leveren"
+    },
+    "linkedExperience": {
+      "title": "Beleef Dit Avontuur!",
+      "description": "Klaar om dit verhaal om te zetten in je eigen ervaring?",
+      "button": "Boek Deze Ervaring",
+      "featured": "Aanbevolen Avontuur",
+      "learnMore": "Meer Informatie"
+    },
+    "relatedPosts": {
+      "title": "Verder Lezen"
+    },
+    "share": "Delen",
+    "linkCopied": "Link gekopieerd naar klembord!"
   }
 }

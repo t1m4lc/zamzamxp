@@ -18,19 +18,13 @@
           <h3 class="text-lg font-bold text-slate-900">{{ $t('footer.destinations') }}</h3>
           <ul class="space-y-3">
             <li>
-              <NuxtLink
-                :to="getCountryPath('nepal')"
-                class="group flex items-center space-x-2 text-sm text-slate-600 transition-colors hover:text-orange-600"
-              >
+              <NuxtLink :to="getCountryPath('nepal')" class="group flex items-center space-x-2 text-sm text-slate-600 transition-colors hover:text-orange-600">
                 <span class="text-lg">🇳🇵</span>
                 <span class="group-hover:translate-x-1 transition-transform">{{ $t('countries.nepal') }}</span>
               </NuxtLink>
             </li>
             <li>
-              <NuxtLink
-                :to="getCountryPath('morocco')"
-                class="group flex items-center space-x-2 text-sm text-slate-600 transition-colors hover:text-orange-600"
-              >
+              <NuxtLink :to="getCountryPath('morocco')" class="group flex items-center space-x-2 text-sm text-slate-600 transition-colors hover:text-orange-600">
                 <span class="text-lg">🇲🇦</span>
                 <span class="group-hover:translate-x-1 transition-transform">{{ $t('countries.morocco') }}</span>
               </NuxtLink>
@@ -43,12 +37,7 @@
           <h3 class="text-lg font-bold text-slate-900">{{ $t('footer.getInTouch') }}</h3>
           <ul class="space-y-3">
             <li>
-              <a
-                :href="`https://wa.me/${APP_CONFIG.company.whatsapp}`"
-                target="_blank"
-                rel="noopener"
-                class="flex items-center space-x-2 text-sm text-slate-600 transition-colors hover:text-green-600"
-              >
+              <a :href="`https://wa.me/${APP_CONFIG.company.whatsapp}`" target="_blank" rel="noopener" class="flex items-center space-x-2 text-sm text-slate-600 transition-colors hover:text-green-600">
                 <MessageCircle class="size-3" />
                 <span>{{ $t('footer.whatsapp') }}</span>
               </a>
@@ -63,10 +52,7 @@
               </a>
             </li> -->
             <li>
-              <NuxtLink
-                to="/contact"
-                class="flex items-center space-x-2 text-sm text-slate-600 transition-colors hover:text-orange-600"
-              >
+              <NuxtLink to="/contact" class="flex items-center space-x-2 text-sm text-slate-600 transition-colors hover:text-orange-600">
                 <Phone class="size-3" />
                 <span>{{ $t('footer.contactUs') }}</span>
               </NuxtLink>
@@ -94,23 +80,19 @@
             {{ $t('footer.copyright', { year: new Date().getFullYear() }) }}
           </p>
           <div class="flex items-center space-x-4 text-xs text-slate-400">
+            <NuxtLink to="/blog" class="hover:text-slate-600 transition-colors">
+              {{ $t('nav.blog') }}
+            </NuxtLink>
+            <span>•</span>
             <NuxtLink to="/terms" class="hover:text-slate-600 transition-colors">{{ $t('common.terms') }}</NuxtLink>
             <span>•</span>
             <NuxtLink to="/privacy" class="hover:text-slate-600 transition-colors">{{ $t('common.privacy') }}</NuxtLink>
           </div>
-          
+
           <!-- Language Selector -->
           <div class="flex items-center gap-2">
-            <select
-              v-model="currentLocale"
-              @change="switchLanguage"
-              class="px-3 py-2 text-sm font-medium rounded-lg border border-slate-200 bg-white text-slate-700 hover:bg-slate-50 focus:outline-none focus:ring-2 focus:ring-orange-500 transition-all cursor-pointer"
-            >
-              <option
-                v-for="loc in availableLocales"
-                :key="loc.code"
-                :value="loc.code"
-              >
+            <select v-model="currentLocale" @change="switchLanguage" class="px-3 py-2 text-sm font-medium rounded-lg border border-slate-200 bg-white text-slate-700 hover:bg-slate-50 focus:outline-none focus:ring-2 focus:ring-orange-500 transition-all cursor-pointer">
+              <option v-for="loc in availableLocales" :key="loc.code" :value="loc.code">
                 {{ loc.flag }} {{ loc.name }}
               </option>
             </select>
@@ -122,7 +104,7 @@
 </template>
 <script setup lang="ts">
 import { APP_CONFIG } from '~/config/constants'
-import { MessageCircle, Mail, Phone, Leaf, Handshake } from 'lucide-vue-next'
+import { MessageCircle, Mail, Phone, Leaf, Handshake, BookOpen } from 'lucide-vue-next'
 
 const { locale, locales, setLocale } = useI18n()
 const { getCountryPath } = useLocalizedRoutes()
@@ -138,12 +120,12 @@ const switchLanguage = async (event: Event) => {
   const target = event.target as HTMLSelectElement
   const newLocale = target.value as 'en' | 'fr' | 'nl'
   await setLocale(newLocale)
-  
+
   // Check if we're on a static page (homepage, about, contact, etc.)
   // These pages don't have localized slugs, so we can stay on them
   const staticPages = ['/', '/about', '/contact', '/destinations', '/terms', '/privacy']
   const currentPath = route.path
-  
+
   if (staticPages.includes(currentPath)) {
     // Stay on the same static page
     await navigateTo(currentPath)

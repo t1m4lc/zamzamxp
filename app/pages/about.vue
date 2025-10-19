@@ -1,14 +1,14 @@
 <template>
   <div>
     <!-- Hero -->
-    <section class="relative py-20 lg:py-32 overflow-hidden">
+    <section class="relative py-16 lg:py-20 overflow-hidden">
       <div class="absolute inset-0 bg-gradient-to-br from-[#FF6B35]/5 to-[#F7931E]/5"></div>
       <div class="container mx-auto px-4 relative">
         <div class="mx-auto max-w-4xl text-center">
-          <h1 class="mb-6 text-5xl font-semibold text-slate-900 lg:text-6xl">
+          <h1 class="mb-6 text-4xl font-semibold text-slate-900 lg:text-5xl">
             {{ $t('about.title') }}
           </h1>
-          <p class="text-xl leading-relaxed text-slate-600 lg:text-2xl">
+          <p class="text-xl leading-relaxed text-slate-600">
             {{ $t('about.subtitle') }}
           </p>
         </div>

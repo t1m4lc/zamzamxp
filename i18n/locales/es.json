@@ -19,7 +19,8 @@
   "nav": {
     "home": "Inicio",
     "destinations": "Destinos",
-    "about": "Acerca de",
+    "blog": "Blog",
+    "about": "Sobre nosotros",
     "contact": "Contacto"
   },
   "footer": {
@@ -228,9 +229,11 @@
       "inclusiveBullet3": "Enfoque de igualdad de oportunidades"
     },
     "stats": {
-      "happyCustomers": "Clientes Felices",
+      "happyCustomers": "Clientes Satisfechos",
       "localPartners": "Socios Locales",
-      "countries": "Países"
+      "countries": "Países",
+      "customers": "Clientes Satisfechos",
+      "partners": "Socios Locales"
     },
     "cta": {
       "title": "Únete a Nuestra Próxima Aventura",
@@ -390,5 +393,50 @@
       "sameCountry": "Explora más aventuras en {country}",
       "similarActivity": "Experiencias similares de {activity} en todo el mundo"
     }
+  },
+  "blog": {
+    "title": "Blog",
+    "description": "Historias de viajes, consejos y experiencias de nuestras aventuras alrededor del mundo.",
+    "by": "por",
+    "backToList": "Volver al blog",
+    "recentPosts": "Artículos Recientes",
+    "viewAll": "Ver todos los artículos",
+    "latest": "Último",
+    "noPosts": {
+      "title": "Aún no hay artículos",
+      "description": "Vuelve pronto para leer historias de viajes y consejos de aventuras."
+    },
+    "notFound": {
+      "title": "Artículo no encontrado",
+      "description": "El artículo que buscas no existe o ha sido eliminado."
+    },
+    "cta": {
+      "title": "¿Listo para tu Aventura?",
+      "description": "Déjanos ayudarte a planear la experiencia perfecta adaptada a tus sueños.",
+      "startButton": "Empezar a Planificar",
+      "exploreButton": "Ver Destinos",
+      "or": "o"
+    },
+    "sidebar": {
+      "whyUs": "¿Por qué elegirnos?",
+      "benefit1Title": "Expertos Locales",
+      "benefit1Text": "Experiencias auténticas con guías locales apasionados",
+      "benefit2Title": "Viaje Sostenible",
+      "benefit2Text": "Aventuras ecológicas con remuneración justa para comunidades locales",
+      "benefit3Title": "Mejor Precio del Mercado",
+      "benefit3Text": "Precios competitivos sin comprometer la calidad"
+    },
+    "linkedExperience": {
+      "title": "¡Vive Esta Aventura!",
+      "description": "¿Listo para convertir esta historia en tu propia experiencia?",
+      "button": "Reservar Esta Experiencia",
+      "featured": "Aventura Destacada",
+      "learnMore": "Saber Más"
+    },
+    "relatedPosts": {
+      "title": "Continuar Leyendo"
+    },
+    "share": "Compartir",
+    "linkCopied": "¡Enlace copiado al portapapeles!"
   }
 }

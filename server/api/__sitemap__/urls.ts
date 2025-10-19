@@ -6,8 +6,9 @@ export default defineSitemapEventHandler(async () => {
   const urls: any[] = [];
   const activityTypesByLocale = new Map<string, Set<string>>();
 
-  // Define the content directory path
-  const contentDir = join(process.cwd(), "content", "activities");
+  // Define the content directories
+  const activitiesDir = join(process.cwd(), "content", "activities");
+  const blogDir = join(process.cwd(), "content", "blog");
 
   // Helper function to recursively read directories
   async function walkDir(dir: string, basePath: string = "") {
@@ -57,7 +58,47 @@ export default defineSitemapEventHandler(async () => {
     }
   }
 
-  await walkDir(contentDir);
+  // Walk blog directory for blog posts
+  async function walkBlogDir(dir: string) {
+    try {
+      const entries = await readdir(dir, { withFileTypes: true });
+
+      for (const entry of entries) {
+        const fullPath = join(dir, entry.name);
+
+        if (entry.isFile() && entry.name.endsWith(".md")) {
+          // Extract slug from filename
+          const slug = entry.name.replace(".md", "");
+
+          // Add blog post URL
+          urls.push(
+            asSitemapUrl({
+              loc: `/blog/${slug}`,
+              changefreq: "weekly",
+              priority: 0.7,
+            })
+          );
+        }
+      }
+    } catch (error) {
+      console.error("Error walking blog directory:", error);
+    }
+  }
+
+  // Process activities
+  await walkDir(activitiesDir);
+
+  // Process blog posts
+  await walkBlogDir(blogDir);
+
+  // Add blog index page
+  urls.push(
+    asSitemapUrl({
+      loc: "/blog",
+      changefreq: "daily",
+      priority: 0.9,
+    })
+  );
 
   // Add activity type pages (e.g., /morocco/surfing, /maroc/surf, /marokko/surfen)
   activityTypesByLocale.forEach((_, activityTypeKey) => {

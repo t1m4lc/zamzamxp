@@ -19,6 +19,7 @@
   "nav": {
     "home": "Accueil",
     "destinations": "Destinations",
+    "blog": "Blog",
     "about": "À propos",
     "contact": "Contact"
   },
@@ -233,9 +234,11 @@
       "inclusiveBullet3": "Approche d'égalité des chances"
     },
     "stats": {
+      "happyCustomers": "Clients Satisfaits",
+      "localPartners": "Partenaires Locaux",
+      "countries": "Pays",
       "customers": "Clients Satisfaits",
-      "partners": "Partenaires Locaux",
-      "countries": "Pays"
+      "partners": "Partenaires Locaux"
     },
     "cta": {
       "title": "Rejoignez Notre Prochaine Aventure",
@@ -395,5 +398,50 @@
       "sameCountry": "Découvrez plus d'aventures au {country}",
       "similarActivity": "Expériences de {activity} similaires dans le monde"
     }
+  },
+  "blog": {
+    "title": "Blog",
+    "description": "Récits de voyage, conseils et expériences de nos aventures autour du monde.",
+    "by": "par",
+    "backToList": "Retour au blog",
+    "recentPosts": "Articles Récents",
+    "viewAll": "Voir tous les articles",
+    "latest": "Dernier",
+    "noPosts": {
+      "title": "Pas encore d'articles",
+      "description": "Revenez bientôt pour des récits de voyage et des conseils d'aventure."
+    },
+    "notFound": {
+      "title": "Article non trouvé",
+      "description": "L'article que vous recherchez n'existe pas ou a été supprimé."
+    },
+    "cta": {
+      "title": "Prêt pour Votre Aventure?",
+      "description": "Laissez-nous vous aider à planifier l'expérience parfaite adaptée à vos rêves.",
+      "startButton": "Commencer à Planifier",
+      "exploreButton": "Découvrir les Destinations",
+      "or": "ou"
+    },
+    "sidebar": {
+      "whyUs": "Pourquoi nous choisir ?",
+      "benefit1Title": "Experts Locaux",
+      "benefit1Text": "Expériences authentiques avec des guides locaux passionnés",
+      "benefit2Title": "Voyage Durable",
+      "benefit2Text": "Aventures écologiques avec rémunération équitable des communautés locales",
+      "benefit3Title": "Meilleur Prix du Marché",
+      "benefit3Text": "Prix compétitifs sans compromettre la qualité"
+    },
+    "linkedExperience": {
+      "title": "Vivez Cette Aventure!",
+      "description": "Prêt à transformer cette histoire en votre propre expérience?",
+      "button": "Réserver Cette Expérience",
+      "featured": "Aventure en Vedette",
+      "learnMore": "En Savoir Plus"
+    },
+    "relatedPosts": {
+      "title": "Continuer la Lecture"
+    },
+    "share": "Partager",
+    "linkCopied": "Lien copié dans le presse-papiers !"
   }
 }

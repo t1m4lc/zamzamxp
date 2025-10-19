@@ -46,7 +46,7 @@
     </div>
 
     <!-- Hero Section with Image -->
-    <section class="relative h-[70vh] min-h-[500px] flex items-center">
+    <section class="relative h-[50vh] min-h-[400px] flex items-center">
       <!-- Background Image -->
       <div class="absolute inset-0">
         <NuxtImg

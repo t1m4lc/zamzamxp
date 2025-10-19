@@ -4,7 +4,7 @@ export default defineContentConfig({
   collections: {
     content: defineCollection({
       type: "page",
-      source: "**/*.md",
+      source: "activities/**/*.md",
       schema: z.object({
         title: z.string(),
         description: z.string(),
@@ -61,6 +61,21 @@ export default defineContentConfig({
             })
           )
           .optional(),
+      }),
+    }),
+    blog: defineCollection({
+      type: "page",
+      source: "blog/**/*.md",
+      schema: z.object({
+        title: z.string(),
+        description: z.string(),
+        author: z.string().optional(),
+        date: z.string(),
+        image: z.string().optional(),
+        tags: z.array(z.string()).optional(),
+        locale: z.string().default("en"),
+        published: z.boolean().default(true),
+        relatedExperienceSlug: z.string().optional(),
       }),
     }),
   },

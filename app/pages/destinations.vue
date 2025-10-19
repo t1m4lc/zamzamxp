@@ -1,14 +1,14 @@
 <template>
   <div>
     <!-- Hero Section -->
-    <section class="relative py-24 lg:py-32 overflow-hidden">
+    <section class="relative py-16 lg:py-20 overflow-hidden">
       <div class="absolute inset-0 bg-gradient-to-br from-[#FF6B35]/5 to-[#F7931E]/5"></div>
       <div class="container mx-auto px-6 relative">
         <div class="text-center max-w-3xl mx-auto">
           <h1 class="text-4xl font-semibold leading-tight text-slate-900 lg:text-5xl mb-6">
             {{ $t('destinations.title') }}
           </h1>
-          <p class="text-xl text-slate-600 mb-8">
+          <p class="text-xl text-slate-600">
             {{ $t('destinations.subtitle') }}
           </p>
         </div>
@@ -206,10 +206,18 @@ const countriesData = computed(() => {
   
   const content = allContent.value as any[]
   // Filter by current locale first - check if path contains the locale directory
+  // Also filter out blog content to prevent translation errors
   const localeContent = content.filter((exp: any) => {
     const path = exp.path || exp._path || ''
     // Match patterns like /activities/en/, /activities/fr/, /activities/nl/
-    return path.includes(`/activities/${locale.value}/`) || path.includes(`activities/${locale.value}/`)
+    // Exclude blog paths explicitly
+    const isActivitiesPath = (path.includes(`/activities/${locale.value}/`) || path.includes(`activities/${locale.value}/`)) && 
+                              path.startsWith('/activities/') || path.startsWith('activities/')
+    const isBlogPath = path.includes('/blog') || path.includes('blog')
+    const hasCountry = exp.country && typeof exp.country === 'string'
+    const hasActivity = exp.activity && typeof exp.activity === 'string'
+    
+    return isActivitiesPath && !isBlogPath && hasCountry && hasActivity
   })
   
   // Extract unique countries
