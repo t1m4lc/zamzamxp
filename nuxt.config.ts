@@ -20,6 +20,7 @@ export default defineNuxtConfig({
       crawlLinks: true,
       routes: [
         "/sitemap.xml",
+        "/robots.txt",
         "/",
         "/about",
         "/contact",
@@ -27,6 +28,8 @@ export default defineNuxtConfig({
         "/blog",
         "/terms",
         "/privacy",
+        "/thanks",
+        "llms.txt",
       ],
     },
   },
@@ -56,6 +59,8 @@ export default defineNuxtConfig({
     description:
       "Discover authentic adventure experiences with passionate local guides. Fair prices, sustainable tourism. Explore trekking, paragliding, and more with Zamzam Experience.",
     defaultLocale: "en",
+    indexable: true,
+    trailingSlash: false,
   },
 
   schemaOrg: {
@@ -83,16 +88,23 @@ export default defineNuxtConfig({
       {
         userAgent: ["*"],
         allow: ["/"],
-        disallow: ["/api/contact"],
+        disallow: ["/api/", "/_nuxt/", "/_vercel/", "/__og-image__/"],
+      },
+      {
+        userAgent: ["Bingbot", "msnbot", "BingPreview"],
+        allow: ["/"],
+        disallow: ["/api/", "/_nuxt/", "/_vercel/", "/__og-image__/"],
       },
     ],
+    sitemap: ["https://zamzamxp.com/sitemap.xml"],
   },
 
   sitemap: {
     enabled: true,
     xsl: false,
     autoLastmod: true,
-    discoverImages: false,
+    discoverImages: true,
+    strictNuxtContentPaths: true,
     // Use multiple sources for better organization
     sources: [
       "/api/__sitemap__/activities",
@@ -105,7 +117,6 @@ export default defineNuxtConfig({
       "/__og-image__/**",
       "/images/**",
       "/_nuxt/**",
-      "/thanks",
       "/**/*.{png,jpg,jpeg,gif,webp,svg,ico,wasm,js,css,json}",
       "/**/_payload.json",
     ],
@@ -114,6 +125,38 @@ export default defineNuxtConfig({
       priority: 0.7,
       lastmod: new Date().toISOString(),
     },
+    urls: [
+      {
+        loc: "/",
+        changefreq: "daily",
+        priority: 1.0,
+      },
+      {
+        loc: "/about",
+        changefreq: "monthly",
+        priority: 0.8,
+      },
+      {
+        loc: "/contact",
+        changefreq: "monthly",
+        priority: 0.8,
+      },
+      {
+        loc: "/destinations",
+        changefreq: "weekly",
+        priority: 0.9,
+      },
+      {
+        loc: "/terms",
+        changefreq: "yearly",
+        priority: 0.3,
+      },
+      {
+        loc: "/privacy",
+        changefreq: "yearly",
+        priority: 0.3,
+      },
+    ],
   },
 
   ogImage: {

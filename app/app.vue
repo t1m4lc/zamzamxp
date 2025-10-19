@@ -34,6 +34,10 @@ useSeoMeta({
       .map((loc) => typeof loc === 'string' ? loc : loc.code)
     return alternates
   }),
+  // Bing and SEO enhancements
+  robots: 'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1',
+  viewport: 'width=device-width, initial-scale=1',
+  charset: 'utf-8',
 })
 
 // Base URL for the site
