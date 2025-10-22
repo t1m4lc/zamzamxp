@@ -252,7 +252,6 @@
       </div>
     </section>
 
-    <!-- Ready for Your Adventure CTA Section (Always Generic) -->
     <section class="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 relative overflow-hidden">
       <!-- Background Pattern -->
       <div class="absolute inset-0 opacity-10">
