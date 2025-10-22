@@ -196,9 +196,9 @@ AMS is het grootste risico van de Annapurna trek. Het kan iedereen treffen, onge
 - Verkrijging van verplichte vergunningen (ACAP, TIMS)
 - Vereenvoudigd transport en logistiek
 
-### Waarom Kiezen voor een Gecertificeerde Gids bij ZamZam Xp?
+### Waarom Kiezen voor een Gecertificeerde Gids bij Zamzam Experience?
 
-**[ZamZam Xp](https://zamzamxp.com/nepal/trekken/annapurna-circuit)** werkt uitsluitend met gecertificeerde, ervaren en Nederlandssprekende Nepalese gidsen:
+**[Zamzam Experience](https://zamzamxp.com/nepal/trekken/annapurna-circuit)** werkt uitsluitend met gecertificeerde, ervaren en Nederlandssprekende Nepalese gidsen:
 
 ✅ **Gediplomeerde gidsen**: Officiële training van de Nepalese overheid en EHBO-certificering
 
@@ -214,7 +214,7 @@ AMS is het grootste risico van de Annapurna trek. Het kan iedereen treffen, onge
 
 ### Wat is Inbegrepen bij een Georganiseerde Trek
 
-Door te kiezen voor volledige organisatie met **[ZamZam Xp](https://zamzamxp.com/nepal/trekken/annapurna-circuit)**, profiteer je van allesomvattende dekking:
+Door te kiezen voor volledige organisatie met **[Zamzam Experience](https://zamzamxp.com/nepal/trekken/annapurna-circuit)**, profiteer je van allesomvattende dekking:
 
 - Gecertificeerde Nederlandssprekende gids gedurende de hele trek
 - Drager (optioneel) om je tas te verlichten
@@ -225,7 +225,7 @@ Door te kiezen voor volledige organisatie met **[ZamZam Xp](https://zamzamxp.com
 - 24/7 assistentie voor, tijdens en na de trek
 - Verzekering voor gids en Nepalees team
 
-**💡 Vraag een persoonlijke offerte aan** volgens je data, niveau en voorkeuren bij [ZamZam Xp](https://zamzamxp.com/nepal/trekken/annapurna-circuit).
+**💡 Vraag een persoonlijke offerte aan** volgens je data, niveau en voorkeuren bij [Zamzam Experience](https://zamzamxp.com/nepal/trekken/annapurna-circuit).
 
 ---
 
@@ -352,15 +352,15 @@ De Nepalese regering heeft deze maatregel ingesteld om verschillende redenen:
 
 **Drager optie:** Voor nog meer comfort kan een drager je hoofdtas dragen (je houdt slechts een kleine tas van 5-6 kg), wat acclimatisatie vergemakkelijkt en vermoeidheid vermindert.
 
-💡 **Vind de ideale formule:** [ZamZam Xp](https://zamzamxp.com/nepal/trekken/annapurna-circuit) biedt verschillende opties aangepast aan je behoeften (gids alleen, gids + drager, kleine groep trek, privé vertrek).
+💡 **Vind de ideale formule:** [Zamzam Experience](https://zamzamxp.com/nepal/trekken/annapurna-circuit) biedt verschillende opties aangepast aan je behoeften (gids alleen, gids + drager, kleine groep trek, privé vertrek).
 
 ### De Juiste Agency Kiezen voor Je Trek
 
-**Waarom kiezen voor een gespecialiseerd bureau zoals ZamZam Xp?**
+**Waarom kiezen voor een gespecialiseerd bureau zoals Zamzam Experience?**
 
-**[ZamZam Xp](https://zamzamxp.com/nepal/trekken/annapurna-circuit)** combineert het beste van twee werelden: Nepalese lokale expertise en gepersonaliseerde Nederlandstalige begeleiding.
+**[Zamzam Experience](https://zamzamxp.com/nepal/trekken/annapurna-circuit)** combineert het beste van twee werelden: Nepalese lokale expertise en gepersonaliseerde Nederlandstalige begeleiding.
 
-🏔️ **ZamZam Xp voordelen:**
+🏔️ **Zamzam Experience voordelen:**
 
 - **Gecertificeerde Nederlandstalige gidsen**: Soepele communicatie en gedetailleerde uitleg gedurende de trek
 - **Ervaren Nepalees team**: Jarenlange ervaring op het Annapurna circuit
@@ -373,7 +373,7 @@ De Nepalese regering heeft deze maatregel ingesteld om verschillende redenen:
 
 **Het verschil van een gespecialiseerd bureau:**
 
-In tegenstelling tot grote internationale bureaus die gestandaardiseerde groepspakketten aanbieden, bouwt ZamZam Xp je trek op maat met bijzondere aandacht voor je verwachtingen en veiligheid.
+In tegenstelling tot grote internationale bureaus die gestandaardiseerde groepspakketten aanbieden, bouwt Zamzam Experience je trek op maat met bijzondere aandacht voor je verwachtingen en veiligheid.
 
 📞 **[Vraag je persoonlijke offerte aan](https://zamzamxp.com/nepal/trekken/annapurna-circuit)** en communiceer direct met het team om DE trek te bouwen die bij je past.
 
@@ -401,7 +401,7 @@ Deze trek is korter en toegankelijker dan het Annapurna Circuit, terwijl het spe
 
 Perfect voor gezinnen of beginnende trekkers.
 
-💡 **Tip:** [ZamZam Xp](https://zamzamxp.com/nepal/trekken/annapurna-circuit) biedt ook deze alternatieve treks aan en kan je adviseren over het beste reisschema volgens je niveau en wensen.
+💡 **Tip:** [Zamzam Experience](https://zamzamxp.com/nepal/trekken/annapurna-circuit) biedt ook deze alternatieve treks aan en kan je adviseren over het beste reisschema volgens je niveau en wensen.
 
 ### Mogelijke Combinaties
 
@@ -441,7 +441,7 @@ Dit betekent echter niet dat je je bij een grote groep moet aansluiten! Je kunt:
 
 ✅ **Kleine groep**: Sluit je aan bij een groep van maximaal 4-6 personen om de ervaring te delen terwijl je profiteert van professionele begeleiding.
 
-**Voor vrouwelijke reizigers:** Nepal blijft een zeer veilige bestemming. Met een betrouwbare gids zoals die van [ZamZam Xp](https://zamzamxp.com/nepal/trekken/annapurna-circuit), profiteer je van versterkte veiligheid en respectvolle begeleiding.
+**Voor vrouwelijke reizigers:** Nepal blijft een zeer veilige bestemming. Met een betrouwbare gids zoals die van [Zamzam Experience](https://zamzamxp.com/nepal/trekken/annapurna-circuit), profiteer je van versterkte veiligheid en respectvolle begeleiding.
 
 ### Moet ik lodges van tevoren reserveren?
 
@@ -484,7 +484,7 @@ Of je nu kiest om onafhankelijk te gaan of begeleid door een gids, in de lente o
 
 ### Wil je je trek organiseren?
 
-**[Ontdek de Annapurna Circuit trek pakketten met ZamZam Xp](https://zamzamxp.com/nepal/trekken/annapurna-circuit)** – Een gespecialiseerd bureau dat Nepalese lokale expertise en Nederlandstalige begeleiding combineert voor een succesvolle en veilige trek.
+**[Ontdek de Annapurna Circuit trek pakketten met Zamzam Experience](https://zamzamxp.com/nepal/trekken/annapurna-circuit)** – Een gespecialiseerd bureau dat Nepalese lokale expertise en Nederlandstalige begeleiding combineert voor een succesvolle en veilige trek.
 
 🏔️ **Namaste en veel wandelplezier!**
 
@@ -494,7 +494,7 @@ Of je nu kiest om onafhankelijk te gaan of begeleid door een gids, in de lente o
 
 ### Om Je Trek te Organiseren
 
-- **[ZamZam Xp - Annapurna Circuit](https://zamzamxp.com/nepal/trekken/annapurna-circuit)**: Gespecialiseerd bureau om je trek te organiseren met Nederlandstalige gidsen
+- **[Zamzam Experience - Annapurna Circuit](https://zamzamxp.com/nepal/trekken/annapurna-circuit)**: Gespecialiseerd bureau om je trek te organiseren met Nederlandstalige gidsen
 - **Gedetailleerde kaart:** Koop de Nepa Maps "Annapurna" kaart (1:125.000)
 - **GPS app:** Maps.me (offline Nepal kaarten)
 - **Weer:** mountain-forecast.com

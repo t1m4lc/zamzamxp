@@ -33,7 +33,7 @@
             </Card>
 
             <p class="text-lg text-slate-700">
-              At ZamZam XP, we respect your privacy and are committed to protecting your personal data. This policy explains how we collect, use, and safeguard your information.
+              At Zamzam Experience, we respect your privacy and are committed to protecting your personal data. This policy explains how we collect, use, and safeguard your information.
             </p>
 
             <h2 id="collection" class="text-3xl font-black text-slate-900">1. Data Collection</h2>
@@ -256,7 +256,7 @@
               <ul class="mb-0 space-y-2 text-slate-700">
                 <li><strong>General:</strong> timothyalcaide+zamzamxp@gmail.com</li>
                 <li><strong>WhatsApp:</strong> +977 1234567890</li>
-                <li><strong>Address:</strong> ZamZam XP, Kathmandu, Nepal</li>
+                <li><strong>Address:</strong> Zamzam Experience, Kathmandu, Nepal</li>
               </ul>
             </Card>
 

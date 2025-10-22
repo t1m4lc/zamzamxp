@@ -34,7 +34,7 @@
 
             <h2 id="services" class="text-3xl font-black text-slate-900">1. Services</h2>
             <p class="text-slate-700">
-              ZamZam XP ("we," "us," "our") provides adventure tourism services including trekking, paragliding, and surfing experiences in Nepal and Morocco. By booking with us, you agree to these Terms of Service.
+              Zamzam Experience ("we," "us," "our") provides adventure tourism services including trekking, paragliding, and surfing experiences in Nepal and Morocco. By booking with us, you agree to these Terms of Service.
             </p>
 
             <h3 class="text-2xl font-bold text-slate-900">What We Provide</h3>
@@ -87,7 +87,7 @@
               <li><strong>Less than 15 days:</strong> No refund</li>
             </ul>
 
-            <h3 class="text-2xl font-bold text-slate-900">Cancellation by ZamZam XP</h3>
+            <h3 class="text-2xl font-bold text-slate-900">Cancellation by Zamzam Experience</h3>
             <p class="text-slate-700">
               We reserve the right to cancel adventures due to insufficient bookings, weather, safety concerns, or force majeure. In such cases, you receive:
             </p>

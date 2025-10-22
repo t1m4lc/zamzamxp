@@ -31,7 +31,8 @@ export default defineEventHandler(async (event) => {
       from: "Zamzam Experience <hello@updates.zamzamxp.com>",
       to: [APP_CONFIG.company.email],
       replyTo: body.email,
-      subject: body.subject || "New Contact Form Submission - ZamZam XP",
+      subject:
+        body.subject || "New Contact Form Submission - Zamzam Experience",
       html: `
         <!DOCTYPE html>
         <html>
@@ -50,7 +51,7 @@ export default defineEventHandler(async (event) => {
           <div class="container">
             <div class="header">
               <h2 style="margin: 0;">🌍 New Contact Form Submission</h2>
-              <p style="margin: 5px 0 0 0; opacity: 0.9;">ZamZam XP Website</p>
+              <p style="margin: 5px 0 0 0; opacity: 0.9;">Zamzam Experience Website</p>
             </div>
             <div class="content">
               <div class="field">

@@ -196,9 +196,9 @@ AMS is the main risk of the Annapurna trek. It can affect anyone, regardless of 
 - Obtaining mandatory permits (ACAP, TIMS)
 - Simplified transport and logistics
 
-### Why Choose a Certified Guide with ZamZam Xp?
+### Why Choose a Certified Guide with Zamzam Experience?
 
-**[ZamZam Xp](https://zamzamxp.com/nepal/trekking/annapurna-circuit)** works exclusively with certified, experienced, and English-speaking Nepalese guides:
+**[Zamzam Experience](https://zamzamxp.com/nepal/trekking/annapurna-circuit)** works exclusively with certified, experienced, and English-speaking Nepalese guides:
 
 ✅ **Certified guides**: Official training from the Nepalese government and first aid certification
 
@@ -214,7 +214,7 @@ AMS is the main risk of the Annapurna trek. It can affect anyone, regardless of 
 
 ### What's Included with an Organized Trek
 
-By choosing complete organization with **[ZamZam Xp](https://zamzamxp.com/nepal/trekking/annapurna-circuit)**, you benefit from comprehensive coverage:
+By choosing complete organization with **[Zamzam Experience](https://zamzamxp.com/nepal/trekking/annapurna-circuit)**, you benefit from comprehensive coverage:
 
 - Certified English-speaking guide throughout the trek
 - Porter (optional) to lighten your bag
@@ -225,7 +225,7 @@ By choosing complete organization with **[ZamZam Xp](https://zamzamxp.com/nepal/
 - 24/7 assistance before, during, and after the trek
 - Insurance for guide and Nepalese team
 
-**💡 Request a personalized quote** according to your dates, level, and preferences from [ZamZam Xp](https://zamzamxp.com/nepal/trekking/annapurna-circuit).
+**💡 Request a personalized quote** according to your dates, level, and preferences from [Zamzam Experience](https://zamzamxp.com/nepal/trekking/annapurna-circuit).
 
 ---
 
@@ -352,15 +352,15 @@ The Nepalese government established this measure for several reasons:
 
 **Porter option:** For even more comfort, a porter can carry your main bag (you only keep a small 5-6 kg bag), which facilitates acclimatization and reduces fatigue.
 
-💡 **Find the ideal formula:** [ZamZam Xp](https://zamzamxp.com/nepal/trekking/annapurna-circuit) offers different options adapted to your needs (guide alone, guide + porter, small group trek, private departure).
+💡 **Find the ideal formula:** [Zamzam Experience](https://zamzamxp.com/nepal/trekking/annapurna-circuit) offers different options adapted to your needs (guide alone, guide + porter, small group trek, private departure).
 
 ### Choosing the Right Agency for Your Trek
 
-**Why choose a specialized agency like ZamZam Xp?**
+**Why choose a specialized agency like Zamzam Experience?**
 
-**[ZamZam Xp](https://zamzamxp.com/nepal/trekking/annapurna-circuit)** combines the best of both worlds: Nepalese local expertise and personalized English-speaking support.
+**[Zamzam Experience](https://zamzamxp.com/nepal/trekking/annapurna-circuit)** combines the best of both worlds: Nepalese local expertise and personalized English-speaking support.
 
-🏔️ **ZamZam Xp advantages:**
+🏔️ **Zamzam Experience advantages:**
 
 - **Certified English-speaking guides**: Smooth communication and detailed explanations throughout the trek
 - **Experienced Nepalese team**: Years of experience on the Annapurna circuit
@@ -373,7 +373,7 @@ The Nepalese government established this measure for several reasons:
 
 **The difference of a specialized agency:**
 
-Unlike large international agencies that offer standardized group packages, ZamZam Xp builds your customized trek with particular attention to your expectations and safety.
+Unlike large international agencies that offer standardized group packages, Zamzam Experience builds your customized trek with particular attention to your expectations and safety.
 
 📞 **[Request your personalized quote](https://zamzamxp.com/nepal/trekking/annapurna-circuit)** and communicate directly with the team to build THE trek that suits you.
 
@@ -401,7 +401,7 @@ This trek is shorter and more accessible than the Annapurna Circuit, while offer
 
 Perfect for families or beginner trekkers.
 
-💡 **Tip:** [ZamZam Xp](https://zamzamxp.com/nepal/trekking/annapurna-circuit) also offers these alternative treks and can advise you on the best itinerary according to your level and desires.
+💡 **Tip:** [Zamzam Experience](https://zamzamxp.com/nepal/trekking/annapurna-circuit) also offers these alternative treks and can advise you on the best itinerary according to your level and desires.
 
 ### Possible Combinations
 
@@ -441,7 +441,7 @@ However, this doesn't mean you must join a large group! You can:
 
 ✅ **Small group**: Join a group of maximum 4-6 people to share the experience while benefiting from professional supervision.
 
-**For solo female travelers:** Nepal remains a very safe destination. With a trusted guide like those from [ZamZam Xp](https://zamzamxp.com/nepal/trekking/annapurna-circuit), you benefit from enhanced security and respectful accompaniment.
+**For solo female travelers:** Nepal remains a very safe destination. With a trusted guide like those from [Zamzam Experience](https://zamzamxp.com/nepal/trekking/annapurna-circuit), you benefit from enhanced security and respectful accompaniment.
 
 ### Do I need to book lodges in advance?
 
@@ -484,7 +484,7 @@ Whether you choose to go independently or accompanied by a guide, in spring or a
 
 ### Want to organize your trek?
 
-**[Discover the Annapurna Circuit trek packages with ZamZam Xp](https://zamzamxp.com/nepal/trekking/annapurna-circuit)** – A specialized agency that combines Nepalese local expertise and English-speaking support for a successful and safe trek.
+**[Discover the Annapurna Circuit trek packages with Zamzam Experience](https://zamzamxp.com/nepal/trekking/annapurna-circuit)** – A specialized agency that combines Nepalese local expertise and English-speaking support for a successful and safe trek.
 
 🏔️ **Namaste and happy trekking!**
 
@@ -494,7 +494,7 @@ Whether you choose to go independently or accompanied by a guide, in spring or a
 
 ### To Organize Your Trek
 
-- **[ZamZam Xp - Annapurna Circuit](https://zamzamxp.com/nepal/trekking/annapurna-circuit)**: Specialized agency to organize your trek with English-speaking guides
+- **[Zamzam Experience - Annapurna Circuit](https://zamzamxp.com/nepal/trekking/annapurna-circuit)**: Specialized agency to organize your trek with English-speaking guides
 - **Detailed map:** Get the Nepa Maps "Annapurna" map (1:125,000)
 - **GPS app:** Maps.me (offline Nepal maps)
 - **Weather:** mountain-forecast.com

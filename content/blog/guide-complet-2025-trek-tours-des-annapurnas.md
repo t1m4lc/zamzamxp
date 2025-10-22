@@ -196,9 +196,9 @@ Le MAM est le risque principal du trek des Annapurnas. Il peut affecter n'import
 - Obtention des permis obligatoires (ACAP, TIMS)
 - Transport et logistique simplifiés
 
-### Pourquoi Choisir un Guide Certifié avec ZamZam Xp ?
+### Pourquoi Choisir un Guide Certifié avec Zamzam Experience ?
 
-**[ZamZam Xp](https://zamzamxp.com/nepal/randonnee/circuit-annapurna)** travaille exclusivement avec des guides népalais certifiés, expérimentés et francophones :
+**[Zamzam Experience](https://zamzamxp.com/nepal/randonnee/circuit-annapurna)** travaille exclusivement avec des guides népalais certifiés, expérimentés et francophones :
 
 ✅ **Guides diplômés** : Formation officielle du gouvernement népalais et certification en premiers secours
 
@@ -214,7 +214,7 @@ Le MAM est le risque principal du trek des Annapurnas. Il peut affecter n'import
 
 ### Ce qui est Inclus avec un Trek Organisé
 
-En choisissant une organisation complète avec **[ZamZam Xp](https://zamzamxp.com/nepal/randonnee/circuit-annapurna)**, vous bénéficiez d'une prise en charge globale :
+En choisissant une organisation complète avec **[Zamzam Experience](https://zamzamxp.com/nepal/randonnee/circuit-annapurna)**, vous bénéficiez d'une prise en charge globale :
 
 - Guide certifié francophone pendant toute la durée du trek
 - Porteur (optionnel) pour alléger votre sac
@@ -225,7 +225,7 @@ En choisissant une organisation complète avec **[ZamZam Xp](https://zamzamxp.co
 - Assistance 24/7 avant, pendant et après le trek
 - Assurance pour le guide et l'équipe népalaise
 
-**💡 Demandez un devis personnalisé** selon vos dates, votre niveau et vos préférences auprès de [ZamZam Xp](https://zamzamxp.com/nepal/randonnee/circuit-annapurna).
+**💡 Demandez un devis personnalisé** selon vos dates, votre niveau et vos préférences auprès de [Zamzam Experience](https://zamzamxp.com/nepal/randonnee/circuit-annapurna).
 
 ---
 
@@ -352,15 +352,15 @@ Le gouvernement népalais a instauré cette mesure pour plusieurs raisons :
 
 **Option porteur :** Pour encore plus de confort, un porteur peut porter votre sac principal (vous ne gardez qu'un petit sac de 5-6 kg), ce qui facilite l'acclimatation et réduit la fatigue.
 
-💡 **Trouvez la formule idéale :** [ZamZam Xp](https://zamzamxp.com/nepal/randonnee/circuit-annapurna) propose différentes options adaptées à vos besoins (guide seul, guide + porteur, trek en petit groupe, départ privatif).
+💡 **Trouvez la formule idéale :** [Zamzam Experience](https://zamzamxp.com/nepal/randonnee/circuit-annapurna) propose différentes options adaptées à vos besoins (guide seul, guide + porteur, trek en petit groupe, départ privatif).
 
 ### Choisir la Bonne Agence pour Votre Trek
 
-**Pourquoi choisir une agence spécialisée comme ZamZam Xp ?**
+**Pourquoi choisir une agence spécialisée comme Zamzam Experience ?**
 
-**[ZamZam Xp](https://zamzamxp.com/nepal/randonnee/circuit-annapurna)** combine le meilleur des deux mondes : l'expertise locale népalaise et l'accompagnement francophone personnalisé.
+**[Zamzam Experience](https://zamzamxp.com/nepal/randonnee/circuit-annapurna)** combine le meilleur des deux mondes : l'expertise locale népalaise et l'accompagnement francophone personnalisé.
 
-🏔️ **Les avantages ZamZam Xp :**
+🏔️ **Les avantages Zamzam Experience :**
 
 - **Guides francophones certifiés** : Communication fluide et explications détaillées tout au long du trek
 - **Équipe népalaise expérimentée** : Années d'expérience sur le circuit des Annapurnas
@@ -373,7 +373,7 @@ Le gouvernement népalais a instauré cette mesure pour plusieurs raisons :
 
 **La différence d'une agence spécialisée :**
 
-Contrairement aux grandes agences internationales qui proposent des formules standardisées en groupe, ZamZam Xp construit votre trek sur-mesure avec une attention particulière à vos attentes et votre sécurité.
+Contrairement aux grandes agences internationales qui proposent des formules standardisées en groupe, Zamzam Experience construit votre trek sur-mesure avec une attention particulière à vos attentes et votre sécurité.
 
 📞 **[Demandez votre devis personnalisé](https://zamzamxp.com/nepal/randonnee/circuit-annapurna)** et échangez directement avec l'équipe pour construire LE trek qui vous correspond.
 
@@ -401,7 +401,7 @@ Ce trek est plus court et plus accessible que le Tour des Annapurnas, tout en of
 
 Parfait pour les familles ou les trekkeurs débutants.
 
-💡 **Conseil :** [ZamZam Xp](https://zamzamxp.com/nepal/randonnee/circuit-annapurna) propose également ces treks alternatifs et peut vous conseiller sur le meilleur itinéraire selon votre niveau et vos envies.
+💡 **Conseil :** [Zamzam Experience](https://zamzamxp.com/nepal/randonnee/circuit-annapurna) propose également ces treks alternatifs et peut vous conseiller sur le meilleur itinéraire selon votre niveau et vos envies.
 
 ### Combinaisons Possibles
 
@@ -441,7 +441,7 @@ Cependant, cela ne signifie pas que vous devez rejoindre un grand groupe ! Vous 
 
 ✅ **Petit groupe** : Rejoignez un groupe de 4-6 personnes maximum pour partager l'expérience tout en bénéficiant d'un encadrement professionnel.
 
-**Pour les femmes voyageuses :** Le Népal reste une destination très sûre. Avec un guide de confiance comme ceux de [ZamZam Xp](https://zamzamxp.com/nepal/randonnee/circuit-annapurna), vous bénéficiez d'une sécurité renforcée et d'un accompagnement respectueux.
+**Pour les femmes voyageuses :** Le Népal reste une destination très sûre. Avec un guide de confiance comme ceux de [Zamzam Experience](https://zamzamxp.com/nepal/randonnee/circuit-annapurna), vous bénéficiez d'une sécurité renforcée et d'un accompagnement respectueux.
 
 ### Dois-je réserver les lodges à l'avance ?
 
@@ -484,7 +484,7 @@ Que vous choisissiez de partir en autonomie ou accompagné d'un guide, au printe
 
 ### Vous souhaitez organiser votre trek ?
 
-**[Découvrez les formules trek du Tour des Annapurnas avec ZamZam Xp](https://zamzamxp.com/nepal/randonnee/circuit-annapurna)** – Une agence spécialisée qui combine l'expertise locale népalaise et l'accompagnement francophone pour un trek réussi en toute sécurité.
+**[Découvrez les formules trek du Tour des Annapurnas avec Zamzam Experience](https://zamzamxp.com/nepal/randonnee/circuit-annapurna)** – Une agence spécialisée qui combine l'expertise locale népalaise et l'accompagnement francophone pour un trek réussi en toute sécurité.
 
 🏔️ **Namaste et bon trek !**
 
@@ -494,7 +494,7 @@ Que vous choisissiez de partir en autonomie ou accompagné d'un guide, au printe
 
 ### Pour Organiser Votre Trek
 
-- **[ZamZam Xp - Circuit Annapurna](https://zamzamxp.com/nepal/randonnee/circuit-annapurna)** : Agence spécialisée pour organiser votre trek avec guides francophones
+- **[Zamzam Experience - Circuit Annapurna](https://zamzamxp.com/nepal/randonnee/circuit-annapurna)** : Agence spécialisée pour organiser votre trek avec guides francophones
 - **Carte détaillée :** Procurez-vous la carte Nepa Maps "Annapurna" (1:125 000)
 - **Application GPS :** Maps.me (cartes offline du Népal)
 - **Météo :** mountain-forecast.com
