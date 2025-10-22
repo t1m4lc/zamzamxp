@@ -870,6 +870,12 @@ if (experience.value) {
   const countryName = countryStr.charAt(0).toUpperCase() + countryStr.slice(1)
   const activityName = activityStr.charAt(0).toUpperCase() + activityStr.slice(1)
 
+  // Canonical URL is always the English version
+  const canonicalUrl = computed(() => {
+    const baseUrl = 'https://zamzamxp.com'
+    return `${baseUrl}/${normalizedCountry}/${normalizedActivity}/${slug}`
+  })
+
   useSeoMeta({
     title: `${exp.title} - ${exp.duration} | Zamzam Experience`,
     description: `${exp.description} Book this ${exp.difficulty} ${activityStr} tour in ${countryStr}. From $${exp.price}. Expert local guides and sustainable tourism.`,
@@ -883,7 +889,15 @@ if (experience.value) {
     twitterImage: exp.image,
   })
 
-  
+  // Add canonical link to avoid duplicate content issues
+  useHead({
+    link: [
+      {
+        rel: 'canonical',
+        href: canonicalUrl.value,
+      },
+    ],
+  })
 
   useSchemaOrg([
     defineProduct({

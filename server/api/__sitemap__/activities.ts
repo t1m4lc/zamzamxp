@@ -1,15 +1,18 @@
 /**
  * Sitemap handler for activity pages
- * Generates URLs for:
- * - Individual activity pages (e.g., /morocco/trekking/sahara-trek)
- * - Activity type listing pages (e.g., /morocco/trekking)
+ * Generates URLs ONLY for canonical (English) activity pages:
+ * - Individual activity pages (e.g., /morocco/surfing/taghazout-surf)
+ * - Activity type listing pages (e.g., /morocco/surfing)
+ *
+ * Translated URLs are accessible but not included in sitemap
+ * to avoid duplicate content and redirect issues with Google indexing.
  */
 export default defineSitemapEventHandler(async () => {
   const { readdir } = await import("fs/promises");
   const { join } = await import("path");
 
   const urls: any[] = [];
-  const activityTypesByLocale = new Map<string, Set<string>>();
+  const activityTypesByEnglish = new Map<string, Set<string>>();
   const activitiesDir = join(process.cwd(), "content", "activities");
 
   /**
@@ -38,21 +41,24 @@ export default defineSitemapEventHandler(async () => {
             const activityType = pathParts[2];
             const slug = pathParts[3];
 
-            // Track activity types for generating listing pages
-            const activityTypeKey = `${locale}:${country}/${activityType}`;
-            if (!activityTypesByLocale.has(activityTypeKey)) {
-              activityTypesByLocale.set(activityTypeKey, new Set());
-            }
+            // Only process English locale for sitemap (canonical URLs)
+            if (locale === "en") {
+              // Track activity types for generating listing pages
+              const activityTypeKey = `${country}/${activityType}`;
+              if (!activityTypesByEnglish.has(activityTypeKey)) {
+                activityTypesByEnglish.set(activityTypeKey, new Set());
+              }
 
-            // Add individual activity page
-            urls.push(
-              asSitemapUrl({
-                loc: `/${country}/${activityType}/${slug}`,
-                lastmod: new Date(),
-                changefreq: "monthly",
-                priority: 0.8,
-              })
-            );
+              // Add individual activity page (canonical English URL)
+              urls.push(
+                asSitemapUrl({
+                  loc: `/${country}/${activityType}/${slug}`,
+                  lastmod: new Date(),
+                  changefreq: "monthly",
+                  priority: 0.8,
+                })
+              );
+            }
           }
         }
       }
@@ -64,9 +70,8 @@ export default defineSitemapEventHandler(async () => {
   // Scan all activity files
   await walkDir(activitiesDir);
 
-  // Add activity type listing pages
-  activityTypesByLocale.forEach((_, activityTypeKey) => {
-    const [locale, path] = activityTypeKey.split(":");
+  // Add activity type listing pages (canonical English URLs)
+  activityTypesByEnglish.forEach((_, path) => {
     urls.push(
       asSitemapUrl({
         loc: `/${path}`,

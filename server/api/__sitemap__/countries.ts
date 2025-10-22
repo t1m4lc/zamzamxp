@@ -1,31 +1,28 @@
 /**
  * Sitemap handler for country pages
- * Generates URLs for country landing pages in all supported locales
- * Examples: /nepal, /morocco, /maroc, /marokko, /marruecos
+ * Generates URLs ONLY for canonical country pages (English versions)
+ * The same pages are accessible via translated slugs but should not be in sitemap
+ * to avoid duplicate content and redirect issues with Google indexing.
+ *
+ * Canonical URLs: /nepal, /morocco
+ * Accessible but not in sitemap: /maroc, /marokko, /marruecos
  */
 export default defineSitemapEventHandler(() => {
   const urls: any[] = [];
 
-  // Country slugs by locale
-  const countries = [
-    { en: "nepal", fr: "nepal", nl: "nepal", es: "nepal" },
-    { en: "morocco", fr: "maroc", nl: "marokko", es: "marruecos" },
-  ];
+  // Only canonical (English) country slugs
+  const canonicalCountries = ["nepal", "morocco"];
 
-  // Generate URLs for each unique country slug
-  countries.forEach((country) => {
-    const uniqueCountries = new Set(Object.values(country));
-
-    uniqueCountries.forEach((countryPath) => {
-      urls.push(
-        asSitemapUrl({
-          loc: `/${countryPath}`,
-          lastmod: new Date(),
-          changefreq: "weekly",
-          priority: 0.95, // High priority for country pages
-        })
-      );
-    });
+  // Generate URLs only for canonical country slugs
+  canonicalCountries.forEach((countrySlug) => {
+    urls.push(
+      asSitemapUrl({
+        loc: `/${countrySlug}`,
+        lastmod: new Date(),
+        changefreq: "weekly",
+        priority: 0.95, // High priority for country pages
+      })
+    );
   });
 
   return urls;

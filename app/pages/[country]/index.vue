@@ -271,6 +271,12 @@ const activities = computed(() => {
   }))
 })
 
+// Canonical URL is always the English version
+const canonicalUrl = computed(() => {
+  const baseUrl = 'https://zamzamxp.com'
+  return `${baseUrl}/${normalizedCountry}`
+})
+
 useSeoMeta({
   title: () => `${countryName.value} Adventure Travel & Tours | Zamzam Experience`,
   description: () => `${countryDescription.value} Fair prices, expert local guides, and sustainable tourism in ${countryName.value}.`,
@@ -278,6 +284,16 @@ useSeoMeta({
   ogDescription: () => countryDescription.value,
   ogType: "website",
   twitterCard: "summary_large_image",
+})
+
+// Add canonical link to avoid duplicate content issues
+useHead({
+  link: [
+    {
+      rel: 'canonical',
+      href: canonicalUrl.value,
+    },
+  ],
 })
 
 useSchemaOrg([
