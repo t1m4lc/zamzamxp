@@ -2,11 +2,10 @@
 title: "Beste Tijd om te Trekken in Nepal: Maand-voor-Maand Gids"
 description: "Wanneer is de beste tijd om te trekken in Nepal? Complete maand-voor-maand analyse van weer, drukte en condities voor Everest, Annapurna, Langtang en andere Himalaya treks."
 author: "Zamzam Team"
-date: "2026-02-12"
+date: "2026-01-28"
 image: "/images/blog/best-time-trek-nepal.jpg"
 tags: ["nepal", "trekking", "weer", "seizoenen", "planning"]
 locale: "nl"
-draft: true
 ---
 
 ## Wanneer is de Beste Tijd om te Trekken in Nepal?

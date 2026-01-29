@@ -2,11 +2,10 @@
 title: "Best Time to Trek in Nepal: Month-by-Month Guide"
 description: "When is the best time to trek in Nepal? Complete month-by-month breakdown of weather, crowds, and conditions for Everest, Annapurna, Langtang, and other Himalayan treks."
 author: "Zamzam Team"
-date: "2026-02-12"
+date: "2026-01-28"
 image: "/images/blog/best-time-trek-nepal.jpg"
 tags: ["nepal", "trekking", "weather", "seasons", "planning"]
 locale: "en"
-draft: true
 ---
 
 ## When is the Best Time to Trek in Nepal?

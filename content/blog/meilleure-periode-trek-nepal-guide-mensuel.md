@@ -2,11 +2,10 @@
 title: "Meilleure Période pour le Trek au Népal : Guide Mois par Mois"
 description: "Quelle est la meilleure période pour faire un trek au Népal ? Analyse complète mois par mois de la météo, de l'affluence et des conditions pour l'Everest, les Annapurnas, Langtang et autres treks himalayens."
 author: "Équipe Zamzam"
-date: "2026-02-12"
+date: "2026-01-28"
 image: "/images/blog/best-time-trek-nepal.jpg"
-tags: ["nepal", "trekking", "météo", "saisons", "planification"]
+tags: ["nepal", "trekking", "meteo", "saisons", "planification"]
 locale: "fr"
-draft: true
 ---
 
 ## Quelle est la Meilleure Période pour un Trek au Népal ?

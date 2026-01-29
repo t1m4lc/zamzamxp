@@ -2,11 +2,10 @@
 title: "Mejor Época para Trekking en Nepal: Guía Mes a Mes"
 description: "¿Cuál es la mejor época para hacer trekking en Nepal? Análisis completo mes a mes del clima, multitudes y condiciones para Everest, Annapurna, Langtang y otros treks himalayos."
 author: "Equipo Zamzam"
-date: "2026-02-12"
+date: "2026-01-28"
 image: "/images/blog/best-time-trek-nepal.jpg"
-tags: ["nepal", "trekking", "clima", "temporadas", "planificación"]
+tags: ["nepal", "trekking", "clima", "temporadas", "planificacion"]
 locale: "es"
-draft: true
 ---
 
 ## ¿Cuál es la Mejor Época para Hacer Trekking en Nepal?
