@@ -30,6 +30,23 @@ export default defineNuxtConfig({
         "/privacy",
         "/thanks",
         "/llms.txt",
+        // Blog posts - all locales (each locale has its own slug)
+        // English (en)
+        "/blog/surfing-essaouira-complete-guide",
+        "/blog/annapurna-circuit-trek-complete-guide-2025",
+        "/blog/top-5-trekking-destinations-nepal",
+        // French (fr)
+        "/blog/surf-essaouira-guide-complet",
+        "/blog/guide-complet-2025-trek-tours-des-annapurnas",
+        "/blog/top-5-destinations-randonnee-nepal",
+        // Spanish (es)
+        "/blog/guia-surf-essaouira-completa",
+        "/blog/guia-completa-2025-trek-circuito-annapurnas",
+        "/blog/top-5-destinos-senderismo-nepal",
+        // Dutch (nl)
+        "/blog/surfen-essaouira-complete-gids",
+        "/blog/annapurna-circuit-trek-complete-gids-2025",
+        "/blog/top-5-trekking-bestemmingen-nepal",
       ],
     },
   },
@@ -125,34 +142,41 @@ export default defineNuxtConfig({
       priority: 0.7,
       lastmod: new Date().toISOString(),
     },
+    // Static pages - canonical URLs only (no locale prefixes with no_prefix strategy)
     urls: [
       {
         loc: "/",
+        lastmod: new Date().toISOString(),
         changefreq: "daily",
         priority: 1.0,
       },
       {
         loc: "/about",
+        lastmod: new Date().toISOString(),
         changefreq: "monthly",
         priority: 0.8,
       },
       {
         loc: "/contact",
+        lastmod: new Date().toISOString(),
         changefreq: "monthly",
         priority: 0.8,
       },
       {
         loc: "/destinations",
+        lastmod: new Date().toISOString(),
         changefreq: "weekly",
         priority: 0.9,
       },
       {
         loc: "/terms",
+        lastmod: new Date().toISOString(),
         changefreq: "yearly",
         priority: 0.3,
       },
       {
         loc: "/privacy",
+        lastmod: new Date().toISOString(),
         changefreq: "yearly",
         priority: 0.3,
       },
