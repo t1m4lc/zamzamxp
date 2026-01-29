@@ -3,12 +3,10 @@
     <Header />
     <NuxtPage />
     <LazyFooter />
-    <SpeedInsights />
+    <LazyWhatsAppBubble v-if="!isBlogPage" />
 </template>
 
 <script setup lang="ts">
-import { SpeedInsights } from "@vercel/speed-insights/nuxt"
-
 const route = useRoute()
 const { locale, locales } = useI18n()
 
@@ -19,11 +17,11 @@ useSeoMeta({
   ogLocale: computed(() => locale.value),
   ogLocaleAlternate: computed(() => {
     const alternates = locales.value
-      .filter((loc) => {
+      .filter((loc: string | { code: string }) => {
         const code = typeof loc === 'string' ? loc : loc.code
         return code !== locale.value
       })
-      .map((loc) => typeof loc === 'string' ? loc : loc.code)
+      .map((loc: string | { code: string }) => typeof loc === 'string' ? loc : loc.code)
     return alternates
   }),
   // Bing and SEO enhancements
@@ -51,10 +49,6 @@ useHead({
   ]),
 })
 
-// Watch for locale changes and update HTML lang attribute
-watch(locale, (newLocale) => {
-  if (import.meta.client) {
-    document.documentElement.setAttribute('lang', newLocale)
-  }
-})
+// Detect if we're on a blog page (hide WhatsApp bubble on blog)
+const isBlogPage = computed(() => route.path.startsWith('/blog'))
 </script>

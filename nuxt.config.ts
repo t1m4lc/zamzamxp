@@ -121,7 +121,6 @@ export default defineNuxtConfig({
     xsl: false,
     autoLastmod: true,
     discoverImages: true,
-    strictNuxtContentPaths: true,
     // Use multiple sources for better organization
     sources: [
       "/api/__sitemap__/activities",
