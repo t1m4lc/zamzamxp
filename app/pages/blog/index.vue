@@ -130,7 +130,7 @@ const localePath = useLocalePath();
 const { fetchBlogPosts } = useBlog();
 
 // SEO - Comprehensive metadata for blog index
-const siteUrl = 'https://zamzamexperience.com'; // Update with your actual domain
+const siteUrl = 'https://zamzamxp.com';
 const blogUrl = `${siteUrl}${localePath('/blog')}`;
 
 useHead({

@@ -13,7 +13,6 @@ import { SpeedInsights } from "@vercel/speed-insights/nuxt"
 // Get route and i18n at the top level
 const route = useRoute()
 const { locale, locales } = useI18n()
-const switchLocalePath = useSwitchLocalePath()
 
 // Check if current page is a blog page
 const isBlogPage = computed(() => {
@@ -43,45 +42,19 @@ useSeoMeta({
 // Base URL for the site
 const baseUrl = "https://zamzamxp.com"
 
-// Build hreflang links for all available locales
-const hreflangLinks = computed(() => {
-  const links = []
-  
-  // Add link for each locale
-  for (const loc of locales.value) {
-    const localeCode = typeof loc === 'string' ? loc : loc.code
-    const localePath = switchLocalePath(localeCode)
-    
-    links.push({
-      rel: "alternate",
-      hreflang: localeCode,
-      href: `${baseUrl}${localePath}`,
-    })
-  }
-  
-  // Add x-default for English (default locale)
-  links.push({
-    rel: "alternate",
-    hreflang: "x-default",
-    href: `${baseUrl}${switchLocalePath('en')}`,
-  })
-  
-  return links
-})
-
-// Set dynamic language attribute and SEO links
+// Set dynamic language attribute and canonical URL
+// Note: hreflang tags removed because no_prefix strategy means all locales share the same URL
+// This would cause all hreflang tags to point to identical URLs, confusing search engines
 useHead({
   htmlAttrs: {
     lang: locale,
   },
   link: computed(() => [
-    // Canonical URL
+    // Canonical URL - the single authoritative version of this page
     {
       rel: "canonical",
       href: `${baseUrl}${route.path}`,
     },
-    // Hreflang tags for multilingual SEO
-    ...hreflangLinks.value,
   ]),
 })
 

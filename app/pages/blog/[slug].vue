@@ -541,7 +541,7 @@ const getExperienceUrl = () => {
 };
 
 // SEO - Comprehensive metadata for blog posts
-const siteUrl = 'https://zamzamexperience.com'; // Update with your actual domain
+const siteUrl = 'https://zamzamxp.com';
 const canonicalUrl = computed(() => post.value ? `${siteUrl}${localePath(`/blog/${slug.value}`)}` : '');
 
 useHead({

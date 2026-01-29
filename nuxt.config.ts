@@ -29,7 +29,7 @@ export default defineNuxtConfig({
         "/terms",
         "/privacy",
         "/thanks",
-        "llms.txt",
+        "/llms.txt",
       ],
     },
   },
@@ -236,7 +236,7 @@ export default defineNuxtConfig({
     detectBrowserLanguage: {
       useCookie: true,
       cookieKey: "i18n_redirected",
-      redirectOn: "root",
+      redirectOn: "no prefix",
     },
     locales: [
       { code: "en", name: "English", file: "en.json", flag: "🇬🇧" },
