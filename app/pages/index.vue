@@ -280,11 +280,6 @@ import { Handshake, Users, Leaf, ChevronRight, Star } from 'lucide-vue-next'
 
 const { t } = useI18n()
 
-useSeoMeta({
-  title: () => t('seo.home.title'),
-  description: () => t('seo.home.description'),
-})
-
 const firstRowReviews = computed(() => [
   {
     initials: "IT",

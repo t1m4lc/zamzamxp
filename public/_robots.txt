@@ -1,9 +1,0 @@
-User-Agent: *
-Allow: /
-Disallow: /api/
-Disallow: /_nuxt/
-Disallow: /_vercel/
-Disallow: /__og-image__/
-
-# Sitemap
-Sitemap: https://zamzamxp.com/sitemap.xml

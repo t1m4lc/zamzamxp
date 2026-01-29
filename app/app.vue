@@ -3,21 +3,14 @@
     <Header />
     <NuxtPage />
     <LazyFooter />
-    <!-- <LazyWhatsAppBubble v-if="!isBlogPage" /> -->
     <SpeedInsights />
 </template>
 
 <script setup lang="ts">
 import { SpeedInsights } from "@vercel/speed-insights/nuxt"
 
-// Get route and i18n at the top level
 const route = useRoute()
 const { locale, locales } = useI18n()
-
-// Check if current page is a blog page
-const isBlogPage = computed(() => {
-  return route.path.includes('/blog')
-})
 
 // Global SEO configuration
 useSeoMeta({
