@@ -2,11 +2,10 @@
 title: "Surf en Essaouira: La Guía Completa"
 description: "Descubre los mejores spots de surf cerca de Essaouira. Sidi Kaouki a 15 min del aeropuerto, La Gruta en Cap Sim. Consejos, surf camps y condiciones ideales en Marruecos."
 author: "Equipo Zamzam"
-date: "2025-10-23"
+date: "2026-10-23"
 image: "/images/blog/surf-essaouira-maroc.jpg"
 tags: ["marruecos", "surf", "essaouira", "aventura", "deporte"]
 locale: "es"
-published: true
 relatedExperienceSlug: "/marruecos/surf/campamento-surf-principiantes-sidi-kaouki"
 ---
 

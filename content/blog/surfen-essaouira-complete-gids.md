@@ -2,11 +2,10 @@
 title: "Surfen in Essaouira: De Complete Gids"
 description: "Ontdek de beste surfspots bij Essaouira. Sidi Kaouki op 15 min van de luchthaven, La Grotte bij Cap Sim. Tips, surfcamps en ideale omstandigheden in Marokko."
 author: "Zamzam Team"
-date: "2025-10-23"
+date: "2026-10-23"
 image: "/images/blog/surf-essaouira-maroc.jpg"
 tags: ["marokko", "surfen", "essaouira", "avontuur", "sport"]
 locale: "nl"
-published: true
 relatedExperienceSlug: "/marokko/surfen/sidi-kaouki-beginners"
 ---
 

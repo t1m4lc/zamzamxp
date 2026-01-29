@@ -1,12 +1,11 @@
 ---
-title: "Trek del Circuito de los Annapurnas: La Guía Completa 2025"
+title: "Trek del Circuito de los Annapurnas: La Guía Completa 2026"
 description: "Prepara tu trek del Circuito de los Annapurnas en Nepal. Itinerario detallado, presupuesto, mejor temporada, dificultad y consejos prácticos para una aventura inolvidable."
 author: "Equipo Zamzam"
 date: "2024-10-22"
 image: "/images/blog/annapurnas-guide.jpg"
 tags: ["nepal", "senderismo", "trekking", "aventura"]
 locale: "es"
-published: true
 relatedExperienceSlug: "/nepal/senderismo/circuito-annapurna"
 ---
 

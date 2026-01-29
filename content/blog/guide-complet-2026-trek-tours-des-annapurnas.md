@@ -1,12 +1,11 @@
 ---
-title: "Trek du Tour des Annapurnas : Le Guide Complet 2025"
+title: "Trek du Tour des Annapurnas : Le Guide Complet 2026"
 description: "Préparez votre trek du Tour des Annapurnas au Népal. Itinéraire détaillé, budget, meilleure saison, difficulté et conseils pratiques pour une aventure inoubliable."
 author: "Équipe Zamzam"
 date: "2024-10-22"
 image: "/images/blog/annapurnas-guide.jpg"
 tags: ["nepal", "randonnée", "trekking", "aventure"]
 locale: "fr"
-published: true
 relatedExperienceSlug: "/nepal/randonnee/circuit-annapurna"
 ---
 

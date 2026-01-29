@@ -6,7 +6,6 @@ date: "2024-10-18"
 image: "/images/blog/top-5-trekking-destinations-nepal.jpg"
 tags: ["nepal", "senderismo", "trekking", "aventura"]
 locale: "es"
-published: true
 relatedExperienceSlug: ""
 ---
 

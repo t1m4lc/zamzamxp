@@ -10,7 +10,7 @@ export const useBlog = () => {
 
     const posts = allPosts
       .filter((post: any) => {
-        return post.published !== false && post.locale === locale.value;
+        return post.draft !== true && post.locale === locale.value;
       })
       .sort((a: any, b: any) => {
         // Sort by date, newest first
@@ -30,7 +30,7 @@ export const useBlog = () => {
       const post = allPosts.find((item: any) => {
         return (
           item.locale === locale.value &&
-          item.published !== false &&
+          item.draft !== true &&
           item.path?.endsWith(`/${slug}`)
         );
       });
@@ -39,7 +39,7 @@ export const useBlog = () => {
     } catch (error) {
       console.error(
         `Blog post not found: ${slug} in locale ${locale.value}`,
-        error
+        error,
       );
       return null;
     }
@@ -54,7 +54,7 @@ export const useBlog = () => {
     const posts = allPosts
       .filter((post: any) => {
         return (
-          post.published !== false &&
+          post.draft !== true &&
           post.locale === locale.value &&
           post.tags?.includes(tag)
         );
@@ -75,7 +75,7 @@ export const useBlog = () => {
     const tags = new Set<string>();
     allPosts
       .filter(
-        (post: any) => post.published !== false && post.locale === locale.value
+        (post: any) => post.draft !== true && post.locale === locale.value,
       )
       .forEach((post: any) => {
         post.tags?.forEach((tag: string) => tags.add(tag));
@@ -90,7 +90,7 @@ export const useBlog = () => {
   const getRelatedPosts = async (
     currentSlug: string,
     tags?: string[],
-    limit: number = 3
+    limit: number = 3,
   ) => {
     const allPosts = await queryCollection("blog" as any).all();
 
@@ -99,7 +99,7 @@ export const useBlog = () => {
       .filter((post: any) => {
         const postSlug = post.path?.split("/").pop()?.replace(".md", "");
         return (
-          post.published !== false &&
+          post.draft !== true &&
           post.locale === locale.value &&
           postSlug !== currentSlug
         );

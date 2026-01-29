@@ -26,6 +26,12 @@ export default defineSitemapEventHandler(async () => {
         const content = await readFile(filePath, "utf-8");
         const slug = entry.name.replace(".md", "");
 
+        // Skip draft posts
+        const draftMatch = content.match(/draft:\s*(true|false)/);
+        if (draftMatch && draftMatch[1] === "true") {
+          continue;
+        }
+
         // Extract date from frontmatter for lastmod
         const dateMatch = content.match(/date:\s*["']?([^"'\n]+)["']?/);
         const lastmod = dateMatch ? new Date(dateMatch[1]) : new Date();

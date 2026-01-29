@@ -1,12 +1,11 @@
 ---
-title: "Annapurna Circuit Trek: De Complete Gids 2025"
+title: "Annapurna Circuit Trek: De Complete Gids 2026"
 description: "Bereid je Annapurna Circuit trek in Nepal voor. Gedetailleerd reisschema, budget, beste seizoen, moeilijkheidsgraad en praktische tips voor een onvergetelijk avontuur."
 author: "Zamzam Team"
 date: "2024-10-22"
 image: "/images/blog/annapurnas-guide.jpg"
 tags: ["nepal", "wandelen", "trekking", "avontuur"]
 locale: "nl"
-published: true
 relatedExperienceSlug: "/nepal/trekken/annapurna-circuit"
 ---
 

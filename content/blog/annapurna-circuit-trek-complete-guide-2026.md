@@ -1,12 +1,11 @@
 ---
-title: "Annapurna Circuit Trek: The Complete 2025 Guide"
+title: "Annapurna Circuit Trek: The Complete 2026 Guide"
 description: "Plan your Annapurna Circuit trek in Nepal. Detailed itinerary, budget, best season, difficulty level, and practical tips for an unforgettable adventure."
 author: "Zamzam Team"
 date: "2024-10-22"
 image: "/images/blog/annapurnas-guide.jpg"
 tags: ["nepal", "hiking", "trekking", "adventure"]
 locale: "en"
-published: true
 relatedExperienceSlug: "/nepal/trekking/annapurna-circuit"
 ---
 
