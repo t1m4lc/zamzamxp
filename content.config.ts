@@ -29,7 +29,7 @@ export default defineContentConfig({
             z.object({
               title: z.string(),
               content: z.string(),
-            })
+            }),
           )
           .optional(),
         referee: z
@@ -45,7 +45,7 @@ export default defineContentConfig({
                 z.object({
                   icon: z.string().optional(),
                   text: z.string(),
-                })
+                }),
               )
               .optional(),
           })
@@ -58,7 +58,7 @@ export default defineContentConfig({
               location: z.string(),
               quote: z.string(),
               rating: z.number(),
-            })
+            }),
           )
           .optional(),
       }),
@@ -74,7 +74,7 @@ export default defineContentConfig({
         image: z.string().optional(),
         tags: z.array(z.string()).optional(),
         locale: z.string().default("en"),
-        published: z.boolean().default(true),
+        draft: z.boolean().default(false),
         relatedExperienceSlug: z.string().optional(),
       }),
     }),

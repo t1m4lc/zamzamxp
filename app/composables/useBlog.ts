@@ -10,7 +10,9 @@ export const useBlog = () => {
 
     const posts = allPosts
       .filter((post: any) => {
-        return post.draft !== true && post.locale === locale.value;
+        // Check if draft is explicitly true, otherwise consider it published
+        const isDraft = post.draft === true;
+        return !isDraft && post.locale === locale.value;
       })
       .sort((a: any, b: any) => {
         // Sort by date, newest first
